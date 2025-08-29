@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <title>FAQ | UATAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../images/Shortcut.png" type="image/png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <!-- Page stylesheet -->
+    <link rel="stylesheet" href="faq.css" />
+</head>
+
+<body class="faq-page">
+    <!-- ========= Header ========= -->
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="/" class="nav-brand" aria-label="UATAS">
+                <img src="../images/logouatas.png" alt="UATAS" class="logo" />
+            </a>
+
+            <nav class="navigation" aria-label="Primary">
+                <ul class="nav-menu">
+                    <li><a href="../beranda/index.html">Beranda</a></li>
+                    <li><a href="../produk/index.html">Produk</a></li>
+                    <li><a href="../tentang/index.html">Tentang Kami</a></li>
+
+                    <li class="dropdown">
+                        <a href="#bantuan">Bantuan</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../faq/index.html">FAQ</a></li>
+                            <li><a href="../kontak/index.html">Kontak</a></li>
+                            <li>
+                                <a href="../pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                                    Syarat dan Ketentuan
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../pdf/Kebijakan Privasi.pdf" target="_blank">
+                                    Kebijakan Privasi
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                                    Layanan Pengaduan Konsumen
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" aria-label="Buka menu" aria-controls="navDrawer" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="tkb-icon" aria-describedby="tkb-tip">
+                <img src="../images/Periksa TKB.png" alt="Periksa TKB" />
+                <div class="tkb-tooltip" id="tkb-tip" role="tooltip">
+                    <strong>TKB0:</strong> 56.04%<br>
+                    <strong>TKB30:</strong> 70.30%<br>
+                    <strong>TKB60:</strong> 82.27%<br>
+                    <strong>TKB90:</strong> 98.93%
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile drawer -->
+        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation">
+            <ul>
+                <li><a href="../beranda/index.html">Beranda</a></li>
+                <li><a href="../produk/index.html">Produk</a></li>
+                <li><a href="../tentang/index.html">Tentang Kami</a></li>
+                <li><a href="index.html" aria-current="page">FAQ</a></li>
+                <li><a href="../kontak/index.html">Kontak</a></li>
+            </ul>
+        </nav>
+        <div class="drawer-backdrop" hidden></div>
+    </header>
+
+    <!-- ========= Hero ========= -->
+    <section class="faq-hero">
+        <div class="faq-container">
+            <h1 class="faq-title">Frequently Asked Questions</h1>
+
+            <div class="faq-tabs" role="tablist" aria-label="Kategori FAQ">
+                <button class="faq-chip is-active" data-filter="umum" role="tab" aria-selected="true">Umum</button>
+                <button class="faq-chip" data-filter="pengajuan" role="tab" aria-selected="false">Pengajuan</button>
+                <button class="faq-chip" data-filter="pembayaran" role="tab" aria-selected="false">Pembayaran</button>
+                <button class="faq-chip" data-filter="restrukturisasi" role="tab"
+                    aria-selected="false">Restrukturisasi</button>
+                <button class="faq-chip" data-filter="akun" role="tab" aria-selected="false">Akun & Bantuan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= Body ========= -->
+    <section class="faq-body">
+        <div class="faq-container">
+            <!-- UMUM -->
+            <div class="faq-section" data-category="umum">
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-umum-1" id="q-umum-1">
+                        Siapa yang dapat menggunakan UATAS?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-umum-1" role="region" aria-labelledby="q-umum-1" hidden>
+                        Semua warga negara Indonesia yang berusia minimal 18 tahun, memiliki pekerjaan atau penghasilan,
+                        serta memiliki Kartu Tanda Penduduk (KTP).
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-umum-2" id="q-umum-2">
+                        Apakah data saya aman dan dirahasiakan?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-umum-2" role="region" aria-labelledby="q-umum-2" hidden>
+                        Keamanan dan kerahasiaan Anda merupakan hal yang sangat penting bagi kami. UATAS menjaga
+                        kerahasiaan data. Untuk kebijakan privasi kami bisa dilihat pada bagian kebijakan privasi di
+                        aplikasi atau situs kami.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-umum-3" id="q-umum-3">
+                        Bagaimana cara membaca TKB0, TKB30, TKB60, dan TKB90?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-umum-3" role="region" aria-labelledby="q-umum-3" hidden>
+                        <h4>TKB0</h4>
+                        <p>Adalah ukuran tingkat keberhasilan Penyelenggara dalam memfasilitasi
+                            penyelesaian kewajiban Pendanaan dalam jangka waktu sampai dengan 0 (nol) hari kalender
+                            terhitung sejak jatuh tempo;</p>
+                        <h4>TKB30</h4>
+                        <p>Adalah ukuran tingkat keberhasilan Penyelenggara dalam memfasilitasi
+                            penyelesaian kewajiban Pendanaan dalam jangka waktu sampai dengan 30 (tiga puluh) hari
+                            kalender
+                            terhitung sejak jatuh tempo;</p>
+                        <h4>TKB60</h4>
+                        <p>Adalah ukuran tingkat keberhasilan Penyelenggara dalam memfasilitasi
+                            penyelesaian kewajiban Pendanaan dalam jangka waktu sampai dengan 60 (enam puluh) hari
+                            kalender
+                            terhitung sejak jatuh tempo; dan</p>
+                        <h4>TKB90</h4>
+                        <p>Adalah ukuran tingkat keberhasilan Penyelenggara dalam memfasilitasi
+                            penyelesaian kewajiban Pendanaan dalam jangka waktu sampai dengan 90 (sembilan puluh) hari
+                            kalender terhitung sejak jatuh tempo;</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-umum-4" id="q-umum-">
+                        Bagaimana cara klaim Asuransi Jiwa Kredit apabila nasabah meninggal dunia?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-umum-4" role="region" aria-labelledby="q-umum-4" hidden>
+                        Nasabah yang dapat melakukan klaim Asuransi Jiwa Kredit hanya nasabah yang sudah melakukan
+                        pembelian Asuransi Jiwa Kredit, dengan kondisi:
+                        <br>1. Nasabah meninggal ketika sudah melalukan pembayaran cicilan atau tenor pertama; dan/atau
+                        <br>2. Nasabah meninggal ketika belum melakukan pembayaran cicilan atau tenor pertama, dapat
+                        melakukan klaim apabila membayar nominal asuransi sejumlah yang tertera di aplikasi.
+                        <br>3. Kerabat atau ahli waris nasabah dapat mengirimkan email ke klaim.asuransi@uatas.id untuk
+                        mendapatkan informasi lebih lanjut.
+                    </div>
+                </article>
+            </div>
+
+            <!-- PENGAJUAN -->
+            <div class="faq-section" data-category="pengajuan" hidden>
+                <article class="faq-item">
+                    <button class="faq-q" asria-expanded="false" aria-controls="a-peng-1" id="q-peng-1">
+                        Bagaimana cara mengajukan pendanaan di UATAS?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-peng-1" role="region" aria-labelledby="q-peng-1" hidden>
+                        Mengajukan pendanaan melalui UATAS sangat ringkas
+                        <br>
+                        a) Unduh UATAS di Google Play Store atau Apple App Store<br>
+                        b) Daftar menggunakan nomor ponsel<br>
+                        c) Pilih jumlah pendanaan yang ingin diajukan<br>
+                        d) Lengkapi semua data (data personal, info pekerjaan, nomor darurat, nomor rekening),
+                        verifikasi KTP dan wajah<br>
+                        e) Tunggu proses tinjauan verifikasi<br>
+                        f) Bila lolos, maka dana akan ditransfer ke rekening bank Anda
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-peng-2" id="q-peng-2">
+                        Apa saja syarat untuk mengajukan pendanaan di UATAS?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-peng-2" role="region" aria-labelledby="q-peng-2" hidden>
+                        Untuk mengajukan pendanaan, Anda harus memenuhi syarat berikut:<br>
+                        a) Warga negara Indonesia<br>
+                        b) Minimal berumur 18 tahun<br>
+                        c) Memegang KTP<br>
+                        d) Memiliki rekening bank dengan nama yang sesuai dengan KTP<br>
+                        e) Berdomisili di Indonesia<br>
+                        f) Bersedia memberikan informasi pribadi dan pekerjaan yang dibutuhkan
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-peng-3" id="q-peng-3">
+                        Berapa lama proses pengajuan?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-peng-3" role="region" aria-labelledby="q-peng-3" hidden>
+                        Umumnya hingga 24 jam, bergantung kelengkapan & keakuratan data.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-peng-4" id="q-peng-4">
+                        Pengajuan pendanaan saya ditolak. Apakah saya bisa mengajukan ulang?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-peng-4" role="region" aria-labelledby="q-peng-4" hidden>
+                        Bila pengajuan pendanaan Anda ditolak, Anda baru bisa melakukan pengajuan pendanaan baru setelah
+                        minimal 14 hari.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-peng-5" id="q-peng-5">
+                        Seberapa cepat pendanaan saya diproses?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-peng-5" role="region" aria-labelledby="q-peng-5" hidden>
+                        Kami berkomitmen untuk menyelesaikan proses pendanaan Anda dalam 24 jam. Proses pendanaan dapat
+                        berubah sesuai dengan kelengkapan dan keakuratan informasi yang diberikan oleh Anda.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-peng-6" id="q-peng-6">
+                        Bagaimana saya menerima dana pendanaan UATAS?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-peng-6" role="region" aria-labelledby="q-peng-6" hidden>
+                        UATAS akan mengirimkan dana ke rekening bank anda yang telah didaftarkan melalui akun UATAS.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-peng-7" id="q-peng-7">
+                        Berapa lama tenor pendanaan yang tersedia?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-peng-7" role="region" aria-labelledby="q-peng-7" hidden>
+                        UATAS menyediakan durasi tenor yang tertera pada aplikasi. Silakan lakukan pengajuan untuk
+                        detail.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-peng-8" id="q-peng-8">
+                        Bagaimana saya dapat mengajukan Perpanjangan Tenor?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-peng-8" role="region" aria-labelledby="q-peng-8" hidden>
+                        Perpanjangan Tenor adalah pengajuan untuk memperpanjang tenor pembayaran Anda. Untuk
+                        pengajuannya Anda dapat melakukan permohonan melalui aplikasi UATAS pada laman Pembayaran.
+                        Pengajuan restrukturisasi jenis ini hanya dapat dilakukan 3 (tiga) hari kalender sebelum jatuh
+                        tempo hingga 1 (satu) hari kalender setelah jatuh tempo. Pengajuan Anda akan kami teruskan untuk
+                        mendapatkan persetujuan dari Pemberi Dana (Lender).
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- PEMBAYARAN -->
+            <div class="faq-section" data-category="pembayaran" hidden>
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-bayar-1" id="q-bayar-1">
+                        Bagaimana cara melakukan pembayaran?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-bayar-1" role="region" aria-labelledby="q-bayar-1" hidden>
+                        Melalui transfer ke Virtual Account, gerai, atau e-Wallet sesuai instruksi di aplikasi.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-bayar-2" id="q-bayar-2">
+                        Apa yang terjadi jika saya terlambat melakukan pembayaran?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-bayar-2" role="region" aria-labelledby="q-bayar-2" hidden>
+                        Apabila terjadi keterlambatan, Anda diwajibkan untuk membayar denda keterlambatan beserta biaya
+                        lainnya. Denda keterlambatan akan ditambahkan dengan jumlah Pendanaan secara akumulatif.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-bayar-3" id="q-bayar-3">
+                        Bagaimana saya dapat menghindari kena penipuan atau melakukan pembayaran ke tujuan yang salah?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-bayar-3" role="region" aria-labelledby="q-bayar-3" hidden>
+                        Sebelum anda melakukan pembayaran, dalam aplikasi UATAS anda dapat lakukan pemeriksaan Kode VA
+                        untuk mengetahui Kode VA yang anda miliki apakah berlaku atau tidak. Cara aksesnya adalah
+                        melalui aplikasi UATAS, masuk ke akun yang terdaftar, masuk ke halaman Saya, klik dan masuk ke
+                        Cek Kode Pembayaran (VA), terus tinggal masukkan kode VA yang Anda miliki lalu klik pencarian.
+                        Anda juga dapat menghubungi customer support UATAS di cs.support@uatas.id dan Call Center 1500
+                        038.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-bayar-4" id="q-bayar-4">
+                        Bagaimana saya dapat mengajukan Pelunasan Sebagian?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-bayar-4" role="region" aria-labelledby="q-bayar-4" hidden>
+                        Pelunasan Sebagian adalah pengajuan untuk penghapusan denda yang timbul karena keterlambatan
+                        pelunasan dan/atau penghapusan bunga yang sebelumnya sudah disepakati. Untuk pengajuannya Anda
+                        dapat melakukan permohonan dengan cara walk in atau melalui Layanan Pelanggan. Setelah
+                        melengkapi seluruh dokumen yang diminta, pengajuan restrukturisasi Anda akan kami teruskan untuk
+                        mendapatkan persetujuan dari Pemberi Dana (Lender).
+                    </div>
+                </article>
+            </div>
+
+            <!-- RESTRUKTURISASI -->
+            <div class="faq-section" data-category="restrukturisasi" hidden>
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-res-1" id="q-res-1">
+                        Apakah pendanaan saya di UATAS bisa direstrukturisasi?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-res-1" role="region" aria-labelledby="q-res-1" hidden>
+                        Ya, Pendanaan Anda dapat direstrukturisasi. Anda dapat melakukan pengajuan Penjadwalan Ulang,
+                        Perpanjangan Tenor atau Pelunasan Sebagian. Seluruh jenis restrukturisasi yang sudah disebutkan
+                        membutuhkan persetujuan dari Pemberi Dana (Lender).
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-res-2" id="q-res-2">
+                        Cara mengajukan Penjadwalan Ulang & Perpanjangan Tenor?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-res-2" role="region" aria-labelledby="q-res-2" hidden>
+                        Penjadwalan Ulang adalah pengajuan untuk melakukan perubahan tanggal jatuh tempo atau jadwal
+                        pembayaran Pendanaan, seperti cicilan dan sejenisnya. Untuk pengajuannya Anda dapat melakukan
+                        permohonan dengan cara walk in atau melalui Layanan Pelanggan. Setelah melengkapi seluruh
+                        dokumen yang diminta, pengajuan restrukturisasi Anda akan kami teruskan untuk mendapatkan
+                        persetujuan dari Pemberi Dana (Lender).
+                    </div>
+                </article>
+            </div>
+
+            <!-- AKUN & BANTUAN -->
+            <div class="faq-section" data-category="akun" hidden>
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-akun-1" id="q-akun-1">
+                        Saya membutuhkan bantuan, bagaimana saya dapat menghubungi UATAS?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-akun-1" role="region" aria-labelledby="q-akun-1" hidden>
+                        Anda dapat menghubungi customer support UATAS melalui cs.support@uatas.id atau Call Center 1500
+                        038.
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-akun-2" id="q-akun-2">
+                        Bagaimana saya dapat pengajuan penutupan/penghapusan akun?
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-akun-2" role="region" aria-labelledby="q-akun-2" hidden>
+                        Anda dapat mengajukan penutupan /penghapusan akun apabila sudah tidak memiliki Pendanaan yang
+                        aktif.
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- FOOTER -->
+        <footer class="uatas-footer">
+            <div class="container">
+
+                <!-- Kartu putih -->
+                <div class="uatas-footer-card">
+                    <!-- Kiri: logo + alamat -->
+                    <div class="uf-left">
+                        <div class="uf-brand">
+                            <img src="../images/logouatas.png" alt="Logo" class="uf-mascot">
+                        </div>
+
+                        <!-- Kantor Pusat -->
+                        <div class="uf-office">
+                            <div class="uf-map">
+                                <!-- boleh pakai gambar preview atau embed maps -->
+                                <iframe title="Kantor Pusat UATAS"
+                                    src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
+                                    loading="lazy"></iframe>
+                            </div>
+                            <div class="uf-info">
+                                <h4>Kantor Pusat</h4>
+                                <address>
+                                    Menara Dea Tower 2 Lt. 9 Unit 902<br>
+                                    Jl. Mega Kuningan Barat Lot 2.1 RT5/RW2,<br>
+                                    Kuningan, Setiabudi, Jakarta Selatan 12950<br>
+                                    <span>DKI Jakarta</span>
+                                </address>
+                                <ul class="uf-meta">
+                                    <li>📞 <a href="tel:+622150012345">+62 21-500-12345</a></li>
+                                    <li>🕘 Senin – Jumat: 09.00 – 18.00 WIB</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Walk in CS -->
+                        <div class="uf-office">
+                            <div class="uf-map">
+                                <iframe title="Walk in Customer Service"
+                                    src="https://www.google.com/maps?q=Wijaya+Kusuma+Jakarta+Barat&output=embed"
+                                    loading="lazy"></iframe>
+                            </div>
+                            <div class="uf-info">
+                                <h4>Walk in Customer Service</h4>
+                                <address>
+                                    Wijaya Kusuma Taman Duta Mas Blok B4 No.15,<br>
+                                    Grogol Petamburan, Jakarta Barat 11460
+                                </address>
+                                <ul class="uf-meta">
+                                    <li>📧 <a href="mailto:cs@support.uatas.id">cs@support.uatas.id</a></li>
+                                    <li>🕘 Senin–Jumat: 09.00–18.00 WIB (Walk-in)<br>Sabtu: 09.00–20.00 WIB
+                                        (Call CS)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kanan: store + sosial -->
+                    <div class="uf-right">
+                        <div class="uf-download">
+                            <h5>Unduh Aplikasi di</h5>
+                            <div class="store-row">
+                                <a class="store-badge"
+                                    href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
+                                    aria-label="Google Play" target="_blank">
+                                    <img src="../images/googleplay.png" alt="Get it on Google Play">
+                                </a>
+                                <a class="store-badge"
+                                    href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
+                                    aria-label="App Store" target="_blank">
+                                    <img src="../images/appstore.png" alt="Download on the App Store">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="uf-social">
+                            <h5>Ikuti Kami</h5>
+                            <div class="social-row">
+                                <a href="https://www.facebook.com/UATASID/" class="social-icon" target="_blank"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="https://x.com/UATASID" class="social-icon" target="_blank"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/uatas.id/" class="social-icon" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@uatasid" class="social-icon" target="_blank"><i
+                                        class="fab fa-tiktok"></i></a>
+                                <a href="https://www.youtube.com/@uatasid" class="social-icon" target="_blank"><i
+                                        class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /card -->
+
+                <!-- PERHATIAN -->
+                <h3 class="uf-notice-title">PERHATIAN</h3>
+                <div class="uf-notice-grid">
+                    <ul>
+                        <li>Layanan Pendanaan Bersama Berbasis Teknologi Informasi merupakan kesepakatan perdata
+                            antara
+                            Pemberi Dana dengan Penerima Dana, sehingga segala risiko yang timbul dari
+                            kesepakatan
+                            tersebut
+                            ditanggung sepenuhnya oleh masing-masing pihak.</li>
+                        <li>Risiko kredit atau gagal bayar ditanggung sepenuhnya oleh Pemberi Dana. Tidak ada
+                            lembaga
+                            atau
+                            otoritas negara yang bertanggung jawab atas risiko gagal bayar ini.</li>
+                        <li>Penyelenggara dengan persetujuan dari masing-masing Pengguna (Pemberi Dana dan/atau
+                            Penerima
+                            Dana) mengakses, memperoleh, menyimpan, mengelola dan/atau menggunakan data pribadi
+                            Pengguna
+                            ("Pemanfaatan Data") pada atau di dalam benda, perangkat elektronik (termasuk
+                            smartphone
+                            atau
+                            telepon seluler), perangkat keras (hardware) maupun lunak (software), dokumen
+                            elektronik,
+                            aplikasi atau sistem elektronik milik Pengguna atau yang dikuasai Pengguna, dengan
+                            memberitahukan tujuan, batasan dan mekanisme Pemanfaatan Data tersebut kepada
+                            Pengguna yang
+                            bersangkutan sebelum memperoleh persetujuan yang dimaksud.</li>
+                        <li>Pemberi Dana yang belum memiliki pengetahuan dan pengalaman pendanaan, disarankan
+                            untuk
+                            tidak
+                            menggunakan layanan UATAS ini.</li>
+                        <li>Penerima Dana harus mempertimbangkan tingkat bunga Pendanaan dan biaya lainnya
+                            sesuai dengan
+                            kemampuan dalam melunasi Pendanaan.</li>
+                        <li>Setiap kecurangan tercatat secara digital di dunia maya dan dapat diketahui
+                            masyarakat luas
+                            di
+                            media sosial.</li>
+                    </ul>
+                    <ul>
+                        <li>Pengguna harus membaca dan memahami informasi ini sebelum membuat keputusan menjadi
+                            Pemberi
+                            Dana
+                            atau Penerima Dana.</li>
+                        <li>Pemerintah yaitu dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas
+                            setiap
+                            pelanggaran atau ketidakpatuhan oleh Pengguna, baik Pemberi Dana maupun Penerima
+                            Dana (baik
+                            karena kesengajaan atau kelalaian Pengguna) terhadap ketentuan peraturan
+                            perundang-undangan
+                            maupun kesepakatan atau perikatan antara Penyelenggara (dalam hal ini adalah
+                            “UATAS”) dengan
+                            Pemberi Dana dan/atau Penerima Dana.</li>
+                        <li>Setiap transaksi dan kegiatan pendanaan atau pelaksanaan kesepakatan mengenai
+                            pendanaan
+                            antara
+                            atau yang melibatkan UATAS, Pemberi Dana dan/atau Penerima Dana wajib dilakukan
+                            melalui
+                            escrow
+                            account dan virtual account sebagaimana yang diwajibkan berdasarkan Peraturan
+                            Otoritas Jasa
+                            Keuangan Nomor 10 /POJK.05/2022 tentang Layanan Pendanaan Bersama Berbasis Teknologi
+                            Informasi
+                            dan pelanggaran atau ketidakpatuhan terhadap ketentuan tersebut merupakan bukti
+                            telah
+                            terjadinya
+                            pelanggaran hukum oleh UATAS sehingga UATAS wajib menanggung ganti rugi yang
+                            diderita oleh
+                            masing-masing Pengguna sebagai akibat langsung dari pelanggaran hukum tersebut
+                            diatas tanpa
+                            mengurangi hak Pengguna yang menderita kerugian menurut Kitab Undang-Undang Hukum
+                            Perdata.
+                        </li>
+                        <li>Hati-hati, transaksi ini beresiko tinggi. Anda dapat saja mengalami kerugian atau
+                            kehilangan
+                            uang. Jangan berutang jika tidak memiliki kemampuan membayar. Pertimbangkan secara
+                            bijak
+                            sebelum
+                            bertransaksi.</li>
+                    </ul>
+                </div>
+
+                <div class="uf-pdf">
+                    <ul class="pdf-links">
+                        <li>
+                            <a href="../pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                                Syarat dan Ketentuan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                                Layanan Pengaduan Konsumen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../pdf/Kebijakan Privasi.pdf" target="_blank">
+                                Kebijakan Privasi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="uf-copy">Copyright © 2025 Uatas. All rights reserved.</div>
+            </div>
+        </footer>
+    </section>
+
+    <script>
+        (function () {
+            // ensure [hidden] really hides even kalau ada CSS lain
+            const hiddenStyle = document.createElement('style');
+            hiddenStyle.textContent = '[hidden]{display:none!important}';
+            document.head.appendChild(hiddenStyle);
+
+            // header height → CSS var (offset hero)
+            function setHeaderVar() {
+                const h = document.querySelector('.header');
+                if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+            }
+            setHeaderVar(); addEventListener('resize', setHeaderVar);
+
+            // tabs filter
+            const chips = [...document.querySelectorAll('.faq-chip')];
+            const sections = [...document.querySelectorAll('.faq-section')];
+
+            function activate(cat) {
+                chips.forEach(c => {
+                    const on = c.dataset.filter === cat;
+                    c.classList.toggle('is-active', on);
+                    c.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+                sections.forEach(s => { s.hidden = s.dataset.category !== cat; });
+                document.querySelector('.faq-body')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            chips.forEach(c => c.addEventListener('click', () => activate(c.dataset.filter)));
+            activate(chips[0]?.dataset.filter || 'umum');
+
+            // accordion
+            document.addEventListener('click', (e) => {
+                const btn = e.target.closest('.faq-q');
+                if (!btn) return;
+                const panel = document.getElementById(btn.getAttribute('aria-controls'));
+                const open = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!open));
+                panel.hidden = open;
+            });
+
+            // mobile drawer
+            const burger = document.querySelector('.hamburger');
+            const drawer = document.getElementById('navDrawer');
+            const backdrop = document.querySelector('.drawer-backdrop');
+            function toggleDrawer(forceOpen) {
+                const open = forceOpen ?? drawer.classList.toggle('open');
+                drawer.classList.toggle('open', open);
+                backdrop.hidden = !open;
+                burger.setAttribute('aria-expanded', String(open));
+            }
+            burger.addEventListener('click', () => toggleDrawer());
+            backdrop.addEventListener('click', () => toggleDrawer(false));
+            drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleDrawer(false)));
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UATAS</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="../images/Shortcut.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Brand -->
+            <a href="/" class="nav-brand" aria-label="UATAS">
+                <img src="../images/logouatas.png" alt="UATAS" class="logo">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="navigation" aria-label="Primary">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="../produk/index.html">Produk</a></li>
+                    <li><a href="../tentang/index.html">Tentang Kami</a></li>
+
+                    <!-- Dropdown Bantuan -->
+                    <li class="dropdown">
+                        <a href="#bantuan">Bantuan</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../faq/index.html">FAQ</a></li>
+                            <li><a href="../kontak/index.html">Kontak</a></li>
+                            <li>
+                                <a href="../pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                                    Syarat dan Ketentuan
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../pdf/Kebijakan Privasi.pdf" target="_blank">
+                                    Kebijakan Privasi
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                                    Layanan Pengaduan Konsumen
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Hamburger (mobile) -->
+            <button class="hamburger" aria-label="Buka menu" aria-controls="navDrawer" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Ikon TKB -->
+            <div class="tkb-icon">
+                <img src="../images/Periksa TKB.png" alt="TKB Info">
+                <div class="tkb-tooltip">
+                    <strong>TKB0 :</strong> 56.04%<br>
+                    <strong>TKB30 :</strong> 70.30%<br>
+                    <strong>TKB60 :</strong> 82.27%<br>
+                    <strong>TKB90 :</strong> 98.93%
+                </div>
+            </div>
+        </div>
+
+        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation"></nav>
+    </header>
+
+
+    <section class="section-hp-wrapper">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+
+                    <!-- Teks Hero -->
+                    <div class="hero-text">
+                        <h1>Wujudkan Impian Tanpa Batas Bersama <span class="highlight">UATAS</span></h1>
+                        <p>Uatas merupakan platform peer-to-peer (P2P) lending yang telah berizin dan diawasi oleh
+                            Otoritas Jasa Keuangan, yang menjembatani antara pemberi dana dan penerima dana</p>
+                        <div class="hero-buttons">
+                            <a href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
+                                target="_blank" class="store-btn" target="_blank">
+                                <img src="../images/Google Play.png" alt="Download on Google Play" />
+                            </a>
+                            <!-- Tombol App Store -->
+                            <a href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
+                                target="_blank" class="store-btn" target="_blank">
+                                <img src="../images/App Store.png" alt="Download on the App Store" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image" id="mockup">
+                        <img src="../images/mockup-phone1.png" alt="Mockup HP" id="mockup-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mengapa Pilih Uatas -->
+        <section class="why-uatas" id="why-section">
+            <div class="container">
+                <h2>Mengapa pilih UATAS?</h2>
+
+                <div class="why-features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="../images/icon-cepat.png" alt="Icon Cepat">
+                        </div>
+                        <h3>Cepat</h3>
+                        <p>Proses registrasi, pencairan dana semua proses serba cepat</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="../images/icon-aman.png" alt="Icon Aman">
+                        </div>
+                        <h3>Aman</h3>
+                        <p>Dipastikan seluruh data privasi pengguna aman</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="../images/icon-praktis.png" alt="Icon Praktis">
+                        </div>
+                        <h3>Praktis</h3>
+                        <p>Hanya membutuhkan KTP dan no. Handphone</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="../images/icon-terjamin.png" alt="Icon Terjangkau">
+                        </div>
+                        <h3>Terjangkau</h3>
+                        <p>Cicilan ringan dengan bunga rendah maks. 0,3%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Melayani Masyarakat Section -->
+    <section class="melayani-section">
+        <div class="container">
+
+            <div class="melayani-container">
+                <!-- Video -->
+                <div class="melayani-video">
+                    <a href="https://www.youtube.com/watch?v=3G2dQcACui0" target="Link Youtube">
+                        <img src="../images/video-thumbnail.png" alt="Video UATAS" />
+                        <div class="play-button">▶</div>
+                    </a>
+                </div>
+
+                <!-- Text -->
+                <div class="melayani-text">
+                    <img src="../images/dompie.png" alt="Dompie">
+                    <h2>Melayani 200.000+<br>Masyarakat Indonesia</h2>
+                    <p>
+                        UATAS berkomitmen menyediakan layanan keuangan terjangkau untuk semua kalangan.
+                        Kami berkontribusi pada inklusi keuangan masyarakat Indonesia melalui teknologi
+                        finansial yang memberikan layanan terbaik.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="melayani-stats">
+                <div class="stat-card">
+                    <img src="../images/icon-stat dana.png" alt="Icon" />
+                    <h3>Rp <span>27,78</span> Triliun</h3>
+                    <p>Total pendanaan sejak berdiri</p>
+                </div>
+                <div class="stat-card">
+                    <img src="../images/icon date.png" alt="Icon" />
+                    <h3>Rp <span>6,67</span> Triliun</h3>
+                    <p>Total pendanaan tahun berjalan</p>
+                </div>
+                <div class="stat-card">
+                    <img src="../images/icon user.png" alt="Icon" />
+                    <h3><span>2,41</span> Juta</h3>
+                    <p>Jumlah akumulasi borrower</p>
+                </div>
+                <div class="stat-card">
+                    <img src="../images/icon borrower.png" alt="Icon" />
+                    <h3><span>273</span> Ribu</h3>
+                    <p>Jumlah borrower aktif</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== Kata Mereka Section ===== -->
+    <section class="testimonial-section">
+        <h2>Kata Mereka Tentang UATAS</h2>
+
+        <div class="testimonial-container">
+            <button class="arrow left">&#8249;</button>
+
+            <div class="testimonial-card fade-in show">
+                <img src="../images/quote.png" alt="Quote" class="quote-icon" />
+                <p>
+                    Pinjaman untuk ekspansi bisnis kuliner saya disetujui dengan mudah.
+                    Tenor yang panjang membuat cicilan ringan. Recommended untuk fellow entrepreneurs!
+                </p>
+                <div class="rating">
+                    <img src="../images/Star.png" alt="5 stars" class="star-icon" />
+                </div>
+                <div class="profile">
+                    <img src="../images/client 1.png" alt="Budi Santoso" class="profile-img" />
+                    <div>
+                        <strong>Budi Santoso</strong>
+                        <span>Pengusaha UMKM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <img src="../images/quote.png" alt="Quote" class="quote-icon" />
+                <p>
+                    Proses cair cepat dan pelayanannya sangat ramah. Sebagai pemilik toko kelontong,
+                    saya merasa sangat terbantu dengan kehadiran UATAS. Terimakasih banyak UATAS!
+                </p>
+                <div class="rating">
+                    <img src="../images/Star.png" alt="5 stars" class="star-icon" />
+                </div>
+                <div class="profile">
+                    <img src="../images/client 2.png" alt="Siti Rahma" class="profile-img" />
+                    <div>
+                        <strong>Puspa Kumalasari</strong>
+                        <span>Pemilik Toko</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <img src="../images/quote.png" alt="Quote" class="quote-icon" />
+                <p>
+                    Proses pengajuan sangat mudah dan transparan. Aplikasi pendanaan online yang sangat membantu.
+                    Terbaik.
+                </p>
+                <div class="rating">
+                    <img src="../images/Star.png" alt="5 stars" class="star-icon" />
+                </div>
+                <div class="profile">
+                    <img src="../images/client 3.png" alt="Andi Wijaya" class="profile-img" />
+                    <div>
+                        <strong>Andi Wijaya</strong>
+                        <span>Freelancer</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="arrow right">&#8250;</button>
+        </div>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities">
+        <div class="container">
+            <h2>Aktivitas Kami</h2>
+            <div class="activities-grid">
+
+                <!-- Card 1 -->
+                <div class="activity-card" data-video-id="W5zcwHu0rLA">
+                    <img alt="Activity Thumbnail" class="activity-image" />
+                    <div class="activity-content">
+                        <p class="activity-date">Oct 17, 2024</p>
+                        <h3>UATAS at FinExpo BIK 2024 Balikpapan</h3>
+                        <a href="https://www.youtube.com/watch?v=W5zcwHu0rLA" target="_blank" class="watch-btn">Watch
+                            Now</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="activity-card" data-video-id="nGHbJBi0i-c">
+                    <img alt="Activity Thumbnail" class="activity-image" />
+                    <div class="activity-content">
+                        <p class="activity-date">Nov 8, 2023</p>
+                        <h3>Muda Paham Fintech @Banjarmasin with UATAS</h3>
+                        <a href="https://www.youtube.com/watch?v=nGHbJBi0i-c" target="_blank" class="watch-btn">Watch
+                            Now</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="activity-card" data-video-id="r--I-vKQ1sQ">
+                    <img alt="Activity Thumbnail" class="activity-image" />
+                    <div class="activity-content">
+                        <p class="activity-date">Dec 5, 2023</p>
+                        <h3>Muda Paham Fintech @ Banyuwangi with UATAS</h3>
+                        <a href="https://www.youtube.com/watch?v=r--I-vKQ1sQ" target="_blank" class="watch-btn">Watch
+                            Now</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="more-wrapper">
+                <a href="../kegiatan/index.html" class="more-btn">More</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Waspada Section !-->
+    <section class="otp-section">
+        <div class="otp-container">
+
+            <!-- Karakter dompet -->
+            <img class="otp-mascot" src="../images/Dompie-Waspada.png" alt="UATAS Wallet Mascot" />
+
+            <!-- Slider -->
+            <div class="otp-slider" aria-roledescription="carousel">
+                <div class="otp-track">
+                    <!-- Slide 1 -->
+                    <article class="otp-slide">
+                        <div class="otp-left">
+                            <h2>Ingat untuk selalu<br><span>Jaga Kerahasiaan OTP</span></h2>
+                            <p>Data pribadi seperti KTP, kode OTP, nomor pin, password, dan sejenisnya adalah bersifat
+                                rahasia dan hanya pemilik yang boleh mengetahui. Maka lebih berhati-hati dan jangan
+                                sembarang memberikan data yang bersifat pribadi dan rahasia terutama OTP, agar terhindar
+                                dari segala bentuk penipuan.</p>
+                        </div>
+                        <div class="otp-right">
+                            <div class="otp-image-wrap">
+                                <img src="../images/Gambar Waspada 1.png" alt="Gambar 1" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Slide 2 -->
+                    <article class="otp-slide">
+                        <div class="otp-left">
+                            <h2>Cara Mudah Cek Legalitas <span>Perusahaan P2P Lending</span> via Whatsapp</h2>
+                            <p>Anda dapat dengan mudah cek legalitas UATAS melalui whatsapp OJK pada nomor sebagai
+                                berikut: 081-157-157-157</p>
+                        </div>
+                        <div class="otp-right">
+                            <div class="otp-image-wrap">
+                                <img src="../images/Gambar Waspada 2.png" alt="Gambar 2" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Slide 3 -->
+                    <article class="otp-slide">
+                        <div class="otp-left">
+                            <h2>Waspada terhadap <span>Tindakan Penipuan</span></h2>
+                            <p>Waspada terhadap tindakan penipuan yang mengatasnamakan UATAS melalui website palsu yang
+                                berisi informasi palsu. Website resmi UATAS hanya www.uatas.id.</p>
+                        </div>
+                        <div class="otp-right">
+                            <div class="otp-image-wrap">
+                                <img src="../images/Gambar Waspada 3.png" alt="Gambar 3" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="otp-dots">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-sec">
+        <div class="container">
+            <h2 class="sec-title">Mitra Kami</h2>
+
+            <!-- Carousel Mitra -->
+            <div class="logo-carousel" id="partnersCarousel" aria-roledescription="carousel">
+                <ul class="logo-track">
+                    <li class="logo-item"><img src="../images/ocbc.png" alt="OCBC NISP"></li>
+                    <li class="logo-item"><img src="../images/bca.png" alt="BCA"></li>
+                    <li class="logo-item"><img src="../images/bni.png" alt="BNI"></li>
+                    <li class="logo-item"><img src="../images/privy.png" alt="Privy"></li>
+                    <li class="logo-item"><img src="../images/mpt.png" alt="Moneta Pembayaran Teknologi"></li>
+                    <li class="logo-item"><img src="../images/vida.png" alt="VIDA"></li>
+                    <li class="logo-item"><img src="../images/itruzz.png" alt="iTruzz"></li>
+                    <!-- tambahkan logo lain di sini -->
+                </ul>
+            </div>
+
+            <h2 class="sec-title mt-60">Regulator</h2>
+
+            <div class="reg-grid">
+                <article class="reg-card">
+                    <p class="reg-label">Berizin dan diawasi</p>
+                    <img src="../images/ojk.png" alt="OJK">
+                </article>
+
+                <article class="reg-card">
+                    <p class="reg-label">Berizin dan diawasi</p>
+                    <img src="../images/afpi.png" alt="AFPI">
+                </article>
+
+                <article class="reg-card">
+                    <p class="reg-label">Terdaftar dalam</p>
+                    <img src="../images/kominfo.png" alt="Kominfo">
+                </article>
+
+                <article class="reg-card">
+                    <p class="reg-label">Anggota dari</p>
+                    <img src="../images/laps sjk.png" alt="LAPS SJK">
+                </article>
+
+                <article class="reg-card">
+                    <p class="reg-label">Tersertifikasi dengan</p>
+                    <img src="../images/iso-27001.png" alt="ISO 27001:2022">
+                    <small>ISO 27001:2022</small>
+                </article>
+
+                <article class="reg-card">
+                    <p class="reg-label">Tersertifikasi dengan</p>
+                    <img src="../images/iso-37001.png" alt="ISO 37001:2016">
+                    <small>ISO 37001:2016</small>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== Footer ===== -->
+    <footer class="uatas-footer">
+        <div class="container">
+
+            <!-- Kartu putih -->
+            <div class="uatas-footer-card">
+                <!-- Kiri: logo + alamat -->
+                <div class="uf-left">
+                    <div class="uf-brand">
+                        <img src="../images/logouatas.png" alt="Logo" class="uf-mascot">
+                    </div>
+
+                    <!-- Kantor Pusat -->
+                    <div class="uf-office">
+                        <div class="uf-map">
+                            <!-- boleh pakai gambar preview atau embed maps -->
+                            <iframe title="Kantor Pusat UATAS"
+                                src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
+                                loading="lazy"></iframe>
+                        </div>
+                        <div class="uf-info">
+                            <h4>Kantor Pusat</h4>
+                            <address>
+                                Menara Dea Tower 2 Lt. 9 Unit 902<br>
+                                Jl. Mega Kuningan Barat Lot 2.1 RT5/RW2,<br>
+                                Kuningan, Setiabudi, Jakarta Selatan 12950<br>
+                                <span>DKI Jakarta</span>
+                            </address>
+                            <ul class="uf-meta">
+                                <li>📞 <a href="tel:+622150012345">+62 21-500-12345</a></li>
+                                <li>🕘 Senin – Jumat: 09.00 – 18.00 WIB</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Walk in CS -->
+                    <div class="uf-office">
+                        <div class="uf-map">
+                            <iframe title="Walk in Customer Service"
+                                src="https://www.google.com/maps?q=Wijaya+Kusuma+Jakarta+Barat&output=embed"
+                                loading="lazy"></iframe>
+                        </div>
+                        <div class="uf-info">
+                            <h4>Walk in Customer Service</h4>
+                            <address>
+                                Wijaya Kusuma Taman Duta Mas Blok B4 No.15,<br>
+                                Grogol Petamburan, Jakarta Barat 11460
+                            </address>
+                            <ul class="uf-meta">
+                                <li>📧 <a href="mailto:cs@support.uatas.id">cs@support.uatas.id</a></li>
+                                <li>🕘 Senin–Jumat: 09.00–18.00 WIB (Walk-in)<br>Sabtu: 09.00–20.00 WIB (Call CS)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kanan: store + sosial -->
+                <div class="uf-right">
+                    <div class="uf-download">
+                        <h5>Unduh Aplikasi di</h5>
+                        <div class="store-row">
+                            <a class="store-badge"
+                                href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
+                                aria-label="Google Play" target="_blank">
+                                <img src="../images/googleplay.png" alt="Get it on Google Play">
+                            </a>
+                            <a class="store-badge"
+                                href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
+                                aria-label="App Store" target="_blank">
+                                <img src="../images/appstore.png" alt="Download on the App Store">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="uf-social">
+                        <h5>Ikuti Kami</h5>
+                        <div class="social-row">
+                            <a href="https://www.facebook.com/UATASID/" class="social-icon" target="_blank"><i
+                                    class="fab fa-facebook"></i></a>
+                            <a href="https://x.com/UATASID" class="social-icon" target="_blank"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/uatas.id/" class="social-icon" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@uatasid" class="social-icon" target="_blank"><i
+                                    class="fab fa-tiktok"></i></a>
+                            <a href="https://www.youtube.com/@uatasid" class="social-icon" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /card -->
+
+            <!-- PERHATIAN -->
+            <h3 class="uf-notice-title">PERHATIAN</h3>
+            <div class="uf-notice-grid">
+                <ul>
+                    <li>Layanan Pendanaan Bersama Berbasis Teknologi Informasi merupakan kesepakatan perdata antara
+                        Pemberi Dana dengan Penerima Dana, sehingga segala risiko yang timbul dari kesepakatan tersebut
+                        ditanggung sepenuhnya oleh masing-masing pihak.</li>
+                    <li>Risiko kredit atau gagal bayar ditanggung sepenuhnya oleh Pemberi Dana. Tidak ada lembaga atau
+                        otoritas negara yang bertanggung jawab atas risiko gagal bayar ini.</li>
+                    <li>Penyelenggara dengan persetujuan dari masing-masing Pengguna (Pemberi Dana dan/atau Penerima
+                        Dana) mengakses, memperoleh, menyimpan, mengelola dan/atau menggunakan data pribadi Pengguna
+                        ("Pemanfaatan Data") pada atau di dalam benda, perangkat elektronik (termasuk smartphone atau
+                        telepon seluler), perangkat keras (hardware) maupun lunak (software), dokumen elektronik,
+                        aplikasi atau sistem elektronik milik Pengguna atau yang dikuasai Pengguna, dengan
+                        memberitahukan tujuan, batasan dan mekanisme Pemanfaatan Data tersebut kepada Pengguna yang
+                        bersangkutan sebelum memperoleh persetujuan yang dimaksud.</li>
+                    <li>Pemberi Dana yang belum memiliki pengetahuan dan pengalaman pendanaan, disarankan untuk tidak
+                        menggunakan layanan UATAS ini.</li>
+                    <li>Penerima Dana harus mempertimbangkan tingkat bunga Pendanaan dan biaya lainnya sesuai dengan
+                        kemampuan dalam melunasi Pendanaan.</li>
+                    <li>Setiap kecurangan tercatat secara digital di dunia maya dan dapat diketahui masyarakat luas di
+                        media sosial.</li>
+                </ul>
+                <ul>
+                    <li>Pengguna harus membaca dan memahami informasi ini sebelum membuat keputusan menjadi Pemberi Dana
+                        atau Penerima Dana.</li>
+                    <li>Pemerintah yaitu dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas setiap
+                        pelanggaran atau ketidakpatuhan oleh Pengguna, baik Pemberi Dana maupun Penerima Dana (baik
+                        karena kesengajaan atau kelalaian Pengguna) terhadap ketentuan peraturan perundang-undangan
+                        maupun kesepakatan atau perikatan antara Penyelenggara (dalam hal ini adalah “UATAS”) dengan
+                        Pemberi Dana dan/atau Penerima Dana.</li>
+                    <li>Setiap transaksi dan kegiatan pendanaan atau pelaksanaan kesepakatan mengenai pendanaan antara
+                        atau yang melibatkan UATAS, Pemberi Dana dan/atau Penerima Dana wajib dilakukan melalui escrow
+                        account dan virtual account sebagaimana yang diwajibkan berdasarkan Peraturan Otoritas Jasa
+                        Keuangan Nomor 10 /POJK.05/2022 tentang Layanan Pendanaan Bersama Berbasis Teknologi Informasi
+                        dan pelanggaran atau ketidakpatuhan terhadap ketentuan tersebut merupakan bukti telah terjadinya
+                        pelanggaran hukum oleh UATAS sehingga UATAS wajib menanggung ganti rugi yang diderita oleh
+                        masing-masing Pengguna sebagai akibat langsung dari pelanggaran hukum tersebut diatas tanpa
+                        mengurangi hak Pengguna yang menderita kerugian menurut Kitab Undang-Undang Hukum Perdata.</li>
+                    <li>Hati-hati, transaksi ini beresiko tinggi. Anda dapat saja mengalami kerugian atau kehilangan
+                        uang. Jangan berutang jika tidak memiliki kemampuan membayar. Pertimbangkan secara bijak sebelum
+                        bertransaksi.</li>
+                </ul>
+            </div>
+
+            <div class="uf-pdf">
+                <ul class="pdf-links">
+                    <li>
+                        <a href="../pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                            Syarat dan Ketentuan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                            Layanan Pengaduan Konsumen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pdf/Kebijakan Privasi.pdf" target="_blank">
+                            Kebijakan Privasi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="uf-copy">Copyright © 2025 Uatas. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mockup = document.getElementById('mockup');        // wrapper hero-image
+            const mockupImg = document.getElementById('mockup-img'); // gambar di dalam mockup
+            const whySection = document.getElementById('why-section');
+            const container = document.querySelector('.container');
+
+            if (!mockup || !mockupImg || !whySection || !container) return;
+
+            // ======= TITIK KONTROL =======
+            const FIXED_TOP = 120;      // jarak top saat posisi fixed
+            const SHRINK_OFFSET = 0;
+            const STOP_EXTRA = 0;
+            // =============================
+
+            function computeRightPx() {
+                const containerStyle = getComputedStyle(container);
+                const paddingRight = parseFloat(containerStyle.paddingRight) || 0;
+                const containerWidth = container.offsetWidth;
+                const rightRemaining = (window.innerWidth - containerWidth) / 2;
+                return rightRemaining + paddingRight;
+            }
+
+            function getMetrics() {
+                const whyTop = whySection.offsetTop;
+                const whyBottom = whyTop + whySection.offsetHeight;
+                const mockupH = mockup.offsetHeight;
+                const rightPx = computeRightPx();
+
+                // Titik mulai shrink → maju/mundur sesuai SHRINK_OFFSET
+                const enterPoint = whyTop - SHRINK_OFFSET;
+                // Titik stop → tambah STOP_EXTRA kalau mau berhenti lebih awal
+                const stopPoint = whyBottom - mockupH - FIXED_TOP - STOP_EXTRA;
+
+                return { whyTop, whyBottom, mockupH, rightPx, enterPoint, stopPoint };
+            }
+
+            let metrics = getMetrics();
+
+            function onScroll() {
+                metrics = getMetrics();
+                const sc = window.scrollY;
+
+                if (sc >= metrics.enterPoint && sc < metrics.stopPoint) {
+                    // Antara shrink & stop
+                    mockup.style.position = 'fixed';
+                    mockup.style.top = FIXED_TOP + 'px';
+                    mockup.style.right = metrics.rightPx + 'px';
+                    mockup.classList.add('shrink');
+                    mockup.classList.remove('stop');
+                    mockupImg.src = 'images/mockup-phone2.png';
+                } else if (sc >= metrics.stopPoint) {
+                    // Stop
+                    mockup.style.position = 'absolute';
+                    mockup.style.top = (metrics.whyBottom - metrics.mockupH - STOP_EXTRA) + 'px';
+                    mockup.style.right = metrics.rightPx + 'px';
+                    mockup.classList.add('shrink');
+                    mockup.classList.add('stop');
+                    mockupImg.src = '../images/mockup-phone2.png';
+                } else {
+                    // Sebelum shrink
+                    mockup.style.position = 'fixed';
+                    mockup.style.top = FIXED_TOP + 'px';
+                    mockup.style.right = metrics.rightPx + 'px';
+                    mockup.classList.remove('shrink');
+                    mockup.classList.remove('stop');
+                    mockupImg.src = '../images/mockup-phone1.png';
+                }
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', () => { metrics = getMetrics(); onScroll(); });
+            onScroll();
+        });
+
+    </script>
+
+    <script>
+        const cards = document.querySelectorAll(".testimonial-card");
+        const dots = document.querySelectorAll(".dot");
+        let current = 0;
+
+        function showCard(index) {
+            cards.forEach(card => {
+                card.classList.remove("active", "show");
+            });
+            dots.forEach(dot => dot.classList.remove("active"));
+
+            cards[index].classList.add("active");
+            setTimeout(() => cards[index].classList.add("show"), 50); // trigger fade-in
+            dots[index].classList.add("active");
+        }
+
+        document.querySelector(".arrow.left").addEventListener("click", () => {
+            current = (current - 1 + cards.length) % cards.length;
+            showCard(current);
+        });
+
+        document.querySelector(".arrow.right").addEventListener("click", () => {
+            current = (current + 1) % cards.length;
+            showCard(current);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+                current = i;
+                showCard(current);
+            });
+        });
+
+        // inisialisasi pertama
+        showCard(current);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".activity-card").forEach(card => {
+                const videoId = card.dataset.videoId;
+                const img = card.querySelector(".activity-image");
+                if (!videoId || !img) return;
+
+                img.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                img.onerror = () => {
+                    img.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                };
+            });
+        });
+    </script>
+
+    <script>
+        (() => {
+            const slider = document.querySelector('.otp-slider');
+            const track = slider.querySelector('.otp-track');
+            const slides = Array.from(track.children);
+            const dotsWrap = slider.querySelector('.otp-dots');
+
+            slides.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.setAttribute('role', 'tab');
+                dot.setAttribute('aria-label', `Slide ${i + 1}`);
+                if (i === 0) dot.setAttribute('aria-selected', 'true');
+                dotsWrap.appendChild(dot);
+            });
+            const dots = Array.from(dotsWrap.children);
+
+            let index = 0;
+            let timer;
+
+            function go(i) {
+                index = (i + slides.length) % slides.length;
+                track.style.transform = `translateX(${index * -100}%)`;
+                dots.forEach((d, k) => d.setAttribute('aria-selected', k === index ? 'true' : 'false'));
+            }
+            const next = () => go(index + 1);
+
+            dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
+
+            slider.addEventListener('mouseenter', stop);
+            slider.addEventListener('mouseleave', start);
+            start();
+        })();
+    </script>
+
+    <script>
+        (function makeAutoCarousel(rootSel, speedPxPerSec = 60) {
+            const root = document.querySelector(rootSel);
+            if (!root) return;
+            const track = root.querySelector('.logo-track');
+
+            let rafId, lastTime, offset = 0, paused = false;
+
+            function cloneUntilWideEnough() {
+                // kembalikan ke konten asli dulu
+                const originals = Array.from(track.children).filter(li => !li.dataset.clone);
+                track.innerHTML = '';
+                originals.forEach(li => track.appendChild(li));
+
+                // gandakan sampai lebar track > 2x container (agar seamless)
+                const containerW = root.clientWidth;
+                while (track.scrollWidth < containerW * 2) {
+                    originals.forEach(li => {
+                        const clone = li.cloneNode(true);
+                        clone.dataset.clone = '1';
+                        track.appendChild(clone);
+                    });
+                }
+            }
+
+            function step(ts) {
+                if (paused) { lastTime = ts; rafId = requestAnimationFrame(step); return; }
+                if (!lastTime) lastTime = ts;
+                const dt = (ts - lastTime) / 1000;            // detik
+                lastTime = ts;
+
+                const distance = speedPxPerSec * dt;          // px bergerak
+                offset -= distance;
+
+                // jika elemen pertama keluar layar, geser ke belakang
+                const first = track.firstElementChild;
+                if (first && Math.abs(offset) > first.offsetWidth + 40 /* gap */) {
+                    offset += first.offsetWidth + 40;
+                    track.appendChild(first); // pindah ke belakang
+                }
+
+                track.style.transform = `translateX(${offset}px)`;
+                rafId = requestAnimationFrame(step);
+            }
+
+            function start() {
+                cancelAnimationFrame(rafId);
+                lastTime = 0; offset = 0;
+                track.style.transform = 'translateX(0)';
+                cloneUntilWideEnough();
+                rafId = requestAnimationFrame(step);
+            }
+
+            // pause/resume on hover
+            root.addEventListener('mouseenter', () => { paused = true; });
+            root.addEventListener('mouseleave', () => { paused = false; });
+
+            // responsive
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(start, 200);
+            });
+
+            start();
+        })('#partnersCarousel', 50); // speed bisa kamu ubah (px/detik)
+    </script>
+
+</body>
+
+</html>
