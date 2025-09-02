@@ -9,19 +9,19 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-SemiBold.ttf") format("truetype");
+  src: url("../fonts/Gilroy-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
+  src: url("../fonts/Gilroy-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -1065,18 +1065,27 @@ body {
 
 /* ===== Footer style ===== */
 .uatas-footer {
-  background: #6b0d0d; /* merah marun */
+  background: #6b0d0d;
   padding: 64px 0 28px;
+}
+.uatas-footer .container {
+  padding-block: 0;
 }
 
 .uatas-footer-card {
   background: linear-gradient(180deg, #fffbfbe1 100%, #ffe1e2 50%);
   border-radius: 30px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.061);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
   padding: 24px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 16px;
+}
+@media (max-width: 1024px) {
+  .uatas-footer-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 }
 
 /* brand */
@@ -1221,6 +1230,22 @@ body {
   font-size: 0.9rem;
   color: #ffe9ea;
   opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .uatas-footer {
+    padding: 48px 0 24px;
+  }
+  .uatas-footer-card {
+    gap: 20px;
+  }
+  .uf-notice-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .store-badge img {
+    height: 36px;
+  }
 }
 
 @media (max-width: 640px) {
