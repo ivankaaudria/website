@@ -6,43 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kontak | UATAS</title>
 
-    <link rel="shortcut icon" href="../images/Shortcut.png" type="image/png" />
-    <link rel="stylesheet" href="kontak.css" />
+    <link rel="shortcut icon" href="../assets/images/Shortcut.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/kontak.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
-            <!-- Brand -->
             <a href="/" class="nav-brand" aria-label="UATAS">
-                <img src="../images/logouatas.png" alt="UATAS" class="logo" />
+                <img src="../assets/images/logouatas.png" alt="UATAS" class="logo" />
             </a>
 
-            <!-- Desktop Navigation -->
             <nav class="navigation" aria-label="Navigasi utama">
                 <ul class="nav-menu">
-                    <li><a href="../beranda/index.html">Beranda</a></li>
-                    <li><a href="../produk/index.html">Produk</a></li>
-                    <li><a href="../tentang/index.html">Tentang Kami</a></li>
+                    <li><a href="../">Beranda</a></li>
+                    <li><a href="../produk/">Produk</a></li>
+                    <li><a href="../about-us/">Tentang Kami</a></li>
                     <li class="dropdown">
                         <a href="#bantuan" aria-haspopup="true">Bantuan</a>
                         <ul class="dropdown-menu" aria-label="Submenu Bantuan">
-                            <li><a href="../faq/index.html">FAQ</a></li>
-                            <li><a href="../kontak/index.html" aria-current="page">Kontak</a></li>
+                            <li><a href="../faq/">FAQ</a></li>
+                            <li><a href="../kontak/" aria-current="page">Kontak</a></li>
                             <li>
-                                <a href="../pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                                <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
                                     Syarat dan Ketentuan
                                 </a>
                             </li>
                             <li>
-                                <a href="../pdf/Kebijakan Privasi.pdf" target="_blank">
+                                <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
                                     Kebijakan Privasi
                                 </a>
                             </li>
                             <li>
-                                <a href="../pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                                <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
                                     Layanan Pengaduan Konsumen
                                 </a>
                             </li>
@@ -51,26 +48,23 @@
                 </ul>
             </nav>
 
-            <!-- Hamburger (mobile) -->
             <button class="hamburger" aria-label="Buka menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
 
-            <!-- Ikon TKB -->
             <div class="tkb-icon">
-                <img src="../images/Periksa TKB.png" alt="Periksa TKB" />
-                <div class="tkb-tooltip" role="status">
-                    <strong>TKB0 :</strong> 56.04%<br />
-                    <strong>TKB30 :</strong> 70.30%<br />
-                    <strong>TKB60 :</strong> 82.27%<br />
-                    <strong>TKB90 :</strong> 98.93%
+                <img src="../assets/images/Periksa TKB.png" alt="Periksa TKB" />
+                <div class="tkb-tooltip">
+                    <strong>TKB0 :</strong> <span id="TKB0">--%</span><br>
+                    <strong>TKB30 :</strong> <span id="TKB30">--%</span><br>
+                    <strong>TKB60 :</strong> <span id="TKB60">--%</span><br>
+                    <strong>TKB90 :</strong> <span id="TKB90">--%</span>
                 </div>
             </div>
         </div>
     </header>
 
     <main id="content">
-        <!-- HERO -->
         <section class="prod-hero site-section">
             <div class="container">
                 <div class="wrap">
@@ -88,10 +82,9 @@
         <section class="contact-cards">
             <div class="container">
 
-                <!-- Card 1 -->
                 <div class="ccard">
                     <div class="ccard-icon">
-                        <img src="../images/icon-email.png" alt="Email Icon">
+                        <img src="../assets/images/icon-email.png" alt="Email Icon">
                     </div>
                     <h3 class="ccard-title">Email Kami</h3>
                     <p class="ccard-desc">
@@ -102,10 +95,9 @@
                     </a>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="ccard">
                     <div class="ccard-icon">
-                        <img src="../images/icon-call.png" alt="Phone Icon">
+                        <img src="../assets/images/icon-call.png" alt="Phone Icon">
                     </div>
                     <h3 class="ccard-title">Hubungi Kami</h3>
                     <p class="ccard-desc">
@@ -114,10 +106,9 @@
                     <a href="tel:1500038" class="ccard-link">1500 038</a>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="ccard">
                     <div class="ccard-icon">
-                        <img src="../images/icon-office.png" alt="Location Icon">
+                        <img src="../assets/images/icon-office.png" alt="Location Icon">
                     </div>
                     <h3 class="ccard-title">Alamat Kami</h3>
                     <p class="ccard-desc">Lokasi kantor:</p>
@@ -130,22 +121,17 @@
         </section>
 
         <section>
-            <!-- FOOTER -->
             <footer class="uatas-footer">
                 <div class="container">
 
-                    <!-- Kartu putih -->
                     <div class="uatas-footer-card">
-                        <!-- Kiri: logo + alamat -->
                         <div class="uf-left">
                             <div class="uf-brand">
-                                <img src="../images/logouatas.png" alt="Logo" class="uf-mascot">
+                                <img src="../assets/images/logouatas.png" alt="Logo" class="uf-mascot">
                             </div>
 
-                            <!-- Kantor Pusat -->
                             <div class="uf-office">
                                 <div class="uf-map">
-                                    <!-- boleh pakai gambar preview atau embed maps -->
                                     <iframe title="Kantor Pusat UATAS"
                                         src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
                                         loading="lazy"></iframe>
@@ -165,7 +151,6 @@
                                 </div>
                             </div>
 
-                            <!-- Walk in CS -->
                             <div class="uf-office">
                                 <div class="uf-map">
                                     <iframe title="Walk in Customer Service"
@@ -188,7 +173,6 @@
                             </div>
                         </div>
 
-                        <!-- Kanan: store + sosial -->
                         <div class="uf-right">
                             <div class="uf-download">
                                 <h5>Unduh Aplikasi di</h5>
@@ -196,12 +180,12 @@
                                     <a class="store-badge"
                                         href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
                                         aria-label="Google Play" target="_blank">
-                                        <img src="../images/googleplay.png" alt="Get it on Google Play">
+                                        <img src="../assets/images/googleplay.png" alt="Get it on Google Play">
                                     </a>
                                     <a class="store-badge"
                                         href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
                                         aria-label="App Store" target="_blank">
-                                        <img src="../images/appstore.png" alt="Download on the App Store">
+                                        <img src="../assets/images/appstore.png" alt="Download on the App Store">
                                     </a>
                                 </div>
                             </div>
@@ -222,9 +206,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- /card -->
+                    </div>
 
-                    <!-- PERHATIAN -->
                     <h3 class="uf-notice-title">PERHATIAN</h3>
                     <div class="uf-notice-grid">
                         <ul>
@@ -309,17 +292,17 @@
                     <div class="uf-pdf">
                         <ul class="pdf-links">
                             <li>
-                                <a href="../pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                                <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
                                     Syarat dan Ketentuan
                                 </a>
                             </li>
                             <li>
-                                <a href="../pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                                <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
                                     Layanan Pengaduan Konsumen
                                 </a>
                             </li>
                             <li>
-                                <a href="../pdf/Kebijakan Privasi.pdf" target="_blank">
+                                <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
                                     Kebijakan Privasi
                                 </a>
                             </li>
@@ -331,6 +314,7 @@
             </footer>
         </section>
     </main>
+    <script src="../assets/api/tkb.js"></script>
 </body>
 
 </html>

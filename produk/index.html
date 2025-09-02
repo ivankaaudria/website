@@ -6,31 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Produk | UATAS</title>
 
-    <link rel="shortcut icon" href="../images/Shortcut.png" type="image/png" />
-    <link rel="stylesheet" href="produk.css" />
+    <link rel="shortcut icon" href="../assets/images/Shortcut.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/produk.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
-            <!-- Brand -->
             <a href="/" class="nav-brand" aria-label="UATAS">
-                <img src="../images/logouatas.png" alt="UATAS" class="logo" />
+                <img src="../assets/images/logouatas.png" alt="UATAS" class="logo" />
             </a>
 
-            <!-- Desktop Navigation -->
             <nav class="navigation" aria-label="Navigasi utama">
                 <ul class="nav-menu">
-                    <li><a href="../beranda/index.html">Beranda</a></li>
-                    <li><a href="index.html" aria-current="page">Produk</a></li>
-                    <li><a href="../tentang/index.html">Tentang Kami</a></li>
+                    <li><a href="../">Beranda</a></li>
+                    <li><a href="#" aria-current="page">Produk</a></li>
+                    <li><a href="../about-us/">Tentang Kami</a></li>
                     <li class="dropdown">
                         <a href="#bantuan" aria-haspopup="true">Bantuan</a>
                         <ul class="dropdown-menu" aria-label="Submenu Bantuan">
-                            <li><a href="../faq/index.html">FAQ</a></li>
-                            <li><a href="../kontak/index.html">Kontak</a></li>
+                            <li><a href="../faq/">FAQ</a></li>
+                            <li><a href="../kontak/">Kontak</a></li>
                             <li><a href="../syarat/index.html">Syarat dan Ketentuan</a></li>
                             <li><a href="../privasi/index.html">Kebijakan Privasi</a></li>
                             <li><a href="../pengaduan/index.html">Layanan Pengaduan Konsumen</a></li>
@@ -39,26 +36,23 @@
                 </ul>
             </nav>
 
-            <!-- Hamburger (mobile) -->
             <button class="hamburger" aria-label="Buka menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
 
-            <!-- Ikon TKB -->
             <div class="tkb-icon">
-                <img src="../images/Periksa TKB.png" alt="Periksa TKB" />
-                <div class="tkb-tooltip" role="status">
-                    <strong>TKB0 :</strong> 56.04%<br />
-                    <strong>TKB30 :</strong> 70.30%<br />
-                    <strong>TKB60 :</strong> 82.27%<br />
-                    <strong>TKB90 :</strong> 98.93%
+                <img src="../assets/images/Periksa TKB.png" alt="Periksa TKB" />
+                <div class="tkb-tooltip">
+                    <strong>TKB0 :</strong> <span id="TKB0">--%</span><br>
+                    <strong>TKB30 :</strong> <span id="TKB30">--%</span><br>
+                    <strong>TKB60 :</strong> <span id="TKB60">--%</span><br>
+                    <strong>TKB90 :</strong> <span id="TKB90">--%</span>
                 </div>
             </div>
         </div>
     </header>
 
     <main id="content">
-        <!-- HERO -->
         <section class="prod-hero site-section">
             <div class="container">
                 <div class="wrap">
@@ -71,32 +65,30 @@
                         </p>
 
                         <div class="store-row">
-                            <a class="store-badge" href="#">
-                                <img src="../images/GooglePlay_Produk.png" alt="Unduh di Google Play" loading="lazy"
+                            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.uatas.android">
+                                <img src="../assets/images/GooglePlay_Produk.png" alt="Unduh di Google Play" loading="lazy"
                                     target="_blank" />
                             </a>
-                            <a class="store-badge" href="#">
-                                <img src="../images/AppStore_Produk.png" alt="Unduh di App Store" loading="lazy"
+                            <a class="store-badge" href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493">
+                                <img src="../assets/images/AppStore_Produk.png" alt="Unduh di App Store" loading="lazy"
                                     target="_blank" />
                             </a>
                         </div>
                     </div>
 
                     <div class="hero-art">
-                        <img class="main" src="../images/headerproduk.png" alt="Ilustrasi produk UATAS"
+                        <img class="main" src="../assets/images/headerproduk.png" alt="Ilustrasi produk UATAS"
                             loading="lazy" />
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SIMULASI PENDANAAN -->
         <section id="simulasi" class="simulasi site-section">
             <div class="container">
                 <h2 class="sim-title">Simulasi Pendanaan</h2>
 
                 <div class="sim-grid">
-                    <!-- Card 1 -->
                     <article class="sim-card" aria-label="Simulasi 80 hari">
                         <div class="sim-head">
                             <small>Jumlah Dana yang Diterima</small>
@@ -136,7 +128,6 @@
                         </div>
                     </article>
 
-                    <!-- Card 2 -->
                     <article class="sim-card" aria-label="Simulasi 90 hari">
                         <div class="sim-head">
                             <small>Jumlah Dana yang Diterima</small>
@@ -178,19 +169,16 @@
             </div>
         </section>
 
-
-        <!-- TATA CARA -->
         <section id="alur" class="steps-sec site-section" aria-labelledby="steps-title">
             <div class="container">
                 <h2 id="steps-title" class="steps-title">Tata Cara Permohonan Pendanaan</h2>
 
                 <div class="steps-grid">
-                    <!-- Step 1 -->
                     <article class="step-card">
                         <div class="step-head">
                             <span class="step-icon">
                                 <span class="diamond" aria-hidden="true"></span>
-                                <img src="../images/unduh.png" alt="" loading="lazy" />
+                                <img src="../assets/images/unduh.png" alt="" loading="lazy" />
                             </span>
                             <strong>Unduh Aplikasi</strong>
                         </div>
@@ -200,12 +188,11 @@
                         </p>
                     </article>
 
-                    <!-- Step 2 -->
                     <article class="step-card">
                         <div class="step-head">
                             <span class="step-icon">
                                 <span class="diamond" aria-hidden="true"></span>
-                                <img src="../images/verifikasi.png" alt="" loading="lazy" />
+                                <img src="../assets/images/verifikasi.png" alt="" loading="lazy" />
                             </span>
                             <strong>Verifikasi Data</strong>
                         </div>
@@ -215,12 +202,11 @@
                         </p>
                     </article>
 
-                    <!-- Step 3 -->
                     <article class="step-card">
                         <div class="step-head">
                             <span class="step-icon">
                                 <span class="diamond" aria-hidden="true"></span>
-                                <img src="../images/bacasyarat.png" alt="" loading="lazy" />
+                                <img src="../assets/images/bacasyarat.png" alt="" loading="lazy" />
                             </span>
                             <strong>Baca Persyaratan</strong>
                         </div>
@@ -230,12 +216,11 @@
                         </p>
                     </article>
 
-                    <!-- Step 4 -->
                     <article class="step-card">
                         <div class="step-head">
                             <span class="step-icon">
                                 <span class="diamond" aria-hidden="true"></span>
-                                <img src="../images/terimadana.png" alt="" loading="lazy" />
+                                <img src="../assets/images/terimadana.png" alt="" loading="lazy" />
                             </span>
                             <strong>Terima Dana</strong>
                         </div>
@@ -246,18 +231,17 @@
                     </article>
                 </div>
 
-                <!-- Strip CTA -->
                 <div class="steps-download">
                     <div class="download-inner">
                         <div class="download-title">Unduh Aplikasi UATAS di</div>
                         <div class="download-actions">
                             <a class="store-btn" href="https://play.google.com/store" target="_blank" rel="noopener">
-                                <img src="../images/Googleplay white.png" alt="Get it on Google Play" />
+                                <img src="../assets/images/Googleplay white.png" alt="Get it on Google Play" />
                             </a>
                             <a class="store-btn"
                                 href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
                                 target="_blank" rel="noopener">
-                                <img src="../images/Appstore white.png" alt="Download on the App Store" />
+                                <img src="../assets/images/Appstore white.png" alt="Download on the App Store" />
                             </a>
                         </div>
                     </div>
@@ -266,11 +250,9 @@
             </div>
         </section>
 
-        <!-- RIPLAY / Ringkasan Informasi Produk dan Layanan -->
         <section class="riplay">
             <div class="riplay__container">
                 <div class="riplay__grid">
-                    <!-- Kiri: judul + deskripsi + CTA -->
                     <div class="riplay__copy">
                         <h2 class="riplay__title">
                             Ringkasan Informasi Produk <br />
@@ -288,44 +270,37 @@
                         <a href="../riplay/index.html" target="_blank" class="riplay__btn">Selengkapnya</a>
                     </div>
 
-                    <!-- Kanan: 3 pill menu (non-klik) -->
                     <div class="riplay__pills">
                         <div class="pill">
-                            <img class="pill__icon" src="../images/produk-fitur.png" alt="Ikon produk & fitur utama" />
+                            <img class="pill__icon" src="../assets/images/produk-fitur.png" alt="Ikon produk & fitur utama" />
                             <span class="pill__title">Produk dan Fitur Utama</span>
                         </div>
 
                         <div class="pill">
-                            <img class="pill__icon" src="../images/manfaat-risiko.png"
+                            <img class="pill__icon" src="../assets/images/manfaat-risiko.png"
                                 alt="Ikon manfaat dan risiko layanan" />
                             <span class="pill__title">Manfaat dan Risiko Layanan</span>
                         </div>
 
                         <div class="pill">
-                            <img class="pill__icon" src="../images/syarat.png" alt="Ikon persyaratan dan tata cara" />
+                            <img class="pill__icon" src="../assets/images/syarat.png" alt="Ikon persyaratan dan tata cara" />
                             <span class="pill__title">Persyaratan dan Tata Cara</span>
                         </div>
                     </div>
                 </div>
         </section>
 
-
-        <!-- FOOTER -->
         <footer class="uatas-footer">
             <div class="container">
 
-                <!-- Kartu putih -->
                 <div class="uatas-footer-card">
-                    <!-- Kiri: logo + alamat -->
                     <div class="uf-left">
                         <div class="uf-brand">
-                            <img src="../images/logouatas.png" alt="Logo" class="uf-mascot">
+                            <img src="../assets/images/logouatas.png" alt="Logo" class="uf-mascot">
                         </div>
 
-                        <!-- Kantor Pusat -->
                         <div class="uf-office">
                             <div class="uf-map">
-                                <!-- boleh pakai gambar preview atau embed maps -->
                                 <iframe title="Kantor Pusat UATAS"
                                     src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
                                     loading="lazy"></iframe>
@@ -345,7 +320,6 @@
                             </div>
                         </div>
 
-                        <!-- Walk in CS -->
                         <div class="uf-office">
                             <div class="uf-map">
                                 <iframe title="Walk in Customer Service"
@@ -367,7 +341,6 @@
                         </div>
                     </div>
 
-                    <!-- Kanan: store + sosial -->
                     <div class="uf-right">
                         <div class="uf-download">
                             <h5>Unduh Aplikasi di</h5>
@@ -375,12 +348,12 @@
                                 <a class="store-badge"
                                     href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
                                     aria-label="Google Play" target="_blank">
-                                    <img src="../images/googleplay.png" alt="Get it on Google Play">
+                                    <img src="../assets/images/googleplay.png" alt="Get it on Google Play">
                                 </a>
                                 <a class="store-badge"
                                     href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
                                     aria-label="App Store" target="_blank">
-                                    <img src="../images/appstore.png" alt="Download on the App Store">
+                                    <img src="../assets/images/appstore.png" alt="Download on the App Store">
                                 </a>
                             </div>
                         </div>
@@ -401,9 +374,8 @@
                             </div>
                         </div>
                     </div>
-                </div><!-- /card -->
+                </div>
 
-                <!-- PERHATIAN -->
                 <h3 class="uf-notice-title">PERHATIAN</h3>
                 <div class="uf-notice-grid">
                     <ul>
@@ -463,17 +435,17 @@
                 <div class="uf-pdf">
                     <ul class="pdf-links">
                         <li>
-                            <a href="../pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                            <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
                                 Syarat dan Ketentuan
                             </a>
                         </li>
                         <li>
-                            <a href="../pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                            <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
                                 Layanan Pengaduan Konsumen
                             </a>
                         </li>
                         <li>
-                            <a href="../pdf/Kebijakan Privasi.pdf" target="_blank">
+                            <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
                                 Kebijakan Privasi
                             </a>
                         </li>
@@ -484,8 +456,9 @@
             </div>
         </footer>
 
+        <script src="../assets/api/tkb.js"></script>
+
         <script>
-            // Hamburger menu (mobile)
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
 
@@ -496,7 +469,6 @@
                 navMenu.classList.toggle('active');
             });
 
-            // Close menu when clicking a link
             document.querySelectorAll('.nav-menu a').forEach((link) => {
                 link.addEventListener('click', () => {
                     hamburger.classList.remove('active');
