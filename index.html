@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>UATAS</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="shortcut icon" href="assets/images/Shortcut.png" type="image/png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preload" as="image" href="assets/images/mockup-phone2.png">
 </head>
 
 <body>
@@ -64,7 +65,12 @@
 
         </div>
 
-        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation"></nav>
+        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true"
+            aria-hidden="true" tabindex="-1">
+            <div class="drawer-header">
+                <button class="drawer-button" aria-label="Tutup menu">&times;</button>
+            </div>
+        </nav>
     </header>
 
 
@@ -89,12 +95,17 @@
                             </a>
                         </div>
                     </div>
-                    <div class="hero-image" id="mockup">
-                        <img src="assets/images/mockup-phone1.png" alt="Mockup HP" id="mockup-img" />
+                    <div class="hero-image" id="mockup" aria-hidden="true">
+                        <!-- Layer A -->
+                        <img id="mockup-a" class="mockup is-visible" src="assets/images/mockup-phone1.png" alt="" />
+                        <!-- Layer B (akan fade-in saat scroll melewati ambang) -->
+                        <img id="mockup-b" class="mockup" src="assets/images/mockup-phone2.png" alt="" />
                     </div>
                 </div>
             </div>
         </section>
+
+        <div id="hero-spacer" aria-hidden="true" style="height:0"></div>
 
         <section class="why-uatas" id="why-section">
             <div class="container">
@@ -409,254 +420,172 @@
     </section>
 
     <footer class="uatas-footer">
-            <div class="container">
+        <div class="container">
 
-                <div class="uatas-footer-card">
-                    <div class="uf-left">
-                        <div class="uf-brand">
-                            <img src="../assets/images/logouatas.png" alt="Logo" class="uf-mascot">
+            <div class="uatas-footer-card">
+                <div class="uf-left">
+                    <div class="uf-brand">
+                        <img src="../assets/images/logouatas.png" alt="Logo" class="uf-mascot">
+                    </div>
+
+                    <div class="uf-office">
+                        <div class="uf-map">
+                            <iframe title="Kantor Pusat UATAS"
+                                src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
+                                loading="lazy"></iframe>
                         </div>
-
-                        <div class="uf-office">
-                            <div class="uf-map">
-                                <iframe title="Kantor Pusat UATAS"
-                                    src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
-                                    loading="lazy"></iframe>
-                            </div>
-                            <div class="uf-info">
-                                <h4>Kantor Pusat</h4>
-                                <address>
-                                    Menara Dea Tower 2 Lt. 9 Unit 902<br>
-                                    Jl. Mega Kuningan Barat Lot 2.1 RT5/RW2,<br>
-                                    Kuningan, Setiabudi, Jakarta Selatan 12950<br>
-                                    <span>DKI Jakarta</span>
-                                </address>
-                                <ul class="uf-meta">
-                                    <li>📞 <a href="tel:+622150012345">+62 21-500-12345</a></li>
-                                    <li>🕘 Senin – Jumat: 09.00 – 18.00 WIB</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="uf-office">
-                            <div class="uf-map">
-                                <iframe title="Walk in Customer Service"
-                                    src="https://www.google.com/maps?q=Wijaya+Kusuma+Jakarta+Barat&output=embed"
-                                    loading="lazy"></iframe>
-                            </div>
-                            <div class="uf-info">
-                                <h4>Walk in Customer Service</h4>
-                                <address>
-                                    Wijaya Kusuma Taman Duta Mas Blok B4 No.15,<br>
-                                    Grogol Petamburan, Jakarta Barat 11460
-                                </address>
-                                <ul class="uf-meta">
-                                    <li>📧 <a href="mailto:cs@support.uatas.id">cs@support.uatas.id</a></li>
-                                    <li>🕘 Senin–Jumat: 09.00–18.00 WIB (Walk-in)<br>Sabtu: 09.00–20.00 WIB (Call CS)
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="uf-info">
+                            <h4>Kantor Pusat</h4>
+                            <address>
+                                Menara Dea Tower 2 Lt. 9 Unit 902<br>
+                                Jl. Mega Kuningan Barat Lot 2.1 RT5/RW2,<br>
+                                Kuningan, Setiabudi, Jakarta Selatan 12950<br>
+                                <span>DKI Jakarta</span>
+                            </address>
+                            <ul class="uf-meta">
+                                <li>📞 <a href="tel:+622150012345">+62 21-500-12345</a></li>
+                                <li>🕘 Senin – Jumat: 09.00 – 18.00 WIB</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div class="uf-right">
-                        <div class="uf-download">
-                            <h5>Unduh Aplikasi di</h5>
-                            <div class="store-row">
-                                <a class="store-badge"
-                                    href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
-                                    aria-label="Google Play" target="_blank">
-                                    <img src="../assets/images/googleplay.png" alt="Get it on Google Play">
-                                </a>
-                                <a class="store-badge"
-                                    href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
-                                    aria-label="App Store" target="_blank">
-                                    <img src="../assets/images/appstore.png" alt="Download on the App Store">
-                                </a>
-                            </div>
+                    <div class="uf-office">
+                        <div class="uf-map">
+                            <iframe title="Walk in Customer Service"
+                                src="https://www.google.com/maps?q=Wijaya+Kusuma+Jakarta+Barat&output=embed"
+                                loading="lazy"></iframe>
                         </div>
-
-                        <div class="uf-social">
-                            <h5>Ikuti Kami</h5>
-                            <div class="social-row">
-                                <a href="https://www.facebook.com/UATASID/" class="social-icon" target="_blank"><i
-                                        class="fab fa-facebook"></i></a>
-                                <a href="https://x.com/UATASID" class="social-icon" target="_blank"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a href="https://www.instagram.com/uatas.id/" class="social-icon" target="_blank"><i
-                                        class="fab fa-instagram"></i></a>
-                                <a href="https://www.tiktok.com/@uatasid" class="social-icon" target="_blank"><i
-                                        class="fab fa-tiktok"></i></a>
-                                <a href="https://www.youtube.com/@uatasid" class="social-icon" target="_blank"><i
-                                        class="fab fa-youtube"></i></a>
-                            </div>
+                        <div class="uf-info">
+                            <h4>Walk in Customer Service</h4>
+                            <address>
+                                Wijaya Kusuma Taman Duta Mas Blok B4 No.15,<br>
+                                Grogol Petamburan, Jakarta Barat 11460
+                            </address>
+                            <ul class="uf-meta">
+                                <li>📧 <a href="mailto:cs@support.uatas.id">cs@support.uatas.id</a></li>
+                                <li>🕘 Senin–Jumat: 09.00–18.00 WIB (Walk-in)<br>Sabtu: 09.00–20.00 WIB (Call CS)
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="uf-notice-title">PERHATIAN</h3>
-                <div class="uf-notice-grid">
-                    <ul>
-                        <li>Layanan Pendanaan Bersama Berbasis Teknologi Informasi merupakan kesepakatan perdata antara
-                            Pemberi Dana dengan Penerima Dana, sehingga segala risiko yang timbul dari kesepakatan
-                            tersebut
-                            ditanggung sepenuhnya oleh masing-masing pihak.</li>
-                        <li>Risiko kredit atau gagal bayar ditanggung sepenuhnya oleh Pemberi Dana. Tidak ada lembaga
-                            atau
-                            otoritas negara yang bertanggung jawab atas risiko gagal bayar ini.</li>
-                        <li>Penyelenggara dengan persetujuan dari masing-masing Pengguna (Pemberi Dana dan/atau Penerima
-                            Dana) mengakses, memperoleh, menyimpan, mengelola dan/atau menggunakan data pribadi Pengguna
-                            ("Pemanfaatan Data") pada atau di dalam benda, perangkat elektronik (termasuk smartphone
-                            atau
-                            telepon seluler), perangkat keras (hardware) maupun lunak (software), dokumen elektronik,
-                            aplikasi atau sistem elektronik milik Pengguna atau yang dikuasai Pengguna, dengan
-                            memberitahukan tujuan, batasan dan mekanisme Pemanfaatan Data tersebut kepada Pengguna yang
-                            bersangkutan sebelum memperoleh persetujuan yang dimaksud.</li>
-                        <li>Pemberi Dana yang belum memiliki pengetahuan dan pengalaman pendanaan, disarankan untuk
-                            tidak
-                            menggunakan layanan UATAS ini.</li>
-                        <li>Penerima Dana harus mempertimbangkan tingkat bunga Pendanaan dan biaya lainnya sesuai dengan
-                            kemampuan dalam melunasi Pendanaan.</li>
-                        <li>Setiap kecurangan tercatat secara digital di dunia maya dan dapat diketahui masyarakat luas
-                            di
-                            media sosial.</li>
-                    </ul>
-                    <ul>
-                        <li>Pengguna harus membaca dan memahami informasi ini sebelum membuat keputusan menjadi Pemberi
-                            Dana
-                            atau Penerima Dana.</li>
-                        <li>Pemerintah yaitu dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas setiap
-                            pelanggaran atau ketidakpatuhan oleh Pengguna, baik Pemberi Dana maupun Penerima Dana (baik
-                            karena kesengajaan atau kelalaian Pengguna) terhadap ketentuan peraturan perundang-undangan
-                            maupun kesepakatan atau perikatan antara Penyelenggara (dalam hal ini adalah “UATAS”) dengan
-                            Pemberi Dana dan/atau Penerima Dana.</li>
-                        <li>Setiap transaksi dan kegiatan pendanaan atau pelaksanaan kesepakatan mengenai pendanaan
-                            antara
-                            atau yang melibatkan UATAS, Pemberi Dana dan/atau Penerima Dana wajib dilakukan melalui
-                            escrow
-                            account dan virtual account sebagaimana yang diwajibkan berdasarkan Peraturan Otoritas Jasa
-                            Keuangan Nomor 10 /POJK.05/2022 tentang Layanan Pendanaan Bersama Berbasis Teknologi
-                            Informasi
-                            dan pelanggaran atau ketidakpatuhan terhadap ketentuan tersebut merupakan bukti telah
-                            terjadinya
-                            pelanggaran hukum oleh UATAS sehingga UATAS wajib menanggung ganti rugi yang diderita oleh
-                            masing-masing Pengguna sebagai akibat langsung dari pelanggaran hukum tersebut diatas tanpa
-                            mengurangi hak Pengguna yang menderita kerugian menurut Kitab Undang-Undang Hukum Perdata.
-                        </li>
-                        <li>Hati-hati, transaksi ini beresiko tinggi. Anda dapat saja mengalami kerugian atau kehilangan
-                            uang. Jangan berutang jika tidak memiliki kemampuan membayar. Pertimbangkan secara bijak
-                            sebelum
-                            bertransaksi.</li>
-                    </ul>
-                </div>
+                <div class="uf-right">
+                    <div class="uf-download">
+                        <h5>Unduh Aplikasi di</h5>
+                        <div class="store-row">
+                            <a class="store-badge"
+                                href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
+                                aria-label="Google Play" target="_blank">
+                                <img src="../assets/images/googleplay.png" alt="Get it on Google Play">
+                            </a>
+                            <a class="store-badge"
+                                href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
+                                aria-label="App Store" target="_blank">
+                                <img src="../assets/images/appstore.png" alt="Download on the App Store">
+                            </a>
+                        </div>
+                    </div>
 
-                <div class="uf-pdf">
-                    <ul class="pdf-links">
-                        <li>
-                            <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
-                                Syarat dan Ketentuan
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
-                                Layanan Pengaduan Konsumen
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
-                                Kebijakan Privasi
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="uf-social">
+                        <h5>Ikuti Kami</h5>
+                        <div class="social-row">
+                            <a href="https://www.facebook.com/UATASID/" class="social-icon" target="_blank"><i
+                                    class="fab fa-facebook"></i></a>
+                            <a href="https://x.com/UATASID" class="social-icon" target="_blank"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/uatas.id/" class="social-icon" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@uatasid" class="social-icon" target="_blank"><i
+                                    class="fab fa-tiktok"></i></a>
+                            <a href="https://www.youtube.com/@uatasid" class="social-icon" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="uf-copy">Copyright © 2025 Uatas. All rights reserved.</div>
             </div>
-        </footer>
+
+            <h3 class="uf-notice-title">PERHATIAN</h3>
+            <div class="uf-notice-grid">
+                <ul>
+                    <li>Layanan Pendanaan Bersama Berbasis Teknologi Informasi merupakan kesepakatan perdata antara
+                        Pemberi Dana dengan Penerima Dana, sehingga segala risiko yang timbul dari kesepakatan
+                        tersebut
+                        ditanggung sepenuhnya oleh masing-masing pihak.</li>
+                    <li>Risiko kredit atau gagal bayar ditanggung sepenuhnya oleh Pemberi Dana. Tidak ada lembaga
+                        atau
+                        otoritas negara yang bertanggung jawab atas risiko gagal bayar ini.</li>
+                    <li>Penyelenggara dengan persetujuan dari masing-masing Pengguna (Pemberi Dana dan/atau Penerima
+                        Dana) mengakses, memperoleh, menyimpan, mengelola dan/atau menggunakan data pribadi Pengguna
+                        ("Pemanfaatan Data") pada atau di dalam benda, perangkat elektronik (termasuk smartphone
+                        atau
+                        telepon seluler), perangkat keras (hardware) maupun lunak (software), dokumen elektronik,
+                        aplikasi atau sistem elektronik milik Pengguna atau yang dikuasai Pengguna, dengan
+                        memberitahukan tujuan, batasan dan mekanisme Pemanfaatan Data tersebut kepada Pengguna yang
+                        bersangkutan sebelum memperoleh persetujuan yang dimaksud.</li>
+                    <li>Pemberi Dana yang belum memiliki pengetahuan dan pengalaman pendanaan, disarankan untuk
+                        tidak
+                        menggunakan layanan UATAS ini.</li>
+                    <li>Penerima Dana harus mempertimbangkan tingkat bunga Pendanaan dan biaya lainnya sesuai dengan
+                        kemampuan dalam melunasi Pendanaan.</li>
+                    <li>Setiap kecurangan tercatat secara digital di dunia maya dan dapat diketahui masyarakat luas
+                        di
+                        media sosial.</li>
+                </ul>
+                <ul>
+                    <li>Pengguna harus membaca dan memahami informasi ini sebelum membuat keputusan menjadi Pemberi
+                        Dana
+                        atau Penerima Dana.</li>
+                    <li>Pemerintah yaitu dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas setiap
+                        pelanggaran atau ketidakpatuhan oleh Pengguna, baik Pemberi Dana maupun Penerima Dana (baik
+                        karena kesengajaan atau kelalaian Pengguna) terhadap ketentuan peraturan perundang-undangan
+                        maupun kesepakatan atau perikatan antara Penyelenggara (dalam hal ini adalah “UATAS”) dengan
+                        Pemberi Dana dan/atau Penerima Dana.</li>
+                    <li>Setiap transaksi dan kegiatan pendanaan atau pelaksanaan kesepakatan mengenai pendanaan
+                        antara
+                        atau yang melibatkan UATAS, Pemberi Dana dan/atau Penerima Dana wajib dilakukan melalui
+                        escrow
+                        account dan virtual account sebagaimana yang diwajibkan berdasarkan Peraturan Otoritas Jasa
+                        Keuangan Nomor 10 /POJK.05/2022 tentang Layanan Pendanaan Bersama Berbasis Teknologi
+                        Informasi
+                        dan pelanggaran atau ketidakpatuhan terhadap ketentuan tersebut merupakan bukti telah
+                        terjadinya
+                        pelanggaran hukum oleh UATAS sehingga UATAS wajib menanggung ganti rugi yang diderita oleh
+                        masing-masing Pengguna sebagai akibat langsung dari pelanggaran hukum tersebut diatas tanpa
+                        mengurangi hak Pengguna yang menderita kerugian menurut Kitab Undang-Undang Hukum Perdata.
+                    </li>
+                    <li>Hati-hati, transaksi ini beresiko tinggi. Anda dapat saja mengalami kerugian atau kehilangan
+                        uang. Jangan berutang jika tidak memiliki kemampuan membayar. Pertimbangkan secara bijak
+                        sebelum
+                        bertransaksi.</li>
+                </ul>
+            </div>
+
+            <div class="uf-pdf">
+                <ul class="pdf-links">
+                    <li>
+                        <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                            Syarat dan Ketentuan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                            Layanan Pengaduan Konsumen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
+                            Kebijakan Privasi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="uf-copy">Copyright © 2025 Uatas. All rights reserved.</div>
+        </div>
+    </footer>
+
     <script src="assets/api/tkb.js"></script>
-
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const mockup = document.getElementById('mockup');
-            const mockupImg = document.getElementById('mockup-img');
-            const whySection = document.getElementById('why-section');
-            const container = document.querySelector('.container');
-
-            if (!mockup || !mockupImg || !whySection || !container) return;
-
-            const FIXED_TOP = 120;
-            const SHRINK_OFFSET = 0;
-            const STOP_EXTRA = 0;
-
-            function computeRightPx() {
-                const containerStyle = getComputedStyle(container);
-                const paddingRight = parseFloat(containerStyle.paddingRight) || 0;
-                const containerWidth = container.offsetWidth;
-                const rightRemaining = (window.innerWidth - containerWidth) / 2;
-                return rightRemaining + paddingRight;
-            }
-
-            function getMetrics() {
-                const whyTop = whySection.offsetTop;
-                const whyBottom = whyTop + whySection.offsetHeight;
-                const mockupH = mockup.offsetHeight;
-                const rightPx = computeRightPx();
-
-                const enterPoint = whyTop - SHRINK_OFFSET;
-                const stopPoint = whyBottom - mockupH - FIXED_TOP - STOP_EXTRA;
-
-                return { whyTop, whyBottom, mockupH, rightPx, enterPoint, stopPoint };
-            }
-
-            let metrics = getMetrics();
-
-            function onScroll() {
-                metrics = getMetrics();
-                const sc = window.scrollY;
-
-                if (sc >= metrics.enterPoint && sc < metrics.stopPoint) {
-                    mockup.style.position = 'fixed';
-                    mockup.style.top = FIXED_TOP + 'px';
-                    mockup.style.right = metrics.rightPx + 'px';
-                    mockup.classList.add('shrink');
-                    mockup.classList.remove('stop');
-                    mockupImg.src = 'images/mockup-phone2.png';
-                } else if (sc >= metrics.stopPoint) {
-                    mockup.style.position = 'absolute';
-                    mockup.style.top = (metrics.whyBottom - metrics.mockupH - STOP_EXTRA) + 'px';
-                    mockup.style.right = metrics.rightPx + 'px';
-                    mockup.classList.add('shrink');
-                    mockup.classList.add('stop');
-                    mockupImg.src = 'assets/images/mockup-phone2.png';
-                } else {
-                    mockup.style.position = 'fixed';
-                    mockup.style.top = FIXED_TOP + 'px';
-                    mockup.style.right = metrics.rightPx + 'px';
-                    mockup.classList.remove('shrink');
-                    mockup.classList.remove('stop');
-                    mockupImg.src = 'assets/images/mockup-phone1.png';
-                }
-            }
-
-            window.addEventListener('scroll', onScroll, { passive: true });
-            window.addEventListener('resize', () => { metrics = getMetrics(); onScroll(); });
-            onScroll();
-        });
-
-    </script>
 
     <script>
         const cards = document.querySelectorAll(".testimonial-card");
@@ -711,10 +640,13 @@
     <script>
         (() => {
             const slider = document.querySelector('.otp-slider');
+            if (!slider) return;
+
             const track = slider.querySelector('.otp-track');
             const slides = Array.from(track.children);
             const dotsWrap = slider.querySelector('.otp-dots');
 
+            // buat dots
             slides.forEach((_, i) => {
                 const dot = document.createElement('button');
                 dot.setAttribute('role', 'tab');
@@ -725,7 +657,7 @@
             const dots = Array.from(dotsWrap.children);
 
             let index = 0;
-            let timer;
+            let timer = null;
 
             function go(i) {
                 index = (i + slides.length) % slides.length;
@@ -734,13 +666,24 @@
             }
             const next = () => go(index + 1);
 
-            dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
+            function start() {
+                stop();
+                timer = setInterval(next, 5000);
+            }
+            function stop() {
+                if (timer) { clearInterval(timer); timer = null; }
+            }
+
+            dots.forEach((d, i) => d.addEventListener('click', () => { go(i); start(); }));
 
             slider.addEventListener('mouseenter', stop);
             slider.addEventListener('mouseleave', start);
+
+            go(0);
             start();
         })();
     </script>
+
 
     <script>
         (function makeAutoCarousel(rootSel, speedPxPerSec = 60) {
@@ -809,7 +752,7 @@
             let num = parseInt(value, 10);
 
             if (type === "triliun") {
-                return (num / 1_000_000_000_000).toFixed(2); 
+                return (num / 1_000_000_000_000).toFixed(2);
             } else if (type === "juta") {
                 return (num / 1_000_000).toFixed(2);
             } else if (type === "ribu") {
@@ -823,26 +766,354 @@
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({})
         })
-        .then(res => res.json())
-        .then(res => {
-            let data = res.data.website_conf;
+            .then(res => res.json())
+            .then(res => {
+                let data = res.data.website_conf;
 
-            const getVal = (alias) => data.find(item => item.alias === alias)?.value || 0;
+                const getVal = (alias) => data.find(item => item.alias === alias)?.value || 0;
 
-            document.getElementById("total-pendanaan").textContent = 
-                formatNumber(getVal("total_pendanaan_sejak_didirikan"), "triliun");
+                document.getElementById("total-pendanaan").textContent =
+                    formatNumber(getVal("total_pendanaan_sejak_didirikan"), "triliun");
 
-            document.getElementById("total-pendanaan-tahun").textContent = 
-                formatNumber(getVal("total_pendanaan_tahun_berjalan"), "triliun");
+                document.getElementById("total-pendanaan-tahun").textContent =
+                    formatNumber(getVal("total_pendanaan_tahun_berjalan"), "triliun");
 
-            document.getElementById("akumulasi-borrower").textContent = 
-                formatNumber(getVal("jumlah_akumulasi_borrower"), "juta");
+                document.getElementById("akumulasi-borrower").textContent =
+                    formatNumber(getVal("jumlah_akumulasi_borrower"), "juta");
 
-            document.getElementById("borrower-aktif").textContent = 
-                formatNumber(getVal("jumlah_borrower_aktif"), "ribu");
-        })
-        .catch(err => console.error(err));
+                document.getElementById("borrower-aktif").textContent =
+                    formatNumber(getVal("jumlah_borrower_aktif"), "ribu");
+            })
+            .catch(err => console.error(err));
+        if (window.innerWidth <= 900) {
+            buildDrawerContent(); // refresh isi drawer dengan angka terbaru
+        }
+
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mock = document.getElementById('mockup');
+            const imgA = document.getElementById('mockup-a');
+            const imgB = document.getElementById('mockup-b');
+            const hero = document.querySelector('.hero');
+            if (!mock || !imgA || !imgB || !hero) return;
+
+            const mq = window.matchMedia('(max-width: 900px)');
+
+            const MAX_SHRINK_TRAVEL = 240;
+            const MOVE_Y = 200;
+            const SCALE_DELTA = 0.09;
+            const SWAP_THRESHOLD = 0.20;
+
+            hero.style.paddingBottom = `${MOVE_Y}px`;
+
+            let rafId = null;
+
+            function calcProgress() {
+                const startY = hero.offsetTop;
+                const scY = Math.max(0, window.scrollY - startY);
+                return Math.max(0, Math.min(1, scY / MAX_SHRINK_TRAVEL));
+            }
+            function apply(p) {
+                const translateY = MOVE_Y * p;
+                const scale = 1 - SCALE_DELTA * p;
+                mock.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                if (p >= SWAP_THRESHOLD) {
+                    imgA.classList.remove('is-visible');
+                    imgB.classList.add('is-visible');
+                } else {
+                    imgB.classList.remove('is-visible');
+                    imgA.classList.add('is-visible');
+                }
+            }
+            function onRaf() { rafId = null; apply(calcProgress()); }
+            function schedule() { if (rafId == null) rafId = requestAnimationFrame(onRaf); }
+
+            function enableDesktop() {
+                // reset vis
+                imgA.classList.add('is-visible');
+                imgB.classList.remove('is-visible');
+                // aktifkan animasi + swap
+                window.addEventListener('scroll', schedule, { passive: true });
+                window.addEventListener('resize', schedule);
+                schedule();
+            }
+            function disableMobile() {
+                // lepas listener
+                window.removeEventListener('scroll', schedule);
+                window.removeEventListener('resize', schedule);
+                cancelAnimationFrame(rafId); rafId = null;
+                // reset transform & pakai A saja
+                mock.style.transform = 'none';
+                imgA.classList.add('is-visible');
+                imgB.classList.remove('is-visible');
+                hero.style.paddingBottom = '0';
+            }
+
+            function handleBP(e) {
+                if (e.matches) {        // <= 900px
+                    disableMobile();
+                } else {               // > 900px
+                    enableDesktop();
+                }
+            }
+            // init
+            handleBP(mq);
+            mq.addEventListener?.('change', handleBP);
+        });
+    </script>
+
+    <script>
+        // Elemen dasar
+        const header = document.querySelector('.header');
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');      // menu desktop
+        const navDrawer = document.getElementById('navDrawer');   // drawer mobile
+
+        // Anchor utk mengembalikan navMenu ke tempat semula saat layar > breakpoint
+        const navAnchor = document.createComment('nav-menu-anchor');
+        if (navMenu && navMenu.parentNode) {
+            navMenu.parentNode.insertBefore(navAnchor, navMenu);
+        }
+
+        let backdrop = null;
+
+        function openDrawer() {
+            if (!navDrawer) return;
+            navDrawer.classList.add('open');
+            makeBackdrop();
+            document.body.style.overflow = 'hidden';
+            hamburger?.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeDrawer() {
+            if (!navDrawer) return;
+            navDrawer.classList.remove('open');
+            removeBackdrop();
+            document.body.style.overflow = '';
+            hamburger?.setAttribute('aria-expanded', 'false');
+        }
+
+        function makeBackdrop() {
+            if (backdrop) return;
+            backdrop = document.createElement('div');
+            backdrop.className = 'drawer-backdrop';
+            backdrop.addEventListener('click', closeDrawer);
+            document.body.appendChild(backdrop);
+            requestAnimationFrame(() => backdrop.classList.add('show'));
+        }
+
+        function removeBackdrop() {
+            if (!backdrop) return;
+            backdrop.classList.remove('show');
+            backdrop.addEventListener('transitionend', () => {
+                backdrop?.remove();
+                backdrop = null;
+            }, { once: true });
+        }
+
+        // Toggle tombol hamburger
+        hamburger?.addEventListener('click', () => {
+            navDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
+        });
+
+        // ===== Drawer builder =====
+        const BP = 900; // breakpoint harus sama dengan CSS
+
+        function buildDrawerContent() {
+            if (!navDrawer || !navMenu) return;
+
+            // kosongkan drawer
+            navDrawer.innerHTML = '';
+
+            // clone menu desktop ke drawer
+            const mobileMenu = navMenu.cloneNode(true);
+            mobileMenu.classList.remove('active');
+            navDrawer.appendChild(mobileMenu);
+
+            // --- SISIPKAN "Periksa TKB" SEBAGAI ITEM LIST ---
+            const tkbLi = document.createElement('li');
+            tkbLi.className = 'tkb-mobile';
+            // ambil angka terkini dari DOM jika sudah terisi
+            const gv = id => document.getElementById(id)?.textContent || '--%';
+            tkbLi.innerHTML = `
+      <a href="#" class="tkb-toggle">Periksa TKB</a>
+      <ul class="tkb-sub">
+        <li><strong>TKB0:</strong> ${gv('TKB0')}</li>
+        <li><strong>TKB30:</strong> ${gv('TKB30')}</li>
+        <li><strong>TKB60:</strong> ${gv('TKB60')}</li>
+        <li><strong>TKB90:</strong> ${gv('TKB90')}</li>
+      </ul>
+    `;
+            mobileMenu.appendChild(tkbLi);
+
+            // Jadikan dropdown biasa sebagai akordeon
+            mobileMenu.querySelectorAll('.dropdown > a').forEach(a => {
+                a.addEventListener('click', e => {
+                    e.preventDefault();          // jangan navigate
+                    a.parentElement.classList.toggle('open');
+                });
+            });
+
+            tkbLi.querySelector('.tkb-toggle').addEventListener('click', e => {
+                e.preventDefault();
+                tkbLi.classList.toggle('open');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    if (a.closest('.dropdown') || a.closest('.tkb-mobile')) return;
+                    closeDrawer();
+                });
+            });
+
+            function updateDrawerTKB() {
+                const sel = (k) => document.getElementById(k)?.textContent || '--%';
+                const li = document.querySelector('#navDrawer .tkb-mobile');
+                if (!li) return;
+                li.querySelector('.tkb-sub').innerHTML = `
+    <li><strong>TKB0:</strong> ${sel('TKB0')}</li>
+    <li><strong>TKB30:</strong> ${sel('TKB30')}</li>
+    <li><strong>TKB60:</strong> ${sel('TKB60')}</li>
+    <li><strong>TKB90:</strong> ${sel('TKB90')}</li>
+  `;
+            }
+
+            const obs = new MutationObserver(() => {
+                if (window.innerWidth <= BP) {
+                    // pastikan drawer punya blok TKB
+                    if (!document.querySelector('#navDrawer .tkb-mobile')) buildDrawerContent();
+                    updateDrawerTKB();
+                }
+            });
+
+            ['TKB0', 'TKB30', 'TKB60', 'TKB90'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) obs.observe(el, { childList: true });
+            });
+
+        }
+
+        function syncDrawer() {
+            if (window.innerWidth <= BP) {
+                // pastikan drawer terisi
+                if (!navDrawer.querySelector('.nav-menu')) buildDrawerContent();
+            } else {
+                // kembalikan menu desktop ke posisi semula
+                if (navAnchor && navMenu && navAnchor.parentNode && navMenu.parentNode !== navAnchor.parentNode) {
+                    navAnchor.parentNode.insertBefore(navMenu, navAnchor.nextSibling);
+                }
+                closeDrawer();
+            }
+        }
+
+        window.addEventListener('resize', syncDrawer);
+        document.addEventListener('DOMContentLoaded', syncDrawer);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const closeBtn = document.querySelector('.drawer-close');
+            closeBtn?.addEventListener('click', () => {
+                closeDrawer();
+            });
+        });
+    </script>
+
+    <script>
+        (function () {
+            const hero = document.querySelector('.hero');
+            const mock = document.getElementById('mockup');     // <div class="hero-image" id="mockup">
+            const spacer = document.getElementById('hero-spacer');
+            const mq = window.matchMedia('(max-width: 900px)');
+
+            if (!hero || !mock || !spacer) return;
+
+            function computeOverhang() {
+                // posisi bawah elemen relatif viewport
+                const heroRect = hero.getBoundingClientRect();
+                const mockRect = mock.getBoundingClientRect();
+                // berapa bagian mockup yang “menjuntai” di bawah hero
+                const overhang = Math.max(0, Math.ceil(mockRect.bottom - heroRect.bottom));
+                return overhang;
+            }
+
+            let rafId = null;
+            function schedule() {
+                if (rafId) return;
+                rafId = requestAnimationFrame(() => {
+                    rafId = null;
+                    // Desktop: aktifkan spacer; Mobile: nolkan
+                    if (mq.matches) {
+                        spacer.style.height = '0px';
+                        return;
+                    }
+                    spacer.style.height = computeOverhang() + 'px';
+                });
+            }
+
+            // Update saat scroll/resize/zoom (zoom memicu resize di sebagian besar browser)
+            window.addEventListener('scroll', schedule, { passive: true });
+            window.addEventListener('resize', schedule);
+
+            // Kalau animasi hero kamu pakai requestAnimationFrame sendiri,
+            // panggil schedule() di akhir apply() juga biar spacer ikut gerak.
+            // Atau cukup interval ringan:
+            let tick = setInterval(schedule, 100); // aman & ringan
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) { clearInterval(tick); tick = null; }
+                else if (!tick) { tick = setInterval(schedule, 100); }
+            });
+
+            // Pastikan hero tidak memotong mockup
+            hero.style.overflow = 'visible';
+
+            // Inisialisasi
+            schedule();
+        })(); 
+    </script>
+
+    <script>
+        (() => {
+            const hero = document.querySelector('.hero');
+            const mock = document.getElementById('mockup');  // <div class="hero-image" id="mockup">
+            if (!hero || !mock) return;
+
+            // buat spacer jika belum ada
+            let spacer = document.getElementById('hero-spacer');
+            if (!spacer) {
+                spacer = document.createElement('div');
+                spacer.id = 'hero-spacer';
+                spacer.setAttribute('aria-hidden', 'true');
+                spacer.style.height = '0px';
+                hero.insertAdjacentElement('afterend', spacer);
+            }
+
+            const mqMobile = window.matchMedia('(max-width: 900px)');
+            let raf = null;
+
+            function sync() {
+                if (raf) return;
+                raf = requestAnimationFrame(() => {
+                    raf = null;
+                    if (mqMobile.matches) { spacer.style.height = '0px'; return; }
+                    const hr = hero.getBoundingClientRect();
+                    const mr = mock.getBoundingClientRect();
+                    const overhang = Math.max(0, Math.round(mr.bottom - hr.bottom));
+                    spacer.style.height = overhang + 'px';
+                });
+            }
+
+            // update saat scroll/resize (zoom memicu resize)
+            window.addEventListener('scroll', sync, { passive: true });
+            window.addEventListener('resize', sync);
+            // panggil sekali
+            sync();
+        })();
+    </script>
+
+
+
+
 </body>
 
 </html>
