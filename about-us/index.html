@@ -11,1129 +11,1146 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="tentang-page">
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="/" class="nav-brand" aria-label="UATAS">
+                <img src="../assets/images/logouatas.png" alt="UATAS" class="logo" />
+            </a>
 
-    <body class="tentang-page">
+            <nav class="navigation" aria-label="Primary">
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="../produk/">Produk</a></li>
+                    <li><a href="../about-us/">Tentang Kami</a></li>
+                    <li class="dropdown">
+                        <a href="#bantuan">Bantuan</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../faq/">FAQ</a></li>
+                            <li><a href="../kontak/">Kontak</a></li>
+                            <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">Syarat dan
+                                    Ketentuan</a></li>
+                            <li><a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">Kebijakan Privasi</a></li>
+                            <li><a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf"
+                                    target="_blank">Layanan Pengaduan Konsumen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
 
-        <header class="header" role="banner">
-            <div class="container">
-                <a href="/" class="nav-brand" aria-label="UATAS">
-                    <img src="../assets/images/logouatas.png" alt="UATAS" class="logo" />
-                </a>
+            <button class="hamburger" aria-label="Buka menu" aria-controls="navDrawer" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
 
-                <nav class="navigation" aria-label="Primary">
-                    <ul class="nav-menu">
-                        <li><a href="../">Beranda</a></li>
-                        <li><a href="../produk/">Produk</a></li>
-                        <li><a href="../about-us/">Tentang Kami</a></li>
+            <div class="tkb-icon" aria-describedby="tkb-tip">
+                <img src="../assets/images/Periksa TKB.png" alt="Periksa TKB" />
+                <div class="tkb-tooltip" id="tkb-tip">
+                    <strong>TKB0 :</strong> <span id="TKB0">--%</span><br>
+                    <strong>TKB30 :</strong> <span id="TKB30">--%</span><br>
+                    <strong>TKB60 :</strong> <span id="TKB60">--%</span><br>
+                    <strong>TKB90 :</strong> <span id="TKB90">--%</span>
+                </div>
+            </div>
+        </div>
 
-                        <li class="dropdown">
-                            <a href="#bantuan">Bantuan</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="../faq/">FAQ</a></li>
-                                <li><a href="../kontak/">Kontak</a></li>
-                                <li>
-                                    <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
-                                        Syarat dan Ketentuan
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
-                                        Kebijakan Privasi
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
-                                        Layanan Pengaduan Konsumen
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+        <!-- Mobile drawer -->
+        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation">
+            <ul class="nav-menu">
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../produk/index.html">Produk</a></li>
+                <li><a href="index.html" aria-current="page">Tentang Kami</a></li>
+
+                <!-- dropdown Bantuan untuk mobile (akordeon) -->
+                <li class="dropdown">
+                    <a href="#bantuan">Bantuan</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../faq/index.html">FAQ</a></li>
+                        <li><a href="../kontak/index.html">Kontak</a></li>
+                        <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank" rel="noopener">Syarat
+                                dan Ketentuan</a></li>
+                        <li><a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank" rel="noopener">Kebijakan
+                                Privasi</a></li>
+                        <li><a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank"
+                                rel="noopener">Layanan Pengaduan Konsumen</a></li>
                     </ul>
-                </nav>
+                </li>
 
-                <button class="hamburger" aria-label="Buka menu" aria-controls="navDrawer" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
+                <li class="tkb-mobile">
+                    <a href="#" class="tkb-toggle">Periksa TKB</a>
+                    <ul class="tkb-sub">
+                        <li><strong>TKB0:</strong> --%</li>
+                        <li><strong>TKB30:</strong> --%</li>
+                        <li><strong>TKB60:</strong> --%</li>
+                        <li><strong>TKB90:</strong> --%</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="drawer-backdrop"></div>
+    </header>
 
-                <div class="tkb-icon" aria-describedby="tkb-tip">
-                    <img src="../assets/images/Periksa TKB.png" alt="Periksa TKB" />
-                    <div class="tkb-tooltip">
-                        <strong>TKB0 :</strong> <span id="TKB0">--%</span><br>
-                        <strong>TKB30 :</strong> <span id="TKB30">--%</span><br>
-                        <strong>TKB60 :</strong> <span id="TKB60">--%</span><br>
-                        <strong>TKB90 :</strong> <span id="TKB90">--%</span>
+    <main id="content">
+        <!-- HERO -->
+        <section class="prod-hero site-section">
+            <div class="container">
+                <div class="wrap">
+                    <div class="hero-copy">
+                        <h1>Tentang UATAS</h1>
+                        <p>
+                            PT. Plus Ultra Abadi (UATAS) adalah platform peer-to-peer (P2P) lending berbasis teknologi
+                            yang aman, nyaman, dan terpercaya. UATAS menjembatani pemberi dan penerima dana untuk
+                            pendanaan multiguna maupun produktif, sekaligus mendukung wirausahawan di Indonesia. Dengan
+                            visi
+                            menjadi fintech terpercaya, UATAS menghadirkan layanan terbaik berbasis AI, Machine
+                            Learning, dan Big Data
+                        </p>
+                    </div>
+                    <div class="hero-art">
+                        <img class="main" src="../assets/images/tentangkami.png" alt="Ilustrasi produk UATAS"
+                            loading="lazy" />
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- mobile drawer -->
-            <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation">
-                <ul>
-                    <li><a href="../beranda/index.html">Beranda</a></li>
-                    <li><a href="../produk/index.html">Produk</a></li>
-                    <li><a href="index.html" aria-current="page">Tentang Kami</a></li>
-                    <li><a href="../faq/index.html">FAQ</a></li>
-                    <li><a href="../kontak/index.html">Kontak</a></li>
-                </ul>
-            </nav>
-            <div class="drawer-backdrop" hidden></div>
-        </header>
+        <!-- PARTNERS -->
+        <section class="partners-wrap">
+            <h2>Mitra Kami</h2>
+            <div class="about_list_container">
+                <ul class="about_list">
+                    <li class="flex">
+                        <a href="https://www.cashcashpro.id/" target="_blank" class="about_check" rel="noopener">
+                            <img src="https://www.cashcashpro.id/img/5fc215a9-07ab-4dad-a4b1-9d68784edd7d.png"
+                                alt="PT. Digital Kuantum Teknologi" width="56" height="56" loading="lazy"
+                                decoding="async">
+                        </a>
+                        <div class="about_list_content">
+                            <a href="https://www.cashcashpro.id/" target="_blank" class="nama" rel="noopener">PT.
+                                Digital Kuantum Teknologi</a>
+                            <p class="deskrip">Cashcash Pro adalah produk dari PT Digital Kuantum Teknologi yang
+                                merupakan mitra resmi kami. Kerjasama ini bertujuan untuk menyediakan layanan keuangan
+                                yang nyaman dan efisien bagi seluruh pengguna UATAS.</p>
+                        </div>
+                    </li>
 
-        <main id="content">
-            <!-- HERO -->
-            <section class="prod-hero site-section">
-                <div class="container">
-                    <div class="wrap">
-                        <div class="hero-copy">
-                            <h1>Tentang UATAS</h1>
-                            <p>
-                                PT. Plus Ultra Abadi (UATAS) adalah platform peer-to-peer (P2P) lending berbasis
-                                teknologi
-                                yang aman, nyaman, dan terpercaya. UATAS menjembatani pemberi dan penerima dana untuk
-                                pendanaan multiguna maupun produktif, sekaligus mendukung wirausahawan di
-                                Indonesia. Dengan visi menjadi fintech terpercaya, UATAS menghadirkan layanan terbaik
-                                berbasis AI, Machine Learning, dan Big Data
+                    <li class="flex">
+                        <a href="https://privy.id/" target="_blank" class="about_check">
+                            <img src="https://privy.id/static/privy.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://privy.id/" target="_blank" class="nama">PT Privy Identitas Digital</a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Privy di Agustus 2022. Dengan
+                                menggunakan layanan Privy untuk tanda tangan elektronik dan KYC (Know Your Customer)
+                                untuk melakukan verifikasi pada calon borrower UATAS.
                             </p>
                         </div>
-                        <div class="hero-art">
-                            <img class="main" src="../assets/images/tentangkami.png" alt="Ilustrasi produk UATAS"
-                                loading="lazy" />
+                    </li>
+                    <li class="flex">
+                        <a href="https://vida.id/id/" target="_blank" class="about_check">
+                            <img src="https://vida.id/hs-fs/hubfs/VIDA_2023-09.png?width=225&height=57&name=VIDA_2023-09.png"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://vida.id/id/" target="_blank" class="nama">PT Vida Digital Indentity</a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan VIDA di November 2024. Dengan
+                                menggunakan layanan VIDA untuk tanda tangan elektronik dan KYC (Know Your Customer)
+                                untuk melakukan verifikasi pada calon borrower UATAS.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.ocbc.id/" target="_blank" class="about_check">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_UC0icKEaY9m4wbrcdJUULe2rTfMQ2KEkzA&s"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.ocbc.id/" target="_blank" class="nama">PT Bank OCBC NISP TBK</a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Bank OCBC sejak tahun 2019
+                                untuk
+                                fasilitas digital banking escrow dan virtual account
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.bni.co.id/id-id/" target="_blank" class="about_check">
+                            <img src="https://www.bni.co.id/Portals/1/bni-logo-id.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.bni.co.id/id-id/" target="_blank" class="nama">PT Bank Negara
+                                Indonesia</a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Bank OCBC sejak tahun 2020
+                                untuk
+                                fasilitas digital banking escrow dan virtual account, dan untuk lender open account
+                                RDL
+                                di BNI
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.bankneocommerce.co.id/id/home" target="_blank" class="about_check">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Bank_Neo_Commerce.png"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.bankneocommerce.co.id/id/home" target="_blank" class="nama">PT Bank
+                                Neo
+                                Commerce Tbk</a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Bank OCBC sejak tahun 2022
+                                untuk
+                                fasilitas digital banking escrow dan virtual account, dan untuk lender open account
+                                RDL
+                                di BNC
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://lbtindonesia.com/" target="_blank" class="about_check">
+                            <img src="../assets/images/lbt.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://lbtindonesia.com/" target="_blank" class="nama">PT Luar Biasa Teknologi
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan PT. LBT untuk melakukan
+                                penagihan
+                                kepada nasabah dengan syarat bahwa nasabah tersebut jatuh tempo pembayaran hingga
+                                keterlambatan 7 hari
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.mitrakoleksimandiri.com/" target="_blank" class="about_check">
+                            <img src="https://www.mitrakoleksimandiri.com/wp-content/uploads/2024/12/logo_main.png"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.mitrakoleksimandiri.com/" target="_blank" class="nama">PT Mitra
+                                Koleksi
+                                Mandiri</a>
+                            <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Mitra Koleksi Mandiri
+                                dalam
+                                Penyediaan Jasa layanan Penagihan Pinjaman
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://xinghaotechnology.com/id/" target="_blank" class="about_check">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://xinghaotechnology.com/id/" target="_blank" class="nama">PT Xing Hao
+                                Technology</a>
+                            <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Xing Hao Technology dalam
+                                Penyediaan Jasa layanan Penagihan Pinjaman
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://telmark.co.id/" target="_blank" class="about_check">
+                            <img src="https://telmark.co.id/wp-content/uploads/2023/07/logo-TELMARK-HD-PNG.png"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://telmark.co.id/" target="_blank" class="nama">PT Telmark Integrasi
+                                Indonesia</a>
+                            <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Telmark Integrasi
+                                Indonesia
+                                dalam Penyediaan Jasa layanan Penagihan Pinjaman
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://colmitra.com/" target="_blank" class="about_check">
+                            <img src="https://colmitra.com/wp-content/uploads/2022/12/logo.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://colmitra.com/" target="_blank" class="nama">PT Colmitra Persada
+                                Indonesia</a>
+                            <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Colmitra Persada
+                                Indonesia
+                                dalam Penyediaan Jasa layanan Penagihan Pinjaman
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://vjr.co.id/" target="_blank" class="about_check">
+                            <img src="https://vjr.co.id/assets/img/Logo.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://vjr.co.id/" target="_blank" class="nama">PT Vista Jaya Raya</a>
+                            <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Vista Jaya Raya dalam
+                                Penyediaan Jasa layanan Penagihan Pinjaman
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="#" target="_blank" class="about_check">
+                            <img src="../assets/images/tin.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="#" target="_blank" class="nama">PT Teknologi Internasional Nusantara</a>
+                            <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Teknologi Internasional
+                                Nusantara dalam Penyediaan Jasa layanan Penagihan Pinjaman
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="http://www.ednindo.com/" target="_blank" class="about_check">
+                            <img src="https://toploker.com/assets/images/perusahaan/profile/1725613486935781.jpg"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="http://www.ednindo.com/" target="_blank" class="nama">PT Ekosistem Digital
+                                Nusantara </a>
+                            <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Ekosistem Digital
+                                Nusantara
+                                dalam Penyediaan Jasa Layanan Penagihan Pinjaman
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="#" target="_blank" class="about_check">
+                            <img src="../assets/images/debito.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="#" target="_blank" class="nama">PT Debito Korporindo Utama </a>
+                            <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT Debito Korporindo Utama
+                                dalam
+                                Penyediaan Jasa Layanan Penagihan Pinjaman
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.bluepowertechnology.com/" target="_blank" class="about_check">
+                            <img src="../assets/images/bluepower.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.bluepowertechnology.com/" target="_blank" class="nama">PT Blue
+                                Power
+                                Technology </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan PT. Blue Power Technology
+                                (Untuk
+                                Layanan Alicloud Indonesia) dengan lokasi server di Indonesia dan salah satu layanan
+                                yang digunakan untuk menjaga keamanan data nasabah dengan ketentuan AliCloud untuk
+                                tidak
+                                mentransfer data pelanggan ke yurisdiksi atau wilayah lain di luar Indonesia.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://cbtp.co.id/" target="_blank" class="about_check">
+                            <img src="https://cbtp.co.id/wp-content/uploads/2019/08/logo-warna-cbtp-2.svg"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://cbtp.co.id/" target="_blank" class="nama">PT Cybertechtonic Pratama
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan PT. Cybertechtonic Pratama
+                                untuk
+                                jasa penitipan server demi keamanan data
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.instamoney.co/" target="_blank" class="about_check">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.instamoney.co/" target="_blank" class="nama">PT Syaftraco
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Instamoney sebagai perusahaan
+                                teknologi yang bergerak dalam bidang transfer dana, antara lain pengiriman,
+                                penerimaan,
+                                dan remintansi
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.monetapay.id/" target="_blank" class="about_check">
+                            <img src="https://www.monetapay.id/assets/images/logomonetapay.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.monetapay.id/" target="_blank" class="nama">PT Moneta Pembayaran
+                                Teknologi</a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan moneta sebagai perusahaan
+                                teknologi yang bergerak dalam bidang transfer dana, antara lain pengiriman,
+                                penerimaan,
+                                dan remintansi
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://cbclik.com/" target="_blank" class="about_check">
+                            <img src="https://cbclik.com/wp-content/uploads/2019/12/Asset-8.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://cbclik.com/" target="_blank" class="nama">PT Crif Lembaga Informasi
+                                Keuangan</a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan CLIK untuk menghasilkan
+                                informasi
+                                perkreditan untuk calon nasabah UATAS </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.iluma.ai/en/" target="_blank" class="about_check">
+                            <img src="https://www.iluma.ai/img/fav.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.iluma.ai/en/" target="_blank" class="nama">PT Sumber Digital
+                                Teknologi
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Iluma untuk menghasilkan
+                                informasi
+                                perkreditan untuk calon nasabah UATAS
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://bpsdata.com/" target="_blank" class="about_check">
+                            <img src="https://bpsdata.com/storage/settings/February2024/k1hvjxR7pMTVZOvjqOW3.png"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://bpsdata.com/" target="_blank" class="nama">PT Bangun Percaya Sosial
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan BPS untuk menghasilkan
+                                informasi
+                                perkreditan untuk calon nasabah UATAS
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.itruzz.com/" target="_blank" class="about_check">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.itruzz.com/" target="_blank" class="nama">PT Inovasi Kredit
+                                Indonesia
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan iTruzz untuk menghasilkan
+                                informasi perkreditan untuk calon nasabah UATAS
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://dartmedia.co.id/" target="_blank" class="about_check">
+                            <img src="https://dartmedia.co.id/images/home/Logo%20Dartmedia.webp" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://dartmedia.co.id/" target="_blank" class="nama">PT Dian Prima Jayaraya
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan DartMedia untuk menyediakan
+                                OTP di
+                                aplikasi UATAS saat nasabah mendaftar pertama kali
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://cpaas.8x8.com/en/" target="_blank" class="about_check">
+                            <img src="../assets/images/eightsolution.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://cpaas.8x8.com/en/" target="_blank" class="nama">PT Eight Solutions
+                                Indonesia
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan 8x8 untuk menyediakan OTP di
+                                aplikasi UATAS saat nasabah mendaftar pertama kali
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.nextotp.com/" target="_blank" class="about_check">
+                            <img src="https://www.nextotp.com/images/logo.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.nextotp.com/" target="_blank" class="nama">PT NextOTP Digital
+                                Indonesia
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan NextOTP untuk menyediakan OTP
+                                di
+                                aplikasi UATAS saat nasabah mendaftar pertama kali
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.quiros.co.id/" target="_blank" class="about_check">
+                            <img src="../assets/images/quiros.png" alt="Checkmark">
+                        </a>
+                        <div class="about_list_content pl-5 pr-2">
+                            <a href="https://www.quiros.co.id/" target="_blank" class="nama">PT Quiros Networks
+                            </a>
+                            <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Quiros untuk menyediakan
+                                layanan
+                                VOIP dan call center di UATAS
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- RIPLAYS / TAB SECTION -->
+        <section class="laporan-sec" id="riplay">
+            <div class="wrap">
+                <!-- Tabs -->
+                <div class="tabs" role="tablist" aria-label="Informasi Perusahaan">
+                    <button class="tab is-active" role="tab" aria-selected="true" data-target="#tab-keu">Laporan
+                        Keuangan</button>
+                    <button class="tab" role="tab" aria-selected="false" data-target="#tab-stats">Detail
+                        Statistik</button>
+                    <button class="tab" role="tab" aria-selected="false" data-target="#tab-direksi">Jajaran
+                        Direksi</button>
+                    <button class="tab" role="tab" aria-selected="false" data-target="#tab-saham">Pemegang
+                        Saham</button>
+                </div>
+
+                <!-- Panel: Laporan Keuangan -->
+                <div class="panel is-visible" id="tab-keu" role="tabpanel">
+                    <div class="docs-grid">
+                        <!-- Kolom kiri -->
+                        <div class="docs-col">
+                            <div class="doc-card">
+                                <div class="doc-title">Laporan Keuangan 2024</div>
+                                <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2024.pdf"
+                                    aria-label="Unduh 2024">
+                                    <img src="../assets/images/unduh-icon.png" alt="">
+                                </button>
+                            </div>
+                            <div class="doc-card">
+                                <div class="doc-title">Laporan Keuangan 2023</div>
+                                <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2023.pdf"
+                                    aria-label="Unduh 2023">
+                                    <img src="../assets/images/unduh-icon.png" alt="">
+                                </button>
+                            </div>
+                            <div class="doc-card">
+                                <div class="doc-title">Laporan Keuangan 2022</div>
+                                <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2022.pdf"
+                                    aria-label="Unduh 2022">
+                                    <img src="../assets/images/unduh-icon.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Kolom kanan -->
+                        <div class="docs-col">
+                            <div class="doc-card">
+                                <div class="doc-title">Laporan Keuangan 2021</div>
+                                <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2021.pdf"
+                                    aria-label="Unduh 2021">
+                                    <img src="../assets/images/unduh-icon.png" alt="">
+                                </button>
+                            </div>
+                            <div class="doc-card">
+                                <div class="doc-title">Laporan Keuangan 2020</div>
+                                <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2020.pdf"
+                                    aria-label="Unduh 2020">
+                                    <img src="../assets/images/unduh-icon.png" alt="">
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section class="partners-wrap">
-                <h2>Mitra Kami</h2>
-                <div class="about_list_container">
-                    <ul class="about_list">
-                        <li class="flex">
-                            <a href="https://www.cashcashpro.id/" target="_blank" class="about_check">
-                                <img src="https://www.cashcashpro.id/img/5fc215a9-07ab-4dad-a4b1-9d68784edd7d.png"
-                                    alt="PT. Digital Kuantum Teknologi" width="56" height="56" loading="lazy"
-                                    decoding="async">
-                            </a>
-                            <div class="about_list_content">
-                                <a href="https://www.cashcashpro.id/" target="_blank" class="nama">PT. Digital Kuantum
-                                    Teknologi</a>
-                                <p class="deskrip">Cashcash Pro adalah produk dari PT Digital Kuantum Teknologi yang
-                                    merupakan mitra resmi kami. Kerjasama ini bertujuan untuk menyediakan layanan
-                                    keuangan
-                                    yang nyaman dan efisien bagi seluruh pengguna UATAS.</p>
+                <!-- Panel: Statistik -->
+                <div class="panel" id="tab-stats" role="tabpanel" hidden>
+                    <div class="stats-grid">
+                        <article class="kpi">
+                            <img class="kpi-ico" src="../assets/images/icon-stat dana.png" alt="">
+                            <div class="kpi-body">
+                                <div class="kpi-main"><span>Rp</span>27,78<small>Triliun</small></div>
+                                <p>Total pendanaan sejak berdiri</p>
                             </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://privy.id/" target="_blank" class="about_check">
-                                <img src="https://privy.id/static/privy.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://privy.id/" target="_blank" class="nama">PT Privy Identitas Digital</a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Privy di Agustus 2022. Dengan
-                                    menggunakan layanan Privy untuk tanda tangan elektronik dan KYC (Know Your Customer)
-                                    untuk melakukan verifikasi pada calon borrower UATAS.
-                                </p>
+                        </article>
+
+                        <article class="kpi">
+                            <img class="kpi-ico" src="../assets/images/icon date.png" alt="">
+                            <div class="kpi-body">
+                                <div class="kpi-main"><span>Rp</span>6,67<small>Triliun</small></div>
+                                <p>Total pendanaan tahun berjalan</p>
                             </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://vida.id/id/" target="_blank" class="about_check">
-                                <img src="https://vida.id/hs-fs/hubfs/VIDA_2023-09.png?width=225&height=57&name=VIDA_2023-09.png"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://vida.id/id/" target="_blank" class="nama">PT Vida Digital Indentity</a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan VIDA di November 2024. Dengan
-                                    menggunakan layanan VIDA untuk tanda tangan elektronik dan KYC (Know Your Customer)
-                                    untuk melakukan verifikasi pada calon borrower UATAS.</p>
+                        </article>
+
+                        <article class="kpi">
+                            <img class="kpi-ico" src="../assets/images/icon akumulasi.png" alt="">
+                            <div class="kpi-body">
+                                <div class="kpi-main">2,41<small>Juta</small></div>
+                                <p>Jumlah akumulasi borrower</p>
                             </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.ocbc.id/" target="_blank" class="about_check">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_UC0icKEaY9m4wbrcdJUULe2rTfMQ2KEkzA&s"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.ocbc.id/" target="_blank" class="nama">PT Bank OCBC NISP TBK</a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Bank OCBC sejak tahun 2019
-                                    untuk
-                                    fasilitas digital banking escrow dan virtual account
-                                </p>
+                        </article>
+
+                        <article class="kpi">
+                            <img class="kpi-ico" src="../assets/images/icon borrower aktif.png" alt="">
+                            <div class="kpi-body">
+                                <div class="kpi-main">273<small>Ribu</small></div>
+                                <p>Jumlah borrower aktif</p>
                             </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.bni.co.id/id-id/" target="_blank" class="about_check">
-                                <img src="https://www.bni.co.id/Portals/1/bni-logo-id.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.bni.co.id/id-id/" target="_blank" class="nama">PT Bank Negara
-                                    Indonesia</a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Bank OCBC sejak tahun 2020
-                                    untuk
-                                    fasilitas digital banking escrow dan virtual account, dan untuk lender open account
-                                    RDL
-                                    di BNI
-                                </p>
+                        </article>
+
+                        <article class="kpi">
+                            <img class="kpi-ico" src="../assets/images/icon borrower-berjalan.png" alt="">
+                            <div class="kpi-body">
+                                <div class="kpi-main">645<small>Ribu</small></div>
+                                <p>Jumlah borrower tahun berjalan</p>
                             </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.bankneocommerce.co.id/id/home" target="_blank" class="about_check">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Bank_Neo_Commerce.png"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.bankneocommerce.co.id/id/home" target="_blank" class="nama">PT Bank
-                                    Neo
-                                    Commerce Tbk</a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Bank OCBC sejak tahun 2022
-                                    untuk
-                                    fasilitas digital banking escrow dan virtual account, dan untuk lender open account
-                                    RDL
-                                    di BNC
-                                </p>
+                        </article>
+
+                        <article class="kpi">
+                            <img class="kpi-ico" src="../assets/images/icon-jumlah lender.png" alt="">
+                            <div class="kpi-body">
+                                <div class="kpi-main">13<small>Pendana</small></div>
+                                <p>Jumlah Lender sejak berdiri</p>
                             </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://lbtindonesia.com/" target="_blank" class="about_check">
-                                <img src="../assets/images/lbt.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://lbtindonesia.com/" target="_blank" class="nama">PT Luar Biasa Teknologi
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan PT. LBT untuk melakukan
-                                    penagihan
-                                    kepada nasabah dengan syarat bahwa nasabah tersebut jatuh tempo pembayaran hingga
-                                    keterlambatan 7 hari
-                                </p>
+                        </article>
+
+                        <article class="kpi">
+                            <img class="kpi-ico" src="../assets/images/icon-lender berjalan.png" alt="">
+                            <div class="kpi-body">
+                                <div class="kpi-main">3<small>Pendana</small></div>
+                                <p>Jumlah Lender tahun berjalan</p>
                             </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.mitrakoleksimandiri.com/" target="_blank" class="about_check">
-                                <img src="https://www.mitrakoleksimandiri.com/wp-content/uploads/2024/12/logo_main.png"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.mitrakoleksimandiri.com/" target="_blank" class="nama">PT Mitra
-                                    Koleksi
-                                    Mandiri</a>
-                                <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Mitra Koleksi Mandiri
-                                    dalam
-                                    Penyediaan Jasa layanan Penagihan Pinjaman
-                                </p>
+                        </article>
+
+                        <article class="kpi">
+                            <img class="kpi-ico" src="../assets/images/icon-lender aktif.png" alt="">
+                            <div class="kpi-body">
+                                <div class="kpi-main">6<small>Pendana</small></div>
+                                <p>Jumlah Lender aktif</p>
                             </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://xinghaotechnology.com/id/" target="_blank" class="about_check">
-                                <img src="data:image/jpeg;base64,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"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://xinghaotechnology.com/id/" target="_blank" class="nama">PT Xing Hao
-                                    Technology</a>
-                                <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Xing Hao Technology dalam
-                                    Penyediaan Jasa layanan Penagihan Pinjaman
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://telmark.co.id/" target="_blank" class="about_check">
-                                <img src="https://telmark.co.id/wp-content/uploads/2023/07/logo-TELMARK-HD-PNG.png"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://telmark.co.id/" target="_blank" class="nama">PT Telmark Integrasi
-                                    Indonesia</a>
-                                <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Telmark Integrasi
-                                    Indonesia
-                                    dalam Penyediaan Jasa layanan Penagihan Pinjaman
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://colmitra.com/" target="_blank" class="about_check">
-                                <img src="https://colmitra.com/wp-content/uploads/2022/12/logo.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://colmitra.com/" target="_blank" class="nama">PT Colmitra Persada
-                                    Indonesia</a>
-                                <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Colmitra Persada
-                                    Indonesia
-                                    dalam Penyediaan Jasa layanan Penagihan Pinjaman
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://vjr.co.id/" target="_blank" class="about_check">
-                                <img src="https://vjr.co.id/assets/img/Logo.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://vjr.co.id/" target="_blank" class="nama">PT Vista Jaya Raya</a>
-                                <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Vista Jaya Raya dalam
-                                    Penyediaan Jasa layanan Penagihan Pinjaman
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="#" target="_blank" class="about_check">
-                                <img src="../assets/images/tin.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="#" target="_blank" class="nama">PT Teknologi Internasional Nusantara</a>
-                                <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Teknologi Internasional
-                                    Nusantara dalam Penyediaan Jasa layanan Penagihan Pinjaman
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="http://www.ednindo.com/" target="_blank" class="about_check">
-                                <img src="https://toploker.com/assets/images/perusahaan/profile/1725613486935781.jpg"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="http://www.ednindo.com/" target="_blank" class="nama">PT Ekosistem Digital
-                                    Nusantara </a>
-                                <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT. Ekosistem Digital
-                                    Nusantara
-                                    dalam Penyediaan Jasa Layanan Penagihan Pinjaman
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="#" target="_blank" class="about_check">
-                                <img src="../assets/images/debito.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="#" target="_blank" class="nama">PT Debito Korporindo Utama </a>
-                                <p class="deskrip">PT. Plus Ultra Abadi bekerjasama dengan PT Debito Korporindo Utama
-                                    dalam
-                                    Penyediaan Jasa Layanan Penagihan Pinjaman
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.bluepowertechnology.com/" target="_blank" class="about_check">
-                                <img src="../assets/images/bluepower.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.bluepowertechnology.com/" target="_blank" class="nama">PT Blue
-                                    Power
-                                    Technology </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan PT. Blue Power Technology
-                                    (Untuk
-                                    Layanan Alicloud Indonesia) dengan lokasi server di Indonesia dan salah satu layanan
-                                    yang digunakan untuk menjaga keamanan data nasabah dengan ketentuan AliCloud untuk
-                                    tidak
-                                    mentransfer data pelanggan ke yurisdiksi atau wilayah lain di luar Indonesia.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://cbtp.co.id/" target="_blank" class="about_check">
-                                <img src="https://cbtp.co.id/wp-content/uploads/2019/08/logo-warna-cbtp-2.svg"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://cbtp.co.id/" target="_blank" class="nama">PT Cybertechtonic Pratama
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan PT. Cybertechtonic Pratama
-                                    untuk
-                                    jasa penitipan server demi keamanan data
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.instamoney.co/" target="_blank" class="about_check">
-                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAPDxENEBAWEA4QDRIOEBESDQ8PEA8QFRIWFhUSGBcYHiggGRolHhkWJDEhJSkrLi4uGCI2ODMsNzQtLisBCgoKDg0OFRAQFi0dHh4tMS0tLTctKy0tKy8tLS0tLS0tLS0tLS8tKy4tNy0tLS0tNys3LTUtNy0tNy0rLi4tLf/AABEIAMgAyAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUCAwj/xAA3EAACAgEBBQYDBgUFAAAAAAAAAQIDEQQFEiExYQYiQVFxgQcTMhQjQpGhsVJiwdHwFUSCovH/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAwQFAQL/xAAiEQEAAgIDAQACAwEAAAAAAAAAAQIDEQQSMSETYSJBQhT/2gAMAwEAAhEDEQA/ALxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGDW12uqojv2zUI+Geb6Jc2fTU3xrhKyTxGKy2VV2j2tK+yU5PhyivCMfIlw4vyT+keS/X5HqavtzoVLdlOUV/E6nu/px/Q7+k1dd0FZVNThLlKMk0ygNVbk6/YbtM9DqVGcn9mte7avCL8LOmP2LWThxFd19draZ9XeDynlZ8OZ6KD2AAAAAAAAAAAAAAAAAHltJZfID0CF7Y+I+jok661PUSTw5Qwq+H8z5+yPexfiJo9RNVT3tPOTwvmY3G/LeXL3wS/gya7aExABEABzNvbSWmpc/wAbzGC6+fsdiJmdQ5aYiNo5222x/t4PhHjPrLwXsV1rr8m/tPVuTbby28t+vNnA1FuTWwY+sK1d2ncvhdM+JmTN2nSNRy1xfH06FnxPvqs74Xdo/n0/YrX99RH7tvnOnl/15emCdn572fqbNLfDUVPFlct5eTXJxfRrgXtsbaUNXRXqK/pnHOPGMuUovqmZXKw9bdo8l6idt8AFR0AAAAAAAAAAAAACCfETb2IvQVS78oqV7T+mD+mHq+b6epJu0u2oaHTT1E+LS3a45+ux/TH/ADwTKT0GtldfbO2W9ZdLfbfjLLePT+xb4uHtPefIebzqrXtoNSynB37aDStoNOLIq5FjfDDtI76vsVss3UxzW2+M6uWPWPL0wTs/Pmg1FmmuhqKniyuW8vJrk4vo+Reuxdpw1dENRX9M48VnjCS4Si+qZmcrD1t2jyU0Ttuzkkm3wSWW/IrLtXtj59jafcj3YLp5+5J+2W1vlw+zxfeksz6R/h9ysdfqMnrjYv8AUq+S3a3WGnrLsnNskfW+zJjQ6SeothRWt6yyajFeviaUfIS0rpsbH0DtlvtdyHPq+eDs20FkPsrXXoYaWtd+qO8pYw7LH9bfr/REMu0+OGCpXPGSfivmtNbfUetoJJ8PttfZb/s1j+4vlhZ5Qt5J+j5fkc+2g07aD3aIvXrLtMi8gR3sXtr7VRuTeb6UozzznH8M/wC/UkZk2rNZ1K1E7jYADjoAAAAAAAAYbxxBEfidtWWn0LjB4nfP5OVzUGm5v8lj3PVKze0Vj+xXvxB7R/btTuwedNS3Cvym84lZ7+HQi8JNNSTw08p+niYBvUpFKxWHJS3Q3K+tTXPlJeTXP2MW0HF7P6mUL4wSclbJVuKTbbb7rRLr9Pjg1h8n7eBBf+M6UskdLfpHraDu9i+0D0M51zy6bVnH8NvJS9+T9vI1raDStoOTEXjUvVcjo7Z18rJynJ5lJ5f+eRGtVbk2tXY0uPocu2ZJjrqEmOr5zZafwr7O/Lr/ANQtj95Yt2lNfTX4z9X+3qQjsXsB6/VRrafyIfeXS/lzwj6vl+fkXvXBRSjFYikkklhJLkkVeZm1HSFh7Il2n2Xuy+dFd2b73SXn7ktPjqaVZFwlyksMz6W6ztFlp3rpWdtBpW0Em12hdcnB+D5+a8znW0F+t2ZF5idS5uydXPS3xvj4PEo/xwf1RLX090bIRsi8xlFSi/NNZRV1tBYPZiDjo6U+e6/y3m1+mCHkxE6svce+/jqgAqLQAAAAAAADBDvijsyWo0O/BZlp7Fc0uLcMOMvyzn/id3WbXUHuwW81wbz3UasNtS/FGLXTKJccWraLQr25WOs6mVCAtvaXw+0msbu09j0zk+9FQU60+kcrHpnA2V8L9PXJTvulek87igqoPo+Lb9mjS/7MetymiYmNw53wq7N5f+o2x4LMdOmub5Ss/ovfoSPtRsvEvnxXdk+/0l5+5Kaq4wioRioxilGMUklFLgkkYvqU4uEuKksMz7Z5tftLzlp3rpWFtBp20Em2hoHXNwfhyfmn4nMtoLVb7ZkWmJ1KO6vSbya/xdSNypk5/LSbm5biik2228JLqTq2g6XYbs2p6qevsj3K2o0p/is3e9P25evoTfmilZmVzj33Oko7GbAWg0samk7p9+6XnN/hz5Ll/wCnfAMm1ptMzK2AA4OftPQfNWVwmuXVeRHr9BNcHB59G/2JgD3XJMK2XjVvO/JRHR7BnZJOa3K88c8JPoiWVwUUopYSWEvJLkesA5a829SYsUY41DIAPKUAAAAAYNbaNrhVOS54wvfhk2T5aqnfhKHmse/gdj15vE9Z16iQPVkHFuLWGng8lpgTExLo7Dsat3fCUX+nj+5ITibC0zy7XyxiPXPidsr5PWvxImMf1kAHhaaG1ND86PD648uvQjOp0M4vDi17MmgwSVyTVWy8at53vUoVpNh2WyWU4Q8ZNY4dF4kw01Ma4KuKxGKwkfUHL5Jt6kxYoxx8ZAB4SgAAAAAAAAAAAAAAAAAA19RpIWfVHL8Hyf6GvXsmpPOG/VvBvg7uUc4qTO5gSxwRkA4kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf//Z"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.instamoney.co/" target="_blank" class="nama">PT Syaftraco
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Instamoney sebagai perusahaan
-                                    teknologi yang bergerak dalam bidang transfer dana, antara lain pengiriman,
-                                    penerimaan,
-                                    dan remintansi
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.monetapay.id/" target="_blank" class="about_check">
-                                <img src="https://www.monetapay.id/assets/images/logomonetapay.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.monetapay.id/" target="_blank" class="nama">PT Moneta Pembayaran
-                                    Teknologi</a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan moneta sebagai perusahaan
-                                    teknologi yang bergerak dalam bidang transfer dana, antara lain pengiriman,
-                                    penerimaan,
-                                    dan remintansi
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://cbclik.com/" target="_blank" class="about_check">
-                                <img src="https://cbclik.com/wp-content/uploads/2019/12/Asset-8.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://cbclik.com/" target="_blank" class="nama">PT Crif Lembaga Informasi
-                                    Keuangan</a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan CLIK untuk menghasilkan
-                                    informasi
-                                    perkreditan untuk calon nasabah UATAS </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.iluma.ai/en/" target="_blank" class="about_check">
-                                <img src="https://www.iluma.ai/img/fav.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.iluma.ai/en/" target="_blank" class="nama">PT Sumber Digital
-                                    Teknologi
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Iluma untuk menghasilkan
-                                    informasi
-                                    perkreditan untuk calon nasabah UATAS
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://bpsdata.com/" target="_blank" class="about_check">
-                                <img src="https://bpsdata.com/storage/settings/February2024/k1hvjxR7pMTVZOvjqOW3.png"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://bpsdata.com/" target="_blank" class="nama">PT Bangun Percaya Sosial
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan BPS untuk menghasilkan
-                                    informasi
-                                    perkreditan untuk calon nasabah UATAS
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.itruzz.com/" target="_blank" class="about_check">
-                                <img src="data:image/jpeg;base64,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"
-                                    alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.itruzz.com/" target="_blank" class="nama">PT Inovasi Kredit
-                                    Indonesia
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan iTruzz untuk menghasilkan
-                                    informasi perkreditan untuk calon nasabah UATAS
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://dartmedia.co.id/" target="_blank" class="about_check">
-                                <img src="https://dartmedia.co.id/images/home/Logo%20Dartmedia.webp" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://dartmedia.co.id/" target="_blank" class="nama">PT Dian Prima Jayaraya
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan DartMedia untuk menyediakan
-                                    OTP di
-                                    aplikasi UATAS saat nasabah mendaftar pertama kali
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://cpaas.8x8.com/en/" target="_blank" class="about_check">
-                                <img src="../assets/images/eightsolution.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://cpaas.8x8.com/en/" target="_blank" class="nama">PT Eight Solutions
-                                    Indonesia
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan 8x8 untuk menyediakan OTP di
-                                    aplikasi UATAS saat nasabah mendaftar pertama kali
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.nextotp.com/" target="_blank" class="about_check">
-                                <img src="https://www.nextotp.com/images/logo.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.nextotp.com/" target="_blank" class="nama">PT NextOTP Digital
-                                    Indonesia
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan NextOTP untuk menyediakan OTP
-                                    di
-                                    aplikasi UATAS saat nasabah mendaftar pertama kali
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <a href="https://www.quiros.co.id/" target="_blank" class="about_check">
-                                <img src="../assets/images/quiros.png" alt="Checkmark">
-                            </a>
-                            <div class="about_list_content pl-5 pr-2">
-                                <a href="https://www.quiros.co.id/" target="_blank" class="nama">PT Quiros Networks
-                                </a>
-                                <p class="deskrip">PT Plus Ultra Abadi bekerjasama dengan Quiros untuk menyediakan
-                                    layanan
-                                    VOIP dan call center di UATAS
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
+                        </article>
+                    </div>
                 </div>
-            </section>
 
-
-            <section class="laporan-sec" id="riplay">
-                <div class="wrap">
-                    <!-- Tabs -->
-                    <div class="tabs" role="tablist" aria-label="Informasi Perusahaan">
-                        <button class="tab is-active" role="tab" aria-selected="true" data-target="#tab-keu">Laporan
-                            Keuangan</button>
-                        <button class="tab" role="tab" aria-selected="false" data-target="#tab-stats">Detail
-                            Statistik</button>
-                        <button class="tab" role="tab" aria-selected="false" data-target="#tab-direksi">Jajaran
-                            Direksi</button>
-                        <button class="tab" role="tab" aria-selected="false" data-target="#tab-saham">Pemegang
-                            Saham</button>
-                    </div>
-
-                    <!-- Panel: Laporan Keuangan -->
-                    <div class="panel is-visible" id="tab-keu" role="tabpanel">
-                        <div class="docs-grid">
-                            <!-- Kolom kiri -->
-                            <div class="docs-col">
-                                <div class="doc-card">
-                                    <div class="doc-title">Laporan Keuangan 2024</div>
-                                    <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2024.pdf"
-                                        aria-label="Unduh 2024">
-                                        <img src="../assets/images/unduh-icon.png" alt="">
-                                    </button>
-                                </div>
-                                <div class="doc-card">
-                                    <div class="doc-title">Laporan Keuangan 2023</div>
-                                    <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2023.pdf"
-                                        aria-label="Unduh 2023">
-                                        <img src="../assets/images/unduh-icon.png" alt="">
-                                    </button>
-                                </div>
-                                <div class="doc-card">
-                                    <div class="doc-title">Laporan Keuangan 2022</div>
-                                    <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2022.pdf"
-                                        aria-label="Unduh 2022">
-                                        <img src="../assets/images/unduh-icon.png" alt="">
-                                    </button>
-                                </div>
+                <!-- Panel: Direksi -->
+                <div class="panel" id="tab-direksi" role="tabpanel" hidden>
+                    <div class="people-grid">
+                        <!-- (Konten direksi persis seperti punyamu) -->
+                        <article class="person">
+                            <img class="avatar" src="../assets/images/komisaris-1.png" alt="Foto Wikancahyo Wicaksono"
+                                loading="lazy" width="112" height="112" />
+                            <div class="p-head">
+                                <h4 class="person-name">Wikancahyo Wicaksono</h4>
+                                <small class="person-role">Komisaris Utama</small>
                             </div>
+                            <p class="person-bio">merupakan Komisaris Utama UATAS, meraih Master of Science dari
+                                University of Strathclyde, Glasgow. Memulai karier sejak 2009 di PT Pertamina Hulu
+                                Energi, Petronas Ltd, PT Inare Proteksi Internasional, dan saat ini beliau juga menjabat
+                                sebagai Direktur Utama di PT Griya Proteksi Nusantara, dengan fokus pada tata kelola dan
+                                manajemen risiko. Ia berkomitmen pada transparansi, perlindungan konsumen, dan kepatuhan
+                                regulasi.</p>
+                        </article>
 
-                            <!-- Kolom kanan -->
-                            <div class="docs-col">
-                                <div class="doc-card">
-                                    <div class="doc-title">Laporan Keuangan 2021</div>
-                                    <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2021.pdf"
-                                        aria-label="Unduh 2024">
-                                        <img src="../assets/images/unduh-icon.png" alt="">
-                                    </button>
-                                </div>
-                                <div class="doc-card">
-                                    <div class="doc-title">Laporan Keuangan 2020</div>
-                                    <button class="dl-btn" data-href="../assets/pdf/PT PUA - BS PL Summary 2020.pdf"
-                                        aria-label="Unduh 2024">
-                                        <img src="../assets/images/unduh-icon.png" alt="">
-                                    </button>
-                                </div>
+                        <article class="person">
+                            <img class="avatar" src="../assets/images/komisaris-2.png" alt="Foto Bayu Pahala Radityo"
+                                loading="lazy" width="112" height="112" />
+                            <div class="p-head">
+                                <h4 class="person-name">Bayu Pahala Radityo</h4>
+                                <small class="person-role">Komisaris</small>
                             </div>
-                        </div>
+                            <p class="person-bio">merupakan Komisaris di UATAS, lulusan dari Universitas Pelita Harapan,
+                                beliau mengawali karir di Industri Perbankan sejak tahun 2008, dan memiliki pengalaman
+                                di berbagai perbankan besar di Indonesia seperti Permata Bank, BII Bank dan AIA
+                                Financial. Dengan kemampuan dan pengalaman beliau di Industri Jasa Keuangan diharapkan
+                                UATAS mampu untuk memberikan solusi keuangan di Indonesia.</p>
+                        </article>
+
+                        <article class="person">
+                            <img class="avatar" src="../assets/images/dir-1.png" alt="Foto Iwan Setiawan" loading="lazy"
+                                width="112" height="112" />
+                            <div class="p-head">
+                                <h4 class="person-name">Iwan Setiawan</h4>
+                                <small class="person-role">Direktur Utama</small>
+                            </div>
+                            <p class="person-bio">merupakan Direktur Utama di UATAS. Dirinya memiliki gelar Master
+                                Digital Marketing dari Universitas Pelita Harapan. Berpengalaman 14 tahun diberbagai
+                                perusahaan besar di Indonesia seperti Microsoft Indonesia, PT Astrindo Starvision, PT
+                                Baidu Digital Indonesia, PT Rezeki Bersama Teknologi dan PT Izi Data Indonesia. Dengan
+                                pengalaman beliau di industri startup dan fintech, diharapkan UATAS sebagai solusi
+                                keuangan inklusif Indonesia.</p>
+                        </article>
+
+                        <article class="person">
+                            <img class="avatar" src="../assets/images/dir-2.png" alt="Foto Shintya Maulida"
+                                loading="lazy" width="112" height="112" />
+                            <div class="p-head">
+                                <h4 class="person-name">Shintya Maulida</h4>
+                                <small class="person-role">Direktur Pengembangan Bisnis</small>
+                            </div>
+                            <p class="person-bio">merupakan Direktur Pengembangan Bisnis di UATAS. Beliau mengawali
+                                karirnya sejak tahun 2014 dan memiliki pengalaman lebih dari 10 tahun di berbagai
+                                perusahaan besar di Indonesia seperti PT. Ecart Services Indonesia (Lazada), PT. Media
+                                Kreasindo Utama (Zing Mobile), PT Baidu Digital Indonesia, PT Rezeki Bersama Teknologi.
+                                Dengan pengalaman beliau di industri startup dan fintech diharapkan UATAS dapat
+                                memberikan literasi keuangan.</p>
+                        </article>
                     </div>
-
-                    <div class="panel" id="tab-stats" role="tabpanel" hidden>
-                        <div class="stats-grid">
-                            <article class="kpi">
-                                <img class="kpi-ico" src="../assets/images/icon-stat dana.png" alt="">
-                                <div class="kpi-body">
-                                    <div class="kpi-main"><span>Rp</span>27,78<small>Triliun</small></div>
-                                    <p>Total pendanaan sejak berdiri</p>
-                                </div>
-                            </article>
-
-                            <article class="kpi">
-                                <img class="kpi-ico" src="../assets/images/icon date.png" alt="">
-                                <div class="kpi-body">
-                                    <div class="kpi-main"><span>Rp</span>6,67<small>Triliun</small></div>
-                                    <p>Total pendanaan tahun berjalan</p>
-                                </div>
-                            </article>
-
-                            <article class="kpi">
-                                <img class="kpi-ico" src="../assets/images/icon akumulasi.png" alt="">
-                                <div class="kpi-body">
-                                    <div class="kpi-main">2,41<small>Juta</small></div>
-                                    <p>Jumlah akumulasi borrower</p>
-                                </div>
-                            </article>
-
-                            <article class="kpi">
-                                <img class="kpi-ico" src="../assets/images/icon borrower aktif.png" alt="">
-                                <div class="kpi-body">
-                                    <div class="kpi-main">273<small>Ribu</small></div>
-                                    <p>Jumlah borrower aktif</p>
-                                </div>
-                            </article>
-
-                            <article class="kpi">
-                                <img class="kpi-ico" src="../assets/images/icon borrower-berjalan.png" alt="">
-                                <div class="kpi-body">
-                                    <div class="kpi-main">645<small>Ribu</small></div>
-                                    <p>Jumlah borrower tahun berjalan</p>
-                                </div>
-                            </article>
-
-                            <article class="kpi">
-                                <img class="kpi-ico" src="../assets/images/icon-jumlah lender.png" alt="">
-                                <div class="kpi-body">
-                                    <div class="kpi-main">13<small>Pendana</small></div>
-                                    <p>Jumlah Lender sejak berdiri</p>
-                                </div>
-                            </article>
-
-                            <article class="kpi">
-                                <img class="kpi-ico" src="../assets/images/icon-lender berjalan.png" alt="">
-                                <div class="kpi-body">
-                                    <div class="kpi-main">3<small>Pendana</small></div>
-                                    <p>Jumlah Lender tahun berjalan</p>
-                                </div>
-                            </article>
-
-                            <article class="kpi">
-                                <img class="kpi-ico" src="../assets/images/icon-lender aktif.png" alt="">
-                                <div class="kpi-body">
-                                    <div class="kpi-main">6<small>Pendana</small></div>
-                                    <p>Jumlah Lender aktif</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="panel" id="tab-direksi" role="tabpanel" hidden>
-                        <div class="people-grid">
-
-                            <article class="person">
-                                <img class="avatar" src="../assets/images/komisaris-1.png" alt="Foto Wikancahyo Wicaksono"
-                                    loading="lazy" width="112" height="112" />
-
-                                <div class="p-head">
-                                    <h4 class="person-name">Wikancahyo Wicaksono</h4>
-                                    <small class="person-role">Komisaris Utama</small>
-                                </div>
-
-                                <p class="person-bio">
-                                    merupakan Komisaris Utama UATAS, meraih Master of Science dari University of
-                                    Strathclyde, Glasgow. Memulai karier sejak 2009 di PT Pertamina Hulu Energi,
-                                    Petronas Ltd, PT Inare Proteksi Internasional, dan saat ini beliau juga menjabat
-                                    sebagai Direktur Utama di PT Griya Proteksi Nusantara,
-                                    dengan fokus pada tata kelola dan manajemen risiko. Ia berkomitmen pada
-                                    transparansi, perlindungan konsumen, dan kepatuhan regulasi.
-                                </p>
-                            </article>
-
-                            <article class="person">
-                                <img class="avatar" src="../assets/images/komisaris-2.png" alt="Foto Bayu Pahala Radityo"
-                                    loading="lazy" width="112" height="112" />
-
-                                <div class="p-head">
-                                    <h4 class="person-name">Bayu Pahala Radityo</h4>
-                                    <small class="person-role">Komisaris</small>
-                                </div>
-
-                                <p class="person-bio">
-                                    merupakan Komisaris di UATAS, lulusan dari Universitas Pelita Harapan, beliau
-                                    mengawali karir di Industri Perbankan sejak tahun 2008, dan memiliki pengalaman
-                                    di berbagai perbankan besar di Indonesia seperti Permata Bank, BII Bank dan AIA
-                                    Financial. Dengan kemampuan dan pengalaman beliau di Industri Jasa Keuangan
-                                    diharapkan UATAS mampu untuk memberikan solusi keuangan di Indonesia.
-                                </p>
-                            </article>
-
-                            <article class="person">
-                                <img class="avatar" src="../assets/images/dir-1.png" alt="Foto Iwan Setiawan" loading="lazy"
-                                    width="112" height="112" />
-
-                                <div class="p-head">
-                                    <h4 class="person-name">Iwan Setiawan</h4>
-                                    <small class="person-role">Direktur Utama</small>
-                                </div>
-
-                                <p class="person-bio">
-                                    merupakan Direktur Utama di UATAS. Dirinya memiliki gelar Master Digital
-                                    Marketing dari Universitas Pelita Harapan. Berpengalaman
-                                    14 tahun diberbagai perusahaan besar di Indonesia seperti Microsoft
-                                    Indonesia, PT Astrindo Starvision, PT Baidu Digital Indonesia, PT Rezeki Bersama
-                                    Teknologi dan PT Izi Data Indonesia. Dengan pengalaman beliau di industri
-                                    startup dan fintech, diharapkan UATAS sebagai solusi keuangan inklusif Indonesia.
-                                </p>
-                            </article>
-
-                            <article class="person">
-                                <img class="avatar" src="../assets/images/dir-2.png" alt="Foto Shintya Maulida" loading="lazy"
-                                    width="112" height="112" />
-
-                                <div class="p-head">
-                                    <h4 class="person-name">Shintya Maulida</h4>
-                                    <small class="person-role">Direktur Pengembangan Bisnis</small>
-                                </div>
-
-                                <p class="person-bio">
-                                    merupakan Direktur Pengembangan Bisnis di UATAS. Beliau mengawali karirnya sejak
-                                    tahun 2014 dan memiliki pengalaman lebih dari 10 tahun di berbagai
-                                    perusahaan besar di Indonesia seperti PT. Ecart Services Indonesia
-                                    (Lazada), PT. Media Kreasindo Utama (Zing Mobile), PT Baidu Digital Indonesia,
-                                    PT Rezeki Bersama Teknologi. Dengan pengalaman beliau di industri startup
-                                    dan fintech diharapkan UATAS dapat memberikan literasi keuangan.
-                                </p>
-                            </article>
-
-                        </div>
-                    </div>
-
-                    <div class="panel" id="tab-saham" role="tabpanel" hidden>
-                        <div class="share-grid">
-                            <article class="share-card">
-                                <img class="avatar" src="../assets/images/firestorm.png" alt="">
-                                <div class="p-head">
-                                    <h4 class="person-name">Firestorm–SEA Pte., Ltd</h4>
-                                    <small class="person-role">Pemegang Saham</small>
-                                </div>
-                                <p class="person-bio">adalah Pemegang Saham di PT Plus Ultra Abadi. Firestorm, Pte, Ltd
-                                    merupakan
-                                    perusahaan internet berbasis mobile yang fokus menggarap pasar
-                                    Asia Tenggara, dengan merancang dan mengembangkan
-                                    berbagai aplikasi mobile.</p>
-                            </article>
-
-                            <article class="share-card">
-                                <img class="avatar" src="../assets/images/dir-1.png" alt="">
-                                <div class="p-head">
-                                    <h4 class="person-name">Iwan Setiawan</h4>
-                                    <small class="person-role">Pemegang Saham</small>
-                                </div>
-                                <p class="person-bio">adalah Pemegang Saham di PT Plus Ultra Abadi. Memiliki gelar
-                                    Master
-                                    Digital
-                                    Marketing yang didapatnya dari Universitas Pelita Harapan. Beliau berpengalaman
-                                    14 tahun diberbagai perusahaan-perusahaan besar di Indonesia, seperti Microsoft
-                                    Indonesia, PT Astrindo Starvision, PT Baidu Digital Indonesia, PT Rezeki Bersama
-                                    Teknologi dan PT Izi Data Indonesia.</p>
-                            </article>
-
-                            <article class="share-card">
-                                <img class="avatar" src="../assets/images/komisaris-1.png" alt="">
-                                <div class="p-head">
-                                    <h4 class="person-name">Wikancahyo Wicaksono</h4>
-                                    <small class="person-role">Pemegang Saham</small>
-                                </div>
-                                <p class="person-bio">adalah Pemegang Saham di PT Plus Ultra Abadi. Dirinya memiliki
-                                    gelar
-                                    Master of
-                                    Science yang didapatnya dari Universitas Katolik Indonesia Atma Jaya. Beliau
-                                    mengawali karirnya sejak tahun 2009 dan saat ini beliau juga menjabat
-                                    sebagai Direktur Utama di PT Griya Proteksi Nusantara.</p>
-                            </article>
-                        </div>
-                    </div>
-
-
                 </div>
+
+                <!-- Panel: Saham -->
+                <div class="panel" id="tab-saham" role="tabpanel" hidden>
+                    <div class="share-grid">
+                        <!-- (Konten saham persis seperti punyamu) -->
+                        <article class="share-card">
+                            <img class="avatar" src="../assets/images/firestorm.png" alt="">
+                            <div class="p-head">
+                                <h4 class="person-name">Firestorm–SEA Pte., Ltd</h4>
+                                <small class="person-role">Pemegang Saham</small>
+                            </div>
+                            <p class="person-bio">adalah Pemegang Saham di PT Plus Ultra Abadi. Firestorm, Pte, Ltd
+                                merupakan perusahaan internet berbasis mobile yang fokus menggarap pasar Asia Tenggara,
+                                dengan merancang dan mengembangkan berbagai aplikasi mobile.</p>
+                        </article>
+
+                        <article class="share-card">
+                            <img class="avatar" src="../assets/images/dir-1.png" alt="">
+                            <div class="p-head">
+                                <h4 class="person-name">Iwan Setiawan</h4>
+                                <small class="person-role">Pemegang Saham</small>
+                            </div>
+                            <p class="person-bio">adalah Pemegang Saham di PT Plus Ultra Abadi. Memiliki gelar Master
+                                Digital Marketing yang didapatnya dari Universitas Pelita Harapan. Beliau berpengalaman
+                                14 tahun diberbagai perusahaan-perusahaan besar di Indonesia, seperti Microsoft
+                                Indonesia, PT Astrindo Starvision, PT Baidu Digital Indonesia, PT Rezeki Bersama
+                                Teknologi dan PT Izi Data Indonesia.</p>
+                        </article>
+
+                        <article class="share-card">
+                            <img class="avatar" src="../assets/images/komisaris-1.png" alt="">
+                            <div class="p-head">
+                                <h4 class="person-name">Wikancahyo Wicaksono</h4>
+                                <small class="person-role">Pemegang Saham</small>
+                            </div>
+                            <p class="person-bio">adalah Pemegang Saham di PT Plus Ultra Abadi. Dirinya memiliki gelar
+                                Master of Science yang didapatnya dari Universitas Katolik Indonesia Atma Jaya. Beliau
+                                mengawali karirnya sejak tahun 2009 dan saat ini beliau juga menjabat sebagai Direktur
+                                Utama di PT Griya Proteksi Nusantara.</p>
+                        </article>
+                    </div>
                 </div>
-                </div>
-            </section>
+            </div>
+        </section>
 
-            <section>
-                <footer class="uatas-footer">
-                    <div class="container">
+        <!-- FOOTER -->
+        <section>
+            <footer class="uatas-footer">
+                <div class="container">
+                    <div class="uatas-footer-card">
+                        <div class="uf-left">
+                            <div class="uf-brand">
+                                <img src="../assets/images/logouatas.png" alt="Logo" class="uf-mascot">
+                            </div>
 
-                        <div class="uatas-footer-card">
-                            <div class="uf-left">
-                                <div class="uf-brand">
-                                    <img src="../assets/images/logouatas.png" alt="Logo" class="uf-mascot">
+                            <div class="uf-office">
+                                <div class="uf-map">
+                                    <iframe title="Kantor Pusat UATAS"
+                                        src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
+                                        loading="lazy"></iframe>
                                 </div>
-
-                                <div class="uf-office">
-                                    <div class="uf-map">
-                                        <iframe title="Kantor Pusat UATAS"
-                                            src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
-                                            loading="lazy"></iframe>
-                                    </div>
-                                    <div class="uf-info">
-                                        <h4>Kantor Pusat</h4>
-                                        <address>
-                                            Menara Dea Tower 2 Lt. 9 Unit 902<br>
-                                            Jl. Mega Kuningan Barat Lot 2.1 RT5/RW2,<br>
-                                            Kuningan, Setiabudi, Jakarta Selatan 12950<br>
-                                            <span>DKI Jakarta</span>
-                                        </address>
-                                        <ul class="uf-meta">
-                                            <li>📞 <a href="tel:+622150012345">+62 21-500-12345</a></li>
-                                            <li>🕘 Senin – Jumat: 09.00 – 18.00 WIB</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="uf-office">
-                                    <div class="uf-map">
-                                        <iframe title="Walk in Customer Service"
-                                            src="https://www.google.com/maps?q=Wijaya+Kusuma+Jakarta+Barat&output=embed"
-                                            loading="lazy"></iframe>
-                                    </div>
-                                    <div class="uf-info">
-                                        <h4>Walk in Customer Service</h4>
-                                        <address>
-                                            Wijaya Kusuma Taman Duta Mas Blok B4 No.15,<br>
-                                            Grogol Petamburan, Jakarta Barat 11460
-                                        </address>
-                                        <ul class="uf-meta">
-                                            <li>📧 <a href="mailto:cs@support.uatas.id">cs@support.uatas.id</a></li>
-                                            <li>🕘 Senin–Jumat: 09.00–18.00 WIB (Walk-in)<br>Sabtu: 09.00–20.00 WIB
-                                                (Call CS)
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="uf-info">
+                                    <h4>Kantor Pusat</h4>
+                                    <address>
+                                        Menara Dea Tower 2 Lt. 9 Unit 902<br>
+                                        Jl. Mega Kuningan Barat Lot 2.1 RT5/RW2,<br>
+                                        Kuningan, Setiabudi, Jakarta Selatan 12950<br>
+                                        <span>DKI Jakarta</span>
+                                    </address>
+                                    <ul class="uf-meta">
+                                        <li>📞 <a href="tel:+622150012345">+62 21-500-12345</a></li>
+                                        <li>🕘 Senin – Jumat: 09.00 – 18.00 WIB</li>
+                                    </ul>
                                 </div>
                             </div>
 
-                            <div class="uf-right">
-                                <div class="uf-download">
-                                    <h5>Unduh Aplikasi di</h5>
-                                    <div class="store-row">
-                                        <a class="store-badge"
-                                            href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
-                                            aria-label="Google Play" target="_blank">
-                                            <img src="../assets/images/googleplay.png" alt="Get it on Google Play">
-                                        </a>
-                                        <a class="store-badge"
-                                            href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
-                                            aria-label="App Store" target="_blank">
-                                            <img src="../assets/images/appstore.png" alt="Download on the App Store">
-                                        </a>
-                                    </div>
+                            <div class="uf-office">
+                                <div class="uf-map">
+                                    <iframe title="Walk in Customer Service"
+                                        src="https://www.google.com/maps?q=Wijaya+Kusuma+Jakarta+Barat&output=embed"
+                                        loading="lazy"></iframe>
                                 </div>
-
-                                <div class="uf-social">
-                                    <h5>Ikuti Kami</h5>
-                                    <div class="social-row">
-                                        <a href="https://www.facebook.com/UATASID/" class="social-icon"
-                                            target="_blank"><i class="fab fa-facebook"></i></a>
-                                        <a href="https://x.com/UATASID" class="social-icon" target="_blank"><i
-                                                class="fab fa-twitter"></i></a>
-                                        <a href="https://www.instagram.com/uatas.id/" class="social-icon"
-                                            target="_blank"><i class="fab fa-instagram"></i></a>
-                                        <a href="https://www.tiktok.com/@uatasid" class="social-icon" target="_blank"><i
-                                                class="fab fa-tiktok"></i></a>
-                                        <a href="https://www.youtube.com/@uatasid" class="social-icon"
-                                            target="_blank"><i class="fab fa-youtube"></i></a>
-                                    </div>
+                                <div class="uf-info">
+                                    <h4>Walk in Customer Service</h4>
+                                    <address>
+                                        Wijaya Kusuma Taman Duta Mas Blok B4 No.15,<br>
+                                        Grogol Petamburan, Jakarta Barat 11460
+                                    </address>
+                                    <ul class="uf-meta">
+                                        <li>📧 <a href="mailto:cs@support.uatas.id">cs@support.uatas.id</a></li>
+                                        <li>🕘 Senin–Jumat: 09.00–18.00 WIB (Walk-in)<br>Sabtu: 09.00–20.00 WIB (Call
+                                            CS)</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="uf-notice-title">PERHATIAN</h3>
-                        <div class="uf-notice-grid">
-                            <ul>
-                                <li>Layanan Pendanaan Bersama Berbasis Teknologi Informasi merupakan kesepakatan perdata
-                                    antara
-                                    Pemberi Dana dengan Penerima Dana, sehingga segala risiko yang timbul dari
-                                    kesepakatan
-                                    tersebut
-                                    ditanggung sepenuhnya oleh masing-masing pihak.</li>
-                                <li>Risiko kredit atau gagal bayar ditanggung sepenuhnya oleh Pemberi Dana. Tidak ada
-                                    lembaga
-                                    atau
-                                    otoritas negara yang bertanggung jawab atas risiko gagal bayar ini.</li>
-                                <li>Penyelenggara dengan persetujuan dari masing-masing Pengguna (Pemberi Dana dan/atau
-                                    Penerima
-                                    Dana) mengakses, memperoleh, menyimpan, mengelola dan/atau menggunakan data pribadi
-                                    Pengguna
-                                    ("Pemanfaatan Data") pada atau di dalam benda, perangkat elektronik (termasuk
-                                    smartphone
-                                    atau
-                                    telepon seluler), perangkat keras (hardware) maupun lunak (software), dokumen
-                                    elektronik,
-                                    aplikasi atau sistem elektronik milik Pengguna atau yang dikuasai Pengguna, dengan
-                                    memberitahukan tujuan, batasan dan mekanisme Pemanfaatan Data tersebut kepada
-                                    Pengguna yang
-                                    bersangkutan sebelum memperoleh persetujuan yang dimaksud.</li>
-                                <li>Pemberi Dana yang belum memiliki pengetahuan dan pengalaman pendanaan, disarankan
-                                    untuk
-                                    tidak
-                                    menggunakan layanan UATAS ini.</li>
-                                <li>Penerima Dana harus mempertimbangkan tingkat bunga Pendanaan dan biaya lainnya
-                                    sesuai dengan
-                                    kemampuan dalam melunasi Pendanaan.</li>
-                                <li>Setiap kecurangan tercatat secara digital di dunia maya dan dapat diketahui
-                                    masyarakat luas
-                                    di
-                                    media sosial.</li>
-                            </ul>
-                            <ul>
-                                <li>Pengguna harus membaca dan memahami informasi ini sebelum membuat keputusan menjadi
-                                    Pemberi
-                                    Dana
-                                    atau Penerima Dana.</li>
-                                <li>Pemerintah yaitu dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas
-                                    setiap
-                                    pelanggaran atau ketidakpatuhan oleh Pengguna, baik Pemberi Dana maupun Penerima
-                                    Dana (baik
-                                    karena kesengajaan atau kelalaian Pengguna) terhadap ketentuan peraturan
-                                    perundang-undangan
-                                    maupun kesepakatan atau perikatan antara Penyelenggara (dalam hal ini adalah
-                                    “UATAS”) dengan
-                                    Pemberi Dana dan/atau Penerima Dana.</li>
-                                <li>Setiap transaksi dan kegiatan pendanaan atau pelaksanaan kesepakatan mengenai
-                                    pendanaan
-                                    antara
-                                    atau yang melibatkan UATAS, Pemberi Dana dan/atau Penerima Dana wajib dilakukan
-                                    melalui
-                                    escrow
-                                    account dan virtual account sebagaimana yang diwajibkan berdasarkan Peraturan
-                                    Otoritas Jasa
-                                    Keuangan Nomor 10 /POJK.05/2022 tentang Layanan Pendanaan Bersama Berbasis Teknologi
-                                    Informasi
-                                    dan pelanggaran atau ketidakpatuhan terhadap ketentuan tersebut merupakan bukti
-                                    telah
-                                    terjadinya
-                                    pelanggaran hukum oleh UATAS sehingga UATAS wajib menanggung ganti rugi yang
-                                    diderita oleh
-                                    masing-masing Pengguna sebagai akibat langsung dari pelanggaran hukum tersebut
-                                    diatas tanpa
-                                    mengurangi hak Pengguna yang menderita kerugian menurut Kitab Undang-Undang Hukum
-                                    Perdata.
-                                </li>
-                                <li>Hati-hati, transaksi ini beresiko tinggi. Anda dapat saja mengalami kerugian atau
-                                    kehilangan
-                                    uang. Jangan berutang jika tidak memiliki kemampuan membayar. Pertimbangkan secara
-                                    bijak
-                                    sebelum
-                                    bertransaksi.</li>
-                            </ul>
-                        </div>
-
-                        <div class="uf-pdf">
-                            <ul class="pdf-links">
-                                <li>
-                                    <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
-                                        Syarat dan Ketentuan
+                        <div class="uf-right">
+                            <div class="uf-download">
+                                <h5>Unduh Aplikasi di</h5>
+                                <div class="store-row">
+                                    <a class="store-badge"
+                                        href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
+                                        aria-label="Google Play" target="_blank" rel="noopener">
+                                        <img src="../assets/images/googleplay.png" alt="Get it on Google Play">
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
-                                        Layanan Pengaduan Konsumen
+                                    <a class="store-badge"
+                                        href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
+                                        aria-label="App Store" target="_blank" rel="noopener">
+                                        <img src="../assets/images/appstore.png" alt="Download on the App Store">
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
-                                        Kebijakan Privasi
-                                    </a>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
+
+                            <div class="uf-social">
+                                <h5>Ikuti Kami</h5>
+                                <div class="social-row">
+                                    <a href="https://www.facebook.com/UATASID/" class="social-icon" target="_blank"
+                                        rel="noopener"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://x.com/UATASID" class="social-icon" target="_blank"
+                                        rel="noopener"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.instagram.com/uatas.id/" class="social-icon" target="_blank"
+                                        rel="noopener"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.tiktok.com/@uatasid" class="social-icon" target="_blank"
+                                        rel="noopener"><i class="fab fa-tiktok"></i></a>
+                                    <a href="https://www.youtube.com/@uatasid" class="social-icon" target="_blank"
+                                        rel="noopener"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="uf-copy">Copyright © 2025 Uatas. All rights reserved.</div>
                     </div>
-                </footer>
-            </section>
 
-        </main>
+                    <h3 class="uf-notice-title">PERHATIAN</h3>
+                    <div class="uf-notice-grid">
+                        <ul>
+                            <li>Layanan Pendanaan Bersama Berbasis Teknologi Informasi merupakan kesepakatan perdata
+                                antara Pemberi Dana dengan Penerima Dana, sehingga segala risiko yang timbul dari
+                                kesepakatan tersebut ditanggung sepenuhnya oleh masing-masing pihak.</li>
+                            <li>Risiko kredit atau gagal bayar ditanggung sepenuhnya oleh Pemberi Dana. Tidak ada
+                                lembaga atau otoritas negara yang bertanggung jawab atas risiko gagal bayar ini.</li>
+                            <li>Penyelenggara dengan persetujuan dari masing-masing Pengguna (Pemberi Dana dan/atau
+                                Penerima Dana) mengakses, memperoleh, menyimpan, mengelola dan/atau menggunakan data
+                                pribadi Pengguna ("Pemanfaatan Data") pada atau di dalam benda, perangkat elektronik
+                                (termasuk smartphone atau telepon seluler), perangkat keras (hardware) maupun lunak
+                                (software), dokumen elektronik, aplikasi atau sistem elektronik milik Pengguna atau yang
+                                dikuasai Pengguna, dengan memberitahukan tujuan, batasan dan mekanisme Pemanfaatan Data
+                                tersebut kepada Pengguna yang bersangkutan sebelum memperoleh persetujuan yang dimaksud.
+                            </li>
+                            <li>Pemberi Dana yang belum memiliki pengetahuan dan pengalaman pendanaan, disarankan untuk
+                                tidak menggunakan layanan UATAS ini.</li>
+                            <li>Penerima Dana harus mempertimbangkan tingkat bunga Pendanaan dan biaya lainnya sesuai
+                                dengan kemampuan dalam melunasi Pendanaan.</li>
+                            <li>Setiap kecurangan tercatat secara digital di dunia maya dan dapat diketahui masyarakat
+                                luas di media sosial.</li>
+                        </ul>
+                        <ul>
+                            <li>Pengguna harus membaca dan memahami informasi ini sebelum membuat keputusan menjadi
+                                Pemberi Dana atau Penerima Dana.</li>
+                            <li>Pemerintah yaitu dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas
+                                setiap pelanggaran atau ketidakpatuhan oleh Pengguna, baik Pemberi Dana maupun Penerima
+                                Dana (baik karena kesengajaan atau kelalaian Pengguna) terhadap ketentuan peraturan
+                                perundang-undangan maupun kesepakatan atau perikatan antara Penyelenggara (dalam hal ini
+                                adalah “UATAS”) dengan Pemberi Dana dan/atau Penerima Dana.</li>
+                            <li>Setiap transaksi dan kegiatan pendanaan atau pelaksanaan kesepakatan mengenai pendanaan
+                                antara atau yang melibatkan UATAS, Pemberi Dana dan/atau Penerima Dana wajib dilakukan
+                                melalui escrow account dan virtual account sebagaimana yang diwajibkan berdasarkan
+                                Peraturan Otoritas Jasa Keuangan Nomor 10 /POJK.05/2022 tentang Layanan Pendanaan
+                                Bersama Berbasis Teknologi Informasi dan pelanggaran atau ketidakpatuhan terhadap
+                                ketentuan tersebut merupakan bukti telah terjadinya pelanggaran hukum oleh UATAS
+                                sehingga UATAS wajib menanggung ganti rugi yang diderita oleh masing-masing Pengguna
+                                sebagai akibat langsung dari pelanggaran hukum tersebut diatas tanpa mengurangi hak
+                                Pengguna yang menderita kerugian menurut Kitab Undang-Undang Hukum Perdata.</li>
+                            <li>Hati-hati, transaksi ini beresiko tinggi. Anda dapat saja mengalami kerugian atau
+                                kehilangan uang. Jangan berutang jika tidak memiliki kemampuan membayar. Pertimbangkan
+                                secara bijak sebelum bertransaksi.</li>
+                        </ul>
+                    </div>
 
-        <script src="../assets/api/tkb.js"></script>
+                    <div class="uf-pdf">
+                        <ul class="pdf-links">
+                            <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">Syarat dan
+                                    Ketentuan</a></li>
+                            <li><a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf"
+                                    target="_blank">Layanan Pengaduan Konsumen</a></li>
+                            <li><a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">Kebijakan Privasi</a></li>
+                        </ul>
+                    </div>
 
-        <script>
-            (function () {
-                const modal = document.getElementById('partner-modal');
-                const pmLogo = document.getElementById('pm-logo');
-                const pmTitle = document.getElementById('pm-title');
-                const pmDesc = document.getElementById('pm-desc');
+                    <div class="uf-copy">Copyright © 2025 Uatas. All rights reserved.</div>
+                </div>
+            </footer>
+        </section>
+    </main>
 
-                document.querySelectorAll('.about_list li').forEach(li => {
-                    li.addEventListener('click', (e) => {
-                        if (e.target.closest('a')?.classList.contains('about_check')) {
-                            e.preventDefault();
-                        }
-                        const img = li.querySelector('.about_check img');
-                        const titleEl = li.querySelector('.nama');
-                        const descEl = li.querySelector('.deskrip');
+    <!-- ====== Partner Modal (dipakai oleh skrip modal) ====== -->
+    <div id="partner-modal" class="partner-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="pm-dialog">
+            <button class="pm-close" data-close aria-label="Tutup">&times;</button>
+            <div class="pm-body">
+                <img id="pm-logo" src="" alt="" class="pm-logo" />
+                <h3 id="pm-title"></h3>
+                <p id="pm-desc"></p>
+            </div>
+        </div>
+    </div>
 
-                        pmLogo.src = img?.src || '';
-                        pmLogo.alt = titleEl?.textContent?.trim() || '';
-                        pmTitle.textContent = titleEl?.textContent?.trim() || '';
-                        pmDesc.textContent = descEl?.textContent?.trim() || '';
+    <!-- ====== SCRIPTS ====== -->
+    <script src="../assets/api/tkb.js"></script>
 
-                        modal.classList.add('show');
-                        modal.setAttribute('aria-hidden', 'false');
-                    });
+    <!-- Modal partner -->
+    <script>
+        (function () {
+            const modal = document.getElementById('partner-modal');
+            const pmLogo = document.getElementById('pm-logo');
+            const pmTitle = document.getElementById('pm-title');
+            const pmDesc = document.getElementById('pm-desc');
+            if (!modal) return;
+
+            document.querySelectorAll('.about_list li').forEach(li => {
+                li.addEventListener('click', (e) => {
+                    if (e.target.closest('a')?.classList.contains('about_check')) e.preventDefault();
+                    const img = li.querySelector('.about_check img');
+                    const titleEl = li.querySelector('.nama');
+                    const descEl = li.querySelector('.deskrip');
+
+                    pmLogo.src = img?.src || '';
+                    pmLogo.alt = titleEl?.textContent?.trim() || '';
+                    pmTitle.textContent = titleEl?.textContent?.trim() || '';
+                    pmDesc.textContent = descEl?.textContent?.trim() || '';
+
+                    modal.classList.add('show');
+                    modal.setAttribute('aria-hidden', 'false');
                 });
+            });
 
-                modal.addEventListener('click', (e) => {
-                    if (e.target.hasAttribute('data-close')) {
-                        modal.classList.remove('show');
-                        modal.setAttribute('aria-hidden', 'true');
-                    }
-                });
-                window.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape') {
-                        modal.classList.remove('show');
-                        modal.setAttribute('aria-hidden', 'true');
-                    }
-                });
-            })();
-        </script>
-
-        <script>
-            (function () {
-                const items = document.querySelectorAll('.about_list li');
-
-                items.forEach(li => {
-                    li.addEventListener('click', (e) => {
-                        if (e.target.closest('.about_list_content .nama')) return;
-
-                        items.forEach(x => { if (x !== li) x.classList.remove('is-open'); });
-
-                        li.classList.toggle('is-open');
-                    });
-                });
-
-                document.addEventListener('click', (e) => {
-                    if (!e.target.closest('.about_list li')) {
-                        items.forEach(x => x.classList.remove('is-open'));
-                    }
-                });
-
-                window.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape') {
-                        items.forEach(x => x.classList.remove('is-open'));
-                    }
-                });
-            })();
-        </script>
-
-        <script>
-            (function initRiplaySection() {
-                const sec = document.querySelector('#riplay');
-                if (!sec) return;
-
-                const tabs = Array.from(sec.querySelectorAll('.tab'));
-                const panels = Array.from(sec.querySelectorAll('.panel'));
-
-                function showPanel(targetId) {
-                    panels.forEach(p => {
-                        p.hidden = true;
-                        p.classList.remove('is-visible');
-                    });
-                    tabs.forEach(t => {
-                        t.classList.remove('is-active');
-                        t.setAttribute('aria-selected', 'false');
-                    });
-
-                    const panel = sec.querySelector(targetId);
-                    const tab = tabs.find(t => t.dataset.target === targetId);
-                    if (panel && tab) {
-                        panel.hidden = false;
-                        panel.classList.add('is-visible');
-                        tab.classList.add('is-active');
-                        tab.setAttribute('aria-selected', 'true');
-                    }
+            modal.addEventListener('click', (e) => {
+                if (e.target.hasAttribute('data-close') || e.target === modal) {
+                    modal.classList.remove('show');
+                    modal.setAttribute('aria-hidden', 'true');
                 }
-
-                tabs.forEach(tab => {
-                    tab.addEventListener('click', () => {
-                        const target = tab.dataset.target;
-                        showPanel(target);
-                        history.replaceState(null, '', target);
-                        tab.focus();
-                    });
-
-                    tab.addEventListener('keydown', (e) => {
-                        const i = tabs.indexOf(tab);
-                        if (e.key === 'ArrowRight') {
-                            e.preventDefault();
-                            const next = tabs[(i + 1) % tabs.length];
-                            next.click();
-                            next.focus();
-                        } else if (e.key === 'ArrowLeft') {
-                            e.preventDefault();
-                            const prev = tabs[(i - 1 + tabs.length) % tabs.length];
-                            prev.click();
-                            prev.focus();
-                        }
-                    });
-                });
-
-                const hash = location.hash;
-                if (hash && sec.querySelector(hash)) {
-                    showPanel(hash);
-                } else {
-                    showPanel('#tab-keu');
+            });
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    modal.classList.remove('show');
+                    modal.setAttribute('aria-hidden', 'true');
                 }
+            });
+        })();
+    </script>
 
-                sec.addEventListener('click', (e) => {
-                    const btn = e.target.closest('.dl-btn');
-                    if (!btn) return;
-                    const href = btn.dataset.href;
-                    if (href) {
-                        window.open(href, '_blank');
-                    }
+    <!-- Accordion partner list -->
+    <script>
+        (function () {
+            const items = document.querySelectorAll('.about_list li');
+            items.forEach(li => {
+                li.addEventListener('click', (e) => {
+                    if (e.target.closest('.about_list_content .nama')) return;
+                    items.forEach(x => { if (x !== li) x.classList.remove('is-open'); });
+                    li.classList.toggle('is-open');
                 });
-
-                sec.querySelectorAll('.doc-card').forEach(card => {
-                    card.style.cursor = 'pointer';
-                    card.addEventListener('click', (e) => {
-                        if (e.target.closest('.dl-btn')) return;
-                        const btn = card.querySelector('.dl-btn');
-                        if (btn) btn.click();
-                    });
-                });
-            })();
-        </script>
-        <script>
-            function formatNumber(value, type) {
-                let num = parseInt(value, 10);
-
-                if (type === "triliun") {
-                    return (num / 1_000_000_000_000).toFixed(2).replace(".", ",");
-                } else if (type === "juta") {
-                    return (num / 1_000_000).toFixed(2).replace(".", ",");
-                } else if (type === "ribu") {
-                    return (num / 1_000).toFixed(0);
+            });
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.about_list li')) {
+                    items.forEach(x => x.classList.remove('is-open'));
                 }
-                return num;
+            });
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') items.forEach(x => x.classList.remove('is-open'));
+            });
+        })();
+    </script>
+
+    <!-- Tabs & dokumen -->
+    <script>
+        (function initRiplaySection() {
+            const sec = document.querySelector('#riplay');
+            if (!sec) return;
+
+            const tabs = Array.from(sec.querySelectorAll('.tab'));
+            const panels = Array.from(sec.querySelectorAll('.panel'));
+
+            function showPanel(targetId) {
+                panels.forEach(p => { p.hidden = true; p.classList.remove('is-visible'); });
+                tabs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+
+                const panel = sec.querySelector(targetId);
+                const tab = tabs.find(t => t.dataset.target === targetId);
+                if (panel && tab) {
+                    panel.hidden = false;
+                    panel.classList.add('is-visible');
+                    tab.classList.add('is-active');
+                    tab.setAttribute('aria-selected', 'true');
+                }
             }
 
-            fetch("https://api.uatas.id/api/thirdapi/homepageconf", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({})
-            })
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.dataset.target;
+                    showPanel(target);
+                    history.replaceState(null, '', target);
+                    tab.focus();
+                });
+                tab.addEventListener('keydown', (e) => {
+                    const i = tabs.indexOf(tab);
+                    if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        const next = tabs[(i + 1) % tabs.length];
+                        next.click(); next.focus();
+                    } else if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        const prev = tabs[(i - 1 + tabs.length) % tabs.length];
+                        prev.click(); prev.focus();
+                    }
+                });
+            });
+
+            const hash = location.hash;
+            if (hash && sec.querySelector(hash)) showPanel(hash); else showPanel('#tab-keu');
+
+            sec.addEventListener('click', (e) => {
+                const btn = e.target.closest('.dl-btn');
+                if (!btn) return;
+                const href = btn.dataset.href;
+                if (href) window.open(href, '_blank');
+            });
+
+            sec.querySelectorAll('.doc-card').forEach(card => {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('.dl-btn')) return;
+                    const btn = card.querySelector('.dl-btn');
+                    if (btn) btn.click();
+                });
+            });
+        })();
+    </script>
+
+    <!-- Ambil data KPI -->
+    <script>
+        function formatNumber(value, type) {
+            let num = parseInt(value, 10);
+            if (type === "triliun") return (num / 1_000_000_000_000).toFixed(2).replace(".", ",");
+            if (type === "juta") return (num / 1_000_000).toFixed(2).replace(".", ",");
+            if (type === "ribu") return (num / 1_000).toFixed(0);
+            return num;
+        }
+        fetch("https://api.uatas.id/api/thirdapi/homepageconf", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({})
+        })
             .then(res => res.json())
             .then(res => {
                 let data = res.data.website_conf;
                 const getVal = (alias) => data.find(item => item.alias === alias)?.value || 0;
-
                 const kpis = document.querySelectorAll("#tab-stats .kpi-main");
-
                 kpis[0].childNodes[1].nodeValue = formatNumber(getVal("total_pendanaan_sejak_didirikan"), "triliun");
-
                 kpis[1].childNodes[1].nodeValue = formatNumber(getVal("total_pendanaan_tahun_berjalan"), "triliun");
-
                 kpis[2].childNodes[0].nodeValue = formatNumber(getVal("jumlah_akumulasi_borrower"), "juta");
-
                 kpis[3].childNodes[0].nodeValue = formatNumber(getVal("jumlah_borrower_aktif"), "ribu");
-
                 kpis[4].childNodes[0].nodeValue = formatNumber(getVal("jumlah_borrower_pada_tahun_berjalan"), "ribu");
-
                 kpis[5].childNodes[0].nodeValue = getVal("jumlah_lender_sejak_berdiri");
-
                 kpis[6].childNodes[0].nodeValue = getVal("jumlah_lender_pada_tahun_berjalan");
-
                 kpis[7].childNodes[0].nodeValue = getVal("jumlah_lender_aktif");
             })
             .catch(err => console.error(err));
-        </script>
+    </script>
 
-    </body>
+    <!-- Mobile drawer (satu-satunya versi) -->
+    <script>
+        (function () {
+            const burger = document.querySelector('.hamburger');
+            const drawer = document.getElementById('navDrawer');
+            const backdrop = document.querySelector('.drawer-backdrop');
+            if (!burger || !drawer || !backdrop) return;
+
+            function openDrawer() {
+                drawer.classList.add('open');
+                backdrop.classList.add('show');
+                document.body.classList.add('nav-open');
+                burger.setAttribute('aria-expanded', 'true');
+            }
+            function closeDrawer() {
+                drawer.classList.remove('open');
+                backdrop.classList.remove('show');
+                document.body.classList.remove('nav-open');
+                burger.setAttribute('aria-expanded', 'false');
+            }
+
+            burger.addEventListener('click', (e) => {
+                e.preventDefault();
+                drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+            });
+            backdrop.addEventListener('click', closeDrawer);
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+
+            // Optional dropdown di dalam drawer
+            drawer.addEventListener('click', (e) => {
+                const trigger = e.target.closest('.nav-menu li.dropdown > a, .nav-menu li.tkb-mobile > a.tkb-toggle');
+                if (!trigger) return;
+                e.preventDefault();
+                trigger.parentElement.classList.toggle('open');
+            });
+        })();
+    </script>
+
+    <script>
+        (function () {
+            const list = document.querySelector('.about_list');
+            const modal = document.getElementById('partner-modal');
+            const pmLogo = document.getElementById('pm-logo');
+            const pmTitle = document.getElementById('pm-title');
+            const pmDesc = document.getElementById('pm-desc');
+
+            if (!list || !modal) return;
+
+            // Buka modal dari item
+            function openModal(li) {
+                const img = li.querySelector('.about_check img');
+                const titleEl = li.querySelector('.nama');
+                const descEl = li.querySelector('.deskrip');
+
+                pmLogo.src = img?.src || '';
+                pmLogo.alt = titleEl?.textContent?.trim() || '';
+                pmTitle.textContent = titleEl?.textContent?.trim() || '';
+                pmDesc.textContent = descEl?.textContent?.trim() || '';
+
+                modal.classList.add('show');
+                document.body.classList.add('modal-open');
+                modal.setAttribute('aria-hidden', 'false');
+            }
+
+            // Satu pintu: klik di list
+            list.addEventListener('click', (e) => {
+                const logo = e.target.closest('.about_check');
+                const nama = e.target.closest('.nama');
+                const li = e.target.closest('li');
+                if (!li) return;
+
+                // Klik logo/nama -> buka modal, jangan biarkan event tembus
+                if (logo || nama) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openModal(li);
+                }
+            }, { passive: false });
+
+            // Tutup modal: klik backdrop atau tombol close
+            modal.addEventListener('click', (e) => {
+                if (e.target.hasAttribute('data-close') || e.target === modal) {
+                    modal.classList.remove('show');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.classList.remove('modal-open');
+                }
+            });
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('show')) {
+                    modal.classList.remove('show');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.classList.remove('modal-open');
+                }
+            });
+        })();
+    </script>
+
+</body>
 
 </html>

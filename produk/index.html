@@ -36,7 +36,7 @@
                 </ul>
             </nav>
 
-            <button class="hamburger" aria-label="Buka menu" aria-expanded="false">
+            <button class="hamburger" aria-label="Buka menu" aria-controls="navDrawer" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
 
@@ -52,6 +52,10 @@
         </div>
     </header>
 
+    <nav id="navDrawer" class="nav-drawer" aria-label="Navigasi mobile" role="dialog" aria-modal="true"
+        aria-hidden="true" tabindex="-1"></nav>
+
+
     <main id="content">
         <section class="prod-hero site-section">
             <div class="container">
@@ -65,11 +69,13 @@
                         </p>
 
                         <div class="store-row">
-                            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.uatas.android">
-                                <img src="../assets/images/GooglePlay_Produk.png" alt="Unduh di Google Play" loading="lazy"
-                                    target="_blank" />
+                            <a class="store-badge"
+                                href="https://play.google.com/store/apps/details?id=com.uatas.android">
+                                <img src="../assets/images/GooglePlay_Produk.png" alt="Unduh di Google Play"
+                                    loading="lazy" target="_blank" />
                             </a>
-                            <a class="store-badge" href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493">
+                            <a class="store-badge"
+                                href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493">
                                 <img src="../assets/images/AppStore_Produk.png" alt="Unduh di App Store" loading="lazy"
                                     target="_blank" />
                             </a>
@@ -272,7 +278,8 @@
 
                     <div class="riplay__pills">
                         <div class="pill">
-                            <img class="pill__icon" src="../assets/images/produk-fitur.png" alt="Ikon produk & fitur utama" />
+                            <img class="pill__icon" src="../assets/images/produk-fitur.png"
+                                alt="Ikon produk & fitur utama" />
                             <span class="pill__title">Produk dan Fitur Utama</span>
                         </div>
 
@@ -283,7 +290,8 @@
                         </div>
 
                         <div class="pill">
-                            <img class="pill__icon" src="../assets/images/syarat.png" alt="Ikon persyaratan dan tata cara" />
+                            <img class="pill__icon" src="../assets/images/syarat.png"
+                                alt="Ikon persyaratan dan tata cara" />
                             <span class="pill__title">Persyaratan dan Tata Cara</span>
                         </div>
                     </div>
@@ -459,24 +467,167 @@
         <script src="../assets/api/tkb.js"></script>
 
         <script>
+            // Elemen dasar
+            const header = document.querySelector('.header');
             const hamburger = document.querySelector('.hamburger');
-            const navMenu = document.querySelector('.nav-menu');
+            const navMenu = document.querySelector('.nav-menu');      // menu desktop
+            const navDrawer = document.getElementById('navDrawer');   // drawer mobile
 
-            hamburger?.addEventListener('click', () => {
-                const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-                hamburger.setAttribute('aria-expanded', String(!expanded));
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
+            // Anchor utk mengembalikan navMenu ke tempat semula saat layar > breakpoint
+            const navAnchor = document.createComment('nav-menu-anchor');
+            if (navMenu && navMenu.parentNode) {
+                navMenu.parentNode.insertBefore(navAnchor, navMenu);
+            }
+
+            let backdrop = null;
+
+            function openDrawer() {
+                if (!navDrawer) return;
+                navDrawer.classList.add('open');
+                makeBackdrop();
+                document.body.style.overflow = 'hidden';
+                hamburger?.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeDrawer() {
+                if (!navDrawer) return;
+                navDrawer.classList.remove('open');
+                removeBackdrop();
+                document.body.style.overflow = '';
+                hamburger?.setAttribute('aria-expanded', 'false');
+            }
+
+            function makeBackdrop() {
+                if (backdrop) return;
+                backdrop = document.createElement('div');
+                backdrop.className = 'drawer-backdrop';
+                backdrop.addEventListener('click', closeDrawer);
+                document.body.appendChild(backdrop);
+                requestAnimationFrame(() => backdrop.classList.add('show'));
+            }
+
+            function removeBackdrop() {
+                if (!backdrop) return;
+                backdrop.classList.remove('show');
+                backdrop.addEventListener('transitionend', () => {
+                    backdrop?.remove();
+                    backdrop = null;
+                }, { once: true });
+            }
+
+            hamburger?.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (!navDrawer) return;                  // guard: pastikan elemen ada
+
+                // kalau drawer kosong (belum ada .nav-menu), isi dulu
+                if (!navDrawer.querySelector('.nav-menu')) buildDrawerContent();
+
+                navDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
             });
 
-            document.querySelectorAll('.nav-menu a').forEach((link) => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
+            // ===== Drawer builder =====
+            const BP = 900; // breakpoint harus sama dengan CSS
+
+            function buildDrawerContent() {
+                if (!navDrawer || !navMenu) return;
+
+                // kosongkan drawer
+                navDrawer.innerHTML = '';
+
+                // clone menu desktop ke drawer
+                const mobileMenu = navMenu.cloneNode(true);
+                mobileMenu.classList.remove('active');
+                navDrawer.appendChild(mobileMenu);
+
+                // --- SISIPKAN "Periksa TKB" SEBAGAI ITEM LIST ---
+                const tkbLi = document.createElement('li');
+                tkbLi.className = 'tkb-mobile';
+                // ambil angka terkini dari DOM jika sudah terisi
+                const gv = id => document.getElementById(id)?.textContent || '--%';
+                tkbLi.innerHTML = `
+      <a href="#" class="tkb-toggle">Periksa TKB</a>
+      <ul class="tkb-sub">
+        <li><strong>TKB0:</strong> ${gv('TKB0')}</li>
+        <li><strong>TKB30:</strong> ${gv('TKB30')}</li>
+        <li><strong>TKB60:</strong> ${gv('TKB60')}</li>
+        <li><strong>TKB90:</strong> ${gv('TKB90')}</li>
+      </ul>
+    `;
+                mobileMenu.appendChild(tkbLi);
+
+                // Jadikan dropdown biasa sebagai akordeon
+                mobileMenu.querySelectorAll('.dropdown > a').forEach(a => {
+                    a.addEventListener('click', e => {
+                        e.preventDefault();          // jangan navigate
+                        a.parentElement.classList.toggle('open');
+                    });
+                });
+
+                tkbLi.querySelector('.tkb-toggle').addEventListener('click', e => {
+                    e.preventDefault();
+                    tkbLi.classList.toggle('open');
+                });
+
+                mobileMenu.querySelectorAll('a').forEach(a => {
+                    a.addEventListener('click', () => {
+                        if (a.closest('.dropdown') || a.closest('.tkb-mobile')) return;
+                        closeDrawer();
+                    });
+                });
+
+                function updateDrawerTKB() {
+                    const sel = (k) => document.getElementById(k)?.textContent || '--%';
+                    const li = document.querySelector('#navDrawer .tkb-mobile');
+                    if (!li) return;
+                    li.querySelector('.tkb-sub').innerHTML = `
+    <li><strong>TKB0:</strong> ${sel('TKB0')}</li>
+    <li><strong>TKB30:</strong> ${sel('TKB30')}</li>
+    <li><strong>TKB60:</strong> ${sel('TKB60')}</li>
+    <li><strong>TKB90:</strong> ${sel('TKB90')}</li>
+  `;
+                }
+
+                const obs = new MutationObserver(() => {
+                    if (window.innerWidth <= BP) {
+                        // pastikan drawer punya blok TKB
+                        if (!document.querySelector('#navDrawer .tkb-mobile')) buildDrawerContent();
+                        updateDrawerTKB();
+                    }
+                });
+
+                ['TKB0', 'TKB30', 'TKB60', 'TKB90'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) obs.observe(el, { childList: true });
+                });
+
+            }
+
+            function syncDrawer() {
+                if (window.innerWidth <= BP) {
+                    // pastikan drawer terisi
+                    if (!navDrawer.querySelector('.nav-menu')) buildDrawerContent();
+                } else {
+                    // kembalikan menu desktop ke posisi semula
+                    if (navAnchor && navMenu && navAnchor.parentNode && navMenu.parentNode !== navAnchor.parentNode) {
+                        navAnchor.parentNode.insertBefore(navMenu, navAnchor.nextSibling);
+                    }
+                    closeDrawer();
+                }
+            }
+
+            window.addEventListener('resize', syncDrawer);
+            document.addEventListener('DOMContentLoaded', syncDrawer);
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const closeBtn = document.querySelector('.drawer-close');
+                closeBtn?.addEventListener('click', () => {
+                    closeDrawer();
                 });
             });
         </script>
+
+
+
 </body>
 
 </html>
