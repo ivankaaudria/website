@@ -22,17 +22,19 @@
                 <ul class="nav-menu">
                     <li><a href="../index.html">Beranda</a></li>
                     <li><a href="../produk/">Produk</a></li>
-                    <li><a href="../about-us/">Tentang Kami</a></li>
+                    <li><a href="../about-us/" aria-current="page">Tentang Kami</a></li>
                     <li class="dropdown">
                         <a href="#bantuan">Bantuan</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../faq/">FAQ</a></li>
-                            <li><a href="../kontak/">Kontak</a></li>
-                            <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">Syarat dan
-                                    Ketentuan</a></li>
-                            <li><a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">Kebijakan Privasi</a></li>
-                            <li><a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf"
-                                    target="_blank">Layanan Pengaduan Konsumen</a></li>
+                            <li><a href="../faq/" rel="noopener">FAQ</a></li>
+                            <li><a href="../kontak/" rel="noopener">Kontak</a></li>
+                            <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" rel="noopener noreferrer"
+                                    target="_blank" rel="noopener">Syarat dan Ketentuan</a></li>
+                            <li><a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank"
+                                    rel="noopener noreferrer">Kebijakan
+                                    Privasi</a></li>
+                            <li><a href="/mekanisme_layanan/index.html" target="_blank"
+                                    rel="noopener noreferrer">Layanan Pengaduan Konsumen</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -53,39 +55,9 @@
             </div>
         </div>
 
-        <!-- Mobile drawer -->
-        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation">
-            <ul class="nav-menu">
-                <li><a href="../index.html">Beranda</a></li>
-                <li><a href="../produk/index.html">Produk</a></li>
-                <li><a href="index.html" aria-current="page">Tentang Kami</a></li>
-
-                <!-- dropdown Bantuan untuk mobile (akordeon) -->
-                <li class="dropdown">
-                    <a href="#bantuan">Bantuan</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../faq/index.html">FAQ</a></li>
-                        <li><a href="../kontak/index.html">Kontak</a></li>
-                        <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank" rel="noopener">Syarat
-                                dan Ketentuan</a></li>
-                        <li><a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank" rel="noopener">Kebijakan
-                                Privasi</a></li>
-                        <li><a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank"
-                                rel="noopener">Layanan Pengaduan Konsumen</a></li>
-                    </ul>
-                </li>
-
-                <li class="tkb-mobile">
-                    <a href="#" class="tkb-toggle">Periksa TKB</a>
-                    <ul class="tkb-sub">
-                        <li><strong>TKB0:</strong> --%</li>
-                        <li><strong>TKB30:</strong> --%</li>
-                        <li><strong>TKB60:</strong> --%</li>
-                        <li><strong>TKB90:</strong> --%</li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <!-- Drawer mobile (kosong, diisi via JS) -->
+        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true"
+            aria-hidden="true" tabindex="-1"></nav>
         <div class="drawer-backdrop"></div>
     </header>
 
@@ -495,18 +467,20 @@
             <div class="wrap">
                 <!-- Tabs -->
                 <div class="tabs" role="tablist" aria-label="Informasi Perusahaan">
-                    <button class="tab is-active" role="tab" aria-selected="true" data-target="#tab-keu">Laporan
-                        Keuangan</button>
-                    <button class="tab" role="tab" aria-selected="false" data-target="#tab-stats">Detail
+                    <button class="tab is-active" role="tab" aria-selected="true" data-target="#tab-keu">Detail
                         Statistik</button>
+                    <button class="tab" role="tab" aria-selected="false" data-target="#tab-stats">Laporan
+                        Keuangan</button>
                     <button class="tab" role="tab" aria-selected="false" data-target="#tab-direksi">Jajaran
                         Direksi</button>
                     <button class="tab" role="tab" aria-selected="false" data-target="#tab-saham">Pemegang
                         Saham</button>
+                    <button class="tab" role="tab" aria-selected="false" data-target="#tab-publik">Laporan
+                        Publikasi</button>
                 </div>
 
                 <!-- Panel: Laporan Keuangan -->
-                <div class="panel is-visible" id="tab-keu" role="tabpanel">
+                <div class="panel is-visible" id="tab-stats" role="tabpanel">
                     <div class="docs-grid">
                         <!-- Kolom kiri -->
                         <div class="docs-col">
@@ -554,7 +528,7 @@
                 </div>
 
                 <!-- Panel: Statistik -->
-                <div class="panel" id="tab-stats" role="tabpanel" hidden>
+                <div class="panel" id="tab-keu" role="tabpanel" hidden>
                     <div class="stats-grid">
                         <article class="kpi">
                             <img class="kpi-ico" src="../assets/images/icon-stat dana.png" alt="">
@@ -621,6 +595,86 @@
                         </article>
                     </div>
                 </div>
+
+                <!-- Panel: Tata Kelola & Kepemilikan -->
+                <div class="panel" id="tab-tatakelola" role="tabpanel" hidden>
+
+                    <!-- Bagian Direksi -->
+                    <h3>Jajaran Direksi</h3>
+                    <div class="people-grid">
+                        <article class="person">
+                            <img class="avatar" src="../assets/images/komisaris-1.png" alt="Foto Wikancahyo Wicaksono"
+                                loading="lazy" />
+                            <div class="p-head">
+                                <h4 class="person-name">Wikancahyo Wicaksono</h4>
+                                <small class="person-role">Komisaris Utama</small>
+                            </div>
+                            <p class="person-bio">merupakan Komisaris Utama UATAS...</p>
+                        </article>
+
+                        <article class="person">
+                            <img class="avatar" src="../assets/images/komisaris-2.png" alt="Foto Bayu Pahala Radityo"
+                                loading="lazy" />
+                            <div class="p-head">
+                                <h4 class="person-name">Bayu Pahala Radityo</h4>
+                                <small class="person-role">Komisaris</small>
+                            </div>
+                            <p class="person-bio">merupakan Komisaris di UATAS...</p>
+                        </article>
+
+                        <article class="person">
+                            <img class="avatar" src="../assets/images/dir-1.png" alt="Foto Iwan Setiawan"
+                                loading="lazy" />
+                            <div class="p-head">
+                                <h4 class="person-name">Iwan Setiawan</h4>
+                                <small class="person-role">Direktur Utama</small>
+                            </div>
+                            <p class="person-bio">merupakan Direktur Utama di UATAS...</p>
+                        </article>
+
+                        <article class="person">
+                            <img class="avatar" src="../assets/images/dir-2.png" alt="Foto Shintya Maulida"
+                                loading="lazy" />
+                            <div class="p-head">
+                                <h4 class="person-name">Shintya Maulida</h4>
+                                <small class="person-role">Direktur Pengembangan Bisnis</small>
+                            </div>
+                            <p class="person-bio">merupakan Direktur Pengembangan Bisnis di UATAS...</p>
+                        </article>
+                    </div>
+
+                    <!-- Bagian Pemegang Saham -->
+                    <h3>Pemegang Saham</h3>
+                    <div class="share-grid">
+                        <article class="share-card">
+                            <img class="avatar" src="../assets/images/firestorm.png" alt="">
+                            <div class="p-head">
+                                <h4 class="person-name">Firestorm–SEA Pte., Ltd</h4>
+                                <small class="person-role">Pemegang Saham</small>
+                            </div>
+                            <p class="person-bio">adalah Pemegang Saham di PT Plus Ultra Abadi...</p>
+                        </article>
+
+                        <article class="share-card">
+                            <img class="avatar" src="../assets/images/dir-1.png" alt="">
+                            <div class="p-head">
+                                <h4 class="person-name">Iwan Setiawan</h4>
+                                <small class="person-role">Pemegang Saham</small>
+                            </div>
+                            <p class="person-bio">adalah Pemegang Saham di PT Plus Ultra Abadi...</p>
+                        </article>
+
+                        <article class="share-card">
+                            <img class="avatar" src="../assets/images/komisaris-1.png" alt="">
+                            <div class="p-head">
+                                <h4 class="person-name">Wikancahyo Wicaksono</h4>
+                                <small class="person-role">Pemegang Saham</small>
+                            </div>
+                            <p class="person-bio">adalah Pemegang Saham di PT Plus Ultra Abadi...</p>
+                        </article>
+                    </div>
+                </div>
+
 
                 <!-- Panel: Direksi -->
                 <div class="panel" id="tab-direksi" role="tabpanel" hidden>
@@ -728,6 +782,21 @@
                         </article>
                     </div>
                 </div>
+
+                <div class="panel is-visible" id="tab-publik" role="tabpanel">
+                    <div class="docs-grid">
+                        <div class="docs-col">
+                            <div class="doc-card">
+                                <div class="doc-title">Publikasi Pengaduan Konsumen<br>PT Plus Ultra Abadi 2024</div>
+                                <button class="dl-btn" aria-label="Unduh 2024"
+                                    onclick="window.open('../lp-2024/index.html', '_blank')">
+                                    <img src="../assets/images/unduh-icon.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -866,11 +935,13 @@
 
                     <div class="uf-pdf">
                         <ul class="pdf-links">
-                            <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">Syarat dan
+                            <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" rel="noopener noreferrer"
+                                    target="_blank">Syarat dan
                                     Ketentuan</a></li>
-                            <li><a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf"
+                            <li><a href="/mekanisme_layanan/index.html" rel="noopener noreferrer"
                                     target="_blank">Layanan Pengaduan Konsumen</a></li>
-                            <li><a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">Kebijakan Privasi</a></li>
+                            <li><a href="../assets/pdf/Kebijakan Privasi.pdf" rel="noopener noreferrer"
+                                    target="_blank">Kebijakan Privasi</a></li>
                         </ul>
                     </div>
 
@@ -893,67 +964,70 @@
     </div>
 
     <!-- ====== SCRIPTS ====== -->
+    <!-- Satu-satunya sumber TKB -->
     <script src="../assets/api/tkb.js"></script>
 
-    <!-- Modal partner -->
+    <!-- Modal partner + accordion (single source of truth) -->
     <script>
         (function () {
+            const list = document.querySelector('.about_list');
             const modal = document.getElementById('partner-modal');
             const pmLogo = document.getElementById('pm-logo');
             const pmTitle = document.getElementById('pm-title');
             const pmDesc = document.getElementById('pm-desc');
-            if (!modal) return;
 
-            document.querySelectorAll('.about_list li').forEach(li => {
-                li.addEventListener('click', (e) => {
-                    if (e.target.closest('a')?.classList.contains('about_check')) e.preventDefault();
-                    const img = li.querySelector('.about_check img');
-                    const titleEl = li.querySelector('.nama');
-                    const descEl = li.querySelector('.deskrip');
+            if (!list || !modal) return;
 
-                    pmLogo.src = img?.src || '';
-                    pmLogo.alt = titleEl?.textContent?.trim() || '';
-                    pmTitle.textContent = titleEl?.textContent?.trim() || '';
-                    pmDesc.textContent = descEl?.textContent?.trim() || '';
+            function openModal(li) {
+                const img = li.querySelector('.about_check img');
+                const titleEl = li.querySelector('.nama');
+                const descEl = li.querySelector('.deskrip');
 
-                    modal.classList.add('show');
-                    modal.setAttribute('aria-hidden', 'false');
-                });
-            });
+                pmLogo.src = img?.src || '';
+                pmLogo.alt = titleEl?.textContent?.trim() || '';
+                pmTitle.textContent = titleEl?.textContent?.trim() || '';
+                pmDesc.textContent = descEl?.textContent?.trim() || '';
 
+                modal.classList.add('show');
+                document.body.classList.add('modal-open');
+                modal.setAttribute('aria-hidden', 'false');
+            }
+
+            // buka modal via klik logo/nama
+            list.addEventListener('click', (e) => {
+                const li = e.target.closest('li');
+                if (!li) return;
+
+                const logo = e.target.closest('.about_check');
+                const nama = e.target.closest('.nama');
+                if (logo || nama) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openModal(li);
+                    return;
+                }
+
+                // toggle accordion pada klik area lain
+                if (!e.target.closest('.about_list_content .nama')) {
+                    list.querySelectorAll('li.is-open').forEach(x => x !== li && x.classList.remove('is-open'));
+                    li.classList.toggle('is-open');
+                }
+            }, { passive: false });
+
+            // tutup modal
             modal.addEventListener('click', (e) => {
                 if (e.target.hasAttribute('data-close') || e.target === modal) {
                     modal.classList.remove('show');
                     modal.setAttribute('aria-hidden', 'true');
+                    document.body.classList.remove('modal-open');
                 }
             });
             window.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
+                if (e.key === 'Escape' && modal.classList.contains('show')) {
                     modal.classList.remove('show');
                     modal.setAttribute('aria-hidden', 'true');
+                    document.body.classList.remove('modal-open');
                 }
-            });
-        })();
-    </script>
-
-    <!-- Accordion partner list -->
-    <script>
-        (function () {
-            const items = document.querySelectorAll('.about_list li');
-            items.forEach(li => {
-                li.addEventListener('click', (e) => {
-                    if (e.target.closest('.about_list_content .nama')) return;
-                    items.forEach(x => { if (x !== li) x.classList.remove('is-open'); });
-                    li.classList.toggle('is-open');
-                });
-            });
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.about_list li')) {
-                    items.forEach(x => x.classList.remove('is-open'));
-                }
-            });
-            window.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') items.forEach(x => x.classList.remove('is-open'));
             });
         })();
     </script>
@@ -1023,7 +1097,7 @@
         })();
     </script>
 
-    <!-- Ambil data KPI -->
+    <!-- KPI fetch -->
     <script>
         function formatNumber(value, type) {
             let num = parseInt(value, 10);
@@ -1054,102 +1128,113 @@
             .catch(err => console.error(err));
     </script>
 
-    <!-- Mobile drawer (satu-satunya versi) -->
+    <!-- Drawer builder (clone dari nav-menu + TKB) -->
     <script>
         (function () {
-            const burger = document.querySelector('.hamburger');
-            const drawer = document.getElementById('navDrawer');
-            const backdrop = document.querySelector('.drawer-backdrop');
-            if (!burger || !drawer || !backdrop) return;
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');      // menu desktop
+            const navDrawer = document.getElementById('navDrawer');   // drawer mobile
+            let backdrop = document.querySelector('.drawer-backdrop');
 
             function openDrawer() {
-                drawer.classList.add('open');
-                backdrop.classList.add('show');
-                document.body.classList.add('nav-open');
-                burger.setAttribute('aria-expanded', 'true');
+                if (!navDrawer) return;
+                navDrawer.classList.add('open');
+                backdrop?.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                hamburger?.setAttribute('aria-expanded', 'true');
+                navDrawer.setAttribute('aria-hidden', 'false');
             }
             function closeDrawer() {
-                drawer.classList.remove('open');
-                backdrop.classList.remove('show');
-                document.body.classList.remove('nav-open');
-                burger.setAttribute('aria-expanded', 'false');
+                if (!navDrawer) return;
+                navDrawer.classList.remove('open');
+                backdrop?.classList.remove('show');
+                document.body.style.overflow = '';
+                hamburger?.setAttribute('aria-expanded', 'false');
+                navDrawer.setAttribute('aria-hidden', 'true');
             }
 
-            burger.addEventListener('click', (e) => {
+            hamburger?.addEventListener('click', (e) => {
                 e.preventDefault();
-                drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+                navDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
             });
-            backdrop.addEventListener('click', closeDrawer);
+            backdrop?.addEventListener('click', closeDrawer);
             document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
 
-            // Optional dropdown di dalam drawer
-            drawer.addEventListener('click', (e) => {
-                const trigger = e.target.closest('.nav-menu li.dropdown > a, .nav-menu li.tkb-mobile > a.tkb-toggle');
-                if (!trigger) return;
-                e.preventDefault();
-                trigger.parentElement.classList.toggle('open');
-            });
-        })();
-    </script>
+            function buildDrawerContent() {
+                if (!navDrawer || !navMenu) return;
+                navDrawer.innerHTML = '';
+                const mobileMenu = navMenu.cloneNode(true);
+                mobileMenu.classList.remove('active');
+                navDrawer.appendChild(mobileMenu);
 
-    <script>
-        (function () {
-            const list = document.querySelector('.about_list');
-            const modal = document.getElementById('partner-modal');
-            const pmLogo = document.getElementById('pm-logo');
-            const pmTitle = document.getElementById('pm-title');
-            const pmDesc = document.getElementById('pm-desc');
+                // sisipkan blok TKB
+                const tkbLi = document.createElement('li');
+                tkbLi.className = 'tkb-mobile';
+                const gv = id => document.getElementById(id)?.textContent || '--%';
+                tkbLi.innerHTML = `
+          <a href="#" class="tkb-toggle">Periksa TKB</a>
+          <ul class="tkb-sub">
+            <li><strong>TKB0:</strong> ${gv('TKB0')}</li>
+            <li><strong>TKB30:</strong> ${gv('TKB30')}</li>
+            <li><strong>TKB60:</strong> ${gv('TKB60')}</li>
+            <li><strong>TKB90:</strong> ${gv('TKB90')}</li>
+          </ul>
+        `;
+                mobileMenu.appendChild(tkbLi);
 
-            if (!list || !modal) return;
+                // jadikan dropdown sebagai akordeon
+                mobileMenu.querySelectorAll('.dropdown > a').forEach(a => {
+                    a.addEventListener('click', e => {
+                        e.preventDefault();
+                        a.parentElement.classList.toggle('open');
+                    });
+                });
+                tkbLi.querySelector('.tkb-toggle')?.addEventListener('click', e => {
+                    e.preventDefault();
+                    tkbLi.classList.toggle('open');
+                });
 
-            // Buka modal dari item
-            function openModal(li) {
-                const img = li.querySelector('.about_check img');
-                const titleEl = li.querySelector('.nama');
-                const descEl = li.querySelector('.deskrip');
+                // tutup drawer saat klik link biasa
+                mobileMenu.querySelectorAll('a').forEach(a => {
+                    if (a.classList.contains('tkb-toggle') || a.closest('.dropdown')) return;
+                    a.addEventListener('click', () => closeDrawer());
+                });
 
-                pmLogo.src = img?.src || '';
-                pmLogo.alt = titleEl?.textContent?.trim() || '';
-                pmTitle.textContent = titleEl?.textContent?.trim() || '';
-                pmDesc.textContent = descEl?.textContent?.trim() || '';
-
-                modal.classList.add('show');
-                document.body.classList.add('modal-open');
-                modal.setAttribute('aria-hidden', 'false');
+                // sinkronkan angka TKB saat berubah
+                function updateDrawerTKB() {
+                    const sel = (k) => document.getElementById(k)?.textContent || '--%';
+                    const block = navDrawer.querySelector('.tkb-mobile .tkb-sub');
+                    if (block) {
+                        block.innerHTML = `
+              <li><strong>TKB0:</strong> ${sel('TKB0')}</li>
+              <li><strong>TKB30:</strong> ${sel('TKB30')}</li>
+              <li><strong>TKB60:</strong> ${sel('TKB60')}</li>
+              <li><strong>TKB90:</strong> ${sel('TKB90')}</li>
+            `;
+                    }
+                }
+                const obs = new MutationObserver(updateDrawerTKB);
+                ['TKB0', 'TKB30', 'TKB60', 'TKB90'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) obs.observe(el, { childList: true });
+                });
             }
 
-            // Satu pintu: klik di list
-            list.addEventListener('click', (e) => {
-                const logo = e.target.closest('.about_check');
-                const nama = e.target.closest('.nama');
-                const li = e.target.closest('li');
-                if (!li) return;
-
-                // Klik logo/nama -> buka modal, jangan biarkan event tembus
-                if (logo || nama) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    openModal(li);
+            // init (bangun isi saat pertama & saat resize ke mobile)
+            function ensureDrawer() {
+                if (window.innerWidth <= 900) {
+                    if (!navDrawer.querySelector('.nav-menu')) buildDrawerContent();
+                } else {
+                    closeDrawer();
                 }
-            }, { passive: false });
-
-            // Tutup modal: klik backdrop atau tombol close
-            modal.addEventListener('click', (e) => {
-                if (e.target.hasAttribute('data-close') || e.target === modal) {
-                    modal.classList.remove('show');
-                    modal.setAttribute('aria-hidden', 'true');
-                    document.body.classList.remove('modal-open');
-                }
-            });
-            window.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.classList.contains('show')) {
-                    modal.classList.remove('show');
-                    modal.setAttribute('aria-hidden', 'true');
-                    document.body.classList.remove('modal-open');
-                }
-            });
+            }
+            window.addEventListener('resize', ensureDrawer);
+            document.addEventListener('DOMContentLoaded', ensureDrawer);
+            // juga bangun awal supaya langsung siap di mobile
+            ensureDrawer();
         })();
     </script>
+
 
 </body>
 

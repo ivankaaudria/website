@@ -13,484 +13,645 @@
 
 <body>
     <div class="uatas">
-    <header class="header" role="banner">
-        <div class="container">
-            <a href="/" class="nav-brand" aria-label="UATAS">
-                <img src="../assets/images/logouatas.png" alt="UATAS" class="logo" />
-            </a>
+        <header class="header" role="banner">
+            <div class="container">
+                <a href="/" class="nav-brand" aria-label="UATAS">
+                    <img src="../assets/images/logouatas.png" alt="UATAS" class="logo" />
+                </a>
 
-            <nav class="navigation" aria-label="Navigasi utama">
-                <ul class="nav-menu">
-                    <li><a href="../">Beranda</a></li>
-                    <li><a href="../produk/">Produk</a></li>
-                    <li><a href="../about-us/">Tentang Kami</a></li>
-                    <li class="dropdown">
-                        <a href="#bantuan" aria-haspopup="true">Bantuan</a>
-                        <ul class="dropdown-menu" aria-label="Submenu Bantuan">
-                            <li><a href="../faq/">FAQ</a></li>
-                            <li><a href="../kontak/" aria-current="page">Kontak</a></li>
+                <!-- NAV DESKTOP (tetap) -->
+                <nav class="navigation" aria-label="Primary">
+                    <ul class="nav-menu">
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../produk/">Produk</a></li>
+                        <li><a href="../about-us/">Tentang Kami</a></li>
+                        <li class="dropdown">
+                            <a href="#bantuan">Bantuan</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../faq/">FAQ</a></li>
+                                <li><a href="../kontak/">Kontak</a></li>
+                                <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank"
+                                        rel="noopener noreferrer">Syarat dan Ketentuan</a></li>
+                                <li><a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank"
+                                        rel="noopener noreferrer">Kebijakan
+                                        Privasi</a></li>
+                                <li><a href="/mekanisme_layanan/index.html" target="_blank"
+                                        rel="noopener noreferrer">Layanan Pengaduan Konsumen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- HAMBURGER -->
+                <button class="hamburger" aria-label="Buka menu" aria-controls="navDrawer" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <!-- IKON TKB (disembunyikan di mobile oleh CSS kamu) -->
+                <div class="tkb-icon" aria-describedby="tkb-tip">
+                    <img src="../assets/images/Periksa TKB.png" alt="Periksa TKB" />
+                    <div class="tkb-tooltip" id="tkb-tip">
+                        <strong>TKB0 :</strong> <span id="TKB0">--%</span><br>
+                        <strong>TKB30 :</strong> <span id="TKB30">--%</span><br>
+                        <strong>TKB60 :</strong> <span id="TKB60">--%</span><br>
+                        <strong>TKB90 :</strong> <span id="TKB90">--%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DRAWER + BACKDROP -->
+            <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true"
+                aria-hidden="true" tabindex="-1"></nav>
+            <div class="drawer-backdrop"></div>
+        </header>
+
+        <section id="blog" class="events">
+            <div class="container">
+                <header class="events-head">
+                    <h2 class="title">Acara dan Kegiatan</h2>
+                </header>
+
+                <div class="event-grid">
+                    <article class="event-card">
+                        <a class="thumb" href="https://www.youtube.com/watch?v=Xhur1vSrrFk" target="_blank"
+                            rel="noopener" aria-label="Pindar Berbagi at Desa Sauwandarek Raja Ampat">
+                            <img src="https://img.youtube.com/vi/Xhur1vSrrFk/hqdefault.jpg"
+                                alt="Corporate Social Responsibility - Pindar Berbagi at Desa Sauwandarek Raja Ampat">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">30 Juli 2025</div>
+                            <h3 class="event-title">Pindar Berbagi at Desa Sauwandarek Raja Ampat</h3>
+                            <a class="btn-watch" href="https://www.youtube.com/watch?v=Xhur1vSrrFk" target="_blank"
+                                rel="noopener">
+                                Watch Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://www.youtube.com/watch?v=JI09pnABRhI" target="_blank"
+                            rel="noopener" aria-label="Fintech Lending Days Sorong - Exhibition and Talk Show">
+                            <img src="https://img.youtube.com/vi/JI09pnABRhI/hqdefault.jpg"
+                                alt="Fintech Lending Days Sorong - Exhibition and Talk Show">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">28 Juli 2025</div>
+                            <h3 class="event-title">Fintech Lending Days Sorong - Exhibition and Talk Show</h3>
+                            <a class="btn-watch" href="https://www.youtube.com/watch?v=JI09pnABRhI" target="_blank"
+                                rel="noopener">
+                                Watch Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://www.youtube.com/watch?v=ejic7E12IwM" target="_blank"
+                            rel="noopener"
+                            aria-label="Fintech Lending Days Sorong - AFPI GOES TO CAMPUS at Universitas Victori Sorong">
+                            <img src="https://img.youtube.com/vi/ejic7E12IwM/hqdefault.jpg"
+                                alt="Fintech Lending Days Sorong - UMKM Visit">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">25 Juli 2025</div>
+                            <h3 class="event-title">Fintech Lending Days Sorong - AFPI GOES TO CAMPUS</h3>
+                            <a class="btn-watch" href="https://www.youtube.com/watch?v=ejic7E12IwM" target="_blank"
+                                rel="noopener">
+                                Watch Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://www.youtube.com/watch?v=bRb2979IXaI" target="_blank"
+                            rel="noopener" aria-label="Fintech Lending Days Sorong - Exhibition and Talk Show">
+                            <img src="https://img.youtube.com/vi/bRb2979IXaI/hqdefault.jpg"
+                                alt="Fintech Lending Days Sorong - UMKM Visit">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">22 Juli 2025</div>
+                            <h3 class="event-title">Fintech Lending Days Sorong - UMKM Visit</h3>
+                            <a class="btn-watch" href="https://www.youtube.com/watch?v=bRb2979IXaI" target="_blank"
+                                rel="noopener">
+                                Watch Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://www.youtube.com/watch?v=qNBStLB0tw0I" target="_blank"
+                            rel="noopener" aria-label="#MudaPahamFintech - Manado at Universitas Sam Ratulangi">
+                            <img src="https://img.youtube.com/vi/qNBStLB0tw0/hqdefault.jpg"
+                                alt="#MudaPahamFintech - Manado at Universitas Sam Ratulangi">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">19 Februari 2025</div>
+                            <h3 class="event-title">#MudaPahamFintech - Manado at Universitas Sam Ratulangi</h3>
+                            <a class="btn-watch" href="https://www.youtube.com/watch?v=qNBStLB0tw0" target="_blank"
+                                rel="noopener">
+                                Watch Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://www.youtube.com/watch?v=Qa2qMTajboo" target="_blank"
+                            rel="noopener"
+                            aria-label="UATAS X 360 Kredi Talkshow : Doom Spending: Bikin Bahagia atau Bangkrut?">
+                            <img src="https://img.youtube.com/vi/Qa2qMTajboo/hqdefault.jpg"
+                                alt="UATAS X 360 Kredi Talkshow : Doom Spending: Bikin Bahagia atau Bangkrut?">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">21 November 2024</div>
+                            <h3 class="event-title">UATAS X 360 Kredi Talkshow : Doom Spending</h3>
+                            <a class="btn-watch" href="https://www.youtube.com/watch?v=Qa2qMTajboo" target="_blank"
+                                rel="noopener">
+                                Watch Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://www.youtube.com/watch?v=vtQxUyjWUAk" target="_blank"
+                            rel="noopener" aria-label="NUSANTARA FUN RUN at IKN - UATASxPinjamDuit">
+                            <img src="https://img.youtube.com/vi/vtQxUyjWUAk/hqdefault.jpg"
+                                alt="NUSANTARA FUN RUN at IKN - UATASxPinjamDuit">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">24 Oktober 2024</div>
+                            <h3 class="event-title">NUSANTARA FUN RUN at IKN - UATASxPinjamDuit</h3>
+                            <a class="btn-watch" href="https://www.youtube.com/watch?v=vtQxUyjWUAk" target="_blank"
+                                rel="noopener">
+                                Watch Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://www.youtube.com/watch?v=W5zcwHu0rLA" target="_blank"
+                            rel="noopener" aria-label="UATAS at FinExpo BIK 2024 Balikpapan">
+                            <img src="https://img.youtube.com/vi/W5zcwHu0rLA/hqdefault.jpg"
+                                alt="UATAS at FinExpo BIK 2024 Balikpapan">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">17 Oktober 2024</div>
+                            <h3 class="event-title">UATAS at FinExpo BIK 2024, Balikpapan</h3>
+                            <a class="btn-watch" href="https://www.youtube.com/watch?v=W5zcwHu0rLA" target="_blank"
+                                rel="noopener">
+                                Watch Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://youtu.be/nGHbJBi0i-c" target="_blank" rel="noopener"
+                            aria-label="Muda Paham Fintech Aula STIE Indonesia, Banjarmasin">
+                            <img src="https://img.youtube.com/vi/nGHbJBi0i-c/maxresdefault.jpg"
+                                data-hq="https://img.youtube.com/vi/nGHbJBi0i-c/hqdefault.jpg"
+                                alt="Muda Paham Fintech Aula STIE Indonesia, Banjarmasin">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">23 Oktober 2023</div>
+                            <h3 class="event-title">Muda Paham Fintech Aula STIE Indonesia, Banjarmasin</h3>
+                            <a class="btn-watch" href="https://youtu.be/nGHbJBi0i-c" target="_blank"
+                                rel="noopener">Watch
+                                Now</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://youtu.be/L6EXDsY8nwU" target="_blank" rel="noopener"
+                            aria-label="Next Gen Fintech Politeknik El Bajo Commodus, Labuan Bajo">
+                            <img src="https://img.youtube.com/vi/L6EXDsY8nwU/maxresdefault.jpg"
+                                data-hq="https://img.youtube.com/vi/L6EXDsY8nwU/hqdefault.jpg"
+                                alt="Next Gen Fintech Politeknik El Bajo Commodus, Labuan Bajo">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">17 Juli 2023</div>
+                            <h3 class="event-title">Next Gen Fintech Politeknik El Bajo Commodus, Labuan Bajo</h3>
+                            <a class="btn-watch" href="https://youtu.be/L6EXDsY8nwU" target="_blank"
+                                rel="noopener">Watch
+                                Now</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://youtu.be/hRBkj3oTPN8" target="_blank" rel="noopener"
+                            aria-label="Fintech Lending Days">
+                            <img src="https://img.youtube.com/vi/hRBkj3oTPN8/maxresdefault.jpg"
+                                data-hq="https://img.youtube.com/vi/hRBkj3oTPN8/hqdefault.jpg"
+                                alt="Fintech Lending Days">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">26 November 2021</div>
+                            <h3 class="event-title">Fintech Lending Days with UMKM at Malang</h3>
+                            <a class="btn-watch" href="https://youtu.be/hRBkj3oTPN8" target="_blank"
+                                rel="noopener">Watch
+                                Now</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://youtu.be/gybp4PuuEz8" target="_blank" rel="noopener"
+                            aria-label="Fintech Bersama UMKM">
+                            <img src="https://img.youtube.com/vi/gybp4PuuEz8/maxresdefault.jpg"
+                                data-hq="https://img.youtube.com/vi/gybp4PuuEz8/hqdefault.jpg"
+                                alt="Fintech Bersama UMKM">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">29 October 2021</div>
+                            <h3 class="event-title">Fintech Bersama UMKM @Sanur, Bali - AFPI</h3>
+                            <a class="btn-watch" href="https://youtu.be/gybp4PuuEz8" target="_blank"
+                                rel="noopener">Watch
+                                Now</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <a class="thumb" href="https://youtu.be/r--I-vKQ1sQ" target="_blank" rel="noopener"
+                            aria-label="Muda Paham Fintech">
+                            <img src="https://img.youtube.com/vi/r--I-vKQ1sQ/maxresdefault.jpg"
+                                data-hq="https://img.youtube.com/vi/r--I-vKQ1sQ/hqdefault.jpg" alt="Muda Paham Fintech">
+                        </a>
+                        <div class="event-body">
+                            <div class="event-date">20 November 2023</div>
+                            <h3 class="event-title">Muda Paham Fintech @ Banyuwangi with UATAS</h3>
+                            <a class="btn-watch" href="https://youtu.be/r--I-vKQ1sQ" target="_blank"
+                                rel="noopener">Watch
+                                Now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <footer class="uatas-footer">
+                <div class="container">
+
+                    <div class="uatas-footer-card">
+                        <div class="uf-left">
+                            <div class="uf-brand">
+                                <img src="../assets/images/logouatas.png" alt="Logo" class="uf-mascot">
+                            </div>
+
+                            <div class="uf-office">
+                                <div class="uf-map">
+                                    <iframe title="Kantor Pusat UATAS"
+                                        src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
+                                        loading="lazy"></iframe>
+                                </div>
+                                <div class="uf-info">
+                                    <h4>Kantor Pusat</h4>
+                                    <address>
+                                        Menara Dea Tower 2 Lt. 9 Unit 902<br>
+                                        Jl. Mega Kuningan Barat Lot 2.1 RT5/RW2,<br>
+                                        Kuningan, Setiabudi, Jakarta Selatan 12950<br>
+                                        <span>DKI Jakarta</span>
+                                    </address>
+                                    <ul class="uf-meta">
+                                        <li>📞 <a href="tel:+622150012345">+62 21-500-12345</a></li>
+                                        <li>🕘 Senin – Jumat: 09.00 – 18.00 WIB</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="uf-office">
+                                <div class="uf-map">
+                                    <iframe title="Walk in Customer Service"
+                                        src="https://www.google.com/maps?q=Wijaya+Kusuma+Jakarta+Barat&output=embed"
+                                        loading="lazy"></iframe>
+                                </div>
+                                <div class="uf-info">
+                                    <h4>Walk in Customer Service</h4>
+                                    <address>
+                                        Wijaya Kusuma Taman Duta Mas Blok B4 No.15,<br>
+                                        Grogol Petamburan, Jakarta Barat 11460
+                                    </address>
+                                    <ul class="uf-meta">
+                                        <li>📧 <a href="mailto:cs@support.uatas.id">cs@support.uatas.id</a></li>
+                                        <li>🕘 Senin–Jumat: 09.00–18.00 WIB (Walk-in)<br>Sabtu: 09.00–20.00 WIB
+                                            (Call CS)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uf-right">
+                            <div class="uf-download">
+                                <h5>Unduh Aplikasi di</h5>
+                                <div class="store-row">
+                                    <a class="store-badge"
+                                        href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
+                                        aria-label="Google Play" target="_blank">
+                                        <img src="../assets/images/googleplay.png" alt="Get it on Google Play">
+                                    </a>
+                                    <a class="store-badge"
+                                        href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
+                                        aria-label="App Store" target="_blank">
+                                        <img src="../assets/images/appstore.png" alt="Download on the App Store">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="uf-social">
+                                <h5>Ikuti Kami</h5>
+                                <div class="social-row">
+                                    <a href="https://www.facebook.com/UATASID/" class="social-icon" target="_blank"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="https://x.com/UATASID" class="social-icon" target="_blank"><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a href="https://www.instagram.com/uatas.id/" class="social-icon" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.tiktok.com/@uatasid" class="social-icon" target="_blank"><i
+                                            class="fab fa-tiktok"></i></a>
+                                    <a href="https://www.youtube.com/@uatasid" class="social-icon" target="_blank"><i
+                                            class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="uf-notice-title">PERHATIAN</h3>
+                    <div class="uf-notice-grid">
+                        <ul>
+                            <li>Layanan Pendanaan Bersama Berbasis Teknologi Informasi merupakan kesepakatan perdata
+                                antara
+                                Pemberi Dana dengan Penerima Dana, sehingga segala risiko yang timbul dari
+                                kesepakatan
+                                tersebut
+                                ditanggung sepenuhnya oleh masing-masing pihak.</li>
+                            <li>Risiko kredit atau gagal bayar ditanggung sepenuhnya oleh Pemberi Dana. Tidak ada
+                                lembaga
+                                atau
+                                otoritas negara yang bertanggung jawab atas risiko gagal bayar ini.</li>
+                            <li>Penyelenggara dengan persetujuan dari masing-masing Pengguna (Pemberi Dana dan/atau
+                                Penerima
+                                Dana) mengakses, memperoleh, menyimpan, mengelola dan/atau menggunakan data pribadi
+                                Pengguna
+                                ("Pemanfaatan Data") pada atau di dalam benda, perangkat elektronik (termasuk
+                                smartphone
+                                atau
+                                telepon seluler), perangkat keras (hardware) maupun lunak (software), dokumen
+                                elektronik,
+                                aplikasi atau sistem elektronik milik Pengguna atau yang dikuasai Pengguna, dengan
+                                memberitahukan tujuan, batasan dan mekanisme Pemanfaatan Data tersebut kepada
+                                Pengguna yang
+                                bersangkutan sebelum memperoleh persetujuan yang dimaksud.</li>
+                            <li>Pemberi Dana yang belum memiliki pengetahuan dan pengalaman pendanaan, disarankan
+                                untuk
+                                tidak
+                                menggunakan layanan UATAS ini.</li>
+                            <li>Penerima Dana harus mempertimbangkan tingkat bunga Pendanaan dan biaya lainnya
+                                sesuai dengan
+                                kemampuan dalam melunasi Pendanaan.</li>
+                            <li>Setiap kecurangan tercatat secara digital di dunia maya dan dapat diketahui
+                                masyarakat luas
+                                di
+                                media sosial.</li>
+                        </ul>
+                        <ul>
+                            <li>Pengguna harus membaca dan memahami informasi ini sebelum membuat keputusan menjadi
+                                Pemberi
+                                Dana
+                                atau Penerima Dana.</li>
+                            <li>Pemerintah yaitu dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas
+                                setiap
+                                pelanggaran atau ketidakpatuhan oleh Pengguna, baik Pemberi Dana maupun Penerima
+                                Dana (baik
+                                karena kesengajaan atau kelalaian Pengguna) terhadap ketentuan peraturan
+                                perundang-undangan
+                                maupun kesepakatan atau perikatan antara Penyelenggara (dalam hal ini adalah
+                                “UATAS”) dengan
+                                Pemberi Dana dan/atau Penerima Dana.</li>
+                            <li>Setiap transaksi dan kegiatan pendanaan atau pelaksanaan kesepakatan mengenai
+                                pendanaan
+                                antara
+                                atau yang melibatkan UATAS, Pemberi Dana dan/atau Penerima Dana wajib dilakukan
+                                melalui
+                                escrow
+                                account dan virtual account sebagaimana yang diwajibkan berdasarkan Peraturan
+                                Otoritas Jasa
+                                Keuangan Nomor 10 /POJK.05/2022 tentang Layanan Pendanaan Bersama Berbasis Teknologi
+                                Informasi
+                                dan pelanggaran atau ketidakpatuhan terhadap ketentuan tersebut merupakan bukti
+                                telah
+                                terjadinya
+                                pelanggaran hukum oleh UATAS sehingga UATAS wajib menanggung ganti rugi yang
+                                diderita oleh
+                                masing-masing Pengguna sebagai akibat langsung dari pelanggaran hukum tersebut
+                                diatas tanpa
+                                mengurangi hak Pengguna yang menderita kerugian menurut Kitab Undang-Undang Hukum
+                                Perdata.
+                            </li>
+                            <li>Hati-hati, transaksi ini beresiko tinggi. Anda dapat saja mengalami kerugian atau
+                                kehilangan
+                                uang. Jangan berutang jika tidak memiliki kemampuan membayar. Pertimbangkan secara
+                                bijak
+                                sebelum
+                                bertransaksi.</li>
+                        </ul>
+                    </div>
+
+                    <div class="uf-pdf">
+                        <ul class="pdf-links">
                             <li>
-                                <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                                <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" rel="noopener noreferrer"
+                                    target="_blank">
                                     Syarat dan Ketentuan
                                 </a>
                             </li>
                             <li>
-                                <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
-                                    Kebijakan Privasi
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                                <a href="/assets/images/Mekanisme dan Layanan Pengaduan Pengguna.png"
+                                    rel="noopener noreferrer" target="_blank">
                                     Layanan Pengaduan Konsumen
                                 </a>
                             </li>
+                            <li>
+                                <a href="../assets/pdf/Kebijakan Privasi.pdf" rel="noopener noreferrer" target="_blank">
+                                    Kebijakan Privasi
+                                </a>
+                            </li>
                         </ul>
-                    </li>
-                </ul>
-            </nav>
+                    </div>
 
-            <button class="hamburger" aria-label="Buka menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-
-            <div class="tkb-icon">
-                <img src="../assets/images/Periksa TKB.png" alt="Periksa TKB" />
-                <div class="tkb-tooltip">
-                    <strong>TKB0 :</strong> <span id="TKB0">--%</span><br>
-                    <strong>TKB30 :</strong> <span id="TKB30">--%</span><br>
-                    <strong>TKB60 :</strong> <span id="TKB60">--%</span><br>
-                    <strong>TKB90 :</strong> <span id="TKB90">--%</span>
+                    <div class="uf-copy">Copyright © 2025 Uatas. All rights reserved.</div>
                 </div>
-            </div>
-        </div>
-    </header>
+            </footer>
+        </section>
 
-    <section id="blog" class="events">
-        <div class="container">
-            <header class="events-head">
-                <h2 class="title">Acara dan Kegiatan</h2>
-            </header>
+        <script src="../assets/api/tkb.js"></script>
 
-            <div class="event-grid">
-                <article class="event-card">
-                    <a class="thumb" href="https://www.youtube.com/watch?v=Xhur1vSrrFk" target="_blank" rel="noopener"
-                        aria-label="Pindar Berbagi at Desa Sauwandarek Raja Ampat">
-                        <img src="https://img.youtube.com/vi/Xhur1vSrrFk/hqdefault.jpg"
-                            alt="Corporate Social Responsibility - Pindar Berbagi at Desa Sauwandarek Raja Ampat">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">30 Juli 2025</div>
-                        <h3 class="event-title">Pindar Berbagi at Desa Sauwandarek Raja Ampat</h3>
-                        <a class="btn-watch" href="https://www.youtube.com/watch?v=Xhur1vSrrFk" target="_blank"
-                            rel="noopener">
-                            Watch Now
-                        </a>
-                    </div>
-                </article>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const fallbackQuals = ["sddefault", "hqdefault", "mqdefault"];
 
-                <article class="event-card">
-                    <a class="thumb" href="https://www.youtube.com/watch?v=JI09pnABRhI" target="_blank" rel="noopener"
-                        aria-label="Fintech Lending Days Sorong - Exhibition and Talk Show">
-                        <img src="https://img.youtube.com/vi/JI09pnABRhI/hqdefault.jpg"
-                            alt="Fintech Lending Days Sorong - Exhibition and Talk Show">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">28 Juli 2025</div>
-                        <h3 class="event-title">Fintech Lending Days Sorong - Exhibition and Talk Show</h3>
-                        <a class="btn-watch" href="https://www.youtube.com/watch?v=JI09pnABRhI" target="_blank"
-                            rel="noopener">
-                            Watch Now
-                        </a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://www.youtube.com/watch?v=ejic7E12IwM" target="_blank" rel="noopener"
-                        aria-label="Fintech Lending Days Sorong - AFPI GOES TO CAMPUS at Universitas Victori Sorong">
-                        <img src="https://img.youtube.com/vi/ejic7E12IwM/hqdefault.jpg"
-                            alt="Fintech Lending Days Sorong - UMKM Visit">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">25 Juli 2025</div>
-                        <h3 class="event-title">Fintech Lending Days Sorong - AFPI GOES TO CAMPUS</h3>
-                        <a class="btn-watch" href="https://www.youtube.com/watch?v=ejic7E12IwM" target="_blank"
-                            rel="noopener">
-                            Watch Now
-                        </a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://www.youtube.com/watch?v=bRb2979IXaI" target="_blank" rel="noopener"
-                        aria-label="Fintech Lending Days Sorong - Exhibition and Talk Show">
-                        <img src="https://img.youtube.com/vi/bRb2979IXaI/hqdefault.jpg"
-                            alt="Fintech Lending Days Sorong - UMKM Visit">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">22 Juli 2025</div>
-                        <h3 class="event-title">Fintech Lending Days Sorong - UMKM Visit</h3>
-                        <a class="btn-watch" href="https://www.youtube.com/watch?v=bRb2979IXaI" target="_blank"
-                            rel="noopener">
-                            Watch Now
-                        </a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://www.youtube.com/watch?v=qNBStLB0tw0I" target="_blank" rel="noopener"
-                        aria-label="#MudaPahamFintech - Manado at Universitas Sam Ratulangi">
-                        <img src="https://img.youtube.com/vi/qNBStLB0tw0/hqdefault.jpg"
-                            alt="#MudaPahamFintech - Manado at Universitas Sam Ratulangi">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">19 Februari 2025</div>
-                        <h3 class="event-title">#MudaPahamFintech - Manado at Universitas Sam Ratulangi</h3>
-                        <a class="btn-watch" href="https://www.youtube.com/watch?v=qNBStLB0tw0" target="_blank"
-                            rel="noopener">
-                            Watch Now
-                        </a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://www.youtube.com/watch?v=Qa2qMTajboo" target="_blank" rel="noopener"
-                        aria-label="UATAS X 360 Kredi Talkshow : Doom Spending: Bikin Bahagia atau Bangkrut?">
-                        <img src="https://img.youtube.com/vi/Qa2qMTajboo/hqdefault.jpg"
-                            alt="UATAS X 360 Kredi Talkshow : Doom Spending: Bikin Bahagia atau Bangkrut?">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">21 November 2024</div>
-                        <h3 class="event-title">UATAS X 360 Kredi Talkshow : Doom Spending</h3>
-                        <a class="btn-watch" href="https://www.youtube.com/watch?v=Qa2qMTajboo" target="_blank"
-                            rel="noopener">
-                            Watch Now
-                        </a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://www.youtube.com/watch?v=vtQxUyjWUAk" target="_blank" rel="noopener"
-                        aria-label="NUSANTARA FUN RUN at IKN - UATASxPinjamDuit">
-                        <img src="https://img.youtube.com/vi/vtQxUyjWUAk/hqdefault.jpg"
-                            alt="NUSANTARA FUN RUN at IKN - UATASxPinjamDuit">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">24 Oktober 2024</div>
-                        <h3 class="event-title">NUSANTARA FUN RUN at IKN - UATASxPinjamDuit</h3>
-                        <a class="btn-watch" href="https://www.youtube.com/watch?v=vtQxUyjWUAk" target="_blank"
-                            rel="noopener">
-                            Watch Now
-                        </a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://www.youtube.com/watch?v=W5zcwHu0rLA" target="_blank" rel="noopener"
-                        aria-label="UATAS at FinExpo BIK 2024 Balikpapan">
-                        <img src="https://img.youtube.com/vi/W5zcwHu0rLA/hqdefault.jpg"
-                            alt="UATAS at FinExpo BIK 2024 Balikpapan">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">17 Oktober 2024</div>
-                        <h3 class="event-title">UATAS at FinExpo BIK 2024, Balikpapan</h3>
-                        <a class="btn-watch" href="https://www.youtube.com/watch?v=W5zcwHu0rLA" target="_blank"
-                            rel="noopener">
-                            Watch Now
-                        </a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://youtu.be/nGHbJBi0i-c" target="_blank" rel="noopener"
-                        aria-label="Muda Paham Fintech Aula STIE Indonesia, Banjarmasin">
-                        <img src="https://img.youtube.com/vi/nGHbJBi0i-c/maxresdefault.jpg"
-                            data-hq="https://img.youtube.com/vi/nGHbJBi0i-c/hqdefault.jpg"
-                            alt="Muda Paham Fintech Aula STIE Indonesia, Banjarmasin">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">23 Oktober 2023</div>
-                        <h3 class="event-title">Muda Paham Fintech Aula STIE Indonesia, Banjarmasin</h3>
-                        <a class="btn-watch" href="https://youtu.be/nGHbJBi0i-c" target="_blank" rel="noopener">Watch
-                            Now</a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://youtu.be/L6EXDsY8nwU" target="_blank" rel="noopener"
-                        aria-label="Next Gen Fintech Politeknik El Bajo Commodus, Labuan Bajo">
-                        <img src="https://img.youtube.com/vi/L6EXDsY8nwU/maxresdefault.jpg"
-                            data-hq="https://img.youtube.com/vi/L6EXDsY8nwU/hqdefault.jpg"
-                            alt="Next Gen Fintech Politeknik El Bajo Commodus, Labuan Bajo">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">17 Juli 2023</div>
-                        <h3 class="event-title">Next Gen Fintech Politeknik El Bajo Commodus, Labuan Bajo</h3>
-                        <a class="btn-watch" href="https://youtu.be/L6EXDsY8nwU" target="_blank" rel="noopener">Watch
-                            Now</a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://youtu.be/hRBkj3oTPN8" target="_blank" rel="noopener"
-                        aria-label="Fintech Lending Days">
-                        <img src="https://img.youtube.com/vi/hRBkj3oTPN8/maxresdefault.jpg"
-                            data-hq="https://img.youtube.com/vi/hRBkj3oTPN8/hqdefault.jpg" alt="Fintech Lending Days">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">26 November 2021</div>
-                        <h3 class="event-title">Fintech Lending Days with UMKM at Malang</h3>
-                        <a class="btn-watch" href="https://youtu.be/hRBkj3oTPN8" target="_blank" rel="noopener">Watch
-                            Now</a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://youtu.be/gybp4PuuEz8" target="_blank" rel="noopener"
-                        aria-label="Fintech Bersama UMKM">
-                        <img src="https://img.youtube.com/vi/gybp4PuuEz8/maxresdefault.jpg"
-                            data-hq="https://img.youtube.com/vi/gybp4PuuEz8/hqdefault.jpg" alt="Fintech Bersama UMKM">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">29 October 2021</div>
-                        <h3 class="event-title">Fintech Bersama UMKM @Sanur, Bali - AFPI</h3>
-                        <a class="btn-watch" href="https://youtu.be/gybp4PuuEz8" target="_blank" rel="noopener">Watch
-                            Now</a>
-                    </div>
-                </article>
-
-                <article class="event-card">
-                    <a class="thumb" href="https://youtu.be/r--I-vKQ1sQ" target="_blank" rel="noopener"
-                        aria-label="Muda Paham Fintech">
-                        <img src="https://img.youtube.com/vi/r--I-vKQ1sQ/maxresdefault.jpg"
-                            data-hq="https://img.youtube.com/vi/r--I-vKQ1sQ/hqdefault.jpg" alt="Muda Paham Fintech">
-                    </a>
-                    <div class="event-body">
-                        <div class="event-date">20 November 2023</div>
-                        <h3 class="event-title">Muda Paham Fintech @ Banyuwangi with UATAS</h3>
-                        <a class="btn-watch" href="https://youtu.be/r--I-vKQ1sQ" target="_blank" rel="noopener">Watch
-                            Now</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <footer class="uatas-footer">
-            <div class="container">
-
-                <div class="uatas-footer-card">
-                    <div class="uf-left">
-                        <div class="uf-brand">
-                            <img src="../assets/images/logouatas.png" alt="Logo" class="uf-mascot">
-                        </div>
-
-                        <div class="uf-office">
-                            <div class="uf-map">
-                                <iframe title="Kantor Pusat UATAS"
-                                    src="https://www.google.com/maps?q=Menara+Dea+Tower+2+Jakarta&output=embed"
-                                    loading="lazy"></iframe>
-                            </div>
-                            <div class="uf-info">
-                                <h4>Kantor Pusat</h4>
-                                <address>
-                                    Menara Dea Tower 2 Lt. 9 Unit 902<br>
-                                    Jl. Mega Kuningan Barat Lot 2.1 RT5/RW2,<br>
-                                    Kuningan, Setiabudi, Jakarta Selatan 12950<br>
-                                    <span>DKI Jakarta</span>
-                                </address>
-                                <ul class="uf-meta">
-                                    <li>📞 <a href="tel:+622150012345">+62 21-500-12345</a></li>
-                                    <li>🕘 Senin – Jumat: 09.00 – 18.00 WIB</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="uf-office">
-                            <div class="uf-map">
-                                <iframe title="Walk in Customer Service"
-                                    src="https://www.google.com/maps?q=Wijaya+Kusuma+Jakarta+Barat&output=embed"
-                                    loading="lazy"></iframe>
-                            </div>
-                            <div class="uf-info">
-                                <h4>Walk in Customer Service</h4>
-                                <address>
-                                    Wijaya Kusuma Taman Duta Mas Blok B4 No.15,<br>
-                                    Grogol Petamburan, Jakarta Barat 11460
-                                </address>
-                                <ul class="uf-meta">
-                                    <li>📧 <a href="mailto:cs@support.uatas.id">cs@support.uatas.id</a></li>
-                                    <li>🕘 Senin–Jumat: 09.00–18.00 WIB (Walk-in)<br>Sabtu: 09.00–20.00 WIB
-                                        (Call CS)
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="uf-right">
-                        <div class="uf-download">
-                            <h5>Unduh Aplikasi di</h5>
-                            <div class="store-row">
-                                <a class="store-badge"
-                                    href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
-                                    aria-label="Google Play" target="_blank">
-                                    <img src="../assets/images/googleplay.png" alt="Get it on Google Play">
-                                </a>
-                                <a class="store-badge"
-                                    href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493"
-                                    aria-label="App Store" target="_blank">
-                                    <img src="../assets/images/appstore.png" alt="Download on the App Store">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="uf-social">
-                            <h5>Ikuti Kami</h5>
-                            <div class="social-row">
-                                <a href="https://www.facebook.com/UATASID/" class="social-icon" target="_blank"><i
-                                        class="fab fa-facebook"></i></a>
-                                <a href="https://x.com/UATASID" class="social-icon" target="_blank"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a href="https://www.instagram.com/uatas.id/" class="social-icon" target="_blank"><i
-                                        class="fab fa-instagram"></i></a>
-                                <a href="https://www.tiktok.com/@uatasid" class="social-icon" target="_blank"><i
-                                        class="fab fa-tiktok"></i></a>
-                                <a href="https://www.youtube.com/@uatasid" class="social-icon" target="_blank"><i
-                                        class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="uf-notice-title">PERHATIAN</h3>
-                <div class="uf-notice-grid">
-                    <ul>
-                        <li>Layanan Pendanaan Bersama Berbasis Teknologi Informasi merupakan kesepakatan perdata
-                            antara
-                            Pemberi Dana dengan Penerima Dana, sehingga segala risiko yang timbul dari
-                            kesepakatan
-                            tersebut
-                            ditanggung sepenuhnya oleh masing-masing pihak.</li>
-                        <li>Risiko kredit atau gagal bayar ditanggung sepenuhnya oleh Pemberi Dana. Tidak ada
-                            lembaga
-                            atau
-                            otoritas negara yang bertanggung jawab atas risiko gagal bayar ini.</li>
-                        <li>Penyelenggara dengan persetujuan dari masing-masing Pengguna (Pemberi Dana dan/atau
-                            Penerima
-                            Dana) mengakses, memperoleh, menyimpan, mengelola dan/atau menggunakan data pribadi
-                            Pengguna
-                            ("Pemanfaatan Data") pada atau di dalam benda, perangkat elektronik (termasuk
-                            smartphone
-                            atau
-                            telepon seluler), perangkat keras (hardware) maupun lunak (software), dokumen
-                            elektronik,
-                            aplikasi atau sistem elektronik milik Pengguna atau yang dikuasai Pengguna, dengan
-                            memberitahukan tujuan, batasan dan mekanisme Pemanfaatan Data tersebut kepada
-                            Pengguna yang
-                            bersangkutan sebelum memperoleh persetujuan yang dimaksud.</li>
-                        <li>Pemberi Dana yang belum memiliki pengetahuan dan pengalaman pendanaan, disarankan
-                            untuk
-                            tidak
-                            menggunakan layanan UATAS ini.</li>
-                        <li>Penerima Dana harus mempertimbangkan tingkat bunga Pendanaan dan biaya lainnya
-                            sesuai dengan
-                            kemampuan dalam melunasi Pendanaan.</li>
-                        <li>Setiap kecurangan tercatat secara digital di dunia maya dan dapat diketahui
-                            masyarakat luas
-                            di
-                            media sosial.</li>
-                    </ul>
-                    <ul>
-                        <li>Pengguna harus membaca dan memahami informasi ini sebelum membuat keputusan menjadi
-                            Pemberi
-                            Dana
-                            atau Penerima Dana.</li>
-                        <li>Pemerintah yaitu dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas
-                            setiap
-                            pelanggaran atau ketidakpatuhan oleh Pengguna, baik Pemberi Dana maupun Penerima
-                            Dana (baik
-                            karena kesengajaan atau kelalaian Pengguna) terhadap ketentuan peraturan
-                            perundang-undangan
-                            maupun kesepakatan atau perikatan antara Penyelenggara (dalam hal ini adalah
-                            “UATAS”) dengan
-                            Pemberi Dana dan/atau Penerima Dana.</li>
-                        <li>Setiap transaksi dan kegiatan pendanaan atau pelaksanaan kesepakatan mengenai
-                            pendanaan
-                            antara
-                            atau yang melibatkan UATAS, Pemberi Dana dan/atau Penerima Dana wajib dilakukan
-                            melalui
-                            escrow
-                            account dan virtual account sebagaimana yang diwajibkan berdasarkan Peraturan
-                            Otoritas Jasa
-                            Keuangan Nomor 10 /POJK.05/2022 tentang Layanan Pendanaan Bersama Berbasis Teknologi
-                            Informasi
-                            dan pelanggaran atau ketidakpatuhan terhadap ketentuan tersebut merupakan bukti
-                            telah
-                            terjadinya
-                            pelanggaran hukum oleh UATAS sehingga UATAS wajib menanggung ganti rugi yang
-                            diderita oleh
-                            masing-masing Pengguna sebagai akibat langsung dari pelanggaran hukum tersebut
-                            diatas tanpa
-                            mengurangi hak Pengguna yang menderita kerugian menurut Kitab Undang-Undang Hukum
-                            Perdata.
-                        </li>
-                        <li>Hati-hati, transaksi ini beresiko tinggi. Anda dapat saja mengalami kerugian atau
-                            kehilangan
-                            uang. Jangan berutang jika tidak memiliki kemampuan membayar. Pertimbangkan secara
-                            bijak
-                            sebelum
-                            bertransaksi.</li>
-                    </ul>
-                </div>
-
-                <div class="uf-pdf">
-                    <ul class="pdf-links">
-                        <li>
-                            <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
-                                Syarat dan Ketentuan
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
-                                Layanan Pengaduan Konsumen
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
-                                Kebijakan Privasi
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="uf-copy">Copyright © 2025 Uatas. All rights reserved.</div>
-            </div>
-        </footer>
-    </section>
-
-    <script src="../assets/api/tkb.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const fallbackQuals = ["sddefault", "hqdefault", "mqdefault"];
-
-            document.querySelectorAll(".event-card img").forEach(img => {
-                img.addEventListener("error", function handler() {
-                    let current = this.dataset.fallbackIndex ? parseInt(this.dataset.fallbackIndex) : 0;
-                    if (current < fallbackQuals.length) {
-                        const videoId = this.src.match(/vi\/([^/]+)\//)?.[1];
-                        if (videoId) {
-                            this.src = `https://i.ytimg.com/vi/${videoId}/${fallbackQuals[current]}.jpg`;
-                            this.dataset.fallbackIndex = current + 1;
+                document.querySelectorAll(".event-card img").forEach(img => {
+                    img.addEventListener("error", function handler() {
+                        let current = this.dataset.fallbackIndex ? parseInt(this.dataset.fallbackIndex) : 0;
+                        if (current < fallbackQuals.length) {
+                            const videoId = this.src.match(/vi\/([^/]+)\//)?.[1];
+                            if (videoId) {
+                                this.src = `https://i.ytimg.com/vi/${videoId}/${fallbackQuals[current]}.jpg`;
+                                this.dataset.fallbackIndex = current + 1;
+                            }
+                        } else {
+                            this.closest(".thumb")?.classList.add("thumb--failed");
+                            this.removeEventListener("error", handler);
                         }
-                    } else {
-                        this.closest(".thumb")?.classList.add("thumb--failed");
-                        this.removeEventListener("error", handler);
-                    }
+                    });
                 });
             });
-        });
-    </script>
+        </script>
+
+        <script>
+            (function () {
+                const hiddenStyle = document.createElement('style');
+                hiddenStyle.textContent = '[hidden]{display:none!important}';
+                document.head.appendChild(hiddenStyle);
+
+                function setHeaderVar() {
+                    const h = document.querySelector('.header');
+                    if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+                }
+                setHeaderVar(); addEventListener('resize', setHeaderVar);
+
+                const chips = [...document.querySelectorAll('.faq-chip')];
+                const sections = [...document.querySelectorAll('.faq-section')];
+
+                function activate(cat) {
+                    chips.forEach(c => {
+                        const on = c.dataset.filter === cat;
+                        c.classList.toggle('is-active', on);
+                        c.setAttribute('aria-selected', on ? 'true' : 'false');
+                    });
+                    sections.forEach(s => { s.hidden = s.dataset.category !== cat; });
+                    document.querySelector('.faq-body')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                chips.forEach(c => c.addEventListener('click', () => activate(c.dataset.filter)));
+                activate(chips[0]?.dataset.filter || 'umum');
+
+                document.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-q');
+                    if (!btn) return;
+                    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+                    const open = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', String(!open));
+                    panel.hidden = open;
+                });
+            })();
+        </script>
+
+        <script>
+            (function () {
+                const hamburger = document.querySelector('.hamburger');
+                const navMenu = document.querySelector('.nav-menu');   // menu desktop
+                const navDrawer = document.getElementById('navDrawer');  // drawer mobile
+                const backdrop = document.querySelector('.drawer-backdrop');
+
+                // buka / tutup drawer
+                function openDrawer() {
+                    navDrawer.classList.add('open');
+                    backdrop.classList.add('show');
+                    document.body.classList.add('no-scroll');
+                    hamburger?.setAttribute('aria-expanded', 'true');
+                    navDrawer?.setAttribute('aria-hidden', 'false');
+                }
+                function closeDrawer() {
+                    navDrawer.classList.remove('open');
+                    backdrop.classList.remove('show');
+                    document.body.classList.remove('no-scroll');
+                    hamburger?.setAttribute('aria-expanded', 'false');
+                    navDrawer?.setAttribute('aria-hidden', 'true');
+                    // tutup sub yang kebuka
+                    navDrawer.querySelectorAll('li.dropdown.open, li.tkb-mobile.open')
+                        .forEach(li => li.classList.remove('open'));
+                }
+
+                hamburger?.addEventListener('click', e => {
+                    e.preventDefault();
+                    navDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
+                });
+                backdrop?.addEventListener('click', closeDrawer);
+                document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+                // ---- build isi drawer (clone menu + blok TKB) ----
+                function buildDrawer() {
+                    if (!navDrawer || !navMenu) return;
+
+                    // kosongkan dulu biar bersih (tanpa tombol X)
+                    navDrawer.innerHTML = '';
+
+                    // clone menu desktop
+                    const mobileMenu = navMenu.cloneNode(true);
+                    navDrawer.appendChild(mobileMenu);
+
+                    // jadikan dropdown sebagai akordeon
+                    mobileMenu.querySelectorAll('.dropdown > a').forEach(a => {
+                        a.addEventListener('click', e => {
+                            e.preventDefault();
+                            a.parentElement.classList.toggle('open');
+                        });
+                    });
+
+                    // ---- blok TKB untuk drawer ----
+                    const tkbLi = document.createElement('li');
+                    tkbLi.className = 'tkb-mobile';
+                    tkbLi.innerHTML = `
+      <a href="#" class="tkb-toggle">Periksa TKB</a>
+      <ul class="tkb-sub">
+        <li><strong>TKB0:</strong>  <span class="tkb-val" data-key="TKB0">--%</span></li>
+        <li><strong>TKB30:</strong> <span class="tkb-val" data-key="TKB30">--%</span></li>
+        <li><strong>TKB60:</strong> <span class="tkb-val" data-key="TKB60">--%</span></li>
+        <li><strong>TKB90:</strong> <span class="tkb-val" data-key="TKB90">--%</span></li>
+      </ul>
+    `;
+                    mobileMenu.appendChild(tkbLi);
+
+                    // toggle akordeon TKB
+                    tkbLi.querySelector('.tkb-toggle')?.addEventListener('click', e => {
+                        e.preventDefault();
+                        tkbLi.classList.toggle('open');
+                    });
+
+                    // sinkron angka dari tooltip header (yang diisi tkb.js)
+                    function syncTKB() {
+                        navDrawer.querySelectorAll('.tkb-val').forEach(span => {
+                            const key = span.getAttribute('data-key');
+                            const src = document.getElementById(key);
+                            span.textContent = src?.textContent?.trim() || '--%';
+                        });
+                    }
+                    // pertama kali
+                    syncTKB();
+                    // pantau kalau tkb.js mengubah angkanya belakangan
+                    const obs = new MutationObserver(syncTKB);
+                    ['TKB0', 'TKB30', 'TKB60', 'TKB90'].forEach(id => {
+                        const el = document.getElementById(id);
+                        if (el) obs.observe(el, { childList: true, subtree: true });
+                    });
+
+                    // tutup drawer saat klik link biasa (bukan dropdown/tkb-toggle)
+                    mobileMenu.querySelectorAll('a').forEach(a => {
+                        if (a.classList.contains('tkb-toggle') || a.closest('.dropdown')) return;
+                        a.addEventListener('click', () => closeDrawer());
+                    });
+                }
+
+                // Build hanya saat mobile
+                function ensureDrawer() {
+                    if (window.innerWidth <= 900) {
+                        if (!navDrawer.querySelector('.nav-menu')) buildDrawer();
+                    } else {
+                        closeDrawer();
+                        navDrawer.innerHTML = ''; // bersihin saat balik ke desktop
+                    }
+                }
+
+                ensureDrawer();
+                window.addEventListener('resize', ensureDrawer);
+            })();
+        </script>
 </body>
+
 </html>

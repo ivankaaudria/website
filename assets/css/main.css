@@ -281,6 +281,7 @@ body {
   opacity: 1;
 }
 
+
 @media (max-width: 900px) {
   .header {
     max-height: fit-content;
@@ -479,7 +480,7 @@ body {
    HERO
    ========================================= */
 .section-hp-wrapper {
-  background: linear-gradient(135deg, #ffe4e1 0%, #ffc0cb 50%, #ffdbe0 100%);
+  background: linear-gradient(135deg, #ffe4e1 0%, #ffe2e7 50%, #ffdbe0 100%);
   padding-top: clamp(24px, 4vw, 48px);
   padding-bottom: 0;
   padding-left: 0;
@@ -493,7 +494,7 @@ body {
   align-items: flex-start;
   background: transparent;
   margin-bottom: 0;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 
@@ -508,7 +509,7 @@ body {
 }
 
 .hero-text {
-  padding-top: 80px;
+  padding-top: 100px;
   width: 100%;
   margin-left: -30px;
 }
@@ -604,7 +605,7 @@ body {
 }
 
 /* <= 900px: satu kolom, gambar di bawah teks, tanpa sticky */
-@media (max-width:900px) {
+@media (max-width:1200px) {
   .section-hp-wrapper {
     padding: 36px 0 48px;
   }
@@ -680,6 +681,68 @@ body {
   .store-btn img {
     height: 40px;
   }
+}
+
+@media (max-width:900px) {
+  .section-hp-wrapper {
+    padding: 36px 0 48px;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 5vw, 28px);
+  }
+
+  .hero-text {
+    padding-top: 80px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    margin-inline: auto;
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .store-btn img {
+    height: 46px;
+  }
+
+  .hero-image {
+    position: static;
+    transform: none !important;
+    width: min(420px, 90vw);
+    margin: 8px auto 0;
+  }
+
+  .hero-image .mockup {
+    position: static;
+    inset: auto;
+    display: block;
+    opacity: 1 !important;
+  }
+
+  #mockup-a {
+    max-width: 500px;
+    justify-content: center;
+  }
+
+  #mockup-b {
+    display: none !important;
+  }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -760,6 +823,28 @@ body {
   color: #666;
   line-height: 1.5;
   font-size: .85rem;
+}
+
+@media (max-width:1200px) {
+  .why-features-grid {
+    grid-template-columns: (2, 1fr);
+    gap: 1rem;
+    max-width: none;
+  }
+
+  .why-uatas h2 {
+    font-size: 2rem;
+    text-align: center;
+
+  }
+
+  .feature-card {
+    text-align: left;
+  }
+
+  .feature-card .feature-icon {
+    justify-content: left;
+  }
 }
 
 /* Why → 1 kolom di mobile */
@@ -1531,6 +1616,7 @@ body {
 .logo-item img {
   display: block;
   height: 100px;
+  max-width: auto;
   width: auto;
   filter: none;
   transition: transform 0.2s ease, filter 0.2s ease;
