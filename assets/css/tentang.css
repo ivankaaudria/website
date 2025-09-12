@@ -285,7 +285,7 @@ p {
   background: #000;
   opacity: 0;
   transition: opacity .2s ease;
-  z-index: 2400;
+  z-index: var(--z-backdrop, 2400);
   pointer-events: none;
 }
 
@@ -297,6 +297,10 @@ p {
 body.nav-open {
   overflow: hidden;
   touch-action: none;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 .header {
@@ -534,7 +538,7 @@ body.nav-open {
 
 .laporan-sec .tabs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   background: #fff;
   border-radius: 999px;
@@ -578,16 +582,61 @@ body.nav-open {
   color: #fff;
 }
 
-@media (max-width: 640px) {
-
-  .laporan-sec {
-    margin: 32px;
-    padding: 48px 0 80px;
+@media (max-width: 1005px) {
+  .laporan-sec .tabs{
+    margin: 0 32px;
+    display: flex;                 /* baris horizontal */
+    gap: 0px;
+    overflow-x: auto;              /* <— scroll ke samping */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; /* snap enak saat geser */
+    border-radius: 999px;
   }
 
-  .laporan-sec .tabs {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 8px;
+  .laporan-sec .tabs::-webkit-scrollbar{ height: 3 }
+
+  .laporan-sec .tab{
+    flex: 0 0 auto;                /* <— jangan melar/menciut */
+    white-space: nowrap;
+    scroll-snap-align: center;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+  
+  .laporan-sec .tabs::before,
+  .laporan-sec .tabs::after{
+    content:"";
+    flex: 0 0 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .laporan-sec .tabs{
+    margin: 0 32px;
+    display: flex;                 /* baris horizontal */
+    gap: 0px;
+    overflow-x: auto;              /* <— scroll ke samping */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; /* snap enak saat geser */
+    border-radius: 999px;
+  }
+
+  .laporan-sec .tabs::-webkit-scrollbar{ height: 5 }
+
+  .laporan-sec .tab{
+    flex: 0 0 auto;                /* <— jangan melar/menciut */
+    white-space: nowrap;
+    scroll-snap-align: center;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+  
+  .laporan-sec .tabs::before,
+  .laporan-sec .tabs::after{
+    content:"";
+    flex: 0 0 0;
   }
 }
 
@@ -624,8 +673,17 @@ body.nav-open {
 @media (max-width: 1024px) {
   .docs-grid {
     grid-template-columns: 1fr;
+    margin: 0 var(--gutter);
   }
 }
+
+@media (max-width: 640px) {
+  .docs-grid {
+    grid-template-columns: 1fr;
+    margin: 0 32px;
+  }
+}
+
 
 .doc-card {
   width: 100%;
@@ -642,7 +700,7 @@ body.nav-open {
 .doc-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.5;
   color: var(--text);
   min-width: 0;
   overflow: hidden;
@@ -667,6 +725,15 @@ body.nav-open {
   filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.1));
 }
 
+@media (max-width: 900px) {
+
+
+  .doc-title {
+  font-weight: 700;
+  font-size: 16px;
+  }
+}
+
 /* =========================================================
    DETAIL STATISTIK (KPI)
    ========================================================= */
@@ -679,12 +746,14 @@ body.nav-open {
 @media (max-width: 1024px) {
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0 var(--gutter);
   }
 }
 
 @media (max-width: 640px) {
   .stats-grid {
     grid-template-columns: 1fr;
+    margin: 0 32px;
   }
 }
 
@@ -767,6 +836,7 @@ body.nav-open {
 
   .people-grid,
   .share-grid {
+    margin: 0 32px;
     grid-template-columns: 1fr;
   }
 }
@@ -923,6 +993,12 @@ body.nav-open {
   }
 }
 
+@media (max-width: 900px) {
+  .uf-brand {
+    transform: translateX(-30px);
+  }
+}
+
 .uf-info h4 {
   font-size: 1rem;
   margin: 0 0 6px;
@@ -1038,7 +1114,7 @@ body.nav-open {
   }
 
   .store-badge img {
-    height: 36px;
+    height: 32px;
   }
 }
 
@@ -1250,11 +1326,11 @@ body.nav-open {
     content: "";
     position: absolute;
     right: 5px;
-    top: 60%;
-    transform: translateY(-50%);
+    top: 50%;
     border: 6px solid transparent;
     border-top-color: #111;
-    transition: transform .2s ease;
+    transform: translateY(-30%) rotate(0deg);
+    transition: transform .2s ease, border-top-color .2s ease;
   }
 
   .nav-drawer .nav-menu .dropdown-menu {
@@ -1271,9 +1347,16 @@ body.nav-open {
 
 
   .nav-drawer .nav-menu li.dropdown.open>a::after {
-    translate: 0 -100%;
-    transform: rotate(180deg);
+    transform: translateY(-100%) rotate(180deg);
     border-top-color: #e2475b;
+  }
+
+  .nav-drawer .nav-menu li.dropdown:hover>.dropdown-menu {
+    display: none !important;
+  }
+
+  .nav-drawer .nav-menu li.dropdown.open>.dropdown-menu {
+    display: block !important;
   }
 
   /* item khusus “Periksa TKB” (opsional) */
@@ -1305,8 +1388,10 @@ body.nav-open {
   }
 
   .nav-drawer .nav-menu li.tkb-mobile.open>a.tkb-toggle::after {
-    transform: translateY(-40%) rotate(180deg);
+    transform: translateY(-100%) rotate(180deg);
+    border-top-color: #e2475b;
   }
+
 }
 
 /* ===== Layering fix: pastikan drawer & backdrop di atas header ===== */
@@ -1370,7 +1455,7 @@ body.nav-open {
     display: flex;
     flex-direction: column;
     gap: clamp(16px, 5vw, 28px);
-    margin-top: 150px;
+    margin-top: 120px;
     text-align: center;
     padding-inline: clamp(12px, 4vw, 24px);
   }
@@ -1436,16 +1521,12 @@ body.nav-open {
 /* Overlay modal penuh layar */
 .partner-modal {
   position: fixed;
-  /* <- kunci: bukan absolute/static */
   inset: 0;
   display: none;
-  /* default sembunyi */
   align-items: center;
-  /* center dialog */
   justify-content: center;
   background: rgba(0, 0, 0, .5);
   z-index: 4000;
-  /* di atas header/footer/drawer */
 }
 
 /* Saat dibuka */
@@ -1481,4 +1562,8 @@ body.nav-open {
 body.modal-open {
   overflow: hidden;
   touch-action: none;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }

@@ -17,44 +17,38 @@
                 <img src="../assets/images/logouatas.png" alt="UATAS" class="logo" />
             </a>
 
+            <!-- NAV DESKTOP (tetap) -->
             <nav class="navigation" aria-label="Primary">
                 <ul class="nav-menu">
-                    <li><a href="../">Beranda</a></li>
+                    <li><a href="../index.html">Beranda</a></li>
                     <li><a href="../produk/">Produk</a></li>
                     <li><a href="../about-us/">Tentang Kami</a></li>
-
                     <li class="dropdown">
                         <a href="#bantuan">Bantuan</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="../faq/">FAQ</a></li>
                             <li><a href="../kontak/">Kontak</a></li>
-                            <li>
-                                <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
-                                    Syarat dan Ketentuan
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
-                                    Kebijakan Privasi
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
-                                    Layanan Pengaduan Konsumen
-                                </a>
-                            </li>
+                            <li><a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank"
+                                    rel="noopener noreferrer">Syarat dan Ketentuan</a></li>
+                            <li><a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank"
+                                    rel="noopener noreferrer">Kebijakan
+                                    Privasi</a></li>
+                            <li><a href="/mekanisme_layanan/index.html" target="_blank"
+                                    rel="noopener noreferrer">Layanan Pengaduan Konsumen</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
 
+            <!-- HAMBURGER -->
             <button class="hamburger" aria-label="Buka menu" aria-controls="navDrawer" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
 
+            <!-- IKON TKB (disembunyikan di mobile oleh CSS kamu) -->
             <div class="tkb-icon" aria-describedby="tkb-tip">
                 <img src="../assets/images/Periksa TKB.png" alt="Periksa TKB" />
-                <div class="tkb-tooltip">
+                <div class="tkb-tooltip" id="tkb-tip">
                     <strong>TKB0 :</strong> <span id="TKB0">--%</span><br>
                     <strong>TKB30 :</strong> <span id="TKB30">--%</span><br>
                     <strong>TKB60 :</strong> <span id="TKB60">--%</span><br>
@@ -63,17 +57,13 @@
             </div>
         </div>
 
-        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation">
-            <ul>
-                <li><a href="../">Beranda</a></li>
-                <li><a href="../produk/">Produk</a></li>
-                <li><a href="../about-us/">Tentang Kami</a></li>
-                <li><a href="#" aria-current="page">FAQ</a></li>
-                <li><a href="../kontak/">Kontak</a></li>
-            </ul>
-        </nav>
-        <div class="drawer-backdrop" hidden></div>
+        <!-- DRAWER + BACKDROP -->
+        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true"
+            aria-hidden="true" tabindex="-1"></nav>
+        <div class="drawer-backdrop"></div>
     </header>
+
+
 
     <section class="faq-hero">
         <div class="faq-container">
@@ -144,7 +134,7 @@
                 </article>
 
                 <article class="faq-item">
-                    <button class="faq-q" aria-expanded="false" aria-controls="a-umum-4" id="q-umum-">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-umum-4" id="q-umum-4">
                         Bagaimana cara klaim Asuransi Jiwa Kredit apabila nasabah meninggal dunia?
                         <span class="faq-icon" aria-hidden="true"></span>
                     </button>
@@ -162,7 +152,7 @@
 
             <div class="faq-section" data-category="pengajuan" hidden>
                 <article class="faq-item">
-                    <button class="faq-q" asria-expanded="false" aria-controls="a-peng-1" id="q-peng-1">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-peng-1" id="q-peng-1">
                         Bagaimana cara mengajukan pendanaan di UATAS?
                         <span class="faq-icon" aria-hidden="true"></span>
                     </button>
@@ -366,6 +356,40 @@
                         aktif.
                     </div>
                 </article>
+
+                <article class="faq-item">
+                    <button class="faq-q" aria-expanded="false" aria-controls="a-akun-3" id="q-akun-3">
+                        Informasi Perihal Layanan Penyelesaian Pengaduan
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-a" id="a-akun-3" role="region" aria-labelledby="q-akun-3" hidden>
+                        LEMBAGA ALTERNATIF PENYELESAIAN SENGKETA SEKTOR JASA KEUANGAN (LAPS SJK)
+                        <br><br>
+                        Landasan Hukum Lembaga Alternatif Penyelesaian Sengketa Sektor Jasa Keuangan ("LAPS SJK")
+                        merujuk pada ketentuan Peraturan Otoritas Jasa Keuangan Nomor 61/POJK.07/2020 tentang Lembaga
+                        Alternatif Penyelesaian Sengketa Sektor Jasa Keuangan (POJK 61/2020 tentang LAPS SJK).
+                        <br><br>
+                        LAPS SJK berfungsi menyelenggarakan layanan penyelesaian sengketa di luar pengadilan yang
+                        terintegrasi pada Sektor Jasa Keuangan.
+                        <br><br>
+                        LAPS SJK berfungsi menyelenggarakan layanan penyelesaian sengketa di luar pengadilan yang
+                        terintegrasi pada Sektor Jasa Keuangan.
+                        <br><br>
+                        Tujuan dibentuknya LAPS SJK adalah untuk memberikan perlindungan bagi pelanggan agar dapat
+                        menyelesaikan sengketanya di luar pengadilan dengan akses yang mudah, cepat, terjangkau, dan
+                        ditangani oleh SDM yang kompeten di industri jasa keuangan.
+                        <br><br>
+                        Tujuan dibentuknya LAPS SJK adalah untuk memberikan perlindungan bagi pelanggan agar dapat
+                        menyelesaikan sengketanya di luar pengadilan dengan akses yang mudah, cepat, terjangkau, dan
+                        ditangani oleh SDM yang kompeten di industri jasa keuangan.
+                        <br><br>
+                        • Alamat : Gedung Menara Karya lt. 25 Unit G-H Jl. HR. Rasuna Said Blok X-5 Kav 1-2 Jakarta
+                        12950<br>
+                        • Email : info@lapssjk.id<br>
+                        • Nomor telp : 021-2527700<br>
+                        • Website : https://lapssjk.id/<br>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -542,17 +566,18 @@
                 <div class="uf-pdf">
                     <ul class="pdf-links">
                         <li>
-                            <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" target="_blank">
+                            <a href="../assets/pdf/Syarat dan Ketentuan UATAS.pdf" rel="noopener noreferrer"
+                                target="_blank">
                                 Syarat dan Ketentuan
                             </a>
                         </li>
                         <li>
-                            <a href="../assets/pdf/Mekanisme dan Layanan Pengaduan Konsumen.pdf" target="_blank">
+                            <a href="/mekanisme_layanan/index.html" rel="noopener noreferrer" target="_blank">
                                 Layanan Pengaduan Konsumen
                             </a>
                         </li>
                         <li>
-                            <a href="../assets/pdf/Kebijakan Privasi.pdf" target="_blank">
+                            <a href="../assets/pdf/Kebijakan Privasi.pdf" rel="noopener noreferrer" target="_blank">
                                 Kebijakan Privasi
                             </a>
                         </li>
@@ -601,19 +626,117 @@
                 btn.setAttribute('aria-expanded', String(!open));
                 panel.hidden = open;
             });
+        })();
+    </script>
 
-            const burger = document.querySelector('.hamburger');
-            const drawer = document.getElementById('navDrawer');
+    <script>
+        (function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');   // menu desktop
+            const navDrawer = document.getElementById('navDrawer');  // drawer mobile
             const backdrop = document.querySelector('.drawer-backdrop');
-            function toggleDrawer(forceOpen) {
-                const open = forceOpen ?? drawer.classList.toggle('open');
-                drawer.classList.toggle('open', open);
-                backdrop.hidden = !open;
-                burger.setAttribute('aria-expanded', String(open));
+
+            // buka / tutup drawer
+            function openDrawer() {
+                navDrawer.classList.add('open');
+                backdrop.classList.add('show');
+                document.body.classList.add('no-scroll');
+                hamburger?.setAttribute('aria-expanded', 'true');
+                navDrawer?.setAttribute('aria-hidden', 'false');
             }
-            burger.addEventListener('click', () => toggleDrawer());
-            backdrop.addEventListener('click', () => toggleDrawer(false));
-            drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleDrawer(false)));
+            function closeDrawer() {
+                navDrawer.classList.remove('open');
+                backdrop.classList.remove('show');
+                document.body.classList.remove('no-scroll');
+                hamburger?.setAttribute('aria-expanded', 'false');
+                navDrawer?.setAttribute('aria-hidden', 'true');
+                // tutup sub yang kebuka
+                navDrawer.querySelectorAll('li.dropdown.open, li.tkb-mobile.open')
+                    .forEach(li => li.classList.remove('open'));
+            }
+
+            hamburger?.addEventListener('click', e => {
+                e.preventDefault();
+                navDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
+            });
+            backdrop?.addEventListener('click', closeDrawer);
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+            // ---- build isi drawer (clone menu + blok TKB) ----
+            function buildDrawer() {
+                if (!navDrawer || !navMenu) return;
+
+                // kosongkan dulu biar bersih (tanpa tombol X)
+                navDrawer.innerHTML = '';
+
+                // clone menu desktop
+                const mobileMenu = navMenu.cloneNode(true);
+                navDrawer.appendChild(mobileMenu);
+
+                // jadikan dropdown sebagai akordeon
+                mobileMenu.querySelectorAll('.dropdown > a').forEach(a => {
+                    a.addEventListener('click', e => {
+                        e.preventDefault();
+                        a.parentElement.classList.toggle('open');
+                    });
+                });
+
+                // ---- blok TKB untuk drawer ----
+                const tkbLi = document.createElement('li');
+                tkbLi.className = 'tkb-mobile';
+                tkbLi.innerHTML = `
+      <a href="#" class="tkb-toggle">Periksa TKB</a>
+      <ul class="tkb-sub">
+        <li><strong>TKB0:</strong>  <span class="tkb-val" data-key="TKB0">--%</span></li>
+        <li><strong>TKB30:</strong> <span class="tkb-val" data-key="TKB30">--%</span></li>
+        <li><strong>TKB60:</strong> <span class="tkb-val" data-key="TKB60">--%</span></li>
+        <li><strong>TKB90:</strong> <span class="tkb-val" data-key="TKB90">--%</span></li>
+      </ul>
+    `;
+                mobileMenu.appendChild(tkbLi);
+
+                // toggle akordeon TKB
+                tkbLi.querySelector('.tkb-toggle')?.addEventListener('click', e => {
+                    e.preventDefault();
+                    tkbLi.classList.toggle('open');
+                });
+
+                // sinkron angka dari tooltip header (yang diisi tkb.js)
+                function syncTKB() {
+                    navDrawer.querySelectorAll('.tkb-val').forEach(span => {
+                        const key = span.getAttribute('data-key');
+                        const src = document.getElementById(key);
+                        span.textContent = src?.textContent?.trim() || '--%';
+                    });
+                }
+                // pertama kali
+                syncTKB();
+                // pantau kalau tkb.js mengubah angkanya belakangan
+                const obs = new MutationObserver(syncTKB);
+                ['TKB0', 'TKB30', 'TKB60', 'TKB90'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) obs.observe(el, { childList: true, subtree: true });
+                });
+
+                // tutup drawer saat klik link biasa (bukan dropdown/tkb-toggle)
+                mobileMenu.querySelectorAll('a').forEach(a => {
+                    if (a.classList.contains('tkb-toggle') || a.closest('.dropdown')) return;
+                    a.addEventListener('click', () => closeDrawer());
+                });
+            }
+
+            // Build hanya saat mobile
+            function ensureDrawer() {
+                if (window.innerWidth <= 900) {
+                    if (!navDrawer.querySelector('.nav-menu')) buildDrawer();
+                } else {
+                    closeDrawer();
+                    navDrawer.innerHTML = ''; // bersihin saat balik ke desktop
+                }
+            }
+
+            ensureDrawer();
+            window.addEventListener('resize', ensureDrawer);
         })();
     </script>
 </body>
