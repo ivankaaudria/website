@@ -24,7 +24,7 @@
                     <li><a href="../produk/">Produk</a></li>
                     <li><a href="../about-us/">Tentang Kami</a></li>
                     <li class="dropdown">
-                        <a href="#bantuan">Bantuan</a>
+                        <a>Bantuan</a>
                         <ul class="dropdown-menu">
                             <li><a href="../faq/">FAQ</a></li>
                             <li><a href="../kontak/">Kontak</a></li>
@@ -73,8 +73,7 @@
                 <button class="faq-chip is-active" data-filter="umum" role="tab" aria-selected="true">Umum</button>
                 <button class="faq-chip" data-filter="pengajuan" role="tab" aria-selected="false">Pengajuan</button>
                 <button class="faq-chip" data-filter="pembayaran" role="tab" aria-selected="false">Pembayaran</button>
-                <button class="faq-chip" data-filter="restrukturisasi" role="tab"
-                    aria-selected="false">Restrukturisasi</button>
+                <button class="faq-chip" data-filter="restrukturisasi" role="tab" aria-selected="false">Restrukturisasi</button>
                 <button class="faq-chip" data-filter="akun" role="tab" aria-selected="false">Akun & Bantuan</button>
             </div>
         </div>
@@ -613,10 +612,14 @@
                     c.setAttribute('aria-selected', on ? 'true' : 'false');
                 });
                 sections.forEach(s => { s.hidden = s.dataset.category !== cat; });
-                document.querySelector('.faq-body')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            chips.forEach(c => c.addEventListener('click', () => activate(c.dataset.filter)));
-            activate(chips[0]?.dataset.filter || 'umum');
+                }
+
+                chips.forEach(c => c.addEventListener('click', (e) => {
+                e.preventDefault();
+                activate(c.dataset.filter);
+                }));
+
+                activate(chips[0]?.dataset.filter || 'umum');
 
             document.addEventListener('click', (e) => {
                 const btn = e.target.closest('.faq-q');
