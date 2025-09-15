@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Kebijakan Privasi | UATAS</title>
+  <link rel="shortcut icon" href="../assets/images/Shortcut.png" type="image/png">
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      background: #f8f8f8;
+    }
+
+    img {
+      width: 60%;
+      display: block;
+      margin: auto;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener("dragstart", function (e) {
+      if (e.target.tagName === "IMG") {
+        e.preventDefault();
+      }
+    });
+  </script>
+</head>
+
+<body>
+<img>
+<img src="/assets/images/Kebijakan Privasi.jpg" rel="noopener noreferrer" alt="Page Kebijakan" />
+</body>
+
+</html>

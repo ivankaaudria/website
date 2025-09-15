@@ -318,6 +318,8 @@ body.faq-page {
 
 /* ===== Hero ===== */
 .faq-page .faq-hero {
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
   padding: calc(var(--header-h) + 24px) 0 18px;
   padding-top: 160px;
   text-align: left;
@@ -552,10 +554,18 @@ body.faq-page {
   border-top-color: rgba(255, 255, 255, .25);
 }
 
+@media (max-width: 1024px) {
+  .faq-page .faq-item {
+    margin-left: var(--gutter);
+    margin-right: var(--gutter)
+  }
+}
+
 /* =========================================================
    FOOTER
    ========================================================= */
 .uatas-footer {
+  place-items: center;
   background: #6b0d0d;
   padding: 64px 0 28px;
 }
