@@ -12,6 +12,18 @@
 </head>
 
 <body>
+    <div class="warning-banner" id="warningBanner" role="region" aria-label="Peringatan penipuan">
+        <div class="inner">
+        <p style="font-weight:700; font-size:16px; letter-spacing:.3px;">WASPADA PENIPUAN!</p>
+        <p style="font-size:13px;">
+            Hati-hati terhadap oknum yang mengatasnamakan UATAS untuk meminta refund dana yang telah dicairkan ataupun
+            pembayaran melalui SMS, Social Media, Telepon maupun pesan WhatsApp. Pembayaran di UATAS dilakukan hanya melalui
+            Nomor Virtual Account (VA) yang tertera pada aplikasi UATAS.
+        </p>
+        <button class="close-btn" id="closeBanner" aria-label="Tutup peringatan" type="button">&times;</button>
+        </div>
+    </div>
+
     <header class="header">
         <div class="container">
             <a href="/" class="nav-brand" aria-label="UATAS">
@@ -23,24 +35,24 @@
                     <li><a href="#">Beranda</a></li>
                     <li><a href="produk/">Produk</a></li>
                     <li><a href="about-us/">Tentang Kami</a></li>
+                    <li><a href="kontak/">Kontak</a></li>
 
                     <li class="dropdown">
                         <a href="#bantuan">Bantuan</a>
                         <ul class="dropdown-menu">
                             <li><a href="faq/">FAQ</a></li>
-                            <li><a href="kontak/">Kontak</a></li>
                             <li>
-                                <a href="/syarat/index.html" rel="noopener" target="_blank">
+                                <a href="/syarat/" rel="noopener" target="_blank">
                                     Syarat dan Ketentuan
                                 </a>
                             </li>
                             <li>
-                                <a href="/kebijakan/index.html" rel="noopener" target="_blank">
+                                <a href="/kebijakan/" rel="noopener" target="_blank">
                                     Kebijakan Privasi
                                 </a>
                             </li>
                             <li>
-                                <a href="/mekanisme_layanan/index.html" rel="noopener" starget="_blank">
+                                <a href="/mekanisme_layanan/" rel="noopener" starget="_blank">
                                     Layanan Pengaduan Konsumen
                                 </a>
                             </li>
@@ -73,6 +85,23 @@
         </nav>
     </header>
 
+    <div id="popup" class="popup"> 
+        <div class="popup-content"> 
+            <span class="close">&times;</span> 
+            <img src="assets/banner/new-popup.png" style="width: 100%; height: auto;" alt="Popup Image"> 
+        </div> 
+    </div>
+
+    
+    <a
+        href="https://wa.me/6282125532191?text=Halo,+CS+UATAS+👋Saya+ingin+menanyakan+informasi+terkait+layanan+UATAS.+Mohon+bantuannya+ya,+terima+kasih.+🙏"
+        class="cs-float"
+        target="_blank"
+        rel="noopener"
+        aria-label="Pengaduan - Lapor di sini"
+        >
+        <img src="assets/banner/icon-pengaduan-2-removebg-preview.png" alt="Pengaduan - Lapor di sini">
+    </a>
 
     <section class="section-hp-wrapper">
 
@@ -82,7 +111,7 @@
 
                     <div class="hero-text">
                         <h1>Wujudkan Impian Tanpa Batas Bersama <span class="highlight">UATAS</span></h1>
-                        <p>Uatas merupakan platform peer-to-peer (P2P) lending yang telah berizin dan diawasi oleh
+                        <p>Uatas merupakan platform <b>LPBBTI</b> yang telah berizin dan diawasi oleh
                             Otoritas Jasa Keuangan, yang menjembatani antara pemberi dana dan penerima dana</p>
                         <div class="hero-buttons">
                             <a href="https://play.google.com/store/apps/details?id=com.uatas.android&hl=en"
@@ -109,7 +138,7 @@
 
         <section class="why-uatas" id="why-section">
             <div class="container">
-                <h2>Mengapa pilih UATAS?</h2>
+                <h2>Pindar Cerdas, Bersama UATAS</h2>
 
                 <div class="why-features-grid">
                     <div class="feature-card">
@@ -568,17 +597,17 @@
             <div class="uf-pdf">
                 <ul class="pdf-links">
                     <li>
-                        <a href="/syarat/index.html" rel="noopener" target="_blank">
+                        <a href="/syarat/" rel="noopener" target="_blank">
                             Syarat dan Ketentuan
                         </a>
                     </li>
                     <li>
-                        <a href="/mekanisme_layanan/index.html" rel="noopener" target="_blank">
+                        <a href="/mekanisme_layanan/" rel="noopener" target="_blank">
                             Layanan Pengaduan Konsumen
                         </a>
                     </li>
                     <li>
-                        <a href="/kebijakan/index.html" rel="noopener" target="_blank">
+                        <a href="/kebijakan/" rel="noopener" target="_blank">
                             Kebijakan Privasi
                         </a>
                     </li>
@@ -952,10 +981,9 @@
     `;
             mobileMenu.appendChild(tkbLi);
 
-            // Jadikan dropdown biasa sebagai akordeon
             mobileMenu.querySelectorAll('.dropdown > a').forEach(a => {
                 a.addEventListener('click', e => {
-                    e.preventDefault();          // jangan navigate
+                    e.preventDefault();
                     a.parentElement.classList.toggle('open');
                 });
             });
@@ -986,7 +1014,6 @@
 
             const obs = new MutationObserver(() => {
                 if (window.innerWidth <= BP) {
-                    // pastikan drawer punya blok TKB
                     if (!document.querySelector('#navDrawer .tkb-mobile')) buildDrawerContent();
                     updateDrawerTKB();
                 }
@@ -1001,10 +1028,8 @@
 
         function syncDrawer() {
             if (window.innerWidth <= BP) {
-                // pastikan drawer terisi
                 if (!navDrawer.querySelector('.nav-menu')) buildDrawerContent();
             } else {
-                // kembalikan menu desktop ke posisi semula
                 if (navAnchor && navMenu && navAnchor.parentNode && navMenu.parentNode !== navAnchor.parentNode) {
                     navAnchor.parentNode.insertBefore(navMenu, navAnchor.nextSibling);
                 }
@@ -1026,17 +1051,15 @@
     <script>
         (function () {
             const hero = document.querySelector('.hero');
-            const mock = document.getElementById('mockup');     // <div class="hero-image" id="mockup">
+            const mock = document.getElementById('mockup');
             const spacer = document.getElementById('hero-spacer');
             const mq = window.matchMedia('(max-width: 900px)');
 
             if (!hero || !mock || !spacer) return;
 
             function computeOverhang() {
-                // posisi bawah elemen relatif viewport
                 const heroRect = hero.getBoundingClientRect();
                 const mockRect = mock.getBoundingClientRect();
-                // berapa bagian mockup yang “menjuntai” di bawah hero
                 const overhang = Math.max(0, Math.ceil(mockRect.bottom - heroRect.bottom));
                 return overhang;
             }
@@ -1046,7 +1069,6 @@
                 if (rafId) return;
                 rafId = requestAnimationFrame(() => {
                     rafId = null;
-                    // Desktop: aktifkan spacer; Mobile: nolkan
                     if (mq.matches) {
                         spacer.style.height = '0px';
                         return;
@@ -1055,23 +1077,17 @@
                 });
             }
 
-            // Update saat scroll/resize/zoom (zoom memicu resize di sebagian besar browser)
             window.addEventListener('scroll', schedule, { passive: true });
             window.addEventListener('resize', schedule);
 
-            // Kalau animasi hero kamu pakai requestAnimationFrame sendiri,
-            // panggil schedule() di akhir apply() juga biar spacer ikut gerak.
-            // Atau cukup interval ringan:
-            let tick = setInterval(schedule, 100); // aman & ringan
+            let tick = setInterval(schedule, 100);
             document.addEventListener('visibilitychange', () => {
                 if (document.hidden) { clearInterval(tick); tick = null; }
                 else if (!tick) { tick = setInterval(schedule, 100); }
             });
 
-            // Pastikan hero tidak memotong mockup
             hero.style.overflow = 'visible';
 
-            // Inisialisasi
             schedule();
         })(); 
     </script>
@@ -1079,10 +1095,9 @@
     <script>
         (() => {
             const hero = document.querySelector('.hero');
-            const mock = document.getElementById('mockup');  // <div class="hero-image" id="mockup">
+            const mock = document.getElementById('mockup'); 
             if (!hero || !mock) return;
 
-            // buat spacer jika belum ada
             let spacer = document.getElementById('hero-spacer');
             if (!spacer) {
                 spacer = document.createElement('div');
@@ -1107,14 +1122,89 @@
                 });
             }
 
-            // update saat scroll/resize (zoom memicu resize)
             window.addEventListener('scroll', sync, { passive: true });
             window.addEventListener('resize', sync);
-            // panggil sekali
             sync();
         })();
     </script>
+    
+    <script>
+        const popup = document.getElementById('popup');
+        const close = document.querySelector('.close');
+        if (popup && close && !sessionStorage.getItem('popupShown')) {
+            popup.style.display = 'block';
+            sessionStorage.setItem('popupShown', 'true');
+            close.addEventListener('click', function () {
+                popup.style.display = 'none';
+            });
+        }
+    </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("warningBanner");
+            const closeBtn = document.getElementById("closeBanner");
+            const header = document.querySelector(".header");
+
+            if (banner) {
+                header.style.marginTop = banner.offsetHeight + "px";
+
+                closeBtn.addEventListener("click", function () {
+                    banner.classList.add("hidden");
+                    header.style.marginTop = "0";
+                });
+            }
+        });
+    </script>
+
+    <script>
+        (function () {
+        const banner = document.getElementById('warningBanner');
+        const closeBtn = document.getElementById('closeBanner');
+        const mq = window.matchMedia('(max-width: 1024px)');
+
+        let rafId = null;
+        function setBodyOffset() {
+            if (!banner) return;
+            if (mq.matches && !banner.classList.contains('hidden')) {
+            const h = Math.ceil(banner.getBoundingClientRect().height);
+            document.body.style.paddingTop = h + 'px';
+            } else {
+            document.body.style.paddingTop = '';
+            }
+        }
+
+        function schedule() {
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(setBodyOffset);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', schedule);
+        } else {
+            schedule();
+        }
+
+        window.addEventListener('resize', schedule);
+        window.addEventListener('orientationchange', schedule);
+        mq.addEventListener ? mq.addEventListener('change', schedule) : mq.addListener(schedule);
+
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(schedule).catch(()=>{});
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+            banner.classList.add('hidden');
+            schedule();
+            });
+        }
+
+        if (window.MutationObserver && banner) {
+            new MutationObserver(schedule).observe(banner, { attributes: true, attributeFilter: ['class', 'style'] });
+        }
+        })();
+    </script>
 
 
 
