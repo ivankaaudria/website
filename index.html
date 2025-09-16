@@ -17,7 +17,7 @@
         <p style="font-weight:700; font-size:16px; letter-spacing:.3px;">WASPADA PENIPUAN!</p>
         <p style="font-size:13px;">
             Hati-hati terhadap oknum yang mengatasnamakan UATAS untuk meminta refund dana yang telah dicairkan ataupun
-            pembayaran melalui SMS, Social Media, Telepon maupun pesan WhatsApp. <br>Pembayaran di UATAS dilakukan hanya melalui
+            pembayaran melalui SMS, Social Media, Telepon maupun pesan WhatsApp. Pembayaran di UATAS dilakukan hanya melalui
             Nomor Virtual Account (VA) yang tertera pada aplikasi UATAS.
         </p>
         <button class="close-btn" id="closeBanner" aria-label="Tutup peringatan" type="button">&times;</button>
@@ -1156,6 +1156,56 @@
             }
         });
     </script>
+
+    <script>
+        (function () {
+        const banner = document.getElementById('warningBanner');
+        const closeBtn = document.getElementById('closeBanner');
+        const mq = window.matchMedia('(max-width: 1024px)');
+
+        let rafId = null;
+        function setBodyOffset() {
+            if (!banner) return;
+            if (mq.matches && !banner.classList.contains('hidden')) {
+            const h = Math.ceil(banner.getBoundingClientRect().height);
+            document.body.style.paddingTop = h + 'px';
+            } else {
+            document.body.style.paddingTop = '';
+            }
+        }
+
+        function schedule() {
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(setBodyOffset);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', schedule);
+        } else {
+            schedule();
+        }
+
+        window.addEventListener('resize', schedule);
+        window.addEventListener('orientationchange', schedule);
+        mq.addEventListener ? mq.addEventListener('change', schedule) : mq.addListener(schedule);
+
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(schedule).catch(()=>{});
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+            banner.classList.add('hidden');
+            schedule();
+            });
+        }
+
+        if (window.MutationObserver && banner) {
+            new MutationObserver(schedule).observe(banner, { attributes: true, attributeFilter: ['class', 'style'] });
+        }
+        })();
+    </script>
+
 
 
 </body>
