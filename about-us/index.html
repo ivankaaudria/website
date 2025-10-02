@@ -88,6 +88,50 @@
             </div>
         </section>
 
+        <section class="activities">
+            <div class="container">
+                <div class="header-row">
+                    <h2>Aktivitas Kami</h2>
+                    <a href="../kegiatan/" class="more-btn">More</a>
+                </div>
+
+                <div class="activities-grid">
+                    <!-- cards -->
+                    <div class="activity-card" data-video-id="W5zcwHu0rLA">
+                        <img alt="Activity Thumbnail" class="activity-image" />
+                        <div class="activity-content">
+                            <p class="activity-date">Oct 17, 2024</p>
+                            <h3>UATAS at FinExpo BIK 2024 Balikpapan</h3>
+                            <a href="https://www.youtube.com/watch?v=W5zcwHu0rLA" target="_blank"
+                                class="watch-btn">Watch Now</a>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" data-video-id="nGHbJBi0i-c">
+                        <img alt="Activity Thumbnail" class="activity-image" />
+                        <div class="activity-content">
+                            <p class="activity-date">Nov 8, 2023</p>
+                            <h3>Muda Paham Fintech @Banjarmasin with UATAS</h3>
+                            <a href="https://www.youtube.com/watch?v=nGHbJBi0i-c" target="_blank"
+                                class="watch-btn">Watch Now</a>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" data-video-id="r--I-vKQ1sQ">
+                        <img alt="Activity Thumbnail" class="activity-image" />
+                        <div class="activity-content">
+                            <p class="activity-date">Dec 5, 2023</p>
+                            <h3>Muda Paham Fintech @ Banyuwangi with UATAS</h3>
+                            <a href="https://www.youtube.com/watch?v=r--I-vKQ1sQ" target="_blank"
+                                class="watch-btn">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
         <!-- PARTNERS -->
         <section class="partners-wrap">
             <h2>Mitra Kami</h2>
@@ -1313,6 +1357,21 @@
             // juga bangun awal supaya langsung siap di mobile
             ensureDrawer();
         })();
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".activity-card").forEach(card => {
+                const videoId = card.dataset.videoId;
+                const img = card.querySelector(".activity-image");
+                if (!videoId || !img) return;
+
+                img.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                img.onerror = () => {
+                    img.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                };
+            });
+        });
     </script>
 
 
