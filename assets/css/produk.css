@@ -314,7 +314,7 @@ p {
    PRODUCT HERO
    ========================================= */
 .prod-hero {
-  background: linear-gradient(270deg, #fffdfc 0%, #eaeaea 100%);
+  background: linear-gradient(270deg, #ffe3ee 0%, #ffe6e6 100%);
 }
 
 .prod-hero>.container {
@@ -586,14 +586,16 @@ p {
   border-radius: 30px;
   padding: 26px 20px 20px;
   position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /* Head */
 .step-head {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   gap: 20px;
 }
 
@@ -604,21 +606,24 @@ p {
 }
 
 /* Icon */
-.step-icon {
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
 
-.step-icon img {
-  width: 100px;
-  margin-left: -15px;
-  height: auto;
-  object-fit: contain;
+.step-icon.number-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;      /* ukuran kotak */
+  height: 60px;
+  border-radius: 50%;   /* bikin bulat */
+  background-color: #920c0c; /* warna hijau brand */
+  color: #fff;      /* warna angka */
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* Paragraph */
 .step-card p {
+  align-items: center;
+  text-align: center;
   margin-top: 10px;
   font-size: 0.95rem;
   color: var(--muted);

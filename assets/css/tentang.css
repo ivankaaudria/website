@@ -17,53 +17,70 @@ body {
   color: var(--text);
   overflow-x: hidden;
 }
+
 :root {
-      --cs-color: rgb(245, 92, 103);
-      --cs-color-ghost: rgba(245, 92, 103, .55);
-    }
+  --cs-color: rgb(245, 92, 103);
+  --cs-color-ghost: rgba(245, 92, 103, .55);
+}
 
-    .cs-float {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 2000;
-      display: inline-block;
-      line-height: 0;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.18);
-      transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
-      animation: cs-pulse 2.2s infinite;
-    }
+.cs-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2000;
+  display: inline-block;
+  line-height: 0;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  animation: cs-pulse 2.2s infinite;
+}
 
-    .cs-float img {
-      display: block;
-      width: 200px;
-      height: auto;
-      border-radius: 16px;
-    }
+.cs-float img {
+  display: block;
+  width: 200px;
+  height: auto;
+  border-radius: 16px;
+}
 
-    @media (max-width: 480px) {
-      .cs-float { right: 14px; bottom: 14px; }
-      .cs-float img { width: 200px; }
-    }
+@media (max-width: 480px) {
+  .cs-float {
+    right: 14px;
+    bottom: 14px;
+  }
 
-    .cs-float:hover,
-    .cs-float:focus-visible {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 10px 24px rgba(0,0,0,.24);
-      animation: none;
-      filter: saturate(1.05);
-    }
+  .cs-float img {
+    width: 200px;
+  }
+}
 
-    @keyframes cs-pulse {
-      0%   { box-shadow: 0 0 0 0 var(--cs-color-ghost); }
-      60%  { box-shadow: 0 0 0 18px rgba(245, 92, 103, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(245, 92, 103, 0); }
-    }
+.cs-float:hover,
+.cs-float:focus-visible {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .24);
+  animation: none;
+  filter: saturate(1.05);
+}
 
-    @media (prefers-reduced-motion: reduce) {
-      .cs-float { animation: none; }
-    }
+@keyframes cs-pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--cs-color-ghost);
+  }
+
+  60% {
+    box-shadow: 0 0 0 18px rgba(245, 92, 103, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 92, 103, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-float {
+    animation: none;
+  }
+}
 
 @supports not (scrollbar-gutter: stable) {
   body {
@@ -396,7 +413,7 @@ body.no-scroll {
    HERO
    ========================================================= */
 .prod-hero {
-  background: linear-gradient(135deg, #ffcdce 0%, #ffe4cd 100%);
+  background: linear-gradient(135deg, #ffe0e1 0%, #ffe4e1 100%);
 }
 
 .prod-hero>.container {
@@ -459,6 +476,7 @@ body.no-scroll {
   padding: 0 16px;
   margin-top: 100px;
 }
+
 
 .about_list {
   list-style: none;
@@ -559,6 +577,183 @@ body.no-scroll {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
 }
 
+/* =========================================
+   ACTIVITIES
+   ========================================= */
+.activities {
+  background: #fff;
+  margin: 0;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activities h2 {
+  text-align: left;
+  font-weight: 700;
+  margin: 0;
+  font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2.25rem);
+}
+
+/* Button "More" tetap kanan; pakai border gradient tipis */
+.more-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: transparent;
+  color: transparent;
+  background-image: linear-gradient(90deg, #b31217, #ff6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.more-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, #b31217, #ff6b6b);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.more-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.activities-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.activity-card {
+  background: #ffecec;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(167, 167, 167, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Pastikan rasio gambar stabil di semua layar */
+.activity-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* responsif, lebih baik dari height:200px */
+  object-fit: cover;
+  display: block;
+}
+
+.activity-content {
+  padding: 1.5rem;
+  background: transparent;
+}
+
+.activity-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.activity-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000;
+  font-weight: 700;
+}
+
+.watch-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6d6d, #ff4747);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.watch-btn:hover {
+  opacity: 0.9;
+}
+
+/* Hapus wrapper lama kalau nggak dipakai */
+/* .more-wrapper { display:none; } */
+
+
+/* ===== Breakpoints ===== */
+
+/* ≤ 1024px: longgarkan grid jadi 2 kolom */
+@media (max-width: 1024px) {
+  .activities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* ≤ 768px: judul & tombol jadi dua baris, tombol tetap kanan */
+@media (max-width: 768px) {
+  .header-row {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-bottom: 20px;
+  }
+
+  .more-btn {
+    margin-left: auto;
+    /* dorong ke kanan */
+  }
+
+  .activity-content {
+    padding: 1.25rem;
+  }
+
+  .activity-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ≤ 576px: 1 kolom penuh, ruang lebih compact */
+@media (max-width: 576px) {
+  .activities {
+    padding: 24px 0;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .activity-content {
+    padding: 1rem;
+  }
+
+  .activity-date {
+    font-size: 0.85rem;
+  }
+
+  .watch-btn {
+    font-size: 0.85rem;
+  }
+}
+
+
 /* =========================================================
    LAPORAN / TABS
    ========================================================= */
@@ -630,59 +825,71 @@ body.no-scroll {
 }
 
 @media (max-width: 1005px) {
-  .laporan-sec .tabs{
+  .laporan-sec .tabs {
     margin: 0 32px;
-    display: flex;                 /* baris horizontal */
+    display: flex;
+    /* baris horizontal */
     gap: 0px;
-    overflow-x: auto;              /* <— scroll ke samping */
+    overflow-x: auto;
+    /* <— scroll ke samping */
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory; /* snap enak saat geser */
+    scroll-snap-type: x mandatory;
+    /* snap enak saat geser */
     border-radius: 999px;
   }
 
-  .laporan-sec .tabs::-webkit-scrollbar{ height: 3 }
+  .laporan-sec .tabs::-webkit-scrollbar {
+    height: 3
+  }
 
-  .laporan-sec .tab{
-    flex: 0 0 auto;                /* <— jangan melar/menciut */
+  .laporan-sec .tab {
+    flex: 0 0 auto;
+    /* <— jangan melar/menciut */
     white-space: nowrap;
     scroll-snap-align: center;
     padding: 12px 18px;
     border-radius: 999px;
     font-weight: 700;
   }
-  
+
   .laporan-sec .tabs::before,
-  .laporan-sec .tabs::after{
-    content:"";
+  .laporan-sec .tabs::after {
+    content: "";
     flex: 0 0 0;
   }
 }
 
 @media (max-width: 640px) {
-  .laporan-sec .tabs{
+  .laporan-sec .tabs {
     margin: 0 32px;
-    display: flex;                 /* baris horizontal */
+    display: flex;
+    /* baris horizontal */
     gap: 0px;
-    overflow-x: auto;              /* <— scroll ke samping */
+    overflow-x: auto;
+    /* <— scroll ke samping */
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory; /* snap enak saat geser */
+    scroll-snap-type: x mandatory;
+    /* snap enak saat geser */
     border-radius: 999px;
   }
 
-  .laporan-sec .tabs::-webkit-scrollbar{ height: 5 }
+  .laporan-sec .tabs::-webkit-scrollbar {
+    height: 5
+  }
 
-  .laporan-sec .tab{
-    flex: 0 0 auto;                /* <— jangan melar/menciut */
+  .laporan-sec .tab {
+    flex: 0 0 auto;
+    /* <— jangan melar/menciut */
     white-space: nowrap;
     scroll-snap-align: center;
     padding: 12px 18px;
     border-radius: 999px;
     font-weight: 700;
   }
-  
+
   .laporan-sec .tabs::before,
-  .laporan-sec .tabs::after{
-    content:"";
+  .laporan-sec .tabs::after {
+    content: "";
     flex: 0 0 0;
   }
 }
@@ -776,8 +983,8 @@ body.no-scroll {
 
 
   .doc-title {
-  font-weight: 700;
-  font-size: 16px;
+    font-weight: 700;
+    font-size: 16px;
   }
 }
 
@@ -1613,4 +1820,154 @@ body.modal-open {
 
 body.no-scroll {
   overflow: hidden;
+}
+
+/* Bound lebar container khusus section ini */
+.activities .container {
+  max-width: 1200px;
+  /* ganti 1100–1280 sesuai grid situs */
+  padding: 0 20px;
+  margin-top: 60px;
+  padding: var(--gutter)
+}
+
+.activities {
+  background: #fff;
+  padding: 32px 0;
+  /* kontrol ruang vertikal */
+  margin: 0;
+  /* jangan pakai margin negatif */
+}
+
+/* Header sejajar kiri-kanan */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Kecilkan h2 agar tidak kebesaran bila ada style global */
+.activities h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.1rem + 1vw, 2rem);
+  /* ~24–32px */
+  line-height: 1.2;
+}
+
+/* Grid 3 → 2 → 1 kolom */
+.activities-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Kartu */
+.activity-card {
+  background: #ffecec;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(167, 167, 167, 0.1);
+  transition: transform .3s ease;
+  margin-bottom: -60px;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gambar stabil dan tidak terlalu tinggi */
+.activity-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* lebih proporsional daripada height fixed */
+  object-fit: cover;
+  display: block;
+}
+
+/* Konten kartu */
+.activity-content {
+  padding: 1.25rem;
+}
+
+.activity-date {
+  font-size: .9rem;
+  color: #666;
+  margin-bottom: .5rem;
+}
+
+.activity-content h3 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin-bottom: .8rem;
+}
+
+/* Tombol */
+.watch-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6d6d, #ff4747);
+  color: #fff;
+  padding: .5rem 1.1rem;
+  border-radius: 20px;
+  font-size: .9rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.watch-btn:hover {
+  opacity: .9;
+}
+
+/* More button tetap kanan */
+.more-btn {
+  margin-left: auto;
+}
+
+/* ===== Breakpoints ===== */
+@media (max-width: 1024px) {
+  .activities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .activities{
+    padding: var(--gutter);
+  }
+  
+  .header-row {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-bottom: 20px;
+  }
+
+  .more-btn {
+    margin-left: auto;
+  }
+
+  .activity-content {
+    padding: 1rem;
+  }
+
+  .activity-content h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .activities .container {
+    padding: 0 30px;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+
+  .activities {
+    padding: 24px 0;
+  }
 }
