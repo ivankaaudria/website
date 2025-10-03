@@ -87,12 +87,12 @@
                         <div class="store-row">
                             <a class="store-badge"
                                 href="https://play.google.com/store/apps/details?id=com.uatas.android">
-                                <img src="../assets/images/GooglePlay_Produk.png" alt="Unduh di Google Play"
-                                    loading="lazy" target="_blank" />
+                                <img src="../assets/images/Google Play.png" alt="Unduh di Google Play" loading="lazy"
+                                    target="_blank" />
                             </a>
                             <a class="store-badge"
                                 href="https://apps.apple.com/id/app/uatas-pinjaman-uang-online/id1610701493">
-                                <img src="../assets/images/AppStore_Produk.png" alt="Unduh di App Store" loading="lazy"
+                                <img src="../assets/images/App Store.png" alt="Unduh di App Store" loading="lazy"
                                     target="_blank" />
                             </a>
                         </div>
@@ -107,88 +107,54 @@
         </section>
 
         <section id="simulasi" class="simulasi site-section">
-            <div class="container">
+            <div class="container sim-container">
                 <h2 class="sim-title">Simulasi Pendanaan</h2>
 
                 <div class="sim-grid">
-                    <article class="sim-card" aria-label="Simulasi 80 hari">
-                        <div class="sim-head">
-                            <small>Jumlah Dana yang Diterima</small>
-                            <b>Rp1.000.000,-</b>
-                        </div>
+                    <div class="sim-right">
+                        <img src="/assets/images/character-3d.png" alt="Simulasi 3D" class="sim-3d">
+                    </div>
 
-                        <div class="sim-rows">
-                            <div class="sim-row">
-                                <span class="muted">Bunga &amp; Layanan (0,3% per hari) + PPN</span>
-                                <b>Rp242.112,-</b>
+                    <!-- Kalkulator -->
+                    <div class="sim-left">
+                        <div class="loan-card">
+                            <!-- Amount (slider snap ke 4 nilai) -->
+                            <div class="row">
+                                <div class="label">Jumlah Dana (Rp)</div>
+                                <div class="value" id="sim-amountLabel">Rp1.000.000</div>
                             </div>
-                            <div class="sim-row">
-                                <span>Jangka Waktu Pendanaan</span>
-                                <b>80 hari</b>
+
+                            <div class="range">
+                                <!-- min=0..3 → mapping ke [500k, 1M, 2M, 3M] -->
+                                <input id="sim-amountIdx" type="range" min="0" max="3" step="1" value="1" />
                             </div>
-                        </div>
-
-                        <div class="sim-total">
-                            <div>
-                                <span>Total Pengembalian</span><br />
-                                <small class="muted">*Denda Keterlambatan (0,3% per hari)</small>
+                            <div class="ticks">
+                                <span>500.000</span><span></span><span>3.000.000</span>
                             </div>
-                            <b class="accent">Rp1.242.112,-</b>
-                        </div>
 
-                        <div class="sim-cta">
-                            <div class="pay-title">Pembayaran per Bulan</div>
-                            <div class="pay-amount">Rp207.100,-</div>
-                            <div class="note note-top">*Termasuk bunga</div>
-
-                            <a href="#" class="btn-dark app-link" target="_blank" rel="noopener noreferrer">
-                                Coba Lakukan Pinjaman
-                            </a>
-
-                            <div class="note">*Asumsi setiap bulan memiliki 30 hari</div>
-                        </div>
-                    </article>
-
-                    <article class="sim-card" aria-label="Simulasi 90 hari">
-                        <div class="sim-head">
-                            <small>Jumlah Dana yang Diterima</small>
-                            <b>Rp1.000.000,-</b>
-                        </div>
-
-                        <div class="sim-rows">
-                            <div class="sim-row">
-                                <span class="muted">Bunga &amp; Layanan (0,3% per hari) + PPN</span>
-                                <b>Rp272.376,-</b>
+                            <!-- Period fixed -->
+                            <div class="row" style="margin-top:14px">
+                                <div class="label">Tenor</div>
+                                <div class="value">90 Hari</div>
                             </div>
-                            <div class="sim-row">
-                                <span>Jangka Waktu Pendanaan</span>
-                                <b>90 hari</b>
+
+                            <!-- Result -->
+                            <div class="section-title">Pembayaran per Bulan</div>
+                            <div class="subtle">*Termasuk bunga & PPN (asumsi 30 hari/bulan)</div>
+                            <div class="installment" id="sim-installment">Rp424.125</div>
+
+                            <button class="cta" type="button">Ajukan Pinjaman</button>
+
+                            <div class="info" id="sim-infoLine">
+                                <span>Total pengembalian: <b>Rp1.272.376</b></span>
+                                <span>Bunga+PPN: <b>Rp272.376</b></span>
                             </div>
                         </div>
-
-                        <div class="sim-total">
-                            <div>
-                                <span>Total Pengembalian</span><br />
-                                <small class="muted">*Denda Keterlambatan (0,3% per hari)</small>
-                            </div>
-                            <b class="accent">Rp1.272.376,-</b>
-                        </div>
-
-                        <div class="sim-cta">
-                            <div class="pay-title">Pembayaran per Bulan</div>
-                            <div class="pay-amount">Rp424.125,-</div>
-                            <div class="note note-top">*Termasuk bunga</div>
-
-                            <a href="#" class="btn-dark app-link" target="_blank" rel="noopener noreferrer">
-                                Coba Lakukan Pinjaman
-                            </a>
-
-                            <div class="note">*Asumsi setiap bulan memiliki 30 hari</div>
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
+
 
         <section id="alur" class="steps-sec site-section" aria-labelledby="steps-title">
             <div class="container">
@@ -625,11 +591,11 @@
                     const li = document.querySelector('#navDrawer .tkb-mobile');
                     if (!li) return;
                     li.querySelector('.tkb-sub').innerHTML = `
-    <li><strong>TKB0:</strong> ${sel('TKB0')}</li>
-    <li><strong>TKB30:</strong> ${sel('TKB30')}</li>
-    <li><strong>TKB60:</strong> ${sel('TKB60')}</li>
-    <li><strong>TKB90:</strong> ${sel('TKB90')}</li>
-  `;
+                    <li><strong>TKB0:</strong> ${sel('TKB0')}</li>
+                    <li><strong>TKB30:</strong> ${sel('TKB30')}</li>
+                    <li><strong>TKB60:</strong> ${sel('TKB60')}</li>
+                    <li><strong>TKB90:</strong> ${sel('TKB90')}</li>
+                `;
                 }
 
                 const obs = new MutationObserver(() => {
@@ -684,6 +650,51 @@
 
             links.forEach(link => link.href = url);
         </script>
+
+        <script>
+            (function () {
+                // ===== PARAMETER PRODUK =====
+                const DAYS_FIXED = 90;              // selalu 90 hari
+                const DAYS_PER_MONTH = 30;          // untuk display
+                const DAILY_RATE = 0.003;           // 0,3% per hari (flat)
+                // PPN efektif agar match contohmu; ganti ke 0.12/0.11 jika perlu
+                const VAT_ON_INTEREST = 0.0088;     // 0,88%
+                const AMOUNTS = [500_000, 1_000_000, 2_000_000, 3_000_000]; // slider values
+                // ============================
+
+                const fmt = new Intl.NumberFormat('id-ID');
+                const elIdx = document.getElementById('sim-amountIdx');
+                const elAmountLabel = document.getElementById('sim-amountLabel');
+                const elInstall = document.getElementById('sim-installment');
+                const elInfo = document.getElementById('sim-infoLine');
+
+                function rupiah(n) { return 'Rp' + fmt.format(Math.round(n)); }
+                function updateFill(range) {
+                    const pct = ((+range.value - +range.min) / (+range.max - +range.min)) * 100;
+                    range.style.setProperty('--fill', pct + '%');
+                }
+                function computeTotals(principal) {
+                    const interest = principal * DAILY_RATE * DAYS_FIXED;
+                    const vat = interest * VAT_ON_INTEREST;
+                    const feePlusVAT = interest + vat;
+                    const total = principal + feePlusVAT;
+                    const perMonth = total / (DAYS_FIXED / DAYS_PER_MONTH); // 90/30 = 3
+                    return { feePlusVAT, total, perMonth };
+                }
+                function render() {
+                    const amount = AMOUNTS[+elIdx.value];
+                    const { feePlusVAT, total, perMonth } = computeTotals(amount);
+                    elAmountLabel.textContent = rupiah(amount);
+                    elInstall.textContent = rupiah(perMonth);
+                    elInfo.innerHTML = `Total pengembalian: <b>${rupiah(total)}</b> <span> </span> Bunga+PPN: <b>${rupiah(feePlusVAT)}</b>`;
+                    updateFill(elIdx);
+                }
+                elIdx.addEventListener('input', render);
+                updateFill(elIdx);
+                render();
+            })();
+        </script>
+
 
 </body>
 
