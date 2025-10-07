@@ -1,42 +1,1189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Kebijakan Privasi | UATAS</title>
-  <link rel="shortcut icon" href="../assets/images/Shortcut.png" type="image/png">
-  <style>
-    html,
-    body {
-      margin: 0;
-      height: 100%;
-      background: #f8f8f8;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kebijakan Privasi | UATAS</title>
+    <link rel="shortcut icon" href="../assets/images/Shortcut.png" type="image/png">
 
-    img {
-      width: 60%;
-      display: block;
-      margin: auto;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-  </style>
-  <script>
-    document.addEventListener("contextmenu", function (e) {
-      e.preventDefault();
-    });
+    <style>
+        @font-face {
+            font-family: 'Mulish';
+            src: url('../assets/fonts/Mulish-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
 
-    document.addEventListener("dragstart", function (e) {
-      if (e.target.tagName === "IMG") {
-        e.preventDefault();
-      }
-    });
-  </script>
+        @font-face {
+            font-family: 'Mulish';
+            src: url('../assets/fonts/Mulish-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Mulish';
+            src: url('../assets/fonts/Mulish-Medium.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Mulish';
+            src: url('../assets/fonts/Mulish-SemiBold.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat-ExtraBold';
+            src: url('../assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Mulish', Arial, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+            padding: 0 0;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffe1df;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 40px 20px 60px;
+            position: relative;
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            height: 60px;
+            width: auto;
+        }
+
+        .section-2 {
+            list-style: none;
+            counter-reset: section2-counter;
+            padding-left: 40px;
+            margin: 0;
+        }
+
+        .section-4 {
+            list-style: none;
+            counter-reset: section4-counter;
+            padding-left: 40px;
+            margin: 0;
+        }
+
+        .section-5 {
+            list-style: none;
+            counter-reset: section5-counter;
+            padding-left: 40px;
+            margin: 0;
+        }
+
+        .section-2>li {
+            counter-increment: section2-counter;
+            position: relative;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            padding-left: 5px;
+        }
+
+        .section-4>li {
+            counter-increment: section4-counter;
+            position: relative;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            padding-left: 5px;
+        }
+
+        .section-5>li {
+            counter-increment: section5-counter;
+            position: relative;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            padding-left: 5px;
+        }
+
+        .section-2>li::before {
+            content: "2." counter(section2-counter);
+            font-weight: bold;
+            position: absolute;
+            left: -35px;
+            color: #000;
+        }
+
+        .section-5>li::before {
+            content: "2." counter(section5-counter);
+            font-weight: bold;
+            position: absolute;
+            left: -35px;
+            color: #000;
+        }
+
+        .section-4>li::before {
+            content: "4." counter(section4-counter);
+            font-weight: bold;
+            position: absolute;
+            left: -35px;
+            color: #000;
+        }
+
+        .section-5>li::before {
+            content: "5." counter(section5-counter);
+            font-weight: bold;
+            position: absolute;
+            left: -35px;
+            color: #000;
+        }
+
+        .section-2,
+        .section-2>li {
+            list-style-type: none !important;
+        }
+
+        .section-4,
+        .section-4>li {
+            list-style-type: none !important;
+        }
+
+        .section-5,
+        .section-5>li {
+            list-style-type: none !important;
+        }
+
+        .section-6 {
+            list-style: none;
+            counter-reset: section6-counter;
+            padding-left: 40px;
+            margin: 0;
+        }
+
+        .section-6>li {
+            counter-increment: section6-counter;
+            position: relative;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            padding-left: 5px;
+        }
+
+        .section-6>li::before {
+            content: "6." counter(section6-counter);
+            font-weight: bold;
+            position: absolute;
+            left: -35px;
+            color: #000;
+        }
+
+        .section-6,
+        .section-6>li {
+            list-style-type: none !important;
+        }
+
+        .sublist-alpha {
+            margin-left: 25px;
+            list-style-type: lower-alpha;
+        }
+
+        .sublist-number {
+            margin-left: 25px;
+            list-style-type: decimal;
+        }
+
+        .sublist-bullet {
+            margin-left: 25px;
+            list-style-type: disc;
+        }
+
+
+        .sublist-alpha li::marker,
+        .sublist-number li::marker,
+        .sublist-bullet li::marker {
+            font-weight: normal;
+        }
+
+        .right-title {
+            text-align: right;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 1.3;
+            color: #000;
+            font-family: 'Montserrat-ExtraBold', sans-serif;
+        }
+
+        .card {
+            background: #fff2f1;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            margin: 0 auto 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: linear-gradient(90deg, #E50019, #FF6161);
+            color: #fff2f1;
+            font-weight: 700;
+            padding: 14px 25px;
+            font-size: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 60px;
+            display: inline-block;
+            min-width: 320px;
+        }
+
+        .card-body {
+            padding: 25px 30px 35px;
+            color: #333;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .card-body p {
+            margin-bottom: 16px;
+        }
+
+        .mascot-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .mascot-wrapper img {
+            position: absolute;
+            right: 0;
+            top: -70px;
+            width: 200px;
+            height: auto;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .alur-section {
+            background: #fff4f0;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            margin: 70px auto 0;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .alur-header {
+            background: linear-gradient(90deg, #E50019, #FF6161);
+            color: #fff;
+            font-weight: 700;
+            padding: 14px 25px;
+            font-size: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 60px;
+            display: inline-block;
+            min-width: 250px;
+        }
+
+        .alur-body {
+            padding: 25px 30px 20px;
+            color: #333;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .alur-body h3 {
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            align-items: center;
+        }
+
+        .alur-body h3 .number {
+            display: inline-block;
+            background: #f55859;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .contact-box {
+            margin-top: 10px;
+            padding-left: 15px;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .contact-list {
+            list-style: disc;
+            margin: 8px 0 0 25px;
+            padding: 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .sla-inline {
+            display: inline !important;
+        }
+
+        @media (max-width:768px) {
+            .page {
+                padding: 25px 15px 40px;
+            }
+
+            .top-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .right-title {
+                text-align: left;
+                font-size: 18px;
+            }
+
+            .card-header,
+            .alur-header {
+                font-size: 18px;
+            }
+
+            .mascot-wrapper img {
+                position: relative;
+                width: 150px;
+                top: 0;
+                right: 0;
+                display: block;
+                margin: 0 auto 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<img>
-<img src="/assets/images/Kebijakan Privasi.jpg" rel="noopener noreferrer" alt="Page Kebijakan" />
+    <div class="page">
+        <div class="top-header">
+            <div class="logo-section">
+                <img src="../assets/images/logouatas.png" alt="Logo UATAS" />
+            </div>
+            <div class="right-title">
+                KEBIJAKAN PRIVASI
+            </div>
+        </div>
+
+        <div class="alur-section">
+            <div class="alur-header">
+                KEBIJAKAN PRIVASI
+            </div>
+            <div class="alur-body">
+                <p>PT Plus Ultra Abadi (“<b>UATAS</b>”) adalah perusahaan yang bergerak sebagai
+                    Penyelenggara Layanan Pendanaan Bersama Berbasis Teknologi Informasi yang telah
+                    berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK) sebagaimana tertuang dalam
+                    Peraturan Otoritas Jasa Keuangan Nomor 10/POJK.05/2022 tentang Layanan
+                    Pendanaan Bersama Berbasis Teknologi Informasi.</p>
+
+                <p>Kebijakan Privasi ini berlaku secara mengikat untuk seluruh pengunjung Platform
+                    UATAS baik melalui website maupun aplikasi mobile, khususnya bagi Anda selaku
+                    Pengguna Terdaftar. Dengan penggunaan Platform UATAS, maka dengan ini Anda
+                    memberikan hak kepada UATAS untuk memperoleh, mengumpulkan, menyimpan,
+                    menyalin, mengungkapkan, memproses, mengelola, mentransfer, mengkaji, melakukan
+                    analisis, dan menggunakan informasi pribadi Anda sehubungan dengan tujuan terkait
+                    proses pengajuan pendanaan secara terus menerus berdasarkan ketentuan hukum
+                    berlaku</p>
+
+                <p>Berkaitan dengan pengaksesan dan penggunaan layanan Kami, maka dengan ini Anda
+                    selaku Pengguna menyatakan telah membaca, mengetahui, memahami, menjamin,
+                    bertanggung jawab, dan menyetujui seluruh ketentuan Kebijakan Privasi ini maupun
+                    ketentuan-ketentuan lainnya baik yang muncul dalam Platform ini maupun berdasarkan
+                    kebijakan pemerintah serta ketentuan peraturan perundang-undangan yang berlaku.</p>
+
+                <h3>1. DEFINISI</h3>
+                <div class="contact-box">
+                    <p>PT PLUS ULTRA ABADI (“Perusahaan”) berarti badan hukum Indonesia yang bergerak
+                        sebagai Penyelenggara Layanan Pendanaan Bersama Berbasis Teknologi Informasi
+                        yang telah berizin dan diawasi oleh regulator berwenang sehingga dapat menyediakan,
+                        mengelola, dan mengoperasikan layanan melalui teknologi tertentu dengan merek
+                        dagang dan jasa “UATAS”.</p>
+
+                    <p>“Anda / Pengguna” berarti semua orang yang mengakses dan menggunakan layanan
+                        yang disediakan oleh Perusahaan, termasuk Pemberi Dana dan Penerima Dana dan
+                        telah melakukan registrasi serta memiliki akun pada Platform UATAS.</p>
+
+                    <p>“Platform” berarti sistem elektronik yang berfungsi dalam rangka mendukung LPBBTI
+                        berupa: (a) portal web dan/atau versi mobile dari portal web yang dapat ditelusuri
+                        melalui mesin search engine dengan URL berikut www.uatas.id; dan/atau (b) aplikasi
+                        mobile UATAS yang dapat diunduh melalui Google Playstore untuk device berbasis
+                        android dan Appstore untuk device berbasis iOS yang mana seluruh Platform
+                        tersebut dibuat, dimiliki, dioperasikan, dan dikelola oleh PT Plus Ultra Abadi.</p>
+                    <p>Layanan Pendanaan Bersama Berbasis Teknologi Informasi (“LPBBTI”) berarti
+                        Layanan Pendanaan Konvensional yang mempertemukan antara Pemberi Dana
+                        dengan Penerima Dana secara langsung melalui sistem elektronik dan teknologi
+                        informasi memadai yang Kami sediakan dari waktu ke waktu melalui Aplikasi UATAS.</p>
+                    <p>Produk (“Pendanaan”) berarti penyaluran dana melalui UATAS dari Pemberi Dana
+                        kepada Penerima Dana dengan ketentuan dan jangka waktu yang telah ditetapkan.
+                        (“Pendanaan”) berarti penyaluran dana melalui UATAS dari Pemberi Dana kepada
+                        Penerima Dana dengan ketentuan dan jangka waktu yang telah ditetapkan.</p>
+                    <p>“Penerima Manfaat”, berarti pihak yang merupakan penerima manfaat sebenarnya
+                        atas pendanaan yang diberikan oleh Penerima Dana kepada Penerima Dana melalui
+                        Platform.</p>
+                    <p>"Konten", berarti teks, data, informasi, angka, gambar, grafik, foto, audio, video,
+                        nama Pengguna, aplikasi, tautan, komentar, tarif, desain atau hal lain yang
+                        ditampilkan dalam Platform.</p>
+                    <p>“Informasi Pribadi", berarti setiap dan semua data pribadi termasuk dokumen yang
+                        diberikan oleh Pengguna melalui Platform UATAS baik milik dirinya sendiri ataupun
+                        dalam hal mewakili pihak lain selaku Penerima Manfaat (termasuk keluarga, rekan,
+                        karyawan, perusahaan atau lainnya yang dikenal dan mengenal Anda serta pihak
+                        yang dicantumkan sebagai Nomor Darurat), termasuk tetapi tidak terbatas pada
+                        nama, nomor identifikasi, informasi Penerima Dana, kartu keluarga, akta nikah, akta
+                        legalitas, sertifikat kepemilikan, identifikasi Pajak, Nomor izin usaha, surat jaminan,
+                        data penghasilan, lokasi pengguna, kontak pengguna, juga dokumen dan data
+                        lainnya seperti data transaksi, data keuangan maupun data lainnya yang disyaratkan
+                        dalam ringkasan pendaftaran akun dan pengajuan Pendanaan yang diberikan dan
+                        disampaikan secara sadar dan telah mendapat persetujuan guna mengidentifikasi
+                        Pengguna baik secara langsung maupun tidak langsung sebagai Pengguna Aplikasi
+                        yang Kami simpan dan kelola sehubungan dengan penyediaan layanan ini.</p>
+                    <p>"Nomor Darurat” berarti nomor kontak pihak yang dikenal dan mengenal Penerima
+                        Dana yang dicantumkan secara sadar oleh Penerima Dana dan telah memperoleh
+                        persetujuan dari pihak tersebut pada saat mengajukan permohonan dana melalui
+                        Aplikasi sebagai pihak yang dapat dihubungi oleh UATAS untuk tujuan
+                        sebagaimana diatur pada “Penggunaan Nomor Darurat”.</p>
+                    <p>“Lender” atau “Pemberi Dana” berarti perorangan dan/atau badan hukum baik yang
+                        berasal dari dan/atau luar wilayah Indonesia yang memberikan Pendanaan kepada
+                        Penerima Dana melalui UATAS.</p>
+                    <p>“Borrower” atau “Penerima Dana” adalah perorangan dan/atau badan hukum
+                        Indonesia yang mengajukan permohonan dan memperoleh Pendanaan dari Pemberi
+                        Dana melalui UATAS.</p>
+                    <p>"Perjanjian Layanan Pendanaan Bersama Berbasis Teknologi Informasi” berarti suatu
+                        perjanjian antara Pemberi Dana, UATAS, dan Penerima Dana yang mengatur
+                        termasuk namun tidak terbatas pada hak dan kewajiban Pemberi Dana dan Penerima
+                        Dana, syarat dan ketentuan penyaluran Pendanaan dari Pemberi Dana melalui
+                        UATAS kepada Penerima Dana, dan prosedur pengembalian atau pembayaran
+                        Pendanaan beserta perubahan, perpanjangan, dan lampirannya.</p>
+                    <p>“Perjanjian Pemberian Layanan Pendanaan Berbasis Teknologi Informasi” berarti
+                        suatu perjanjian pemberian pendanaan antara Pemberi Dana dengan UATAS yang
+                        mengatur penyaluran pendanaan dari Pemberi Dana kepada Penerima Dana melalui
+                        Kami.</p>
+                    <p>“Pendanaan” adalah fasilitas pendanaan (berikut bunga, biaya layanan, denda dan
+                        kewajiban finansial lainnya) dari Pemberi Dana yang disalurkan Pemberi Dana kepada
+                        Penerima Dana melalui Aplikasi berdasarkan Perjanjian Layanan Pendanaan Bersama
+                        Berbasis Teknologi Informasi .</p>
+                    <p>“Syarat dan Ketentuan” berarti syarat dan ketentuan atau standar prosedur operasi
+                        atau ketentuan lainnya sehubungan dengan Aplikasi yang dikembangkan dan dikelola
+                        oleh PT Plus Ultra Abadi, sebagaimana dapat diubah atau ditambah dari waktu ke
+                        waktu.</p>
+
+
+                </div>
+
+                <h3>2. INFORMASI PRIBADI YANG KAMI KUMPULKAN</h3>
+
+                <div class="contact-box">
+                    <ul class="contact-list section-2">
+
+                        <!-- 2.1 -->
+                        <li>
+                            Informasi yang Kami peroleh langsung dari Anda melalui pengisian formulir
+                            yang Kami sediakan pada Aplikasi dikumpulkan secara terbatas pada
+                            informasi pribadi antara lain mencakup data KTP, alamat tempat tinggal,
+                            jenis kelamin, status perkawinan, tingkat pendidikan, pendapatan bulanan,
+                            maksud dan tujuan pendanaan, alamat email, informasi pekerjaan, informasi
+                            rekening bank, dan informasi lainnya.
+                            <br><br>
+
+                            Ketika Pengguna mendaftar dan membuat akun pada Aplikasi, Pengguna
+                            harus memberikan kepada Kami Data dan Informasi Pribadi sebagaimana
+                            tersebut di atas, serta informasi biometrik (termasuk namun tidak terbatas
+                            pada pengenalan wajah).
+                            <br><br>
+
+                            Ketika Pengguna menggunakan Aplikasi, Pengguna harus memberikan Kami
+                            informasi yang relevan yang mungkin diperlukan oleh Kami agar Aplikasi
+                            dapat berfungsi, contohnya:
+                            <br><br>
+
+                            a. Jika Anda menggunakan Aplikasi sebagai Pengguna, Anda harus
+                            memberikan persetujuan kepada Kami untuk mengakses kamera (untuk
+                            mengidentifikasi Anda), mikrofon (untuk percakapan telepon Anda dengan
+                            Kami yang sepenuhnya termonitor dan terekam dalam sistem Kami untuk
+                            mendeteksi suara), GPS (untuk mendapatkan lokasi dan posisi Anda saat
+                            mengakses dan menggunakan layanan Kami), dan informasi aplikasi
+                            (untuk mengumpulkan daftar aplikasi yang terpasang di perangkat ponsel
+                            Anda guna keperluan layanan Kami).
+                            <br><br>
+
+                            b. Jika Anda hendak melakukan pembayaran atau transfer melalui fasilitas
+                            gerbang pembayaran yang disediakan oleh dan/atau bekerja sama dengan
+                            Kami dan Anda merupakan pihak pembayar atau pengirim, Anda wajib
+                            mengisi informasi terkait penggunaan, pembayaran atau transfer,
+                            termasuk namun tidak terbatas pada rincian transfer, jumlah pembayaran
+                            yang dibayarkan, nama bank, nama pemilik rekening, nomor rekening,
+                            sebagaimana berlaku.
+                        </li>
+
+                        <!-- 2.2 -->
+                        <li>
+                            Informasi yang dikumpulkan setiap kali Anda menggunakan Platform Kami.
+                            Setiap kali Anda mengakses, menggunakan, atau mengunjungi Platform
+                            Kami, maka dengan sendirinya Kami dapat mengumpulkan data teknis
+                            tertentu sehubungan dengan penggunaan Anda, seperti alamat protokol
+                            internet, durasi setiap kunjungan/sesi, identitas perangkat internet, dan
+                            informasi perangkat lainnya termasuk informasi mengenai produsen, model,
+                            dan sistem operasi dari perangkat yang Anda gunakan untuk mengakses
+                            Platform Kami.
+                            <br><br>
+
+                            Kami juga mengumpulkan informasi tertentu secara otomatis ketika Anda
+                            mengakses, menggunakan, ataupun mengunjungi Platform Kami dengan
+                            menggunakan cookies. Cookies adalah berkas data kecil yang tersimpan
+                            pada komputer atau perangkat seluler Anda. Kami menggunakan cookies
+                            untuk melacak aktivitas Pengguna dengan tujuan meningkatkan antarmuka
+                            dan pengalaman Pengguna secara memadai.
+                            <br><br>
+
+                            Sebagian besar perangkat seluler dan perangkat internet mendukung
+                            penggunaan cookies; namun Anda dapat menyesuaikan pengaturan pada
+                            perangkat seluler atau peramban internet Anda untuk menolak beberapa
+                            jenis cookies atau cookies spesifik tertentu. Perangkat seluler dan/atau
+                            peramban Anda juga memungkinkan Anda untuk menghapus cookies apa pun
+                            yang sebelumnya telah tersimpan.
+                            <br><br>
+
+                            Setiap kali Anda menggunakan Aplikasi melalui perangkat seluler, Kami akan
+                            melacak dan mengumpulkan informasi lokasi geografis Anda secara real-time.
+                            Anda akan diminta atau diharuskan untuk mengaktifkan Global Positioning
+                            System (GPS) pada perangkat seluler Anda untuk memungkinkan Kami
+                            memberikan layanan melalui Platform (termasuk namun tidak terbatas pada
+                            keperluan penilaian risiko kredit dan pencegahan tindakan
+                            penipuan/fraud).
+                            <br><br>
+
+                            Anda dapat menonaktifkan pelacakan lokasi geografis pada perangkat seluler
+                            Anda untuk sementara waktu. Namun, hal ini dapat mempengaruhi
+                            fungsi-fungsi yang tersedia pada Aplikasi.
+                            <br><br>
+
+                            Jika Anda menggunakan dan/atau ketika melakukan pembayaran atau
+                            transfer melalui fasilitas gerbang pembayaran yang disediakan oleh dan/atau
+                            bekerja sama dengan Kami, Kami dapat mengumpulkan informasi tertentu
+                            yang berkaitan dengan penggunaan, pembayaran, atau transfer, termasuk
+                            namun tidak terbatas pada rincian transfer, jumlah pembayaran yang
+                            dibayarkan, rincian penyelesaian pembayaran, nama bank, nama pemilik
+                            rekening, nomor rekening, sebagaimana berlaku.
+                        </li>
+
+                        <!-- 2.3 -->
+                        <li>
+                            Tujuan Penggunaan Informasi Pribadi
+                            <br><br>
+
+                            Kami dapat mengumpulkan, memproses, menggunakan, menyimpan,
+                            mengungkapkan, dan/atau melakukan tindakan lain sepanjang relevan dengan
+                            tujuan dan kepentingan yang ada atas Informasi Pribadi Anda berkenaan dengan
+                            hal berikut:
+                            <br><br>
+
+                            <!-- Level a, b, c -->
+                            <ol type="a" class="sublist-alpha">
+                                <li>
+                                    Meminta otorisasi pelacakan penggunaan Aplikasi kepada Pengguna dengan
+                                    memberitahukan Pengguna tentang alasan dan tujuan kepentingan pelacakan
+                                    baik terhadap data pribadi maupun perangkat yang digunakan oleh
+                                    Pengguna pada saat pengaksesan atau pemanfaatan Aplikasi. Otorisasi
+                                    pelacakan tersebut akan didahului dengan langkah-langkah berikut:
+                                    <br><br>
+
+                                    <!-- Level 1, 2, 3 -->
+                                    <ol type="1" class="sublist-number">
+                                        <li>
+                                            Menampilkan atau menyajikan permintaan pemberitahuan izin sistem
+                                            yang perlu diinstal pada perangkat Pengguna sehubungan dengan
+                                            penggunaan Aplikasi;
+                                        </li>
+                                        <li>
+                                            Memberitahukan kepada Pengguna terkait permintaan persetujuan atas
+                                            otorisasi pelacakan baik sebelum, pada saat, dan/atau setelah
+                                            pengaksesan atau penggunaan Aplikasi melalui App Tracking
+                                            Transparency (ATT) yang berfungsi untuk mengidentifikasi data pribadi,
+                                            iklan, ataupun informasi lainnya yang terdapat dalam perangkat
+                                            Pengguna secara terbatas dan bersifat relevan sehubungan dengan
+                                            kepentingan penggunaan Aplikasi saja, termasuk namun tidak terbatas
+                                            pada pemrosesan permohonan Pendanaan;
+                                        </li>
+                                        <li>
+                                            Menentukan status izin pelacakan Aplikasi terhadap data atau informasi
+                                            pribadi apa saja yang diidentifikasi atau diakses melalui ATT seperti:
+                                            <ul class="sublist-bullet">
+                                                <li>
+                                                    Akses terhadap data lokasi perangkat Pengguna ataupun email yang
+                                                    dicantumkan pada saat penggunaan Aplikasi;
+                                                </li>
+                                                <li>
+                                                    Menggabungkan data Pengguna dari Aplikasi milik UATAS dengan
+                                                    data yang Pengguna cantumkan pada Aplikasi milik Pihak
+                                                    Pengembang lainnya sehingga dapat dianalisis lebih lanjut dari data
+                                                    terkumpul sepanjang hanya ditujukan untuk kepentingan pemrosesan
+                                                    data pada saat Pengguna mengakses Aplikasi UATAS; dan
+                                                </li>
+                                                <li>
+                                                    Membantu Pengguna untuk mengetahui dan memahami data atau
+                                                    informasi apa saja yang dikumpulkan atau diperoleh dari Aplikasi
+                                                    UATAS dan bagaimana ketentuan penggunaannya.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Setiap pengumpulan, perolehan, dan/atau pelacakan data atau informasi
+                                            pribadi dalam Aplikasi tentunya wajib diselenggarakan dengan penuh
+                                            tanggung jawab, terbatas pada data atau informasi tertentu, dan
+                                            mematuhi ketentuan hukum yang berlaku.
+                                        </li>
+                                    </ol>
+                                </li>
+
+                                <li>
+                                    Memproses, mengadministrasikan, mengelola, dan menangani Layanan yang
+                                    disediakan oleh Pihak Ketiga mana pun kepada Kami;
+                                </li>
+
+                                <li>
+                                    Mengembangkan, meningkatkan, dan/atau menyediakan Layanan yang Kami
+                                    gunakan untuk mengidentifikasi dan verifikasi Pengguna, melakukan analisis
+                                    penilaian kredit dan/atau profil risiko yang ditawarkan atau akan ditawarkan
+                                    oleh Kami dan/atau Pihak Ketiga lainnya; dan
+                                </li>
+
+                                <li>
+                                    Melatih model dan algoritma kecerdasan buatan atau pembelajaran mesin
+                                    sehubungan dengan pengembangan, peningkatan, atau penyediaan Layanan
+                                    yang Kami dan/atau Pihak Ketiga lainnya tawarkan.
+                                </li>
+                            </ol>
+                        </li>
+
+                        <!-- 2.4 -->
+                        <li>
+                            Informasi yang Kami kumpulkan dari Pihak Ketiga
+                            <br><br>
+
+                            Kami juga dapat mengumpulkan Informasi Pribadi Anda dari pihak ketiga
+                            (termasuknamun tidak terbatas pada agen, vendor, pemasok, kontraktor, mitra,
+                            dan pihak lainnya yang memberikan Layanan kepada Kami, mengumpulkan
+                            Informasi Pribadi dan/atau melakukan tugas atas nama Kami, atau dengan
+                            siapa Kami melakukan kerja sama). Dalam hal tersebut, Kami hanya akan
+                            mengumpulkan Informasi Pribadi Anda untuk atau sehubungan dengan tujuan
+                            yang melibatkan pihak ketiga tersebut atau tujuan kerja sama Kami dengan
+                            pihak ketiga tersebut (misalnya untuk mengumpulkan riwayat kredit, atau data
+                            maupun informasi lainnya yang dapat menghasilkan nilai kelayakan Anda
+                            dalam menerima Layanan Kami, tergantung pada situasinya).
+                        </li>
+
+                        <!-- 2.5 -->
+                        <li>
+                            Informasi kontak darurat Kami peroleh dari Informasi Pribadi yang Anda
+                            berikan ketika mengakses dan menggunakan Layanan Kami yang bertujuan
+                            untuk memudahkan proses verifikasi dan validasi data serta penyediaan
+                            Layanan Kami. Informasi kontak darurat tersebut dicantumkan dan diberikan
+                            secara sadar oleh Anda sebagai Pengguna pada saat pengajuan pendanaan
+                            melalui Platform kami. Kami mensyaratkan bahwa pencantuman setiap
+                            kontak darurat yang Anda berikan, maka Anda harus memastikan bahwa
+                            Anda telah memperoleh persetujuan dari pihak terkait untuk dijadikan
+                            sebagai Kontak Darurat.
+                            <br><br>
+                        </li>
+
+                        <!-- 2.6 -->
+                        <li>
+                            Informasi lain yang dikumpulkan saat Anda menggunakan Aplikasi, termasuk
+                            namun tidak terbatas pada tipe perangkat dan sistem yang anda gunakan,
+                            pengenalan wajah dan suara Anda serta lokasi Anda melalui teknologi Global
+                            Positioning System (GPS) yang terlacak dalam sistem Kami yang Kami
+                            gunakan untuk pencegahan penipuan dan segala bentuk kejahatan lainnya,
+                            melakukan pemasaran produk Kami,menyediakan layanan yang sesuai untuk
+                            Anda melalui proses identifikasi.
+                            <br><br>
+                        </li>
+
+                        <!-- 2.7 -->
+                        <li>
+                            Percakapan telepon dengan tim customer service Kami yang terekam dan
+                            termonitor dalamsistem Kami, serta informasi lainnya yang dikumpulkan dari
+                            interaksi dengan Pihak Ketiga, dimana seluruhnya dikumpulkan demi
+                            mempermudah kami dalam meningkatkan layanan kepada Anda.
+                            <br><br>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <h3>3. PENGGUNAAN DATA DAN INFORMASI PRIBADI</h3>
+
+                <div class="contact-box">
+                    <p>Pengumpulan, pemrosesan, pengelolaan, penggunaan, pengungkapan dan
+                        penyimpanan Informasi Pribadi yang Anda berikan bertujuan untuk meningkatkan
+                        layanan kami sehingga kami dapat melakukan analisa-analisa yang diperlukan
+                        sehubungan dengan kepentingan dan tujuan-tujuan sebagai berikut:</p>
+                    <ul class="contact-list section-2">
+                        <ol type="a" class="sublist-alpha">
+                            <li>
+                                Menyediakan layanan Kami kepada Anda serta meningkatkan jasa layanan Kami.
+                            </li>
+                            <li>
+                                Melakukan verifikasi identitas pengguna dan calon pengguna.
+                            </li>
+                            <li>
+                                Melakukan verifikasi, pemeriksaan, analisis dan penilaian terhadap kelayakan anda
+                                sebagai
+                                Penerima Dana atau Pemberi Dana.
+                            </li>
+                            <li>
+                                Melakukan klarifikasi dan konfirmasi lebih lanjut apabila Anda bukan sebagai
+                                Penerima Manfaat sebenarnya.
+                            </li>
+                            <li>
+                                Melakukan konfirmasi kepada setiap pihak yang dicantumkan sebagai kontak
+                                darurat.
+                            </li>
+                            <li>
+                                Melakukan pemasaran produk Kami yang efektif dan relevan.
+                            </li>
+                            <li>
+                                Melakukan mitigasi, identifikasi serta pengawasan dan pencegahan terhadap
+                                tindak pidana anti pencucian uang, pendanaan terorisme di sektor jasa
+                                keuangan dan tindak pidana lainnya.
+                            </li>
+                            <li>
+                                Melakukan survei, evaluasi atau riset terkait pengembangan layanan atau
+                                produk baik melaluiUATAS maupun Pihak Ketiga.
+                            </li>
+                            <li>
+                                Melakukan menajemen internal untuk mengoperasikan sistem informasi kontrol
+                                dan manajemen dan melaksanakan audit internal atau mengizinkan
+                                pelaksanaan audit eksternal.
+                            </li>
+                            <li>
+                                Memberikan kepada Anda, atau mengizinkan Para Pihak Ketiga Yang Dipilih
+                                untukmemberikan informasi tentang Produk atau Layanan kepada Anda yang
+                                Kami rasa mungkin menarik bagi Anda. Apabila Anda telah menjadi Pengguna,
+                                Kami hanya akan menghubungi Anda melalui email, SMS atau telepon untuk
+                                memberikan Informasi tentang Produk dan Layanan yang serupa dengan yang
+                                sebelumnya telah Anda pertimbangkan, pendanaan atau manfaatkan. Jika
+                                Anda seorang pelanggan baru, dan apabila Anda setuju untuk mengungkapkan
+                                Data Pribadi Anda kepada Para Pihak Ketiga Yang Dipilih, Kami (atau Para
+                                Pihak Ketiga Yang Dipilih) dapat menghubungi Anda melalui email atau SMS
+                                untuk memberikan informasi tentang Produk atau Layanan.
+                            </li>
+                            <li>Mengizinkan institusi keuangan seperti Bank, Lembaga Keuangan atau Pihak
+                                Ketiga lainnya, (termasuk namun tidak terbatas pada Fintech Data Centre,
+                                Pusat Data Fintech Lending, dan SLIK) yang berwenang untuk melakukan
+                                pemeriksaan terbatas pada status anda di database atau layanan Kami.
+                            </li>
+                            <li>Memberikan informasi yang memadai yang Kami simpan untuk mengidentifikasi
+                                anda kepadaPemberi Dana atau Penerima Dana sebenarnya.</li>
+                            <li>Berkomunikasi dengan Anda termasuk menyediakan informasi kepada Anda
+                                tentang platformdan mengizinkan Anda menggunakan layanan yang disediakan
+                                oleh platform terkait produk dan atau layanan terbaru jika ada perubahan pada
+                                layanan Kami yang ditawarkan yang menurut Kami mungkin menarik bagi Anda.</li>
+                            <li>Mengidentifikasi anda ketika anda menghubungi Kami atau mengunjungi Platform
+                                Kami.</li>
+                            <li>Mendaftarkan pengguna kepada penyelenggara tanda tangan elektronik yang
+                                telah bekerjasama dengan UATAS.</li>
+                            <li>Untuk mengizinkan Anda berpartisipasi dalam layanan yang ditawarkan oleh
+                                UATAS.</li>
+                            <li>Untuk mendokumentasikan setiap tahapan/proses penyaluran pendanaan kepada
+                                Anda sehingga dapat melakukan pengungkapan-pengungkapan yang diperlukan
+                                jika terdapat permintaan dari Pengadilan, lembaga, badan-badan, institusi,
+                                dan/atau otoritas berwenang di Indonesia maupun berdasarkan kewajiban
+                                kepatuhan atas ketentuan peraturan perundang-undangan yang berlaku.</li>
+                            <li>Dan hal lainnya yang terkait dengan kegiatan usaha UATAS sebagai
+                                Penyelenggara Layanan Pendanaan Bersama Berbasis Teknologi Informasi.</li>
+                            <li>Untuk menjaga komunikasi yang baik dengan Anda, Kami dapat mengakses
+                                keberadaan Anda dengan menggunakan teknologi GPS sehingga dapat
+                                memudahkan Kami untuk memahami kebutuhan Anda dimanapun dan untuk
+                                mencegah adanya aktivitas illegal.</li>
+                            <li>Untuk memudahkan dan memperlancar pelayanan Kami kepada Anda, Kami
+                                akan melakukan panggilan telepon baik untuk melakukan validasi, konfirmasi
+                                maupun pencairan kredit dan proses pembayaran kembali Anda kepada Kami.</li>
+                        </ol>
+
+                    </ul>
+                </div>
+
+                <h3>4. PENYIMPANAN INFORMASI PRIBADI</h3>
+
+                <div class="contact-box">
+                    <ul class="contact-list section-4">
+
+                        <li>
+                            Informasi Pribadi yang Anda berikan atau Kami terima sesuai dengan Kebijakan
+                            Privasi ini, Kamisimpan pada pusat data Kami serta pusat pemulihan bencana
+                            Kami yang berlokasi di wilayah Republik Indonesia, dan Apabila mengharuskan
+                            Informasi Pribadi tersebut dikirim keluar wilayah Republik Indonesia,
+                            pengiriman tersebut akan dilakukan sesuai dengan ketentuan peraturan
+                            perundang – undangan yang berlaku di Indonesia dan mempertimbangkan
+                            ataupun memperhatikan sifat kesetaraan regulasi yang sama pada negara /
+                            yurisdiksi yang menerima Informasi Pribadi tersebut.
+                        </li>
+
+                        <li>
+                            Informasi Pribadi Anda tentunya akan Kami simpan setidaknya 5 (lima) tahun
+                            sesuai dengan masa retensi sebagaimana tercantum dalam regulasi yang
+                            berlaku atau selama diperlukan untuk melindungi kepentingan Kami, sesuai
+                            dengan persyaratan undang–undang.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>5. KEAMANAN INFORMASI PRIBADI</h3>
+
+                <div class="contact-box">
+                    <ul class="contact-list section-5">
+
+                        <li>
+                            Kami akan mengambil semua langkah dan tindakan yang wajar untuk
+                            mencegah kehilangan, penyalahgunaan, pengaksesan tidak sah atau
+                            perubahan Informasi Pribadi anda dari Pihak–pihak yang tidak berwenang.
+                        </li>
+
+                        <li>
+                            Kami juga akan menempatkan pengaturan pengamanan yang wajar untuk
+                            memastikan Informasi Pribadi Anda terlindungi dan aman. Pengaturan
+                            pengamanan yang sesuai akan dilakukan untuk mencegah akses,
+                            pengumpulan, pengguna, pengungkapan, penyalinan, perubahan, kebocoran,
+                            kehilangan, kerusakan dan/atau perubahan yang tidak sah terhadap Informasi
+                            Pribadi Anda. Namun, Kami tidak menanggung suatu tanggung jawab apapun
+                            atas setiap penggunaan tidak sah dari Informasi Pribadi Anda oleh para pihak
+                            ketiga yang sepenuhnya disebabkan oleh faktor-faktor di luar kendali Kami.
+                        </li>
+                        <li>Kata sandi akun anda merupakan tanggung jawab anda masing–masing, Kami
+                            tidak bertanggung jawab atas kerugian yang timbul akibat kelalaian Anda
+                            dalam menjaga kerahasiaan kata sandi akun Anda.</li>
+                        <li>Kami selalu mengambil langkah terbaik, dari segi elektronik maupun manajemen
+                            demi melindungi Informasi Pribadi Anda, termasuk tapi tidak terbatas pada SSL,
+                            penyimpanan informasi terenkripsi, dan akses kontrol pada pusat data serta
+                            simulasi berkala terhadap pusat pemulihan bencana (Disaster Recovery Center).
+                            Kami selalu memberlakukan prosedur yang ketat dan fitur keamanan terbaik
+                            agar tidak terjadi kebocoran, kerusakan, pemusnahan atau kehilangan pada
+                            Informasi Pribadi Anda. Selanjutnya, Informasi Pribadi Anda disimpan di dalam
+                            server Kami yang berlokasi di Indonesia, sebagai upaya menjamin keamanan
+                            dan cadangan (back up) atas data dan informasi tersebut. Kami mungkin akan
+                            menyimpan Informasi Pribadi Anda di dalam server Pihak Ketiga. Sistem
+                            keamanan Kami telah memenuhi standar industri dan Kami senantiasa
+                            mengamati perkembangan internet guna memastikan sistem Kami berkembang
+                            seperti yang disyaratkan. Kami juga tunduk kepada hukum perlindungan data di
+                            Indonesia.</li>
+                    </ul>
+                </div>
+
+                <h3>6. PENGHAPUSAN INFORMASI PRIBADI</h3>
+
+                <div class="contact-box">
+                    <ul class="contact-list section-6">
+
+                        <li>
+                            Anda dapat mengajukan permohonan penghapusan Informasi Pribadi Anda
+                            pada Platform Kami dengan memberikan pemberitahuan tertulis melalui email
+                            customer service Kami di alamat berikut : <a href="mailto:cs.support@uatas.id"
+                                style="color: black;"><b>cs.support@uatas.id</b></a> paling lambat
+                            14 (empat belas) hari kerja sebelum tanggal efektif penghapusan yang
+                            dikehendaki. Ketentuan terkait penghapusan Informasi Pribadi akan dilakukan
+                            sesuai dengan peraturan perundang – undangan yang berlaku terkait data
+                            pribadi.
+                        </li>
+
+                        <li>
+                            Permohonan penghapusan sebagaimana dimaksud pada poin 6.1. dilakukan
+                            dengan menyertakan bukti salinan identitas diri yang sah disertai dengan
+                            alasan permohonan penghapusan informasi pribadi.
+                        </li>
+                        <li>Penghapusan informasi pribadi tersebut secara otomatis akan menyebabkan
+                            penutupan akun sehingga ketika Kami sudah memproses permohonan
+                            penghapusan tersebut, maka Anda tidak dapat menggunakan Layanan Kami.</li>
+                        <li>Sehubungan dengan ketentuan poin 6.3. di atas, Anda dapat menggunakan
+                            kembali Layanan Kami dengan menghubungi call center customer service Kami
+                            untuk mengajukan permohonan pembukaan Akun kembali atas permohonan
+                            penghapusan Akun yang telah diajukan sebelumnya.</li>
+                    </ul>
+                </div>
+
+                <h3>7. PENGUNGKAPAN INFORMASI RAHASIA</h3>
+
+                <div class="contact-box">
+                    <ul class="contact-list section-2">
+                        <p>
+                            UATAS akan selalu menjaga Informasi Pribadi Anda, namun demikian sehubungan
+                            untuk kepentingan dan tujuan pendanaan yang Anda ajukan, maka dengan ini Anda
+                            memberikan kamu persetujuan guna melakukan pengungkapan Informasi Pribadi kepada
+                            pihak ketiga yang bekerja sama dengan Kami sepanjang untuk mempermudah dan
+                            meningkatkan proses layanan. Adapun pengungkapan tersebut kami lakukan kepada
+                            Pihak Ketiga yang tertera sebagai berikut:
+                        </p>
+
+                        <ol type="a" class="sublist-alpha">
+                            <li>Kepada Pihak yang berwenang sesuai dengan ketentuan peraturan
+                                perundang – undanganyang berlaku di Indonesia;
+                            </li>
+
+                            <li>Kepada Pihak yang bekerja sama dengan Kami:
+                                <ol type="1" class="sublist-number">
+                                    <li>
+                                        Saat terjadi proses klaim asuransi, maka Kami akan membagikan Informasi
+                                        Pribadi Anda dengan tujuan pemrosesan klaim asuransi kepada perusahaan
+                                        asuransi yang telah bekerjasama dengan Kami.
+                                    </li>
+                                    <li>
+                                        Pihak ketiga yang membantu menyediakan jasa layanan Kami sebagai penyedia
+                                        jasa penunjanglayanan Kami, termasuk penyedia sistem analis, penyelenggara
+                                        tanda tangan elektronik, konsultan hukum, konsultan pajak, Bank, penyedia
+                                        jasa pembayaran, mitra kerjasama channeling, penyelenggara sertifikasi
+                                        elektronik, penyedia credit scoring, dan pihak lain yang ditunjuk oleh UATAS
+                                        untuk memberikan jasa penunjang yang relevan untuk kegiatan usaha Kami.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Perlindungan hak PT Plus Ultra Abadi dan Pihak Ketiga.
+                                <br>
+                                Saat Kami berencana untuk merger dengan Pihak Ketiga, diakuisisi oleh
+                                Pihak Ketiga, melakukan kegiatan pasar modal lainnya (termasuk namun tidak
+                                terbatas pada IPO danpenerbitan obligasi), atau dikarenakan situasi lain seperti
+                                due dilligence dari Pihak Ketiga yang wajib Kami jalankan, maka Kami akan
+                                memberikan Data & Informasi Anda kepada Pihak Ketiga. Namun, Kami akan
+                                berusaha menjaga kerahasiaan Data & Informasi Anda melalui cara-cara seperti
+                                menandatangani perjanjian kerahasian dengan Pihak Ketiga.
+                            </li>
+                        </ol>
+                    </ul>
+                </div>
+
+                <h3>8. PENGESAMPINGAN KEWAJIBAN</h3>
+
+                <div class="contact-box">
+                    <p>
+                        Pengguna setuju untuk melepaskan dan membebaskan Kami dari segala bentuk
+                        pertanggungjawaban atas pelanggaran atau ketidakpatuhan terhadap Kebijakan
+                        Privasi atau perlindungan Data dan Informasi Pribadi dalam hal terjadi kondisi
+                        sebagai berikut:
+                    </p>
+                    <ul class="contact-list section-2">
+
+                        <ol type="a" class="sublist-alpha">
+                            <li>
+                                Terdapat suatu bencana alam yang tidak terduga telah terjadi, mengakibatkan
+                                kerusakan, kerusakan atau penghancuran peralatan dan/atau mesin yang
+                                digunakan untuk mengamankan, menyimpan atau memproses Data dan
+                                Informasi Pribadi
+                            </li>
+
+                            <li>
+                                Apabila Data dan Informasi Pribadi telah tersedia atau dapat ditemukan oleh
+                                publik sebelum Data dan Informasi Pribadi tersebut disampaikan kepada Kami.
+                            </li>
+
+                            <li>
+                                Apabila Kami telah melakukan upaya yang wajar untuk memverifikasi,
+                                mengamankan dan melindungi data dan informasi pribadi Anda, namun
+                                terdapat akses tidak sah, hacking, penyalahgunaan, modifikasi, perubahan,
+                                gangguan, sepanjang dapat dibuktikan bahwa hal tersebut bukan disebabkan
+                                oleh kesalahan atau kelalaian Kami;
+                            </li>
+                            <li>
+                                Atas keakurasian (kecuali Data dan Informasi Pribadi yang telah diverifikasi oleh
+                                Kami sesuai kebijakan Kami), keabsahan, legalitas dan kelengkapan Data dan
+                                Informasi Pribadi Anda dan tidak diwajibkan untuk memberitahu Anda atau
+                                pihak manapun perihal tersebut kecualidiwajibkan secara hukum; dan/atau
+                            </li>
+                            <li>Di mana penyalahgunaan Data dan Informasi Pribadi disebabkan oleh tindakan
+                                kejahatan, penipuan atau tindak pidana apapun atau tindakan dari pihak ketiga
+                                yang tidak berada di bawah kendali atau instruksi Kami.</li>
+                        </ol>
+                        <br>
+                        <p>
+                            Kami akan berupaya sewajarnya untuk memberitahu Anda jika terjadi kegagalan
+                            perlindungan kerahasiaan Informasi Pribadi Anda dalam pengelolaan Kami, baik yang
+                            disebabkan oleh Kami atau ketika Kami mengetahuinya dari pihak ketiga yang dikelola
+                            dengan ketentuan pemberitahuan sebagai berikut:
+                        </p>
+
+                        <ol type="a" class="sublist-alpha">
+
+                            <li>
+                                Dengan menyertakan alasan atau penyebab terjadinya kegagalan perlindungan
+                                rahasia Data danInformasi Pribadi;
+                            </li>
+
+                            <li>
+                                Pemberitahuan tertulis lewat e-mail kepada Anda paling lambat 14 (empat
+                                belas) hari sejakdiketahui adanya kegagalan tersebut;
+                            </li>
+
+                            <li>
+                                Menyediakan kontak yang mudah dihubungi oleh Anda terkait pengelolaan Data
+                                dan Informasi Pribadi.
+                            </li>
+                        </ol>
+                    </ul>
+                </div>
+
+                <h3>9. PENGGUNAAN KONTAK DARURAT</h3>
+
+                <div class="contact-box">
+                    <p>
+                        Untuk tujuan meningkatkan layanan Kami kepada Anda, serta mematuhi ketentuan
+                        perundang – undangan yang berlaku, Kami dapat meminta Anda mencantumkan
+                        kontak darurat dengan ketentuan sebagai berikut:
+
+                    </p>
+
+                    <ol type="a" class="sublist-alpha">
+                        <li>
+                            Kami hanya menghubungi kontak darurat yang telah Anda cantumkan pada
+                            Platform Kami.
+                        </li>
+
+                        <li>
+                            Anda dengan ini menyatakan bahwa Anda telah mendapatkan persetujuan dari
+                            pihak – pihak yang nama dan informasi rahasianya didaftarkan sebagai Kontak
+                            Darurat pada Platform Kami dan tentunya Kami juga akan melakukan
+                            konfirmasi kepada pihak yang bersangkutan.
+                        </li>
+
+                        <li>
+                            Dengan tetap memperhatikan ketentuan hukum yang berlaku, Kami dapat
+                            menghubungi kontak darurat baik melalui telepon, media komunikasi, layanan
+                            sms dan cara komunikasi lainnya yang ditentukan oleh Kami dari waktu ke
+                            waktu, untuk:
+                            <ol type="a" class="sublist-number">
+                                <li>Meminta bantuan pemilik nomor darurat untuk mengingatkan Anda
+                                    untuk membayar danmelunasi pendanaan atau kewajiban Anda atas
+                                    fasilitas pendanaan yang telah andaterima pada Platform Kami; dan</li>
+                                <li>Menyampaikan pesan dari Kami kepada Anda sehubungan dengan
+                                    pemenuhan kewajibanpelunasan atas fasilitas pendanaan yang telah
+                                    diterima oleh Anda dari platform Kami.</li>
+                            </ol>
+                        </li>
+
+                    </ol>
+                </div>
+
+                <h3>10. PERUBAHAN INFORMASI PRIBADI</h3>
+
+                <div class="contact-box">
+                    <p>
+                        Terhadap setiap Informasi Pribadi yang Anda berikan, maka Anda berkewajiban untuk:
+                    </p>
+
+                    <ol type="a" class="sublist-alpha">
+                        <li>
+                            Pengguna wajib untuk menjaga kebenaran informasi pribadi anda;
+                        </li>
+                        <li>
+                            UATAS dapat melakukan tindakan yang dipandang perlu untuk memastikan
+                            keakurasian Informasi Pribadi anda termasuk dengan menghubungi anda; dan
+                        </li>
+                        <li>Pengguna dapat melakukan Perubahan terhadap Informasi Pribadi Pengguna
+                            melalui Platform atau dengan mengirimkan permohonan tertulis kepada tim
+                            customer service melalui email : cs.support@uatas.id
+                        </li>
+                    </ol>
+                </div>
+
+                <h3>11. ANAK DIBAWAH UMUR</h3>
+
+                <div class="contact-box">
+                    <p>
+                        UATAS tidak dapat membedakan usia orang yang mengakses dan menggunakan
+                        Platform Kami, jika seorang anak dibawah umur (menurut undang-undang yang
+                        berlaku) telah memberikan Informasi Pribadinya kepada UATAS tanpa persetujuan
+                        orang tua atau walinya, maka orang tua atau walinya tersebut harus menghubungi
+                        UATAS untuk mengajukan permohonan penghapusan Informasi Pribadi terkait dan
+                        menghapus nama anak dibawah umur itu dari daftar.
+                    </p>
+                </div>
+
+                <h3>12. PERSETUJUAN</h3>
+
+                <div class="contact-box">
+                    <p>
+                        Dengan menggunakan Platform Kami, Anda mengakui, menjamin, memastikan, dan
+                        menyatakan bahwa Anda telah membaca, memahami, dan menyetujui Kebijakan
+                        Privasi ini dan Syarat dan Ketentuan Umum dari penggunaan Platform, serta setuju
+                        dan sepakat terhadap pengumpulan, penggunaan, penyimpanan, pengolahan,
+                        pengalihan dan pengungkapan Informasi Pribadi Anda oleh Kami sebagaimana
+                        dinyatakan di dalam Kebijakan Privasi ini.
+                        <br>
+                        Anda dapat menarik persetujuan Anda untuk setiap atau segala pengumpulan,
+                        penggunaan atau pengungkapan Informasi Pribadi Anda kapan saja dengan
+                        memberikan kepada Kami pemberitahuan yang wajar secara tertulis melalui rincian
+                        kontak yang disebutkan secara khusus dibagian lain dari Kebijakan Privasi di bawah ini.
+                        Tergantung pada keadaan dan sifat persetujuan yang Anda tarik, Anda harus
+                        memahami dan mengakui bahwa setelah penarikan persetujuan tersebut, Anda
+                        mungkin tidak lagi dapat menggunakan Aplikasi atau Layanan. Penarikan persetujuan
+                        Anda dapat mengakibatkan penghentian akun Anda atau hubungan kontraktual Anda
+                        dengan Kami, dengan semua hak dan kewajiban yang muncul sepenuhnya harus
+                        dipenuhi. Setelah menerima pemberitahuan untuk menarik persetujuan untuk
+                        pengumpulan, penggunaan atau pengungkapan Informasi Pribadi Anda, Kami akan
+                        menginformasikan Anda tentang konsekuensi yang mungkin terjadi dari penarikan
+                        tersebut sehingga Anda dapat memutuskan apakah Anda tetap ingin menarik
+                        persetujuan.
+                    </p>
+                </div>
+
+                <h3>13. PERUBAHAN KEBIJAKAN PRIVASI</h3>
+
+                <div class="contact-box">
+                    <p>
+                        Kami mungkin akan melakukan perubahan pada isi Kebijakan Privasi ini dari waktu
+                        ke waktu. Perubahan apapun yang Kami buat dalam Kebijakan Privasi Kami di masa
+                        yang akan datang akan dipasang pada halaman ini, bila perlu, dan diberitahukan
+                        kepada Anda dalam bentuk pemberitahuan otomatis pada perangkat Anda. Pasca
+                        perubahan, apabila Anda tetap terus mengakses Platform Kami, ataupun memakai
+                        jasa layanan manapun yang disediakan PT Plus Ultra Abadi, Kami percaya ini
+                        menandakanAnda sudah dengan seksama membaca, mengerti dan menerima revisi
+                        Kebijakan Privasi ini.
+                    </p>
+                </div>
+
+                <h3>14. HUBUNGI UATAS</h3>
+
+                <div class="contact-box">
+                    <p>
+                        Apabila ada pertanyaan dan/atau keluhan terkait Kebijakan Privasi ini, anda dapat
+                        menghubungi Kami melalui email: <b><u>cs.support@uatas.id</u></b>.
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

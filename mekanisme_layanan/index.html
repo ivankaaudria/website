@@ -1,42 +1,532 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Mekanisme Layanan | UATAS</title>
-  <link rel="shortcut icon" href="../assets/images/Shortcut.png" type="image/png">
-  <style>
-    html,
-    body {
-      margin: 0;
-      height: 100%;
-      background: #f8f8f8;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mekanisme dan Layanan Pengaduan Pengguna</title>
+    <link rel="shortcut icon" href="../assets/images/Shortcut.png" type="image/png">
 
-    img {
-      width: 60%;
-      display: block;
-      margin: auto;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-  </style>
-  <script>
-    document.addEventListener("contextmenu", function (e) {
-      e.preventDefault();
-    });
+    <style>
+        @font-face {
+            font-family: 'Mulish';
+            src: url('../assets/fonts/Mulish-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
 
-    document.addEventListener("dragstart", function (e) {
-      if (e.target.tagName === "IMG") {
-        e.preventDefault();
-      }
-    });
-  </script>
+        @font-face {
+            font-family: 'Mulish';
+            src: url('../assets/fonts/Mulish-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Mulish';
+            src: url('../assets/fonts/Mulish-Medium.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Mulish';
+            src: url('../assets/fonts/Mulish-SemiBold.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat-ExtraBold';
+            src: url('../assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+            font-weight: 800;
+            font-style: normal;
+        }
+
+
+        body {
+            font-family: 'Mulish', Arial, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+            padding: 0 0;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffe1df;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 40px 20px 60px;
+            position: relative;
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            height: 60px;
+            width: auto;
+        }
+
+        .right-title {
+            text-align: right;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 1.3;
+            color: #000;
+            font-family: 'Montserrat-ExtraBold', sans-serif;
+        }
+
+
+        .card {
+            background: #fff2f1;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            margin: 0 auto 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: linear-gradient(90deg, #E50019, #FF6161);
+            color: #fff2f1;
+            font-weight: 700;
+            padding: 14px 25px;
+            font-size: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 60px;
+            display: inline-block;
+            min-width: 320px;
+        }
+
+        .card-body {
+            padding: 25px 30px 35px;
+            color: #333;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .card-body p {
+            margin-bottom: 16px;
+        }
+
+        .mascot-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .mascot-wrapper img {
+            position: absolute;
+            right: 0;
+            top: -70px;
+            width: 200px;
+            height: auto;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .alur-section {
+            background: #fff4f0;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            margin: 70px auto 0;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .alur-header {
+            background: linear-gradient(90deg, #E50019, #FF6161);
+            color: #fff;
+            font-weight: 700;
+            padding: 14px 25px;
+            font-size: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 60px;
+            display: inline-block;
+            min-width: 250px;
+        }
+
+        .alur-body {
+            padding: 25px 30px 20px;
+            color: #333;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .alur-body h3 {
+            background: #820002;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .alur-body h3 .number {
+            display: inline-block;
+            background: #f55859;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .contact-box {
+            margin-top: 10px;
+            padding-left: 15px;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+            text-align: justify;
+        }
+
+        .contact-list {
+            list-style: disc;
+            margin: 8px 0 0 25px;
+            padding: 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .sla-inline {
+            display: inline !important;
+        }
+
+        @media (max-width:768px) {
+            .page {
+                padding: 25px 15px 40px;
+            }
+
+            .top-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .right-title {
+                text-align: left;
+                font-size: 18px;
+            }
+
+            .card-header,
+            .alur-header {
+                font-size: 18px;
+            }
+
+            .mascot-wrapper img {
+                position: relative;
+                width: 150px;
+                top: 0;
+                right: 0;
+                display: block;
+                margin: 0 auto 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<img>
-<img src="/assets/images/Mekanisme dan Layanan Pengaduan Pengguna.png" rel="noopener noreferrer" alt="Page Mekanisme" />
+    <div class="page">
+        <div class="top-header">
+            <div class="logo-section">
+                <img src="../assets/images/logouatas.png" alt="Logo UATAS" />
+            </div>
+            <div class="right-title">
+                MEKANISME DAN LAYANAN<br />
+                PENGADUAN PENGGUNA
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                PT PLUS ULTRA ABADI
+            </div>
+            <div class="card-body">
+                <p>
+                    PT Plus Ultra Abadi (UATAS / Kami) dalam melakukan penyelesaian terhadap adanya pengaduan yang
+                    diajukan
+                    oleh setiap Pemberi Dana, Penerima Dana dan Pihak Ketiga lainnya (selanjutnya secara bersama-sama
+                    disebut sebagai “Pengguna/Anda”), senantiasa memperhatikan ketentuan Peraturan Otoritas Jasa
+                    Keuangan
+                    No. 18/POJK.07/2018 tentang Layanan Pengaduan Konsumen di Sektor Jasa Keuangan serta Surat Edaran
+                    Otoritas Jasa Keuangan No. 17/POJK.07/2018 tentang Pedoman Pelaksanaan Layanan Pengaduan Konsumen di
+                    Sektor Jasa Keuangan.
+                </p>
+
+                <p>
+                    Dalam menyelesaikan setiap pengaduan yang disampaikan oleh Pengguna, UATAS selalu berusaha untuk
+                    menerapkan prinsip transparansi, keberimbangan, serta kehati-hatian guna memberikan solusi terbaik
+                    dari
+                    setiap pengaduan yang telah disampaikan.
+                </p>
+            </div>
+        </div>
+
+        <div class="mascot-wrapper">
+            <img src="../assets/img/mascot.png" alt="Maskot UATAS" />
+        </div>
+
+        <div class="alur-section">
+            <div class="alur-header">
+                ALUR PENGADUAN
+            </div>
+            <div class="alur-body">
+                <p>Berikut tahapan yang perlu ditempuh Pengguna saat mengajukan pengaduan kepada UATAS:</p>
+
+                <h3><span class="number">1</span> Kanal Pengaduan</h3>
+                <div class="contact-box">
+                    <p>Bentuk pengaduan Anda dapat menghubungi UATAS melalui :</p>
+                    <ul class="contact-list">
+                        <li>Mendatangi Kantor Layanan Pelanggan UATAS di Wijaya Kusuma Taman Duta Mas Blok D-8 No.15,
+                            Grogol
+                            Petamburan, Jakarta Barat, DKI Jakarta</li>
+                        <li>E-mail: <a href="mailto:cs.support@uatas.id">cs.support@uatas.id</a></li>
+                        <li>Call Center: 1500 038</li>
+                        <li>Whatsapp CS: +62 821-2553-2191</li>
+                        <li>Social Media Instagram “uatas.id” dan halaman Facebook Page “UATAS Indonesia”</li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">2</span> Standar Penanganan Kami</h3>
+                <div class="contact-box">
+                    <ul class="contact-list">
+                        <li>Kami akan sangat senang menangani setiap pengaduan yang Anda sampaikan melalui
+                            Kanal yang telah Kami sediakan, Kami telah menyiapkan tim khusus untuk Anda yang akan
+                            dengan segera memberikan tanggapan terhadap setiap pengaduan Anda.
+                        </li>
+                        <li>Selain itu Kami berharap bahwa untuk meningkatkan serta mempercepat penyelesaian
+                            terhadap pengaduan yang telah Anda sampaikan sebelumnya, maka harap diperhatikan
+                            agar setiap pengaduan disampaikan kepada Kami secara tertulis serta dilengkapi dengan
+                            dokumen pendukung yang berkaitan dengan pengaduan Anda.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">3</span> Tim Khusus Kami</h3>
+                <div class="contact-box">
+                    <ul class="contact-list">
+                        <li>Customer Service Officer, yang akan mencatat serta mendengarkan pengaduan Anda
+                            sesuai dengan Kanal yang telah dipilih;
+                        </li>
+                        <li>Verificator Officer, tim khusus Kami yang akan menelaah lebih lanjut secara teknis mengenai
+                            pengaduan yang telah Anda sampaikan.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">4</span> Jenis Pengaduan Berdasarkan Tingkat Kompleksitas</h3>
+                <div class="contact-box">
+                    <p>
+                        Kami menyadari bahwa Anda memiliki kekhawatiran terhadap pengaduan yang telah Anda
+                        sampaikan kepada Kami, namun demikian harus dipahami bahwa setiap pengaduan memiliki
+                        bobot serta kompleksitas yang berbeda, sehingga demi memberikan pelayanan yang terbaik
+                        kepada Anda berikut adalah <b><i class="sla-inline">Service Level Agreement (SLA)</i></b> yang
+                        akan
+                        Kami berusaha penuhi
+                        dalam menyelesaikan pengaduan Anda:
+                    </p>
+                    <ul class="contact-list">
+                        <li>Soft Complaint untuk pengaduan dengan jenis seperti pertanyaan, kendala verifikasi dan/
+                            atau keingintahuan terhadap suatu informasi yang berkaitan dengan layanan Kami.
+                            Terhadap hal ini Kami akan berusaha menyelesaikannya dalam waktu maksimal 2 (dua)
+                            hari kerja;
+                        </li>
+                        <li>Medium Complaint untuk pengaduan dengan jenis seperti perubahan data, penarikan dana
+                            atau kendala transfer. Terhadap hal ini Kami akan berusaha menyelesaikannya dalam
+                            waktu maksimal 5 (lima) hari kerja namun dengan tetap memperhatikan ketentuan yang
+                            ada pada unit kerja tertentu;
+                        </li>
+                        <li>Hard Complaint untuk pengaduan dengan jenis seperti adanya permasalahan mengenai
+                            status pengembalian dana, informasi status pencairan pendanaan, serta adanya kendala
+                            pada sistem/teknologi Kami. Terhadap hal ini Kami akan berusaha menyelesaikannya
+                            dalam waktu maksimal 10 (sepuluh) hari kerja namun dengan tetap memperhatikan
+                            ketentuan yang ada pada unit kerja tertentu.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">5</span> Standar Penyelesaian Pengaduan yang Melibatkan Pihak Eksternal</h3>
+                <div class="contact-box">
+                    <p>
+                        Selain terhadap jenis pengaduan beserta SLA yang telah Kami sampaikan di atas, harus dipahami
+                        bahwa setiap Pengaduan mungkin saja berkaitan dengan pihak-pihak ketiga lainnya maka
+                        standar pelayanan terhadap pengaduan jenis ini akan mengikuti ketentuan berikut:
+                    </p>
+                    <ul class="contact-list">
+                        <li>Apabila pengaduan Anda melibatkan dan/atau berkaitan dengan pihak eksternal atau pihak
+                            ketiga lainnya maka terhadap penyelesaian pengaduan tersebut akan Kami upayakan untuk
+                            diselesaikan dalam waktu 40 (empat puluh) hari kerja; dan
+                        </li>
+                        <li>Apabila pengaduan Anda diselesaikan di Pengadilan atau luar pengadilan, maka standar
+                            waktu penyelesaiannya akan mengikuti dan tunduk pada ketentuan yang diatur oleh
+                            masing-masing institusi tersebut
+                        </li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">6</span> Alur Pengaduan</h3>
+                <div class="contact-box">
+                    <p>
+                        Pengaduan yang disampaikan oleh Anda akan ditangani dengan alur sebagai berikut:
+                    </p>
+                    <ul class="contact-list">
+                        <li>
+                            Pengguna menyampaikan pengaduan melalui salah satu atau beberapa Kanal pengaduan yang
+                            tersedia.
+                        </li>
+                        <li>
+                            Pengaduan yang masuk baik melalui email atau telepon akan ditangani oleh Tim Khusus
+                            Kami yang nantinya akan mengidentifikasi pokok permasalahannya dan kemudian akan
+                            Kami berikan solusinya.
+                        </li>
+                        <li>
+                            Apabila diperlukan, Tim Khusus berhak meminta kepada Anda untuk melengkapi dokumen
+                            yang diperlukan terkait dengan pengaduan tersebut, termasuk tetapi tidak terbatas kepada:
+                            <br>a. Nama lengkap Anda;
+                            <br>b. Nomor telepon Anda yang dapat dihubungi;
+                            <br>c. Surat kuasa khusus (jika Anda mewakilkan proses pengaduan kepada suatu perwakilan);
+                            <br>d. Jenis dan tanggal transaksi;
+                            <br>e. Permasalahan yang diadukan.
+                        </li>
+                        <li>
+                            Apabila pengaduan tidak dapat diselesaikan oleh Tim Khusus, maka Tim Khusus Kami
+                            dapat melaporkannya kepada Departemen Legal guna menganalisa lebih dalam
+                            permasalahannya. Analisa lanjutan ini dapat melibatkan lintas unit kerja lainnya apabila
+                            diperlukan;
+                        </li>
+                        <li>
+                            Apabila pengaduan tidak bisa diselesaikan oleh Departemen Legal, maka pengaduan dapat
+                            dinaikkan ke level direksi untuk dicarikan solusinya.
+                        </li>
+                        <li>
+                            Lebih lanjut apabila dianggap perlu, Kami dapat meminta bantuan pihak eksternal untuk
+                            menyelesaikan masalah yang disampaikan oleh Anda melalui Pengaduan tersebut.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">7</span> Penyelesaian Terhadap Pengaduan</h3>
+                <div class="contact-box">
+                    <ul class="contact-list">
+                        <li>Terhadap setiap pengaduan yang Anda sampaikan, maka dalam rangka menyelesaikannya
+                            Kami akan memberikan tanggapan terhadap pengaduan Anda dengan ketentuan sebagai berikut:
+                            <br>a. Apabila Anda melakukan pengaduan secara tertulis, maka Kami akan memberikan
+                            tanggapan kepada Anda secara tertulis disertai dengan hasil verifikasi Kami dengan
+                            mengacu kepada SLA yang telah ditentukan sebelumnya;
+                            <br>b. Apabila Anda melakukan pengaduan secara lisan, maka Kami akan memberikan tanggapan
+                            kepada Anda secara lisan, dan apabila menurut penilaian Kami diperlukan maka Kami juga
+                            dapat memberikan tanggapan melalui keterangan tertulis dengan mengacu kepada SLA
+                            yang telah ditentukan sebelumnya.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">8</span> Tindakan Terhadap Pengaduan</h3>
+                <div class="contact-box">
+                    <p>
+                        Terhadap tanggapan dari Pengaduan yang telah Anda sampaikan, maka Kami dapat melakukan
+                        tindakan-tindakan sebagai bentuk penyelesaiannya antara lain:
+                    </p>
+                    <ul class="contact-list">
+                        <li>Apabila hasil verifikasi internal, Kami tidak menemukan adanya permasalahan maka Kami
+                            akan memberikan penjelasan kepada Anda sesuai dengan ketentuan yang berlaku;
+                        </li>
+                        <li>Apabila hasil verifikasi internal Kami ditemukan adanya permasalahan yang diakibatkan
+                            oleh kesalahan Kami, maka Kami akan memperbaiki layanan dan produk Kami selain itu
+                            Kami juga dapat memberikan permintaan maaf serta dalam hal pengaduan berkaitan
+                            dengan finansial maka Kami mungkin akan memberikan ganti rugi dengan ketentuan nilai
+                            pergantian tersebut maksimal sebesar kerugian finansial yang dapat dibuktikan.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">9</span> Penolakan Pengaduan Pengguna</h3>
+                <div class="contact-box">
+                    <p>
+                        Anda memahami bahwa Kami memiliki hak untuk melakukan penolakan terhadap pengaduan
+                        yang telah disampaikan, adapun ketentuan mengenai penolakan terhadap pengaduan Anda
+                        adalah sebagai berikut:
+                    </p>
+                    <ul class="contact-list">
+                        <li>Kami berhak menolak pengaduan Anda, apabila Anda tidak melengkapi setiap dokumen
+                            dan/atau informasi yang telah Kami minta dalam waktu yang telah ditentukan;
+                        </li>
+                        <li>Kami telah menyelesaikan pengaduan Anda sebagaimana syarat dan ketentuan yang diatur
+                            dalam Peraturan Otoritas Jasa Keuangan No. 18/POJK.07/2018 tentang Layanan
+                            Pengaduan Konsumen di Sektor Jasa Keuangan serta Surat Edaran Otoritas Jasa Keuangan
+                            No. 17/POJK.07/2018;
+                        </li>
+                        <li>Pengaduan yang Anda sampaikan tidak berkaitan dan/atau berhubungan dengan layanan
+                            yang telah diberikan oleh Kami;</li>
+                        <li>Pengaduan yang Anda sampaikan tidak terkait dengan kerugian finansial Anda secara
+                            langsung, maupun pengaduan yang tidak diatur dan/atau disepakati dalam Perjanjian atau
+                            dokumen manapun yang berkaitan dengan layanan Kami.</li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">10</span> Ketentuan Lainnya</h3>
+                <div class="contact-box">
+                    <ul class="contact-list">
+                        <li>Anda menyadari bahwa setiap ketentuan yang diatur dalam dokumen ini, semata-mata
+                            dibuat oleh Kami demi mematuhi ketentuan peraturan perundang-undangan yang relevan.
+                            Namun demikian penyusunan dokumen juga mengacu kepada Standar Operasional
+                            Prosedur (SOP) internal yang Kami miliki.
+                        </li>
+                        <li>Dalam hal terjadinya pertentangan antara ketentuan yang ada pada dokumen ini dengan
+                            SOP internal yang Kami miliki, maka sepanjang diperbolehkan oleh peraturan perundangundangan
+                            serta belum diatur dalam dokumen ini maka ketentuannya akan mengacu dan
+                            mengikuti SOP internal yang Kami miliki.
+                        </li>
+                        <li>Kami juga berhak untuk mengubah, memperbaharui, dan/atau menghapus setiap ketentuan
+                            yang ada pada dokumen ini dengan tujuan menyesuaikan terhadap peraturan perundangundangan
+                            yang
+                            berlaku, Anda akan kami beritahukan secara berkala dalam hal terjadinya
+                            suatu perubahan terhadap isi dari dokumen ini.</li>
+                    </ul>
+                </div>
+
+                <h3><span class="number">11</span> Pelaporan Pengaduan Pengguna Kepada OJK</h3>
+                <div class="contact-box">
+                    <p>
+                        Kami akan secara berkala melakukan pelaporan pengaduan Pengguna disertai dengan status
+                        pengaduan serta penyebab dan hasil penanganan dari pengaduan Pengguna kepada Otoritas
+                        Jasa Keuangan (OJK) untuk periode bulanan dan triwulan dengan bentuk yang telah ditentukan
+                        oleh OJK.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

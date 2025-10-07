@@ -1,42 +1,1654 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="UTF-8" />
-  <title>Syarat dan Ketentuan | UATAS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syarat dan Ketentuan</title>
   <link rel="shortcut icon" href="../assets/images/Shortcut.png" type="image/png">
+
   <style>
-    html,
-    body {
-      margin: 0;
-      height: 100%;
-      background: #f8f8f8;
+    @font-face {
+      font-family: 'Mulish';
+      src: url('../assets/fonts/Mulish-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
     }
 
-    img {
-      width: 60%;
-      display: block;
-      margin: auto;
-      user-select: none;
-      -webkit-user-drag: none;
+    @font-face {
+      font-family: 'Mulish';
+      src: url('../assets/fonts/Mulish-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Mulish';
+      src: url('../assets/fonts/Mulish-Medium.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Mulish';
+      src: url('../assets/fonts/Mulish-SemiBold.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Montserrat-ExtraBold';
+      src: url('../assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'Mulish', Arial, sans-serif;
+      background: #f3f3f3;
+      margin: 0;
+      padding: 0 0;
+    }
+
+    .section-14 {
+      list-style: none;
+      counter-reset: section14-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-14>li {
+      counter-increment: section14-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-14>li::before {
+      content: "14." counter(section14-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-14,
+    .section-14>li {
+      list-style-type: none !important;
+    }
+
+    .section-13 {
+      list-style: none;
+      counter-reset: section13-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-13>li {
+      counter-increment: section13-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-13>li::before {
+      content: "13." counter(section13-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-13,
+    .section-13>li {
+      list-style-type: none !important;
+    }
+
+    .section-8 {
+      list-style: none;
+      counter-reset: section8-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-8>li {
+      counter-increment: section8-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-8>li::before {
+      content: "8." counter(section8-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-8,
+    .section-8>li {
+      list-style-type: none !important;
+    }
+
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffe1df;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      padding: 40px 20px 60px;
+      position: relative;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-section img {
+      height: 60px;
+      width: auto;
+    }
+
+    .section-2 {
+      list-style: none;
+      counter-reset: section2-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-4 {
+      list-style: none;
+      counter-reset: section4-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-5 {
+      list-style: none;
+      counter-reset: section5-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-2>li {
+      counter-increment: section2-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-4>li {
+      counter-increment: section4-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-5>li {
+      counter-increment: section5-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-2>li::before {
+      content: "2." counter(section2-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-5>li::before {
+      content: "2." counter(section5-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-4>li::before {
+      content: "4." counter(section4-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-5>li::before {
+      content: "5." counter(section5-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-2,
+    .section-2>li {
+      list-style-type: none !important;
+    }
+
+    .section-4,
+    .section-4>li {
+      list-style-type: none !important;
+    }
+
+    .section-5,
+    .section-5>li {
+      list-style-type: none !important;
+    }
+
+    .section-6 {
+      list-style: none;
+      counter-reset: section6-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-6>li {
+      counter-increment: section6-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-6>li::before {
+      content: "6." counter(section6-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-6,
+    .section-6>li {
+      list-style-type: none !important;
+    }
+
+    .section-1 {
+      list-style: none;
+      counter-reset: section1-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-1>li {
+      counter-increment: section1-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-1>li::before {
+      content: "1." counter(section1-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-1,
+    .section-1>li {
+      list-style-type: none !important;
+    }
+
+    .section-3 {
+      list-style: none;
+      counter-reset: section3-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-3>li {
+      counter-increment: section3-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-3>li::before {
+      content: "3." counter(section3-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-3,
+    .section-3>li {
+      list-style-type: none !important;
+    }
+
+    .section-7 {
+      list-style: none;
+      counter-reset: section7-counter;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    .section-7>li {
+      counter-increment: section7-counter;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+      padding-left: 5px;
+    }
+
+    .section-7>li::before {
+      content: "7." counter(section7-counter);
+      font-weight: bold;
+      position: absolute;
+      left: -35px;
+      color: #000;
+    }
+
+    .section-7,
+    .section-7>li {
+      list-style-type: none !important;
+    }
+
+    .sublist-alpha {
+      margin-left: 25px;
+      list-style-type: lower-alpha;
+    }
+
+    .sublist-number {
+      margin-left: 25px;
+      list-style-type: decimal;
+    }
+
+    .sublist-bullet {
+      margin-left: 25px;
+      list-style-type: disc;
+    }
+
+
+    .sublist-alpha li::marker,
+    .sublist-number li::marker,
+    .sublist-bullet li::marker {
+      font-weight: normal;
+    }
+
+    .right-title {
+      text-align: right;
+      font-weight: 800;
+      font-size: 25px;
+      line-height: 1.3;
+      color: #000;
+      font-family: 'Montserrat-ExtraBold', sans-serif;
+    }
+
+    .card {
+      background: #fff2f1;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      max-width: 900px;
+      margin: 0 auto 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: linear-gradient(90deg, #E50019, #FF6161);
+      color: #fff2f1;
+      font-weight: 700;
+      padding: 14px 25px;
+      font-size: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 60px;
+      display: inline-block;
+      min-width: 320px;
+    }
+
+    .card-body {
+      padding: 25px 30px 35px;
+      color: #333;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .card-body p {
+      margin-bottom: 16px;
+    }
+
+    .mascot-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .mascot-wrapper img {
+      position: absolute;
+      right: 0;
+      top: -70px;
+      width: 200px;
+      height: auto;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .alur-section {
+      background: #fff4f0;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      max-width: 900px;
+      margin: 70px auto 0;
+      position: relative;
+      padding-bottom: 40px;
+    }
+
+    .alur-header {
+      background: linear-gradient(90deg, #E50019, #FF6161);
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 25px;
+      font-size: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 60px;
+      display: inline-block;
+      min-width: 250px;
+    }
+
+    .alur-body {
+      padding: 25px 30px 20px;
+      color: #333;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .alur-body h3 {
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      align-items: center;
+    }
+
+    .alur-body h3 .number {
+      display: inline-block;
+      background: #f55859;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .contact-box {
+      margin-top: 10px;
+      padding-left: 15px;
+    }
+
+    .contact-box p {
+      margin: 6px 0;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .contact-list {
+      list-style: disc;
+      margin: 8px 0 0 25px;
+      padding: 0;
+    }
+
+    .contact-list li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .sla-inline {
+      display: inline !important;
+    }
+
+    @media (max-width:768px) {
+      .page {
+        padding: 25px 15px 40px;
+      }
+
+      .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .right-title {
+        text-align: left;
+        font-size: 18px;
+      }
+
+      .card-header,
+      .alur-header {
+        font-size: 18px;
+      }
+
+      .mascot-wrapper img {
+        position: relative;
+        width: 150px;
+        top: 0;
+        right: 0;
+        display: block;
+        margin: 0 auto 20px;
+      }
     }
   </style>
-  <script>
-    document.addEventListener("contextmenu", function (e) {
-      e.preventDefault();
-    });
-
-    document.addEventListener("dragstart", function (e) {
-      if (e.target.tagName === "IMG") {
-        e.preventDefault();
-      }
-    });
-  </script>
 </head>
 
 <body>
-<img>
-<img src="/assets/images/Syarat dan Ketentuan.jpg" rel="noopener noreferrer" alt="Page Kebijakan" />
+  <div class="page">
+    <div class="top-header">
+      <div class="logo-section">
+        <img src="../assets/images/logouatas.png" alt="Logo UATAS" />
+      </div>
+      <div class="right-title">
+        SYARAT DAN KETENTUAN
+        <br>PENGGUNAAN LAYANAN PENDANAAN
+      </div>
+    </div>
+
+    <div class="alur-section">
+      <div class="alur-header">
+        SYARAT DAN KETENTUAN
+      </div>
+      <div class="alur-body">
+        <p>Sebelum mengakses dan/atau menggunakan Layanan Kami yang ada dalam Aplikasi, mohon
+          dipastikan Anda telah membaca dan memahami Syarat dan Ketentuan Penggunaan Aplikasi (“Syarat
+          dan Ketentuan”) yang berlaku secara cermat dan teliti. </p>
+
+        <p>Syarat dan Ketentuan ini merupakan perjanjian antara Anda sebagai Pengguna dengan Kami selaku
+          Penyedia Layanan Pendanaan Bersama Berbasis Teknologi Informasi (“Layanan”) sehingga mewakili
+          tujuan penyediaan dan penggunaan Layanan. Dengan tetap mengakses dan/atau menggunakan
+          Layanan yang tersedia pada Aplikasi, maka dengan ini, Anda setuju bahwa Anda dianggap telah
+          membaca, memahami, menerima, dann menyetujui Syarat dan Ketentuan ini. Selain itu, Anda juga
+          setuju untuk mematuhi dan terikat secara hukum berdasarkan Syarat dan Ketentuan serta dokumendokumen
+          lainnya yang relevan. Jika Anda tidak menyetujui Syarat dan Ketentuan ini, mohon untuk
+          tidak melanjutkan dalam mengakses dan/atau menggunakan Layanan yang tersedia dalam Aplikasi
+          Kami.</p>
+
+        <p>UATAS dapat melakukan perubahan Syarat dan Ketentuan ini sewaktu-waktu bila diperlukan, baik
+          disertai atau tanpa disertai pemberitahuan terlebih dahulu, sepanjang tujuan dan kepentingan
+          pemrosesan data pribadi Pengguna sesuai dgan tujuan awal serta tidak bertentangan dengan
+          ketentuan peraturan perundang-undangan yang berlaku.</p>
+
+        <h3>1. DEFINISI DAN INTERPRETASI</h3>
+        <div class="contact-box">
+          <p>Setiap kata atau istilah berikut yang digunakan di dalam Syarat dan Ketentuan ini memiliki arti
+            sebagaimana tercantum di bawah ini, kecuali jika kata atau istilah terkait secara tegas
+            ditentukan
+            lain. </p>
+
+          <div class="contact-box">
+            <ul class="contact-list section-1">
+
+              <!-- 1.1 -->
+              <li>
+                “Kami” atau “UATAS” berarti PT Plus Ultra Abadi, yaitu badan hukum Indonesia
+                yang bergerak sebagai Penyelenggara Layanan Pendanaan Bersama Berbasis Teknologi
+                Informasi (“LPBBTI”) yang telah berizin dan diawasi oleh Otoritas Jasa Keuangan dan/atau
+                regulator lainnya yang relevan sehingga dapat menyediakan, mengelola, memperantarai,
+                dan mengoperasikan Layanan melalui teknologi tertentu.
+              </li>
+
+              <!-- 1.2 -->
+              <li>
+                "Layanan" berarti semua layanan yang Kami tawarkan melalui Aplikasi, khsusunya PBBTI
+                yang Kami sediakan dari waktu ke waktu melalui Aplikasi untuk nempertemukan antara
+                Pemberi Dana dengan Penerima Dana melalui sistem elektronik dan teknologi informasi
+                memadai sesuai ketentuan Peraturan Otoritas Jasa Keuangan Nomor 40 Tahun 2024
+                tentang LPBBTI.
+              </li>
+
+              <!-- 1.3 -->
+              <li>
+                “Layanan Pendanaan Bersama Berbasis Teknologi Informasi” atau “LPBBTI” berarti
+                penyelenggaraan layanan jasa keuangan untuk mempertemukan Pemberi Dana dengan
+                Penerima Dana dalam melakukan pendanaan konvensional secara langsung melalui sistem
+                elektronik dengan menggunakan internet.
+              </li>
+
+              <!-- 1.4 -->
+              <li>
+                “Pendanaan” atau “Produk” berarti penyaluran dana dari Pemberi Dana kepada Penerima
+                Dana dengan suatu janji yang akan dibayarkan atau dikembalikan sesuai dengan jangka
+                waktu tertentu dalam transaksi LPBBTI.
+              </li>
+
+              <!-- 1.5 -->
+              <li>
+                “Perjanjian Pendanaan” berarti Perjanjian antara UATAS selaku Penyelenggara LPBBTI
+                sekaligus penerima kuasa dari Pemberi Dana dengan Penerima Dana.
+              </li>
+
+              <!-- 1.6 -->
+              <li>
+                “Aplikasi” berarti sistem elektronik baik berbentuk aplikasi mobile dan/atau situs
+                portal
+                “UATAS” yang dimiliki, dikembangkan, dikelola, dan dioperasikan oleh PT Plus Ultra Abadi
+                yang berfungsi dalam menyediakan Layanan maupun mendukung ekosistem penyediaan
+                Layanan.
+              </li>
+
+              <!-- 1.7 -->
+              <li>
+                “Pemberi Dana” atau “Lender” berarti orang perseorangan, badan hukum, dan/atau badan
+                usaha yang menerima Pendanaan.
+              </li>
+
+              <!-- 1.8 -->
+              <li>
+                “Penerima Dana” atau “Borrower” berarti orang perseorangan, badan hukum, dan/atau
+                badan usaha yang menerima Pendanaan melalui Layanan UATAS.
+              </li>
+
+              <!-- 1.9 -->
+              <li>
+                “Pengguna” atau “Anda” berarti pihak yang terdaftar dan memiliki akun sebagai pengguna
+                Aplikasi dan/atau pihak yang telah mengakses dan menggunakan Aplikasi dan/atau Situs
+                Web, baik Pemberi Dana maupun Penerima Dana dengan ketentuan harus mematuhi
+                Syarat dan Ketentuan ini dalam memanfaatkan Layanan yang tersedia dalam Aplikasi.
+              </li>
+
+              <!-- 1.10 -->
+              <li>
+                “Informasi Pribadi” berarti setiap dan semua data pribadi beserta informasi lainnya
+                tentang Anda dan/atau Penerima Manfaat, baik bersifat umum maupun spesifik yang telah
+                dikumpulkan melalui Aplikasi bertujuan untuk mengidentifikasi, termasuk namun tidak
+                terbatas pada nama, alamat, tanggal lahir, pekerjaan, sumber penghasilan (apabila Anda
+                merupakan individu), data, dokumen identitas perwakilan, perizinan, data keuangan,
+                identifikasi pajak, dan dokumen identitas perusahaan (apabila Anda merupakan Badan
+                Hukum), nomor telepon, nomor ponsel, alamat korespondensi (e-mail), Surat Kuasa, data
+                identitas, dan data keuangan (Apabila Anda bertindak mewakili Penerima Manfaat), dan
+                informasi lain yang dipersyaratkan pada saat proses registrasi akun dan permohonan
+                Pendanaan yang mungkin dapat mengidentifikasikan Anda sebagai Pengguna Aplikasi.
+              </li>
+
+              <!-- 1.11 -->
+              <li>
+                “Data Kredit” berarti data Pengguna mengenai kondisi fasilitas penyediaan dana,
+                pembiayaan dari lembaga keuangan non-bank, dan/atau fasilitas lain yang serupa.
+              </li>
+
+              <!-- 1.12 -->
+              <li>
+                “Data Lain” berarti data selain Data Kredit yang dapat dimanfaatkan untuk
+                menggambarkan kemampuan pihak tertentu dalam memenuhi kewajiban keuangan,
+                termasuk pola perilaku Pengguna.
+              </li>
+
+              <!-- 1.13 -->
+              <li>
+                “Informasi Perkreditan” berarti produk dan/atau layanan yang dihasilkan oleh Lembaga
+                Pengelola Informasi Perkreditan secara tertulis, lisan, atau dengan metode lain, yang
+                bersumber dari Data Kredit dan/atau Data Lain yang dihimpun dan diolah oleh Lembaga
+                Pengelola Informasi Perkreditan.
+              </li>
+
+              <!-- 1.14 -->
+              <li>
+                “Lembaga Pengelola Informasi Perkreditan” atau “LPIP” berarti lembaga pemeringkat yang
+                menghimpun dan mengolah Data Kredit dan data lain untuk menghasilkan informasi
+                perkreditan.
+              </li>
+
+              <!-- 1.15 -->
+              <li>
+                “Afiliasi” berarti (i) seluruh pegawai hingga level Direksi dan Komisaris; (ii) pihak
+                pengendali
+                dari; (iii) anak perusahaan dari; (iv) pihak yang berada dalam satu pengendalian yang
+                sama
+                dengan PT Plus Ultra Abadi; atau (v) pihak yang bekerja sama dengan PT Plus Ultra Abadi
+                dalam mendukung penyediaan Layanan, khususnya sebagai Prosesor Data Pribadi.
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+        <h3>2. PENGGUNAAN DAN PENGAKSESAN PRODUK</h3>
+
+        <div class="contact-box">
+          <ul class="contact-list section-2">
+
+            <!-- 2.1 -->
+            <li>
+              Dengan menggunakan dan mengakses aplikasi UATAS, maka Pengguna bertanggung
+              jawab secara penuh atas tindakan tersebut dan Anda tidak diperkenankan untuk
+              menggunakan dan/atau mengakses aplikasi UATAS untuk kepentingan yang bertentangan
+              secara hukum serta merugikan UATAS dan/atau Afiliasinya.
+
+            </li>
+
+            <!-- 2.2 -->
+            <li>
+              Penggunaan Layanan yang tersedia dalam Aplikasi ditujukan dan digunakan untuk:
+
+              <!-- Level a, b, c -->
+              <ol type="a" class="sublist-alpha">
+                <li>
+                  Pengguna individu yang berkewarganegaraan Indonesia (WNI) yang telah dewasa,
+                  yaitu berusia minimal 18 (delapan belas) tahun atau telah menikah hingga usia 60
+                  (enam puluh) tahun dan cakap hukum sehingga memiliki kapasitas hukum, hak, kuasa,
+                  dan otoritas yang diperlukan untuk menyetujui dan terikat dengan Syarat dan
+                  Ketentuan ini. Berdasarkan pertimbangan tertentu dengan tetap memperhatikan
+                  ketentuan hukum yang berlaku, Kami dapat memberikan persetujuan kepada Anda
+                  yang berusia kurang dari 21 (dua puluh satu) tahun.
+                </li>
+
+                <li>
+                  Badan hukum Indonesia, badan usaha Indonesia, badan usaha asing, dan/atau badan
+                  hukum asing, diwakili oleh perwakilan yang sah dan memiliki kapasitas hukum untuk
+                  mengadakan perjanjian secara mengikat, khususnya penggunaan Layanan yang
+                  tersedia dalam Aplikasi, dan berlokasi dalam wilayah Republik Indonesia. Segala hal
+                  yang terkait dengan, akses ke atau penggunaan dari Aplikasi dan Layanan diatur dan
+                  disusun sesuai dengan hukum Indonesia tanpa mempengaruhi prinsip hukum
+                  internasional lainnya.
+                </li>
+
+                <li>
+                  Jika Anda termasuk dalam kategori poin (b) dan memiliki kapasitas bertindak untuk
+                  dan atas nama badan hukum, Anda harus memperoleh persetujuan yang diperlukan
+                  dari badan hukum tersebut dan pihak ketiga terkait lainnya sehubungan dengan
+                  penggunaan dan tanggung jawab yang dibebankan, namun tidak terbatas pada:
+                  <ol type="a" class="sublist-bullet">
+                    <li>Tindakan Anda terkait penggunaan Layanan pada Aplikasi;</li>
+                    <li>Biaya yang terkait penggunaan Aplikasi; dan</li>
+                    <li>Penerimaan dan kepatuhan Anda sesuai dengan Ketentuan Layanan ini. Jika Anda
+                      gagal memperoleh persetujuan yang diperlukan, Anda diminta untuk berhenti
+                      mengakses dan/atau memanfaatkan Layanan yang disediakan dalam Aplikasi</li>
+                  </ol>
+                </li>
+
+                <li>
+                  Anda akan mengakses dan/atau menggunakan Layanan dalam Aplikasi Kami hanya
+                  untuk tujuan yang sah dan tidak bertentangan dengan ketentuan hukum yang berlaku
+                  di Indonesia.
+                </li>
+                <li>
+                  Anda wajib mengakses Layanan Kami melalui perangkat elektronik milik Anda pribadi.
+                </li>
+                <li>
+                  Kami memberikan batasan Pendanaan kepada setiap Pengguna berdasarkan kriteria
+                  dan pertimbangan Kami untuk dapat digunakan dalam berbagai tenor Pendanaan.
+                </li>
+                <li>
+                  Anda hanya dapat mengajukan permohonan Pendanaan selama limit pendanaan aktif
+                  masih tersedia.
+                </li>
+                <li>
+                  Jangka waktu Pendanaan yang diberikan menyesuaikan dengan tempo yang tertera
+                  dalam Aplikasi Kami.
+                </li>
+                <li>
+                  Setiap Pendanaan yang telah dicairkan oleh Pemberi Dana dan/atau diterima oleh
+                  Penerima Dana tidak dapat dibatalkan atau dikembalikan (refund) dalam bentuk
+                  apapun, kecuali jika disepakati lain oleh UATAS dan Pemberi Dana.
+                </li>
+                <li>
+                  Dengan membuat dan memelihara akun melalui Aplikasi UATAS, Anda menyatakan
+                  dan menjamin bahwa Anda memenuhi persyaratan kelayakan di atas dan diizinkan
+                  untuk mengakses Layanan Kami. Anda juga secara tegas memberi wewenang kepada
+                  Kami untuk menggunakan berbagai cara yang diperlukan untuk memverifikasi
+                  identitas Anda melalui penyedia informasi pihak ketiga, baik untuk kepentingan
+                  penagihan, penggunaan Tanda Tangan Elektronik yang diamankan oleh Sertifikat
+                  Elektronik, Credit Scoring, dan penyedia layanan pendukung lainnya
+                </li>
+                <li>
+                  Anda tidak diperkenankan untuk mengakses, menggunakan, mengumpulkan dan/atau
+                  mengambil data pada Aplikasi UATAS untuk kepentingan selain dari maksud dan
+                  tujuan Layanan Kami.
+                </li>
+                <li>
+                  Hak Kekayaan Intelektual yang meliputi identitas Kami atau merek UATAS beserta
+                  turunannya, Hak Cipta atas program komputer beserta sistem lainnya adalah Hak
+                  Kekayaan Intelektual (“Aset Tak Berwujud”) milik PT Plus Ultra Abadi. Anda tidak
+                  diizinkan menggunakan dan/atau melakukan pencatutan nama, logo, merek, hak cipta,
+                  desain terdaftar atau segala jenis hak atas kekayaan intelektual lainnya yang secara
+                  sah telah Kami miliki, tanpa persetujuan tertulis terlebih dahulu dari Kami dan/atau
+                  afiliasi dan/atau secara melawan hukum untuk tujuan dan kepentingan pribadi
+                </li>
+              </ol>
+            </li>
+
+            <!-- 2.3 -->
+            <li>
+              Sehubungan dengan penggunaan Layanan Pendanaan, tentunya Kami akan melakukan
+              identifikasi dan verifikasi identitas Anda selaku Pengguna untuk tujuan permohonan
+              Pendanaan melalui tahapan pemrosesan Informasi Pribadi. Identifikasi dan verifikasi
+              tersebut melibatkan penggunaan Informasi Pribadi Anda berupa data demografi dan/atau
+              biometrik untuk diperiksa kesesuaiannya baik oleh Kami maupun pihak ketiga yang
+              bermitra dengan Kami. Pemeriksaan melibatkan penyesuaian dengan data pada sistem
+              instansi pemerintahan yang berhak mengeluarkan identitas. Apabila Informasi Pribadi
+              Anda terverifikasi kesesuaiannya, maka UATAS dan mitra akan menerbitkan sertifikat
+              elektronik sebagai bukti bahwa Informasi Pribadi Anda telah diverifikasi dan sesuai dengan
+              data yang tercatat pada sistem instansi terkait. Oleh karenanya, Anda menjamin
+              keakuratan Informasi Pribadi yang Anda sediakan dan menyetujui seluruh tahapan
+              pemrosesan Informasi Pribadi Anda untuk tujuan permohonan Pendanaan, termasuk
+              penerbitan sertifikat elektronik serta layanan lainnya yang melekat
+            </li>
+
+            <!-- 2.4 -->
+            <li>
+              Dalam hal permohonan Pendanaan yang diajukan oleh Pengguna, selain pelaksanaan
+              identifikasi dan verifikasi pada poin 2.3 di atas, Kami turut melakukan penilaian kredit,
+              baik
+              yang dilaksanakan oleh UATAS maupun LPIP yang telah bermitra (“Kami”). Sehubungan
+              dengan penggunaan Layanan Pendanaan UATAS, Anda setuju untuk memberikan Kami
+              akses atas Informasi Perkreditan, dengan ketentuan bahwa Data Kredit dan/atau Data
+              Lain yang relevan terkait proses ini akan disampaikan kepada LPIP, instansi berwenang,
+              dan/atau pihak ketiga lainnya sebagai pengguna informasi perkreditan sesuai dengan
+              ketentuan peraturan perundang-undangan yang berlaku.
+            </li>
+          </ul>
+        </div>
+
+        <h3>3. LAYANAN UATAS</h3>
+
+        <div class="contact-box">
+          <ul class="contact-list section-3">
+            <li>
+              Aplikasi UATAS bertujuan untuk memberikan layanan dalam cakupan wilayah Republik
+              Indonesia, namun tidak menutup kemungkinan dapat teraksesnya Aplikasi UATAS oleh
+              pihak yang tidak tinggal di wilayah Indonesia. Kami tidak menjamin bahwa konten yang
+              tersedia sesuai dan dapat diperuntukkan bagi penggunaan selain di wilayah Negara
+              Republik Indonesia.
+            </li>
+            <li>
+              Layanan yang kami sediakan memuat seluruh informasi Pendanaan yang memungkinkan
+              Anda untuk dapat melihat, menelaah, membaca, dan memahami secara cermat dan teliti
+              sesuai dengan kebutuhan Anda.
+            </li>
+            <li>
+              Informasi seputar Pendanaan yang ditampilkan dan terdapat pada Aplikasi UATAS adalah
+              sesuai dengan keadaan sebenarnya dan tanpa perwakilan atau jaminan apa pun sebagai
+              dasar informasi bagi Anda dalam menentukan keputusan permohonan Pendanaan. Kami
+              berusaha untuk selalu menyediakan dan menampilkan informasi terbaru dan akurat,
+              namun Kami tidak menjamin bahwa segala informasi sesuai dengan ketepatan waktu atau
+              relevansi dengan kebutuhan Anda. Sejauh diizinkan menurut hukum yang berlaku, Kami
+              menolak seluruh jaminan tersebut, tersurat maupun tersirat, termasuk, namun t idak
+              terbatas pada jaminan kelayakan untuk diperdagangkan, kesesuaian untuk tujuan tertentu,
+              non-pelanggaran, akurasi, kebebasan dari kesalahan, kesesuaian konten, ketersediaan,
+              pembayaran atau realisasi transaksi.
+            </li>
+            <li>
+              Kami berharap bahwa dalam setiap pengaksesan dan penggunaan Aplikasi UATAS dapat
+              Anda dijadikan sebagai salah satu alternatif sarana keuangan terbaik sesuai kebutuhan.
+              Anda sepenuhnya bertanggung jawab atas setiap dan seluruh keputusan terkait
+              permohonan Pendanaan, termasuk dalam menyetujui Syarat dan Ketentuan, Kebijakan
+              Privasi, Perjanjian Pendanaan, maupun ketentuan dan kebijakan lainnya yang telah Kami
+              tetapkan.
+            </li>
+            <li>
+              Anda menyadari sepenuhnya pengaksesan dan penggunaan Layanan Kami. Tidak ada
+              situasi atau keadaan apapun di luar kendali, termasuk kekhilafan, kelalaian atau kekeliruan
+              Anda yang membuat Kami bertanggung jawab atas kemungkinan kerugian yang Anda
+              alami akibat pengambilan keputusan yang Anda lakukan sendiri dalam penuh kesadaran
+              dan sesuai dengan konsensus yang Anda berikan. Kami juga tidak bertanggung jawab
+              atas segala kerugian yang ditimbulkan oleh kegagalan atas akses terhadap Aplikasi dan
+              penggunaan Aplikasi oleh Anda sebagai suatu tindakan di luar kendali Kami.
+            </li>
+            <li>
+              Anda setuju untuk tidak menggunakan Aplikasi UATAS untuk atau melakukan tindakan
+              berikut dalam Aplikasi UATAS:
+              <ol type="a" class="sublist-alpha">
+                <li>
+                  Berkedok sebagai orang atau entitas apapun atau secara tidak benar menyatakan
+                  atau menggambarkan diri Anda sendiri, termasuk pada identitas Anda maupun afiliasi
+                  Anda dengan orang, badan atau entitas manapun.
+                </li>
+                <li>
+                  Melukai, menyalahgunakan, mempermalukan, menghina, merendahkan, memfitnah,
+                  mengancam, mengintimidasi, menggunakan kekerasan atau mengganggu orang atau
+                  bisnis lain, atau tindakan apa pun yang dianggap sebagai pelanggaran hak privasi
+                  atau publisitas, kebencian, merusak, tidak senonoh, tidak pantas, tidak dpaat
+                  diterima,
+                  atau diskriminatif.
+                </li>
+                <li>
+                  Memasang atau menyediakan iklan atau permintaan yang tidak diinginkan atau tidak
+                  sah, permohonan, materi promosi, atau bentuk ajakan lainnya yang berpotensi
+                  menyesatkan publik sehingga dapat menimbulkan kerugian baik bagi Kami maupun
+                  afiliasi Kami.
+                </li>
+                <li>
+                  Memasang atau dengan cara lain membuat akses publik tersedia di Aplikasi UATAS
+                  tentang informasi pribadi atau keuangan dari pihak ketiga mana pun.
+                </li>
+
+                <li>
+                  Memanfaatkan Layanan Kami dengan mengakses Aplikasi UATAS untuk tujuan
+                  komersil yang menguntungkan diri sendiri atau entitas lain.
+                </li>
+                <li>
+                  Melakukan illegal access atas Layanan dan/atau Aplikasi Kami.
+                </li>
+                <li>
+                  Tindakan melawan hukum, memanfaatkan Layanan atau Aplikasi Kami sebagai media
+                  melancarkan aksi kejahatan dan/atau aktivitas keuangan ilegal seperti penipuan,
+                  melakukan transaksi mencurigakan, pencucian uang, pendanaan terhadap kelompok,
+                  organisasi, perkumpulan, maupun sindikat terorisme, pendananaan terhadap
+                  pengembangan proliferasi senjata pemusnah massal, perjudian online, dan/atau
+                  bentuk aktivitas lainnya yang bertentangan dengan ketentuan peraturan
+                  perundangundangan berlaku.
+                </li>
+                <li>
+                  Melanggar hak orang lain, seperti hak kepemilikan terhadap suatu objek tertentu
+                  seperti hak kekayaan intelektual yang mencakup hak cipta, pencitraan merek, rahasia
+                  dagang, publisitas, paten, segala desain, dan berbagai kepemilikan lainnya.
+                </li>
+                <li>
+                  Membuat, memeriksa, memperbarui, mengubah atau memperbaiki database milik
+                  Anda, rekaman, dokumentasi atau direktori orang lain, tanpa sepengetahuan dan/atau
+                  persetujuan Kami.
+                </li>
+                <li>
+                  Mengubah atau menyetel ulang setiap bagian dari Aplikasi UATAS yang dapat
+                  mengganggu pemrosesan sistem atau memuat beban yang berlebihan dalam
+                  komunikasi dan sistem teknis Kami.
+                </li>
+                <li>
+                  Menggunakan kode komputer otomatis, proses, program, robot, penjelajah, spider,
+                  pemrosesan data, trawling atau kode komputer, proses, program atau sistem Screen
+                  Scraping alternatif atau phising maupun spionase program atau Aplikasi, termasuk
+                  namun tidak terbatas pada pengumpulan alamat email, informasi pribadi, kontak, atau
+                  informasi Pengguna lainnya dari Aplikasi Kami.
+                </li>
+                <li>
+                  Mengirim virus, worm, trojan, atau konten yang dapat mengganggu atau
+                  membahayakan Aplikasi Kami. Anda tidak diperbolehkan untuk memisahkan,
+                  membubarkan, mendekompilasi, membongkar, atau merekayasa ulang bentuk atau
+                  bagian apa pun dari perangkat lunak yang menyusun atau dalam bentuk lainnya
+                  dalam Aplikasi Kami.
+                </li>
+                <li>
+                  Melakukan pengaksesan, peretasan, dan/atau aktivitas tidak sah lainnya sehingga
+                  menghambat, mengacaukan, menonaktifkan, membebani, atau merusak Aplikasi Kami,
+                  dengan cara apa pun yang menyebabkan tidak tersedianya Layanan Kami secara
+                  normal.
+                </li>
+                <li>
+                  Melanggar Syarat dan Ketentuan, Kebijakan Privasi, Perjanjian Pendanaan, instruksi
+                  lain yang tertera atau ditampilkan dalam Aplikasi maupun ketentuan hukum yang
+                  berlaku.
+                </li>
+              </ol>
+            </li>
+            <li>
+              Segala risiko kesalahpahaman, kekeliruan, kelalaian, kerusakan, biaya atau kerugian yang
+              ditimbulkan akibat penggunaan Aplikasi atau sehubungan dengan transaksi Pendanaan
+              antara Anda dan Penerima Dana (sebagaimana berlaku), sepenuhnya merupakan risiko
+              yang Anda sadari sehingga harus Anda tanggung dan telah sepenuhnya dinyatakan
+              dalam Syarat dan Ketentuan ini dan oleh karenanya Kami tidak berkewajiban untuk
+              bertanggung jawab atas hal tersebut.
+            </li>
+            <li>
+              Kami tidak bertanggung jawab atas segala kerugian yang timbul dari berbagai tindakan
+              ilegal yang Anda lakukan dan dengan ini Anda harus mengganti kerugian Kami maupun
+              pihak ketiga lainnya yang terkena dampak baik secara langsung maupun tidak langsung
+              atas kerugian atau kerusakan yang berkaitan dengan pengaksesan, penggunaan, dan/atau
+              operasional Aplikasi Kami, termasuk namun tidak terbatas pada kehilangan keuntungan
+              yang diharapkan, peluang bisnis, pendapatan atau laba, atau apa pun yang terjadi
+              sehubungan dengan tindakan Anda.
+            </li>
+            <li>
+              Kami tidak bertanggung jawab atas kehilangan atau kerugian yang disebabkan karena
+              kelalaian, kekeliruan, dan/atau tindakan pengabaian maupun kesengajaan yang Anda
+              lakukan dalam mengamankan Informasi Pribadi Anda, perangkat elektronik yang
+              digunakan untuk mengakses Aplikasi, dan koneksi internet dari kejahatan siber secara t
+              idak terbatas pada phising, virus, trojan, malwares, bug, dan/atau berbagai kejahatan siber
+              lainnya. Anda sangat disarankan untuk menjalankan dan menerapkan alat atau proteksi
+              tambahan dalam mengambil tindakan pencegahan ketika mengakses koneksi internet
+              publik.
+            </li>
+
+          </ul>
+        </div>
+
+        <h3>4. KEBIJAKAN PRIVASI</h3>
+
+        <div class="contact-box">
+          <ul class="contact-list section-4">
+
+            <li>
+              Anda tidak diperkenankan mengirimkan setiap Informasi Pribadi atau data apa pun lainnya
+              tanpa membaca terlebih dahulu Kebijakan Privasi Kami atas penjelasan penggunaan dan
+              pengaksepan data serta penerapan privasi Kami secara rinci
+            </li>
+
+            <li>
+              Kami berkomitmen dan menghormati setiap privasi Anda sesuai ketentuan Pelindungan
+              Data Pribadi yang berlaku. Kami tidak mengumpulkan Informasi Pribadi tentang Anda,
+              kecuali Anda secara khusus dan sengaja memilih untuk memberikan informasi tersebut
+              kepada Kami sesuai tujuan penyediaan Layanan. Kami hanya akan menggunakan
+              informasi yang Anda berikan untuk tujuan pemberian Layanan. Ketentuan lebih lanjut
+              sehubungan dengan Kebijakan Privasi akan ditampilkan secara terpisah tetapi masih
+              menjadi bagian dari Aplikasi Kami.
+
+            </li>
+
+            <li>
+              Seluruh Informasi Pribadi dan data lainnya yang diperoleh dan terkumpul dalam Aplikasi
+              akan Kami simpan dan pergunakan sebagaimana mestinya sesuai dengan tujuan dan
+              kepentingan proses Pendanaan yang tertuang dalam Peraturan Otoritas Jasa Keuangan
+              Nomor 40 Tahun 2024 tentang Layanan Pendanaan Bersama Berbasis Teknologi Informasi
+              (“<b>POJK LPBBTI</b>”), Peraturan Otoritas Jasa Keuangan Nomor 4 Tahun 2021 tentang
+              Penerapan Manajemen Risiko Dalam Penggunaan Informasi Oleh Lembaga Jasa Keuangan
+              NonBank (“<b>POJK MRSI</b>”), Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan
+              Transaksi Elektronik yang telah diubah oleh Undang-Undang Nomor 19 Tahun 2016 dan
+              Undang-Undang Nomor 1 Tahun 2024 (“<b>UU ITE</b>”), Undang-Undang Nomor 27 Tahun 2022
+              tentang Pelindungan Data Pribadi (“<b>UU PDP</b>”), Peraturan Pemerintah Nomor 71 Tahun
+              2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik (“<b>PP PSTE</b>”), Peraturan
+              Menteri Komunikasi dan Informatika RI Nomor 20 Tahun 2016 tentang Perlindungan Data
+              Pribadi Dalam Sistem Elektronik (“<b>PMKI 20/2016</b>”), serta ketentuan peraturan
+              perundangundangan lainnya yang berlaku, termasuk setiap aturan turunan, pelaksana, maupun
+              perubahannya dari waktu ke waktu (apabila ada).
+            </li>
+          </ul>
+        </div>
+
+        <h3>5. PERNYATAAN DAN JAMINAN</h3>
+
+        <div class="contact-box">
+          <ul class="contact-list section-5">
+            <p>
+              Dengan ini Anda sebagai Pengguna Aplikasi memberikan persetujuan, menyatakan, dan menjamin
+              hal-hal berikut ini:
+            </p>
+
+            <li>
+              Memberikan akses kepada Kami untuk dapat memperoleh, mengumpulkan, memproses,
+              mengelola, menggunakan, mengolah, menganalisis, menyimpan, menghapus,
+              memusnahkan, dan mengungkapkan secara terbatas Informasi Pribadi Anda, termasuk
+              terhadap akses kamera, lokasi, dan mikrofon pada device Anda. Dalam hal terdapat
+              pengecualian ketentuan peraturan perundang-undangan dan/atau permintaan dari
+              Pengadilan, Lembaga, Badan, dan/atau Otoritas berwenang, maka Kami maupun pihak
+              ketiga yang bekerja sama dengan UATAS berhak untuk melakukan pengungkapan
+              Informasi Pribadi Anda secara tidak terbatas tanpa didahului pemberitahuan maupun
+              persetujuan dari Anda.
+            </li>
+
+            <li>
+              Seluruh Informasi Pribadi yang Anda berikan melalui Aplikasi Kami merupakan Informasi
+              Pribadi yang bersifat lengkap, akurat, orisinal, utuh, relevan, sesuai keadaan atau
+              kepemilikan sebenarnya, tidak menyesatkan, bukan hasil tindak manipulasi, pemalsuan
+              maupun pencurian dan/atau penyalahgunaan Informasi Pribadi milik dan tanpa izin pihak
+              lain.
+            </li>
+            <li>
+              Anda memastikan bahwa Anda selaku Pemohon/Penerima Dana adalah entitas atau
+              subjek hukum yang bebas, tidak dalam keadaan bermasalah baik dari segi kesehatan
+              keuangan maupun keadaan lainnya, bukan merupakan bagian dari suatu kelompok
+              berbahaya, dan tidak terlibat dalam kejahatan atau aktivitas keuangan ilegal dalam bentuk
+              apa pun seperti perjudian online, tindak pidana pencucian uang, pendanaan terorisme,
+              pendanaan proliferasi senjata pemusnah massal maupun berbagai bentuk kejahatan atau
+              aktivitas ilegal lainnya serta tidak dinyatakan wanprestasi oleh pihak ketiga manapun.
+            </li>
+            <li>
+              Anda memastikan bahwa nomor rekening pencairan dana yang dicantumkan pada Aplikasi
+              UATAS adalah benar milik dan atas nama Anda selaku Pemohon dan/atau Penerima Dana
+              yang sah, bukan untuk kepentingan pihak lain
+            </li>
+            <li>
+              Anda memastikan bahwa pencantuman kontak darurat yang Anda lakukan pada saat
+              permohonan Pendanaan melalui Aplikasi Kami telah memperoleh persetujuan secara sah
+              dari pihak yang dijadikan sebagai kontak darurat disertai konfirmasi lebih lanjut oleh Tim
+              Internal UATAS terkait pencantuman tersebut.
+            </li>
+            <li>
+              Anda memastikan dan menjamin bahwa permohonan Pendanaan ini ditujukan untuk
+              kepentingan pribadi Anda sendiri sesuai dengan tujuan yang telah dicantumkan melalui
+              Aplikasi dan/atau apabila Anda mewakili pihak lain, maka Anda wajib memberikan
+              Informasi Pribadi pihak lain selaku Penerima Manfaat (Beneficial Owner) atas Pendanaan
+              disertai klarifikasi dan konfirmasi baik secara langsung maupun tidak langsung kepada
+              Kami. Berdasarkan kebijakan Kami, jika Anda mewakili kepentingan pihak lain, maka Kami
+              berhak untuk melakukan pemeriksaan lebih lanjut dan meminta dokumen tambahan yang
+              diperlukan.
+            </li>
+            <li>
+              Layanan Pendanaan melalui Aplikasi UATAS adalah transaksi keuangan yang bersifat sah
+              dan mengikat, menimbulkan hubungan hukum antara Pemberi Dana dengan Penerima
+              Dana sebagaimana diatur dalam Perjanjian Pendanaan yang disepakati oleh Para Pihak
+              sehingga dalam hal ini Anda selaku Penerima Dana bertanggung jawab penuh atas setiap
+              Pendanaan.
+            </li>
+            <li>
+              Anda selaku Penerima Dana bertanggung jawab atas segala kerugian disebabkan akibat
+              kelalaian, kekeliruan, dan ketidakhati-hatian Anda dalam melakukan transaksi yang terjadi
+              di luar Aplikasi UATAS dan/atau oknum yang mengatasnamakan UATAS sehingga dengan
+              ini membebaskan serta melepaskan UATAS dari seluruh tuntutan, gugatan, dan/atau klaim
+              kerugian yang akan timbul tanpa menghapuskan kewajiban Pendanaan Anda kepada
+              Kami serta pembatasan dan/atau pengurangan hak Pemberi Dana maupun Kami selaku
+              Penyelenggara LPBBTI terutama yang berkaitan dengan Syarat dan Ketentuan, Perjanjian
+              Pendanaan maupun ketentuan lainnya.
+            </li>
+            <li>
+              Anda menyatakan bahwa Anda telah membaca, memahami, menyetujui, dan mematuhi
+              seluruh informasi yang tertera baik pada Syarat dan Ketentuan, Perjanjian Pendanaan,
+              Kebijakan Privasi, dan/atau ketentuan lainnya yang ada
+            </li>
+          </ul>
+        </div>
+
+        <h3>6. HAK KEKAYAAN INTELEKTUAL </h3>
+
+        <div class="contact-box">
+          <ul class="contact-list section-6">
+
+            <li>
+              Hak Kekayaan Intelektual terkait Aplikasi dan setiap penyediaan Layanan maupun fitur
+              yang terdapat dalam Aplikasi, termasuk namun tidak terbatas pada hak cipta, merek
+              dagang, rahasia dagang, merek layanan/jasa, logo, program komputer, hak paten, tampilan
+              UI/UX Aplikasi, desain, dan seluruh kepemilikan kekayaan intelektual tetap akan menjadi
+              milik Kami sebagai Aset Tak Berwujud PT Plus Ultra Abadi.
+
+            </li>
+
+            <li>
+              Setiap atau semua informasi dan materi maupun konten, termasuk tetapi tidak terbatas
+              pada penulisan, materi penyusun perangkat lunak, teks, data, grafik, gambar, audio, video,
+              logo, ikon atau kode html, source code dan kode-kode lainnya dalam Aplikasi ini tidak akan
+              dipublikasikan serta tidak dapat disalin, digandakan, dimodifikasi, ditiru, atau diubah
+              dengan cara apapun dari cakupan Aplikasi tanpa persetujuan Kami.
+            </li>
+            <li>
+              Anda hanya diperkenankan untuk melihat tampilan Aplikasi, termasuk pengisian data atau
+              dokumen apa pun yang termuat dalam Aplikasi secara sewajarnya. Anda setuju bahwa
+              Anda tidak menggunakan bagian manapun dari Aplikasi ini untuk penggunaan yang
+              bertentangan sebagai berikut:
+              <ol type="a" class="sublist-alpha">
+                <li>
+                  Menyelipkan, menularkan atau menyebarkan baik secara sengaja atau tidak sengaja
+                  virus, worm, trojan horse, trap door, time bomb, atau kode komputer, berkas, program
+                  atau membuat permintaan berulang yang dirancang untuk mengganggu, merusak,
+                  atau membatasi fungsi dari perangkat lunak, perangkat keras komputer, peralatan
+                  telekomunikasi, atau untuk mengurangi kualitas, mengganggu tampilan dari, merusak
+                  fungsi, dan/atau mengganggu fungsi dari Aplikasi ini;
+                </li>
+                <li>
+                  Menggunggah, memasang, mengirimkan e-mail atau sebaliknya menerima atau
+                  menempelkan tautan pada konten apapun yang memfasilitasi peretasan data;
+                </li>
+                <li>
+                  Meretas apapun yang menjadi bagian dari Aplikasi ini;
+                </li>
+                <li>
+                  Menguggah, mengirimkan e-mail, atau mengirimkan tautan yang melanggar hak
+                  kekayaan intelektual dari pihak ketiga;
+                </li>
+                <li>
+                  Mengelak atau mencoba melonggarkan keamanan Aplikasi dengan cara apapun;
+                </li>
+                <li>
+                  Mengizinkan atau meminta pihak ketiga mana pun untuk melakukan semua hal di atas;
+                  dan
+                </li>
+                <li>
+                  Jika Anda menggunakan konten dari Aplikasi ini tetapi gagal untuk memenuhi seluruh
+                  persyaratan ini, maka hak Anda untuk menggunakan Aplikasi Kami secara otomatis
+                  akan hilang.
+                </li>
+              </ol>
+            </li>
+            <li>
+              Tidak ada tautan dari situs lain yang mungkin termuat pada Aplikasi ini tanpa izin tertulis
+              dari Kami terlebih dahulu.
+            </li>
+            <li>
+              Anda tidak berhak memberikan informasi apapun, memodifikasi, atau membagikan kembali
+              setiap konten atau muatan yang terdapat dalam Aplikasi tanpa persetujuan atau izin dari
+              Kami.
+            </li>
+          </ul>
+        </div>
+
+        <h3>7. PERATURAN PENGGUNA</h3>
+
+        <div class="contact-box">
+          <ul class="contact-list section-7">
+
+            <li>
+              Anda diminta untuk memberikan Informasi Pribadi secara benar, akurat, lengkap, asli,
+              kepemilikan sebenarnya dan sah kepada Kami dengan pembatasan atas penggunaan
+              Informasi Pribadi Pengguna. Anda menjamin bahwa tidak ada informasi yang
+              menyesatkan, palsu, tidak relevan, dimanipulasi, dan/atau diperoleh dan digunakan secara
+              bertentangan untuk diberikan kepada Kami selama proses pendaftaran dan tahap lain
+              penggunaan Aplikasi. Anda diwajibkan untuk memberi Kami pembaruan apa pun untuk
+              setiap perubahan Informasi Pribadi melalui fitur yang tersedia dalam Aplikasi ataupun
+              melalui Layanan Pelanggan Kami.
+            </li>
+            <li>
+              Kami akan menggunakan informasi pribadi Anda hanya sebatas pada tujuan dan
+              kepentingan pemrosesan data dan informasi sehubungan dengan Pendanaan yang Anda
+              ajukan. Jika dikemudian hari terdapat perubahan tujuan penggunaan dan pemrosesan
+              Informasi Pribadi milik Anda, maka Kami akan memberitahukan dan meminta persetujuan
+              kembali dari Anda selaku Pengguna.
+            </li>
+            <li>
+              Kami tidak memiliki kewajiban untuk menyetujui semua pendaftaran yang diajukan melalui
+              Aplikasi. Kami berhak untuk tidak memproses pendaftaran yang tidak memenuhi
+              persyaratan seperti kelengkapan data yang tidak akurat dan valid, terindikasi terlibat
+              dalam kelompok atau organisasi berbahaya seperti terorisme, terindikasi melakukan
+              kejahatan atau tindak pidana berat seperti pencucian uang, perjudian online, maupun
+              aktivitas ilegal serta ketidaksesuaian lainnya. Selain itu, Kami berhak untuk mencabut
+              pendaftaran Anda dari waktu ke waktu dan/atau melakukan blacklist, atas kecurigaan atau
+              indikasi pelanggaran-pelanggaran yang ditemukan baik terhadap Syarat dan Ketentuan,
+              Perjanjian Pendanaan, kebijakan internal UATAS lainnya maupun ketentuan peraturan
+              perundang-undangan berlaku.
+            </li>
+            <li>
+              Setiap Informasi Pribadi termasuk kontak Anda yang telah dikirimkan melalui Aplikasi Kami,
+              Anda sepenuhnya setuju untuk dihubungi oleh Tim Kami melalui media atau sarana apa
+              pun seperti via telepon, pesan teks, dan/atau media komunikasi lainnnya mengenai
+              pengajuan Pendaanan Anda sehingga memungkinkan konfirmasi lebih lanjut sebagai
+              bagian dari proses pengajuan Anda.
+            </li>
+            <li>
+              Informasi Pribadi yang Kami kumpulkan melalui Aplikasi UATAS telah sesuai dengan
+              persyaratan penerimaan Layanan yang ditentukan berdasarkan Peraturan Otoritas Jasa
+              Keuangan Nomor 40 Tahun 2024 tentang Layanan Pendanaan Bersama Berbasis
+              Teknologi Informasi (“<b>POJK LPBBTI</b>”) dan Undang-Undang Nomor 27 Tahun 2022 tentang
+              Pelindungan Data Pribadi (“<b>UU PDP</b>”) beserta segala aturan pelaksana maupun
+              perubahannya (apabila ada). Kami hanya akan melakukan pemrosesan Informasi Pribadi
+              Anda yang relevan dengan penyediaan Layanan dalam jangka waktu 5 (lima) tahun sesuai
+              ketentuan peraturan perundang-undangan yang berlaku, kecuali jika terdapat permintaan
+              dari Anda untuk melakukan penghentian pemrosesan maupun penghapusan serta
+              pemusnahan Informasi Pribadi Anda.
+            </li>
+            <li>
+              Anda sepenuhnya bertanggung jawab untuk menjaga kerahasiaan Akun yang berisikan
+              Informasi Pribadi Anda, termasuk kata sandi akun, nomor telepon atau e-mail pemulihan
+              yang digunakan, dan informasi masuk lainnya ke Aplikasi. Kami berkomitmen untuk
+              menghormati kerahasiaan Informasi Pribadi Anda dan menerapkan Prosedur Pelindungan
+              Data Pribadi secara wajar sesuai ketentuan hukum yang berlaku. Apabila terjadi
+              pelanggaran keamanan dan dapat berdampak pada kerahasiaan Informasi Pribadi Anda
+              yang disimpan oleh Kami, maka (i) Kami akan memberitahu Anda dalam jangka waktu 3 x
+              24 jam sejak Kami menyadari peristiwa tersebut disertai dengan upaya terbaik yang Kami
+              kerahkan untuk mengatasi insiden krisis tersebut; dan (ii) Kami berkomitmen bahwa Kami
+              akan segera melakukan tindakan dan mitigasi yang diperlukan untuk mencegah
+              pelanggaran tersebut terjadi di masa depan.
+            </li>
+            <li>
+              Anda dapat mengajukan permintaan perubahan/revisi, penghapusan, informasi rekam jejak
+              pemrosesan dan/atau salinan Informasi Pribadi Anda kepada Kami baik melalui fitur yang
+              tersedia di Aplikasi UATAS ataupun layanan pengaduan pelanggan UATAS disertai dengan
+              alasan penghapusan data. Kami akan melakukan pemrosesan permintaan tersebut dalam
+              jangka waktu paling lambat 3 x 24 jam. Permintaan penghapusan data dapat berimplikasi
+              pada penutupan akun.
+            </li>
+            <li>
+              Anda juga dapat mengajukan permintaan penundaan, pembatasan hingga penghentian
+              pemrosesan Informasi Pribadi dengan tujuan melakukan penarikan kembali persetujuan
+              pemrosesan Informasi Pribadi. Selanjutnya, kami akan melakukan pemrosesan atas
+              permintaan tersebut dalam jangka waktu paling lambat 3 x 24 jam terhitung sejak Kami
+              menerima permintaan tersebut. Namun demikian, penundaan dan pembatasan
+              pemrosesan Informasi Pribadi dikecualikan apabila:
+              <ol type="a" class="sublist-alpha">
+                <li>
+                  Terdapat ketentuan peraturan perundang-undangan yang tidak memungkinkan
+                  dilakukan penundaan dan pembatasan pemrosesan Informasi Pribadi;
+                </li>
+                <li>
+                  Dapat membahayakan keselamatan pihak lain; dan/atau
+                </li>
+                <li>
+                  Anda terikat perjanjian tertulis dengan Kami yang tidak memungkinkan dilakukan
+                  penundaan dan pembatasan pemrosesan Informasi Pribadi
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+
+        <h3>8. HAK PENGGUNA SEHUBUNGAN DENGAN PELINDUNGAN DATA PRIBADI </h3>
+
+        <div class="contact-box">
+          <ul class="contact-list section-8">
+            <li>
+              Anda berhak mendapatkan informasi tentang kejelasan identitas, dasar kepentingan
+              hukum, tujuan permintaan dan penggunaan Informasi Pribadi dan akuntabilitas pihak yang
+              meminta Informasi Pribadi, yang sudah diatur dalam Syarat dan Ketentuan ini.
+            </li>
+            <li>
+              Anda berhak menarik kembali persetujuan pemrosesan Informasi Pribadi tentang diri Anda
+              yang telah diberikan kepada Kami dengan ketentuan bahwa Anda telah selesai dalam
+              menggunakan Layanan dan tidak terdapat lagi hak dan kewajiban Pendanaan
+            </li>
+            <li>
+              Anda berhak mengajukan keberatan atas keputusan Pihak Ketiga sehubungan dengan
+              penerimaan penyediaan Layanan. Untuk hal tersebut, Anda dapat melakukannya melalui
+              Layanan Pelanggan sesuai dengan mekanisme yang berlaku.
+
+            </li>
+          </ul>
+        </div>
+
+        <h3>9. PEMBATASAN ATAU PENGHENTIAN AKSES </h3>
+
+        <div class="contact-box">
+          <p>
+            Kami memiliki hak untuk mengubah, menangguhkan, atau menghentikan akses Anda ke Aplikasi
+            dan/atau bagian dari Aplikasi, mengubah, menunda, menghentikan Aplikasi dan/atau bagian dari
+            Aplikasi termasuk tetapi tidak terbatas pada Layanan atau Produk dalam Aplikasi dan/atau
+            menggunakan Aplikasi, atau bagiannya, kapan saja atau untuk alasan apapun tanpa perlu
+            memberikan pemberitahuan lanjutan kepada Anda atau tanggung jawab apapun kepada Anda.
+            Jika Anda memiliki keberatan sehubungan dengan ini, Anda dapat menghubungi Layanan
+            Pelanggan Kami, sebagaimana tertera pada Aplikasi Kami.
+
+          </p>
+
+          <p>
+            Untuk tujuan penghentian, Anda dan Perusahaan setuju untuk mengesampingkan ketentuan
+            Pasal 1266 Kitab Undang-Undang Hukum Perdata sehingga penghentian Ketentuan Layanan ini
+            akan efektif tanpa harus mendapatkan persetujuan pengadilan, lembaga lain atau pertimbangan
+            lainnya di dalam wilayah Republik Indonesia.
+          </p>
+        </div>
+
+        <h3>10. DOKUMEN LAIN YANG BERLAKU </h3>
+
+        <div class="contact-box">
+          <p>
+            Pemberlakuan Syarat dan Ketentuan ini tidak serta merta terlepas dari ketentuan lain yang telah
+            Kami tetapkan dan berlaku terhadap penyediaan Layanan melalui Aplikasi dan dianggap sebagai
+            satu kesatuan ketentuan penggunaan Layanan maupun Aplikasi, antara lain mencakup:
+          </p>
+
+          <ol type="a" class="sublist-alpha">
+            <li>
+              Kebijakan Privasi;
+            </li>
+            <li>
+              Perjanjian Pendanaan; dan
+            </li>
+            <li>
+              Dokumen lainnya yang termuat dalam Aplikasi ini
+            </li>
+          </ol>
+          <p>
+            Jika terdapat pertentangan ketentuan yang diatur dalam Syarat dan Ketentuan ini dengan
+            dokumen lain yang Kami berlakukan, maka ketentuan lainnya yang tidak bertentangan tetap
+            diberlakukan dan Kami akan melakukan penyesuaian lebih lanjut serta dalam hal terdapat
+            kebijakan untuk aspek-aspek khusus dari Layanan, maka kebijakan khusus tersebut yang akan
+            diberlakukan sementara hingga Kami sudah memenuhi penyesuaian yang ada.
+          </p>
+        </div>
+
+        <h3>11. TIDAK ADA JAMINAN </h3>
+
+        <div class="contact-box">
+          <p>
+            Anda dengan ini menerima dan menyetujui bahwa sejauh aturan yang berlaku memungkinkan:
+          </p>
+          <ol type="a" class="sublist-alpha">
+            <li>
+              Layanan dan konten dalam Aplikasi ini tersedia sebagaimana adanya;
+            </li>
+            <li>
+              Kami tidak memberikan jaminan bahwa (i) fungsi dan layanan yang disediakan oleh
+              Aplikasi bebas dari gangguan atau kesalahan, termasuk tetapi tidak terbatas pada
+              keamanan Aplikasi ini; (ii) kelalaian akan diperbaiki; atau (iii) Aplikasi ini atau server
+              bebas dari komponen virus atau malware; dan
+            </li>
+            <li>
+              Setiap dan seluruh produk yang diunduh dari Aplikasi merupakan tanggung jawab dan
+              risiko Anda pribadi sehingga Anda harus bertanggung jawab sepenuhnya atas
+              perangkat dan kerusakan sistem atau data serta kerugian apapun yang disebabkan
+              oleh unduhan.
+            </li>
+          </ol>
+        </div>
+
+        <h3>12. TAUTAN DAN PENGIKLAN</h3>
+
+        <div class="contact-box">
+          <p>
+            Demi kenyamanan Anda, Kami dapat menyertakan hyperlink ke dalam Aplikasi atau konten lain di
+            internet yang dimiliki atau dioperasikan oleh pihak ketiga. Situs atau konten terkait tidak
+            berada di
+            bawah kendali Kami dan Kami tidak bertanggung jawab atas kesalahan, kelalaian, penundaan,
+            pencemaran nama baik, kebohongan, pornografi, konten perjudian, konten cabul, ketidakakuratan,
+            informasi menyesatkan atau materi lain yang terkandung dalam konten, atau konsekuensi dari
+            mengakses Aplikasi terkait serta keakuratan informasi, konten, produk atau layanan yang
+            ditawarkan oleh, atau praktik informasi yang digunakan oleh situs-situs yang terkait dengan atau
+            dari Aplikasi. Kami menyarankan Anda untuk meninjau Kebijakan Privasi serta Syarat dan
+            Ketentuan Aplikasi Kami sebelum memberikan Informasi Pribadi apa pun milik Anda.
+          </p>
+          <p>
+            Perusahaan dapat menampilkan spanduk, applet java dan/atau hal lain yang diperlukan oleh
+            Aplikasi untuk tujuan periklanan atau iklan produk dan/atau Layanan. Anda mengakui dan setuju
+            bahwa Anda tidak memiliki hak untuk menerima pembayaran, biaya, penggantian dan/atau komisi
+            sehubungan dengan iklan dan/atau materi promosi lainnya.
+          </p>
+          <p>
+            Harap diperhatikan bahwa tautan apapun ke dalam Aplikasi atau konten lain bukan bentuk
+            dukungan atau verifikasi Aplikasi atau konten tersebut dan Anda setuju bahwa akses Anda
+            terhadap penggunaan Aplikasi atau konten yang ditautkan sepenuhnya merupakan risiko Anda
+            sendiri. Kami tidak bertanggung jawab atas risiko Informasi Pribadi dan keamanan data untuk
+            akses pihak ketiga yang terhubung ke atau dari Aplikasi. Dalam hal demikian, Kami akan
+            dibebaskan dari tanggung jawab atas kerusakan atau kerugian apapun yang terjadi pada akses
+            tautan tersebut, termasuk namun tidak terbatas pada kerusakan atau kerugian apapun terkait
+            dengan <i>virus, spyware, malware, worm, tojan, fault, bugs</i>, atau kerusakan lainnya
+          </p>
+        </div>
+
+        <h3>13. PEFERENSI DAN DOMISILI HUKUM </h3>
+
+        <div class="contact-box">
+          <ul class="contact-list section-13">
+            <li>
+              Syarat dan Ketentuan ini dibuat, ditafsirkan, dan diatur berdasarkan Hukum Indonesia
+            </li>
+            <li>
+              Semua pihak setuju bahwa dalam setiap perselisihan yang muncul dari dan/atau terkait
+              dengan pelaksanaan Persyaratan dan Ketentuan, selama mungkin, akan diselesaikan
+              melalui diskusi. Setiap perselisihan harus diselesaikan secara damai atau melalui mediasi
+              sebagaimana direkomendasikan oleh otoritas berwenang.
+            </li>
+            <li>
+              Semua hal, klaim atau sengketa yang timbul dari atau sehubungan dengan Ketentuan
+              Layanan ini, harus diselesaikan dengan cara-cara berikut:
+              <ol type="a" class="sublist-bullet">
+                <li>
+                  Bagi Pengguna yang belum terdaftar di UATAS, dengan tidak mendaftar ke Perusahaan,
+                  tidak menggunakan layanan Perusahaan, dan meninggalkan Aplikasi;
+                </li>
+                <li>
+                  Bagi Pengguna yang telah terdaftar di UATAS, setiap perselisihan atau perselisihan
+                  yang
+                  tidak dapat dilakukan melalui diskusi dan/atau mediasi dalam industri pembiayaan
+                  akan
+                  diselesaikan di Pengadilan Negeri Jakarta Selatan, meskipun ada hak-hak UATAS untuk
+                  mengajukan klaim atau gugatan ke Pengadilan atau badan lain dan dengan ini Anda
+                  setuju untuk melepaskan hak Anda untuk mengajukan pengecualian kekuasaan
+                  yurisdiksi relatif.
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+
+        <h3>14. LAIN LAIN</h3>
+
+        <div class="contact-box">
+          <ul class="contact-list section-14">
+            <li>
+              Kami menyediakan fasilitas Layanan Pelanggan yang menjawab pertanyaan untuk
+              menggunakan layanan yang disediakan oleh Aplikasi dan/atau memberikan informasiinformasi
+              lainnya yang dibutuhkan sehubungan dengan penggunaan layanan.
+            </li>
+            <li>
+              Jika ada ketentuan-ketentuan ini yang dianggap oleh otoritas terkait tidak memiliki kekuatan
+              hukum atau tidak sah, maka ketentuan yang relevan harus dimodifikasi untuk
+              memungkinkan diberlakukan sesuai dengan maksud teks asli hingga batas yang diizinkan
+              oleh hukum yang berlaku. Validitas dan keberlakuan ketentuan lainnya dari ketentuanketentuan
+              ini tidak akan terpengaruh.
+
+            </li>
+            <li>
+              Anda setuju bahwa semua dokumen atau pemberitahuan dapat dikirimkan kepada Anda
+              secara elektronik melalui alamat e-mail Anda yang disediakan setelah pendaftaran. Dengan
+              demikian, Anda mengakui dan menerima bahwa itu adalah tanggung jawab Anda untuk
+              memperbarui alamat e-mail terkini kepada Kami. Namun, Kami tidak akan bertanggung
+              jawab atas klaim kehilangan atau kerusakan atas kegagalan untuk menerima
+              pemberitahuan.
+            </li>
+            <li>
+              Anda setuju bahwa semua dokumen, persetujuan, pengakuan, otorisasi, dalam bentuk
+              apapun berdasarkan ketentuan layanan dapat dilaksanakan secara elektronik,
+              menggunakan tanda tangan elektronik, dan Anda menerima validitas dan keberlakuannya,
+              kecuali dapat dibuktikan bahwa tanda tangan elektronik yang disediakan didasarkan pada
+              tindakan yang melanggar hukum seperti pemalsuan, penipuan, atau pencurian data.
+            </li>
+            <li>
+              Tunduk pada hukum yang berlaku, semua ketentuan ganti rugi dan pengecualian dalam
+              Syarat dan Ketentuan ini akan tetap berlaku setelah pengakhiran perjanjian.
+            </li>
+            <li>
+              Penggunaan dan/atau akses ke Aplikasi akan tunduk pada seluruh ketentuan yang telah
+              ditetapkan dalam Kebijakan Privasi. Dengan menyetujui Syarat dan Ketentuan ini, Kami
+              berasumsi bahwa Anda telah membaca dan menyetujui isi Kebijakan Privasi. Seluruh
+              ketentuan tersebut merupakan satu kesatuan dan dokumen integral yang perlu disetujui
+              oleh Pengguna sebelum melanjutkan proses penelusuran dan penggunaan Aplikasi.
+            </li>
+          </ul>
+        </div>
+
+        <h3>15. OTORISASI</h3>
+
+        <div class="contact-box">
+          <p>
+            Dengan menerima Syarat dan Ketentuan ini, Anda mengakui dan setuju bahwa UATAS tidak
+            bertanggung jawab atas tindakan pelanggaran yang Anda lakukan sehubungan dengan Informasi
+            Pribadi yang diberikan kepada Kami. Anda juga bertanggung jawab secara penuh dan terikat
+            pada Perjanjian Pendanaan melalui Aplikasi ini.
+          </p>
+          <p>
+            Berkenaan dengan hal tersebut, Anda setuju untuk menunjuk dan memberikan kuasa kepada
+            UATAS sebagai perwakilan atau penghubung resmi antara Anda dengan Pemberi Dana serta
+            mengirimkan pemberitahuan atau informasi apapun kepada Pemberi Dana dan pihak ketiga
+            lainnya baik vendor maupun otoritas pemerintah secara resmi terkait akses terhadap Informasi
+            Pribadi Anda.
+
+          </p>
+          <p>
+            Selanjutnya otorisasi dari Pemberi Dana kepada Perusahaan tidak perlu dibuktikan kepada Anda
+            kecuali jika disyaratkan oleh ketentuan hukum berlaku. Hal ini berlaku termasuk pada permintaan
+            pengungkapan Informasi Pribadi kepada badan, lembaga atau otoritas pemerintah secara resmi
+            sehingga segala bentuk pengungkapan tersebut tidak membutuhkan persetujuan maupun
+            pemberitahuan terlebih dahulu kepada Anda.
+          </p>
+          <p>
+            Dengan ini pula, Anda mengakui bahwa setiap informasi, permintaan, pemberitahuan, peringatan
+            dan/atau notifikasi lainnya yang dikirimkan dalam bentuk dan cara apapun baik oleh UATAS,
+            karyawan, sub-kontraktor maupun para afiliasinya merupakan pemberitahuan yang valid dan sah
+            sehubungan dengan penyediaan layanan melalui Aplikasi.
+          </p>
+        </div>
+
+        <h3>16. PENGAKHIRAN</h3>
+
+        <div class="contact-box">
+          <p>
+            Anda setuju bahwa jika terdapat pelanggaran oleh Anda berdasarkan Syarat dan Ketentuan ini
+            atau berdasarkan peraturan perundang-undangan berlaku, maka Kami secara sepihak atas
+            kebijakan Kami dan tanpa pemberitahuan terlebih dahulu sebelumnya melakukan penundaan dan/
+            atau pemblokiran terhadap pengajuan maupun transaksi Pendanaan Anda hingga penghapusan
+            akun Anda pada Aplikasi Kami, membatasi akses Anda ke seluruh Aplikasi Kami serta
+            menghentikan layanan kepada Anda. Anda dengan ini setuju bahwa kerugian material atau
+            immaterial yang timbul dari penghapusan akun Anda dan/atau pembatasan akses yang
+            disebutkan di atas sepenuhnya merupakan tanggung jawab Anda.
+
+          </p>
+          <p>
+            Dalam hal hubungan hukum antara Kami dan Anda telah berakhir atau tidak terdapat kewajiban
+            Pendanaan yang harus Anda penuhi kepada Kami dan/atau Pemberi Dana, maka Kami dapat
+            melakukan penyimpanan Informasi Pribadi Anda untuk jangka waktu 5 (lima) tahun dan dapat
+            melakukan penghapusan Informasi Pribadi Anda jika terdapat keadaan sebagai berikut:
+          <ol type="a" class="sublist-alpha">
+            <li>
+              Telah mencapai masa retensi;
+            </li>
+            <li>
+              Tujuan pemrosesan Informasi Pribadi telah tercapai; atau
+            </li>
+            <li>
+              Terdapat permintaan dari Anda selaku Pemilik Informasi Pribadi.
+            </li>
+          </ol>
+          </p>
+        </div>
+
+        <h3>17. HUBUNGI KAMI </h3>
+
+        <div class="contact-box">
+          <p>
+            Untuk informasi lebih lanjut, Anda dapat mengunjungi halaman FAQ Kami atau dapat
+            menghubungi Kami melalui layanan call center di nomor 1500-038 atau layanan e-mail di
+            <a href="mailto:cs.suport@uatas.id" style="color: #000;"><b>cs.support@uatas.id</b></a>.
+          </p>
+        </div>
+
+        <h3>18. PENERIMAAN</h3>
+
+        <div class="contact-box">
+          <ol type="a" class="sublist-alpha">
+            <li>
+              Saya dengan ini menyatakan telah membaca, memahami, dan menyetujui seluruh
+              Syarat dan Ketentuan di atas, termasuk pemberian akses informasi perkreditan
+              maupun penyampaian Data Kredit dan/atau Data Lainnya, baik kepada LPIP, instansi
+              berwenang, dan/atau Pengguna Informasi Perkreditan lainnya serta ketentuan layanan
+              penandatanganan secara elektronik yang diamankan dengan sertifikasi elektronik
+              guna menjamin keakuratan Informasi Pribadi Saya untuk diproses lebih lanjut baik oleh
+              UATAS maupun pihak ketiga yang bermitra dengan UATAS untuk keperluan
+              permohonan Pendanaan berdasarkan ketentuan peraturan perundang-undangan
+              yang berlaku.
+            </li>
+            <li>
+              Saya memberikan persetujuan secara penuh atas seluruh Syarat dan Ketentuan ini
+              sesuai regulasi yang berlaku untuk layanan yang diberikan.
+            </li>
+            <li>
+              Saya setuju untuk menjamin dan bertanggung jawab secara penuh atas setiap
+              Informasi Pribadi yang saya berikan sehubungan dengan pengajuan Pendanaan.
+            </li>
+            <li>
+              Saya setuju untuk membebaskan, melepaskan, dan mengecualikan UATAS, karyawan,
+              pejabat, direktur, pemegang saham maupun para afiliasinya untuk bertanggung jawab
+              atas setiap klaim, tuntutan, dan gugatan sehubungan dengan pelaksanaan atau
+              pemrosesan Informasi Pribadi yang terjadi di luar kendali para pihak tersebut
+              sehubungan dengan pelaksanaan atau pemrosesan informasi pribadi berdasarkan
+              persetujuan atau otorisasi yang saya berikan terhadap seluruh Syarat dan Ketentuan
+              ini.
+            </li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
