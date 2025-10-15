@@ -143,7 +143,7 @@
                             <div class="subtle">*Termasuk bunga & PPN (asumsi 30 hari/bulan)</div>
                             <div class="installment" id="sim-installment">Rp424.125</div>
 
-                            <button class="cta" type="button">Ajukan Pinjaman</button>
+                            <button class="cta" type="button" id="loanButton">Ajukan Pinjaman</button>
 
                             <div class="info" id="sim-infoLine">
                                 <span>Total pengembalian: <b>Rp1.272.376</b></span>
@@ -694,8 +694,19 @@
                 render();
             })();
         </script>
+        <script>
+            document.getElementById("loanButton").addEventListener("click", function () {
+                const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-
+                if (/android/i.test(userAgent)) {
+                    window.location.href = "https://play.google.com/store/apps/details?id=com.uatas.android";
+                } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    window.location.href = "https://apps.apple.com/id/app/uatas-pinjaman-dana-daring/id1610701493";
+                } else {
+                    alert("Silakan buka dari perangkat Android atau iOS untuk mengunduh aplikasi.");
+                }
+            });
+        </script>
 </body>
 
 </html>
