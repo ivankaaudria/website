@@ -480,7 +480,7 @@
                     </li>
                     <li class="flex">
                         <a href="https://www.nextotp.com/" target="_blank" class="about_check">
-                            <img src="https://www.nextotp.com/images/logo.png" alt="Checkmark">
+                            <img src="../assets/images/nextotp.png" alt="Checkmark">
                         </a>
                         <div class="about_list_content pl-5 pr-2">
                             <a href="https://www.nextotp.com/" target="_blank" class="nama">PT NextOTP Digital
@@ -577,10 +577,11 @@
                 <!-- Panel: Statistik -->
                 <div class="panel" id="tab-keu" role="tabpanel" hidden>
                     <div class="stats-grid">
+
                         <article class="kpi">
                             <img class="kpi-ico" src="../assets/images/icon-stat dana.png" alt="">
                             <div class="kpi-body">
-                                <div class="kpi-main"><span>Rp</span>27,78<small>Triliun</small></div>
+                                <div class="kpi-main" id="val_total_pendanaan_sejak_didirikan"></div>
                                 <p>Total pendanaan sejak berdiri</p>
                             </div>
                         </article>
@@ -588,7 +589,7 @@
                         <article class="kpi">
                             <img class="kpi-ico" src="../assets/images/icon date.png" alt="">
                             <div class="kpi-body">
-                                <div class="kpi-main"><span>Rp</span>6,67<small>Triliun</small></div>
+                                <div class="kpi-main" id="val_total_pendanaan_tahun_berjalan"></div>
                                 <p>Total pendanaan tahun berjalan</p>
                             </div>
                         </article>
@@ -596,7 +597,7 @@
                         <article class="kpi">
                             <img class="kpi-ico" src="../assets/images/icon akumulasi.png" alt="">
                             <div class="kpi-body">
-                                <div class="kpi-main">2,41<small>Juta</small></div>
+                                <div class="kpi-main" id="val_jumlah_akumulasi_borrower"></div>
                                 <p>Jumlah akumulasi borrower</p>
                             </div>
                         </article>
@@ -604,7 +605,7 @@
                         <article class="kpi">
                             <img class="kpi-ico" src="../assets/images/icon borrower aktif.png" alt="">
                             <div class="kpi-body">
-                                <div class="kpi-main">273<small>Ribu</small></div>
+                                <div class="kpi-main" id="val_jumlah_borrower_aktif"></div>
                                 <p>Jumlah borrower aktif</p>
                             </div>
                         </article>
@@ -612,7 +613,7 @@
                         <article class="kpi">
                             <img class="kpi-ico" src="../assets/images/icon borrower-berjalan.png" alt="">
                             <div class="kpi-body">
-                                <div class="kpi-main">645<small>Ribu</small></div>
+                                <div class="kpi-main" id="val_jumlah_borrower_pada_tahun_berjalan"></div>
                                 <p>Jumlah borrower tahun berjalan</p>
                             </div>
                         </article>
@@ -620,7 +621,7 @@
                         <article class="kpi">
                             <img class="kpi-ico" src="../assets/images/icon-jumlah lender.png" alt="">
                             <div class="kpi-body">
-                                <div class="kpi-main">13<small>Pendana</small></div>
+                                <div class="kpi-main" id="val_jumlah_lender_sejak_berdiri"></div>
                                 <p>Jumlah Lender sejak berdiri</p>
                             </div>
                         </article>
@@ -628,7 +629,7 @@
                         <article class="kpi">
                             <img class="kpi-ico" src="../assets/images/icon-lender berjalan.png" alt="">
                             <div class="kpi-body">
-                                <div class="kpi-main">3<small>Pendana</small></div>
+                                <div class="kpi-main" id="val_jumlah_lender_pada_tahun_berjalan"></div>
                                 <p>Jumlah Lender tahun berjalan</p>
                             </div>
                         </article>
@@ -636,12 +637,14 @@
                         <article class="kpi">
                             <img class="kpi-ico" src="../assets/images/icon-lender aktif.png" alt="">
                             <div class="kpi-body">
-                                <div class="kpi-main">6<small>Pendana</small></div>
+                                <div class="kpi-main" id="val_jumlah_lender_aktif"></div>
                                 <p>Jumlah Lender aktif</p>
                             </div>
                         </article>
+
                     </div>
                 </div>
+
 
                 <!-- Panel: Tata Kelola & Kepemilikan -->
                 <div class="panel" id="tab-tatakelola" role="tabpanel" hidden>
@@ -1373,6 +1376,70 @@
             });
         });
     </script>
+
+    <script>
+        async function loadHomepageConf() {
+            try {
+                const response = await fetch("https://api.uatas.id/api/thirdapi/homepageconf", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({})
+                });
+
+                const result = await response.json();
+
+                if (!result.data || !result.data.website_conf) {
+                    console.error("Data website_conf tidak ditemukan");
+                    return;
+                }
+
+                const items = result.data.website_conf;
+
+                items.forEach(item => {
+                    const alias = item.alias;
+                    const value = item.value;
+                    const icon = item.icon;
+                    const desc = item.desc;
+
+                    const iconElement = document.getElementById(`ico_${alias}`);
+                    if (iconElement) {
+                        iconElement.src = icon;
+                    }
+
+                    const formattedValue = formatNumber(value, desc);
+
+                    const valueElement = document.getElementById(`val_${alias}`);
+                    if (valueElement) {
+                        valueElement.innerHTML = formattedValue;
+                    }
+                });
+
+            } catch (err) {
+                console.error("Error fetching homepage conf:", err);
+            }
+        }
+
+        function formatNumber(num, desc) {
+            num = Number(num);
+
+            if (num >= 1_000_000_000_000) {
+                return (num / 1_000_000_000_000).toFixed(2) + "<small> Triliun</small>";
+            } else if (num >= 1_000_000_000) {
+                return (num / 1_000_000_000).toFixed(2) + "<small> Miliar</small>";
+            } else if (num >= 1_000_000) {
+                return (num / 1_000_000).toFixed(2) + "<small> Juta</small>";
+            } else if (num >= 1_000) {
+                return (num / 1_000).toFixed(0) + "<small> Ribu</small>";
+            }
+
+            return num.toString();
+        }
+
+        loadHomepageConf();
+    </script>
+
 
 
 </body>
