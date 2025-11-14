@@ -7,66 +7,133 @@
     <title>Kontak | UATAS</title>
 
     <link rel="shortcut icon" href="../assets/images/Shortcut.png" type="image/png" />
-    <link rel="stylesheet" href="../assets/css/events.css" />
+    <link rel="stylesheet" href="../assets/css/kontak.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="uatas">
-        <header class="header" role="banner">
+    <header class="header" role="banner">
+        <a href="https://wa.me/6282125532191?text=Halo,+CS+UATAS+👋Saya+ingin+menanyakan+informasi+terkait+layanan+UATAS.+Mohon+bantuannya+ya,+terima+kasih.+🙏"
+            class="cs-float" target="_blank" rel="noopener" aria-label="Pengaduan - Lapor di sini">
+            <img src="../assets/banner/icon-pengaduan-2-removebg-preview.png" alt="Pengaduan - Lapor di sini">
+        </a>
+        <div class="container">
+            <a href="/" class="nav-brand" aria-label="UATAS">
+                <img src="../assets/images/logouatas.png" alt="UATAS" class="logo" />
+            </a>
+
+            <!-- NAV DESKTOP (tetap) -->
+            <nav class="navigation" aria-label="Primary">
+                <ul class="nav-menu">
+                    <li><a href="../../">Beranda</a></li>
+                    <li><a href="../produk/">Produk</a></li>
+                    <li><a href="../about-us/">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                    <li class="dropdown">
+                        <a href="#bantuan">Bantuan</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../faq/">FAQ</a></li>
+                            <li><a href="../s&k/" rel="noopener noreferrer">Syarat dan Ketentuan</a>
+                            </li>
+                            <li><a href="../privasi/" rel="noopener noreferrer">Kebijakan Privasi</a>
+                            </li>
+                            <li><a href="../layanan_pengaduan/" rel="noopener noreferrer">Layanan
+                                    Pengaduan Konsumen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- HAMBURGER -->
+            <button class="hamburger" aria-label="Buka menu" aria-controls="navDrawer" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- IKON TKB (disembunyikan di mobile oleh CSS kamu) -->
+            <div class="tkb-icon" aria-describedby="tkb-tip">
+                <img src="../assets/images/Periksa TKB.png" alt="Periksa TKB" />
+                <div class="tkb-tooltip" id="tkb-tip">
+                    <strong>TKB0 :</strong> <span id="TKB0">--%</span><br>
+                    <strong>TKB30 :</strong> <span id="TKB30">--%</span><br>
+                    <strong>TKB60 :</strong> <span id="TKB60">--%</span><br>
+                    <strong>TKB90 :</strong> <span id="TKB90">--%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- DRAWER + BACKDROP -->
+        <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true"
+            aria-hidden="true" tabindex="-1"></nav>
+        <div class="drawer-backdrop"></div>
+    </header>
+
+    <main id="content">
+        <section class="prod-hero site-section">
             <div class="container">
-                <a href="/" class="nav-brand" aria-label="UATAS">
-                    <img src="../assets/images/logouatas.png" alt="UATAS" class="logo" />
-                </a>
-
-                <nav class="navigation" aria-label="Primary">
-                    <ul class="nav-menu">
-                        <li><a href="../index.html">Beranda</a></li>
-                        <li><a href="../produk/">Produk</a></li>
-                        <li><a href="../about-us/">Tentang Kami</a></li>
-                        <li><a href="../kontak/index.html">Kontak</a></li>
-                        <li class="dropdown">
-                            <a href="#bantuan">Bantuan</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="../faq/">FAQ</a></li>
-                                <li><a href="/s&k/" rel="noopener noreferrer">Syarat dan
-                                        Ketentuan</a></li>
-                                <li><a href="/privasi" rel="noopener noreferrer">Kebijakan
-                                        Privasi</a></li>
-                                <li><a href="/layanan_pengaduan/" rel="noopener noreferrer">Layanan Pengaduan
-                                        Konsumen</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-
-                <button class="hamburger" aria-label="Buka menu" aria-controls="navDrawer" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-
-                <div class="tkb-icon" aria-describedby="tkb-tip">
-                    <img src="../assets/images/Periksa TKB.png" alt="Periksa TKB" />
-                    <div class="tkb-tooltip" id="tkb-tip">
-                        <strong>TKB0 :</strong> <span id="TKB0">--%</span><br>
-                        <strong>TKB30 :</strong> <span id="TKB30">--%</span><br>
-                        <strong>TKB60 :</strong> <span id="TKB60">--%</span><br>
-                        <strong>TKB90 :</strong> <span id="TKB90">--%</span>
+                <div class="wrap">
+                    <div class="hero-copy">
+                        <h1>
+                            <span class="h1-a">Kontak UATAS</span>
+                            <span class="h1-b">Customer Service</span>
+                        </h1>
+                        <p>
+                            Layanan Pengaduan dan Customer Service UATAS
+                        </p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation" role="dialog" aria-modal="true"
-                aria-hidden="true" tabindex="-1"></nav>
-            <div class="drawer-backdrop"></div>
-        </header>
-
-        <section id="blog" class="events">
+        <section class="contact-cards">
             <div class="container">
-                <header class="events-head">
-                    <h2 class="title">Acara dan Kegiatan</h2>
-                </header>
 
-                <div id="youtube-videos" class="event-grid">
+                <div class="ccard">
+                    <div class="ccard-icon">
+                        <img src="../assets/images/icon-email.png" alt="Email Icon">
+                    </div>
+                    <h3 class="ccard-title">Email Kami</h3>
+                    <p class="ccard-desc">
+                        Layanan dapat dihubungi (Setiap Hari, 08.00 - 20.00 WIB) melalui email resmi berikut:
+                    </p>
+                    <a href="mailto:cs.support@uatas.id" class="ccard-link">
+                        cs.support@uatas.id
+                    </a>
+                </div>
+
+                <div class="ccard">
+                    <div class="ccard-icon">
+                        <img src="../assets/images/icon-office.png" alt="Location Icon">
+                    </div>
+                    <h3 class="ccard-title">Alamat Kami</h3>
+                    <p class="ccard-desc">Lokasi Walk in<br>(Setiap Hari, 09.00 - 18.00 WIB) :</p>
+                    <address class="ccard-address">
+                        Wijaya Kusuma Taman Duta Mas Blok D-8 No.15,
+                        Grogol Petamburan, Jakarta Barat, DKI Jakarta
+                    </address>
+                </div>
+
+                <div class="ccard">
+                    <div class="ccard-icon">
+                        <img src="../assets/images/icon-cs.png" alt="Phone Icon">
+                    </div>
+                    <h3 class="ccard-title">Hubungi Kami</h3>
+                    <p class="ccard-desc">
+                        Layanan bantuan Call Center (Setiap Hari, 08.00 - 20.00 WIB) pada nomor:
+                    </p>
+                    <a href="tel:1500038" class="ccard-link">1500 038</a>
+                </div>
+
+
+                <div class="ccard">
+                    <div class="ccard-icon">
+                        <img src="../assets/images/icon-call.png" alt="Phone Icon">
+                    </div>
+                    <h3 class="ccard-title">Whatsapp Kami</h3>
+                    <p class="ccard-desc">
+                        Layanan Whatsapp (diakses Setiap Hari, selama 24 jam):
+                    </p>
+                    <a href="https://api.whatsapp.com/send/?phone=6282125532191&text=Halo%2C+CS+UATAS+%EF%BF%BDSaya+ingin+menanyakan+informasi+terkait+layanan+UATAS.+Mohon+bantuannya+ya%2C+terima+kasih.+%EF%BF%BD&type=phone_number&app_absent=0"
+                        class="ccard-link">082125532191</a>
                 </div>
             </div>
         </section>
@@ -275,17 +342,17 @@
                     <div class="uf-pdf">
                         <ul class="pdf-links">
                             <li>
-                                <a href="/s&k/" rel="noopener">
+                                <a href="../s&k/" rel="noopener">
                                     Syarat dan Ketentuan
                                 </a>
                             </li>
                             <li>
-                                <a href="/layanan_pengaduan/" rel="noopener">
+                                <a href="../layanan_pengaduan/" rel="noopener">
                                     Layanan Pengaduan Konsumen
                                 </a>
                             </li>
                             <li>
-                                <a href="/privasi/" rel="noopener">
+                                <a href="../privasi/" rel="noopener">
                                     Kebijakan Privasi
                                 </a>
                             </li>
@@ -296,119 +363,103 @@
                 </div>
             </footer>
         </section>
+    </main>
+    <script src="../assets/api/tkb.js"></script>
 
-        <script src="../assets/api/tkb.js"></script>
-        <script src="../assets/api/event.js"></script>
+    <script>
+        (function () {
+            const hiddenStyle = document.createElement('style');
+            hiddenStyle.textContent = '[hidden]{display:none!important}';
+            document.head.appendChild(hiddenStyle);
 
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const fallbackQuals = ["sddefault", "hqdefault", "mqdefault"];
+            function setHeaderVar() {
+                const h = document.querySelector('.header');
+                if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+            }
+            setHeaderVar(); addEventListener('resize', setHeaderVar);
 
-                document.querySelectorAll(".event-card img").forEach(img => {
-                    img.addEventListener("error", function handler() {
-                        let current = this.dataset.fallbackIndex ? parseInt(this.dataset.fallbackIndex) : 0;
-                        if (current < fallbackQuals.length) {
-                            const videoId = this.src.match(/vi\/([^/]+)\//)?.[1];
-                            if (videoId) {
-                                this.src = `https://i.ytimg.com/vi/${videoId}/${fallbackQuals[current]}.jpg`;
-                                this.dataset.fallbackIndex = current + 1;
-                            }
-                        } else {
-                            this.closest(".thumb")?.classList.add("thumb--failed");
-                            this.removeEventListener("error", handler);
-                        }
-                    });
+            const chips = [...document.querySelectorAll('.faq-chip')];
+            const sections = [...document.querySelectorAll('.faq-section')];
+
+            function activate(cat) {
+                chips.forEach(c => {
+                    const on = c.dataset.filter === cat;
+                    c.classList.toggle('is-active', on);
+                    c.setAttribute('aria-selected', on ? 'true' : 'false');
                 });
+                sections.forEach(s => { s.hidden = s.dataset.category !== cat; });
+                document.querySelector('.faq-body')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            chips.forEach(c => c.addEventListener('click', () => activate(c.dataset.filter)));
+            activate(chips[0]?.dataset.filter || 'umum');
+
+            document.addEventListener('click', (e) => {
+                const btn = e.target.closest('.faq-q');
+                if (!btn) return;
+                const panel = document.getElementById(btn.getAttribute('aria-controls'));
+                const open = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!open));
+                panel.hidden = open;
             });
-        </script>
+        })();
+    </script>
 
-        <script>
-            (function () {
-                const hiddenStyle = document.createElement('style');
-                hiddenStyle.textContent = '[hidden]{display:none!important}';
-                document.head.appendChild(hiddenStyle);
+    <script>
+        (function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');   // menu desktop
+            const navDrawer = document.getElementById('navDrawer');  // drawer mobile
+            const backdrop = document.querySelector('.drawer-backdrop');
 
-                function setHeaderVar() {
-                    const h = document.querySelector('.header');
-                    if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
-                }
-                setHeaderVar(); addEventListener('resize', setHeaderVar);
+            // buka / tutup drawer
+            function openDrawer() {
+                navDrawer.classList.add('open');
+                backdrop.classList.add('show');
+                document.body.classList.add('no-scroll');
+                hamburger?.setAttribute('aria-expanded', 'true');
+                navDrawer?.setAttribute('aria-hidden', 'false');
+            }
+            function closeDrawer() {
+                navDrawer.classList.remove('open');
+                backdrop.classList.remove('show');
+                document.body.classList.remove('no-scroll');
+                hamburger?.setAttribute('aria-expanded', 'false');
+                navDrawer?.setAttribute('aria-hidden', 'true');
+                // tutup sub yang kebuka
+                navDrawer.querySelectorAll('li.dropdown.open, li.tkb-mobile.open')
+                    .forEach(li => li.classList.remove('open'));
+            }
 
-                const chips = [...document.querySelectorAll('.faq-chip')];
-                const sections = [...document.querySelectorAll('.faq-section')];
+            hamburger?.addEventListener('click', e => {
+                e.preventDefault();
+                navDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
+            });
+            backdrop?.addEventListener('click', closeDrawer);
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 
-                function activate(cat) {
-                    chips.forEach(c => {
-                        const on = c.dataset.filter === cat;
-                        c.classList.toggle('is-active', on);
-                        c.setAttribute('aria-selected', on ? 'true' : 'false');
+            // ---- build isi drawer (clone menu + blok TKB) ----
+            function buildDrawer() {
+                if (!navDrawer || !navMenu) return;
+
+                // kosongkan dulu biar bersih (tanpa tombol X)
+                navDrawer.innerHTML = '';
+
+                // clone menu desktop
+                const mobileMenu = navMenu.cloneNode(true);
+                navDrawer.appendChild(mobileMenu);
+
+                // jadikan dropdown sebagai akordeon
+                mobileMenu.querySelectorAll('.dropdown > a').forEach(a => {
+                    a.addEventListener('click', e => {
+                        e.preventDefault();
+                        a.parentElement.classList.toggle('open');
                     });
-                    sections.forEach(s => { s.hidden = s.dataset.category !== cat; });
-                    document.querySelector('.faq-body')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-                chips.forEach(c => c.addEventListener('click', () => activate(c.dataset.filter)));
-                activate(chips[0]?.dataset.filter || 'umum');
-
-                document.addEventListener('click', (e) => {
-                    const btn = e.target.closest('.faq-q');
-                    if (!btn) return;
-                    const panel = document.getElementById(btn.getAttribute('aria-controls'));
-                    const open = btn.getAttribute('aria-expanded') === 'true';
-                    btn.setAttribute('aria-expanded', String(!open));
-                    panel.hidden = open;
                 });
-            })();
-        </script>
 
-        <script>
-            (function () {
-                const hamburger = document.querySelector('.hamburger');
-                const navMenu = document.querySelector('.nav-menu');
-                const navDrawer = document.getElementById('navDrawer'); 
-                const backdrop = document.querySelector('.drawer-backdrop');
-
-                function openDrawer() {
-                    navDrawer.classList.add('open');
-                    backdrop.classList.add('show');
-                    document.body.classList.add('no-scroll');
-                    hamburger?.setAttribute('aria-expanded', 'true');
-                    navDrawer?.setAttribute('aria-hidden', 'false');
-                }
-                function closeDrawer() {
-                    navDrawer.classList.remove('open');
-                    backdrop.classList.remove('show');
-                    document.body.classList.remove('no-scroll');
-                    hamburger?.setAttribute('aria-expanded', 'false');
-                    navDrawer?.setAttribute('aria-hidden', 'true');
-                    navDrawer.querySelectorAll('li.dropdown.open, li.tkb-mobile.open')
-                        .forEach(li => li.classList.remove('open'));
-                }
-
-                hamburger?.addEventListener('click', e => {
-                    e.preventDefault();
-                    navDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
-                });
-                backdrop?.addEventListener('click', closeDrawer);
-                document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
-
-                function buildDrawer() {
-                    if (!navDrawer || !navMenu) return;
-
-                    navDrawer.innerHTML = '';
-
-                    const mobileMenu = navMenu.cloneNode(true);
-                    navDrawer.appendChild(mobileMenu);
-
-                    mobileMenu.querySelectorAll('.dropdown > a').forEach(a => {
-                        a.addEventListener('click', e => {
-                            e.preventDefault();
-                            a.parentElement.classList.toggle('open');
-                        });
-                    });
-
-                    const tkbLi = document.createElement('li');
-                    tkbLi.className = 'tkb-mobile';
-                    tkbLi.innerHTML = `
+                // ---- blok TKB untuk drawer ----
+                const tkbLi = document.createElement('li');
+                tkbLi.className = 'tkb-mobile';
+                tkbLi.innerHTML = `
       <a href="#" class="tkb-toggle">Periksa TKB</a>
       <ul class="tkb-sub">
         <li><strong>TKB0:</strong>  <span class="tkb-val" data-key="TKB0">--%</span></li>
@@ -417,46 +468,52 @@
         <li><strong>TKB90:</strong> <span class="tkb-val" data-key="TKB90">--%</span></li>
       </ul>
     `;
-                    mobileMenu.appendChild(tkbLi);
+                mobileMenu.appendChild(tkbLi);
 
-                    tkbLi.querySelector('.tkb-toggle')?.addEventListener('click', e => {
-                        e.preventDefault();
-                        tkbLi.classList.toggle('open');
-                    });
+                // toggle akordeon TKB
+                tkbLi.querySelector('.tkb-toggle')?.addEventListener('click', e => {
+                    e.preventDefault();
+                    tkbLi.classList.toggle('open');
+                });
 
-                    function syncTKB() {
-                        navDrawer.querySelectorAll('.tkb-val').forEach(span => {
-                            const key = span.getAttribute('data-key');
-                            const src = document.getElementById(key);
-                            span.textContent = src?.textContent?.trim() || '--%';
-                        });
-                    }
-                    syncTKB();
-                    const obs = new MutationObserver(syncTKB);
-                    ['TKB0', 'TKB30', 'TKB60', 'TKB90'].forEach(id => {
-                        const el = document.getElementById(id);
-                        if (el) obs.observe(el, { childList: true, subtree: true });
-                    });
-
-                    mobileMenu.querySelectorAll('a').forEach(a => {
-                        if (a.classList.contains('tkb-toggle') || a.closest('.dropdown')) return;
-                        a.addEventListener('click', () => closeDrawer());
+                // sinkron angka dari tooltip header (yang diisi tkb.js)
+                function syncTKB() {
+                    navDrawer.querySelectorAll('.tkb-val').forEach(span => {
+                        const key = span.getAttribute('data-key');
+                        const src = document.getElementById(key);
+                        span.textContent = src?.textContent?.trim() || '--%';
                     });
                 }
+                // pertama kali
+                syncTKB();
+                // pantau kalau tkb.js mengubah angkanya belakangan
+                const obs = new MutationObserver(syncTKB);
+                ['TKB0', 'TKB30', 'TKB60', 'TKB90'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) obs.observe(el, { childList: true, subtree: true });
+                });
 
-                function ensureDrawer() {
-                    if (window.innerWidth <= 900) {
-                        if (!navDrawer.querySelector('.nav-menu')) buildDrawer();
-                    } else {
-                        closeDrawer();
-                        navDrawer.innerHTML = ''; 
-                    }
+                // tutup drawer saat klik link biasa (bukan dropdown/tkb-toggle)
+                mobileMenu.querySelectorAll('a').forEach(a => {
+                    if (a.classList.contains('tkb-toggle') || a.closest('.dropdown')) return;
+                    a.addEventListener('click', () => closeDrawer());
+                });
+            }
+
+            // Build hanya saat mobile
+            function ensureDrawer() {
+                if (window.innerWidth <= 900) {
+                    if (!navDrawer.querySelector('.nav-menu')) buildDrawer();
+                } else {
+                    closeDrawer();
+                    navDrawer.innerHTML = ''; // bersihin saat balik ke desktop
                 }
+            }
 
-                ensureDrawer();
-                window.addEventListener('resize', ensureDrawer);
-            })();
-        </script>
+            ensureDrawer();
+            window.addEventListener('resize', ensureDrawer);
+        })();
+    </script>
 </body>
 
 </html>
